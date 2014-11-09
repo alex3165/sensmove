@@ -1,0 +1,7 @@
+parameters:
+#    sensmove_admin.example.class: Sensmove\AdminBundle\Example
+
+services:
+#    sensmove_admin.example:
+#        class: %sensmove_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

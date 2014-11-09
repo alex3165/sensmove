@@ -1,0 +1,4 @@
+sensmove_admin:
+    resource: "@SensmoveAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+

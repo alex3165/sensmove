@@ -1,0 +1,4 @@
+/back/vendor/*
+/back/app/config/parameters.yml
+/back/app/cache/*
+/back/app/logs/*

@@ -13,6 +13,8 @@
 		22684E121A1A5B45008A51B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22684E111A1A5B45008A51B2 /* Images.xcassets */; };
 		22684E151A1A5B45008A51B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22684E131A1A5B45008A51B2 /* LaunchScreen.xib */; };
 		22684E211A1A5B45008A51B2 /* appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22684E201A1A5B45008A51B2 /* appTests.swift */; };
+		A7CD90411A1BDD9D00CA2780 /* SMSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CD90401A1BDD9D00CA2780 /* SMSensor.swift */; };
+		A7CD90421A1BDD9D00CA2780 /* SMSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CD90401A1BDD9D00CA2780 /* SMSensor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 		22684E1A1A1A5B45008A51B2 /* appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22684E1F1A1A5B45008A51B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22684E201A1A5B45008A51B2 /* appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appTests.swift; sourceTree = "<group>"; };
+		A7CD90401A1BDD9D00CA2780 /* SMSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSensor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 				22684E0E1A1A5B45008A51B2 /* Main.storyboard */,
 				22684E111A1A5B45008A51B2 /* Images.xcassets */,
 				22684E131A1A5B45008A51B2 /* LaunchScreen.xib */,
+				A7CD90401A1BDD9D00CA2780 /* SMSensor.swift */,
 				22684E081A1A5B45008A51B2 /* Supporting Files */,
 			);
 			path = app;
@@ -214,6 +218,7 @@
 			files = (
 				22684E0D1A1A5B45008A51B2 /* ViewController.swift in Sources */,
 				22684E0B1A1A5B45008A51B2 /* AppDelegate.swift in Sources */,
+				A7CD90411A1BDD9D00CA2780 /* SMSensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22684E211A1A5B45008A51B2 /* appTests.swift in Sources */,
+				A7CD90421A1BDD9D00CA2780 /* SMSensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +411,7 @@
 				22684E261A1A5B45008A51B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22684E271A1A5B45008A51B2 /* Build configuration list for PBXNativeTarget "appTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +420,7 @@
 				22684E291A1A5B45008A51B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

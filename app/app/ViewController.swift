@@ -14,30 +14,35 @@ class ViewController: UIViewController {
     
     let nbSensors:Int=7
     var arraySensors:NSMutableArray?
-    
+    @IBOutlet weak var sceneView: SCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         for index in 1...self.nbSensors {
             var indexFloat:Float = Float(index)
-            var vector:Vector3D = Vector3D (x: 2, y: 3, z : 3)
-            var sens:SMSensor=SMSensor(id: index, pos: vector)
-            self.arraySensors?.addObject(sens)
+            self.arraySensors?.addObject(SMSensor(id: index, pos: SCNVector3Make(10, 10, 10)))
         }
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Initialization of the scene
+        sceneSetup();
+        
+        // Allow touch gesture control the camera
+        sceneView.allowsCameraControl = true
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     
     func sceneSetup() {
         let scene:SCNScene = SCNScene()
         
+        
+        
+        sceneView.scene = scene;
     }
 }
 

@@ -7,24 +7,23 @@
 //
 
 import Foundation
-
-struct Vector3D {
-    var x = 0.0
-    var y = 0.0
-    var z = 0.0
-}
+import SceneKit
 
 class SMSensor: NSObject {
     
- 
+    var Pos3D: SCNVector3?
     var id: Int
-    var pos: Vector3D?
     let radius: Float = 10
+    var Sphere: SCNSphere?
 
-    required init(id:Int, pos:Vector3D) {
-        
+    required init(id:Int, pos:SCNVector3) {
         self.id = id
-        self.pos = pos
+        self.Pos3D = pos
+    }
+    
+    // Update the z position of pressions measurement
+    func updateZ(zPos: Float) {
+        self.Pos3D?.z = zPos
     }
 
 }

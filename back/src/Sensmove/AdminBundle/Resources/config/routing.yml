@@ -1,3 +1,8 @@
 sensmove_admin_homepage:
     path:     /hello/{name}
     defaults: { _controller: SensmoveAdminBundle:Default:index }
+
+sensmove_api:
+    resource: "@SensmoveAdminBundle/Controller/ApiController.php"
+    prefix:   /api
+    type:     annotation

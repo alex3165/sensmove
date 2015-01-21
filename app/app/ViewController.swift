@@ -13,36 +13,39 @@ import SceneKit
 class ViewController: UIViewController {
     
     let nbSensors:Int=7
-    var arraySensors:NSMutableArray?
+    var arraySensors:[SMSensor]?
     @IBOutlet weak var sceneView: SCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.arraySensors = NSMutableArray()
+        let scene:SCNScene = SCNScene()
         
         for index in 1...self.nbSensors {
             var indexFloat:Float = Float(index)
-            self.arraySensors?.addObject(SMSensor(id: index, pos: SCNVector3Make(10, 10, 10)))
+            var sens:SMSensor = SMSensor(id: index, pos: SCNVector3Make(0, 0, indexFloat))
+//            println(sens.id)
+            scene.rootNode.addChildNode(sens.getNode())
+            self.arraySensors?.append(sens)
         }
-        
+//        scene.background = SCNMaterialProperty
         // Initialization of the scene
-        sceneSetup();
+        self.sceneView.scene = scene;
         
         // Allow touch gesture control the camera
-        sceneView.allowsCameraControl = true
+        self.sceneView.allowsCameraControl = true
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
     
-    func sceneSetup() {
-        let scene:SCNScene = SCNScene()
-        
-        
-        
-        sceneView.scene = scene;
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        sceneView.stop(nil)
+        sceneView.play(nil)
     }
+
 }
 

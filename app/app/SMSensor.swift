@@ -11,19 +11,31 @@ import SceneKit
 
 class SMSensor: NSObject {
     
-    var Pos3D: SCNVector3?
+    private var Pos3D: SCNVector3?
     var id: Int
-    let radius: Float = 10
-    var Sphere: SCNSphere?
+    private var Node: SCNNode?
 
     required init(id:Int, pos:SCNVector3) {
         self.id = id
         self.Pos3D = pos
+        
+        super.init()
+        
+        self.initializeVisual()
+    }
+    
+    func getNode() -> SCNNode {
+        return self.Node!
+    }
+    
+    func initializeVisual(){
+        var Sphere = SCNSphere(radius: 0.3)
+        self.Node = SCNNode(geometry: Sphere)
+        self.Node?.position = self.Pos3D!
     }
     
     // Update the z position of pressions measurement
     func updateZ(zPos: Float) {
         self.Pos3D?.z = zPos
     }
-
 }

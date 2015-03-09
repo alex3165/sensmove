@@ -3,3 +3,7 @@
 /back/app/config/parameters.yml
 /back/app/cache/*
 /back/app/logs/*
+app/Pods/Pods.xcodeproj/xcuserdata/pacejz.xcuserdatad/
+app/app.xcodeproj/project.xcworkspace/xcuserdata/pacejz.xcuserdatad/
+app/app.xcodeproj/xcuserdata/pacejz.xcuserdatad/
+app/app.xcworkspace/xcuserdata/pacejz.xcuserdatad/

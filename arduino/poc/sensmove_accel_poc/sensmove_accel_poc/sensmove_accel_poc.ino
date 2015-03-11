@@ -42,7 +42,6 @@ void loop(void) {
   
   if ((millis() - lastDisplayTime) > 50)
   {
-    //Serial.print("Accel Minimums: "); Serial.print(accelEvent.acceleration.x); Serial.print("  ");Serial.print(accelEvent.acceleration.y); Serial.print("  "); Serial.print(accelEvent.acceleration.z); Serial.println();
     lastDisplayTime = millis();
   }
 }

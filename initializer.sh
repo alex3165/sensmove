@@ -31,7 +31,6 @@ elif ! [ -d "$PATHPROJECT" ]; then
 
 	echo -e "${red}Error, path $PATHPROJECT does not exist${NC}"
 
-
 else
 
 	for file in $(ls -1 $PATHPROJECT); do 

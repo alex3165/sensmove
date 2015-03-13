@@ -4,10 +4,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'app' do
-
+       pod 'Alamofire', '~> 1.1'
 end
 
 target 'appTests' do
-
+       pod 'Alamofire', '~> 1.1'
 end
 

@@ -1,10 +1,10 @@
 
 ##
-## Link arduino librairies from the project to the Arduino libraries folder
+##  Link arduino librairies from the project to the Arduino libraries folder
 ##  initializer.sh
 ##  SensMove
 ##
-##  @author {nom_utilisateur} Jean-Sebastien Pélerin
+##  @author Jean-Sebastien Pélerin
 ##  @date 13/03/2015
 ##  @copyright (c) 2014 SensMove. All rights reserved.
 ##

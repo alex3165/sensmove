@@ -1,27 +1,59 @@
-#!/bin/bash
-## Link Arduino librairires
-##
-## Made by Jean-Sebastien Pélerin
-##
-## Nobody is permitted to copy and distribute verbatim or modified
-## copies of this license document, and changing it is allowed as long
-## as the name is changed.
-## DO NOT DO WHAT THE HELL YOU WANT TO PUBLIC LICENSE
-## TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-##
-## 0. You just WILL NOT DO WHAT THE HELL YOU WANT TO.
 
+##
+## Link arduino librairies from the project to the Arduino libraries folder
+##  initializer.sh
+##  SensMove
+##
+##  @author {nom_utilisateur} Jean-Sebastien Pélerin
+##  @date 13/03/2015
+##  @copyright (c) 2014 SensMove. All rights reserved.
+##
 
-PATHPROJECT="${PWD}/Arduino/libraries/*"
+#The script is meant to work on OSX
+
+#Path of the libraries in the project (the script should be started in the root of the project)
+PATHPROJECT="${PWD}/Arduino/libraries/"
+#Path of the libraries in Arduino
 PATHARDUI="${HOME}/Documents/Arduino/libraries/"
 
-##echo $PATHPROJECT
-if ln -s $PATHPROJECT $PATHARDUI; then
+#Color added to the console messages
+red='\033[0;31m'
+blue='\033[0;34m'
+cyan='\033[0;36m'
+NC='\033[0m' # Uncolored
 
-echo "Lien vers librairie effectué"
+#Check wether the path specified exists
+if ! [ -d "$PATHARDUI" ]; then
+
+	echo -e "${red}Error, path $PATHARDUI does not exist${NC}"
+
+elif ! [ -d "$PATHPROJECT" ]; then
+
+	echo -e "${red}Error, path $PATHPROJECT does not exist${NC}"
+
 
 else
 
-echo "Erreur de chemin"
+	for file in $(ls -1 $PATHPROJECT); do 
+	#For each folder in the library folder of the project
 
+
+		if [ -L "$PATHARDUI${file%/}" ]; then 
+		#Link exists in Arduino's Library
+			
+			echo -e "${cyan}Link ${file%/} exists ${NC}"
+
+		elif [ -d "$PATHARDUI${file%/}" ]; then 
+		#Foder exists in Arduino's Library
+
+			echo -e "${red}Warning, folder ${file%/} already exists in Arduino's library, the folder will not be updated"
+
+		else 
+		#Link has to be created
+
+			echo -e "${blue}Adding symbolic link ${file%/} ${NC}"
+			ln -s $PATHPROJECT$file $PATHARDUI
+		fi
+
+	done
 fi

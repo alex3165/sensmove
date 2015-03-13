@@ -13,7 +13,7 @@ import SceneKit
 class ViewController: UIViewController {
     
     let nbSensors:Int=7
-    var arraySensors:[SMSensor]?
+    var arraySensors:[SMForce]?
     @IBOutlet weak var sceneView: SCNView!
     
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         for index in 1...self.nbSensors {
             var indexFloat:Float = Float(index)
-            var sens:SMSensor = SMSensor(id: index, pos: SCNVector3Make(0, 0, indexFloat))
+            var sens:SMForce = SMForce(id: index, creation: NSDate(), pos: SCNVector3Make(0, 0, indexFloat))
 //            println(sens.id)
             scene.rootNode.addChildNode(sens.getNode())
             self.arraySensors?.append(sens)

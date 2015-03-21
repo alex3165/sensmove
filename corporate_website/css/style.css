@@ -1,0 +1,11 @@
+.scene {
+	height: 500px;
+	width: 100%;
+}
+.elem {
+	background-color: #2599be;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	margin: 60px auto;
+}

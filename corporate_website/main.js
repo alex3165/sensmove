@@ -3,12 +3,26 @@ requirejs.config({
           'jquery': 'js/libs/jquery', /* Javascript extension library */
         'parallax': 'js/libs/parallax', /* Parallax.js library to make parallax effect */
       'underscore': 'node_modules/underscore/underscore-min', /* Methods that help to manipulate javascript */
-        'backbone': 'node_modules/backbone/backbone-min', /* Javascript MVC framework */
-      'marionette': 'node_modules/backbone.marionette/lib/backbone.marionette.min', /* Backbone overlay that make development more easy */
       'handlebars': 'node_modules/handlebars/handlebars.min' /* Library that make data-binding easier */
     }
 });
 
-requirejs(['backbone', 'marionette'], function (Backbone, Marionette) {
-	
+requirejs(['jquery'], function ($) {
+
+	$(document).ready(function() {
+
+		var layers = $('section');
+
+		$('.nav').on('click', function(){
+			
+			$('.nav').removeClass('active');
+			$(this).addClass('active');
+
+			layers.hide();
+			var layerToShow = $(this).attr('href').replace('#', '');
+			var elementToShow = layers.filter('.' + layerToShow);
+			elementToShow.show();
+		});
+	});
+
 });

@@ -1,11 +1,118 @@
-.scene {
-	height: 500px;
+body {
+	background-color: #FAFAFA;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+}
+
+.center-entity {
+	text-align: center;
+	padding: 40px 0px;
+}
+
+.center-entity a {
+	text-decoration: none;
+}
+
+.center-entity h1 {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 24px;
+	color: #ef4f2c;
+	margin-top: 20px;
+}
+
+nav {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+nav ul li {
+	display: inline;
+	padding: 10px;
+}
+nav ul li a {
+	text-decoration: none;
+	color: #adacac;
+}
+nav ul li a:hover,
+nav ul li a.active {
+	color: #6B6B6B;
+	font-weight: 400;
+}
+
+section {
+	display: none;
+}
+
+section.active {
+	display: block;
+}
+
+section.home .description {
+	background-color: white;
+	padding: 30px;
+	font-size: 13px;
+}
+
+section.home .description p {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+section.home .img-container {
+	text-align: center;
+	padding: 30px 0px;
+}
+
+section.home img.schema {
+	margin: 0 auto;
+	max-width: 800px;
+	text-align: center;
+}
+
+section.project {
+	text-align: center;
+}
+
+section.project figcaption {
+	padding: 20px 0px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 20px;
+	background-color: #ef4f2c;
+	color: white;
+}
+
+section.project img {
 	width: 100%;
 }
-.elem {
-	background-color: #2599be;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	margin: 60px auto;
+
+section.contact {
+	padding: 30px 40px;
+}
+
+section.contact .user {
+	display: inline-block;
+	width: 48%;
+	margin-bottom: 40px;
+}
+
+section.contact .user img {
+	float: left;
+	margin-right: 20px;
+}
+
+section.contact .user .description h2 {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 22px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+section.contact .user .description .current {
+	color: #ef4f2c;
+}
+
+section.contact .user .description .status {
+	color: #9D9D9D;
+	margin-bottom: 20px;
 }

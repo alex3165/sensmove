@@ -1,5 +1,0 @@
-class SMSensor {
-	public:
-
-	private:
-}

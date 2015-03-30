@@ -33,7 +33,7 @@ void setup(void) {
   /*
   * Try to begin the accelerometer for reading values
   */
-  Serial.println("Accelerometer Test"); Serial.println("");
+ // Serial.println("Accelerometer Test"); Serial.println("");
   if(!accel.begin()) {
     // There was a problem detecting the LSM303 ... check your connections
     Serial.println("Ooops, no LSM303 detected ... Check your wiring!");

@@ -9,8 +9,6 @@ void setup() {
 	while(!Serial); // Leonardo/Micro should wait for serial init
 
 	Serial.println(F("SensMove let's go for folk"));
-
-	sessionManager.InitializeBluetooth();
 }
 
 void loop() {

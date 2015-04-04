@@ -4,20 +4,19 @@
   Copyright SensMove.
 */
 
-#ifndef SMDataSessionManager
-#define SMDataSessionManager
+#ifndef _SMDATASESSIONMANAGER_H_
+#define _SMDATASESSIONMANAGER_H_
 
 /**
 *
 *	Include libraries
 *
 */
-#include <SPI.h>
 #include <Adafruit_BLE_UART.h>
 
 /**
 *
-*	Define contants
+*	Define constants
 *
 */
 #define ADAFRUITBLE_REQ 10
@@ -31,24 +30,22 @@ class SMDataSessionManager {
     SMDataSessionManager();
     ~SMDataSessionManager();
 
-    int sessionId;
-
-  	time_t currentTime; // Current time set by the first bluetooth communication
-  	time_t startSessionTime;
-  	time_t stopSessionTime;
-
     // bool SendDatasOverBluetooth();
     void BleLoopCommunication();
+    void RetrievingBleDatas();
 
   private:
-    
-  	int bleCommunicationCounter;
+    uint16_t sessionId;
 
-	  void InitializeBluetooth();
-	  void RetrievingBleDatas();
+    uint16_t currentTime; // Current time set by the first bluetooth communication
+    uint16_t startSessionTime;
+  	uint16_t bleCommunicationCounter;
+
+    String lastData;
 
     // void detectValuesLimitations();
     void SetCurrentTime();
+    void InitializeBluetooth();
 };
 
 #endif

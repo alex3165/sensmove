@@ -1,7 +1,6 @@
 #include "Arduino.h"
 #include "SMDataSessionManager.h"
 
-
 /**
 *
 *	Bluetooth necessary objects
@@ -14,8 +13,12 @@ aci_evt_opcode_t laststatus = ACI_EVT_DISCONNECTED;
 /**
 *	Constructor for the session manager
 */
-SMDataSessionManager::SMDataSessionManager(void) {
-	initializeBluetooth();
+SMDataSessionManager::SMDataSessionManager()
+	: sessionId(0), currentTime(0), startSessionTime(0), bleCommunicationCounter(0), lastData() {
+	InitializeBluetooth();
+}
+
+SMDataSessionManager::~SMDataSessionManager() {
 }
 
 void SMDataSessionManager::InitializeBluetooth() {
@@ -24,7 +27,7 @@ void SMDataSessionManager::InitializeBluetooth() {
 }
 
 void SMDataSessionManager::BleLoopCommunication() {
-  
+
 	BTLEserial.pollACI(); // Tell the nRF8001 to do whatever it should be working on.
 
 	aci_evt_opcode_t status = BTLEserial.getState(); // Ask what is our current status
@@ -40,7 +43,7 @@ void SMDataSessionManager::BleLoopCommunication() {
 		if (status == ACI_EVT_DISCONNECTED) {
 		    Serial.println(F("* Disconnected or advertising timed out"));
 		}
-		
+
 		laststatus = status; // OK set the last status change to this one
 	}
 
@@ -63,19 +66,13 @@ void SMDataSessionManager::BleLoopCommunication() {
 
 void SMDataSessionManager::RetrievingBleDatas() {
 
-	char date[];
-	int index = 0;
-
 	if (bleCommunicationCounter < 1) { // first ble communication
 		while (BTLEserial.available()) {
-		  date[index] = BTLEserial.read();
-		  index++;
-
-		  Serial.print(c);
+		  lastData += BTLEserial.read();
 		}
 	}
 
-	bleCommunicationCounter ++;
+	bleCommunicationCounter++;
 }
 
 void SMDataSessionManager::SetCurrentTime() {

@@ -1,11 +1,20 @@
 #include "Arduino.h"
 #include "SMDataSessionManager.h"
 
+
+/**
+*
+*	Bluetooth necessary objects
+*
+*/
+Adafruit_BLE_UART BTLEserial = Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
+aci_evt_opcode_t laststatus = ACI_EVT_DISCONNECTED;
+
+
 /**
 *	Constructor for the session manager
 */
-SMDataSessionManager::SMDataSessionManager() {
-	
+SMDataSessionManager::SMDataSessionManager(void) {
 	initializeBluetooth();
 }
 

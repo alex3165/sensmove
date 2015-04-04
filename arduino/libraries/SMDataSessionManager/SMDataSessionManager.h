@@ -13,7 +13,7 @@
 *
 */
 #include <SPI.h>
-#include "Adafruit_BLE_UART.h"
+#include <Adafruit_BLE_UART.h>
 
 /**
 *
@@ -24,19 +24,14 @@
 #define ADAFRUITBLE_RDY 2
 #define ADAFRUITBLE_RST 9
 
-/**
-*
-*	Bluetooth necessary objects
-*
-*/
-Adafruit_BLE_UART BTLEserial = Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
-aci_evt_opcode_t laststatus = ACI_EVT_DISCONNECTED;
-
 class SMDataSessionManager {
 
   public:
 
-	SMDataSessionManager();
+    SMDataSessionManager();
+    ~SMDataSessionManager();
+
+    int sessionId;
 
   	time_t currentTime; // Current time set by the first bluetooth communication
   	time_t startSessionTime;
@@ -49,8 +44,8 @@ class SMDataSessionManager {
     
   	int bleCommunicationCounter;
 
-	void InitializeBluetooth();
-	void RetrievingBleDatas();
+	  void InitializeBluetooth();
+	  void RetrievingBleDatas();
 
     // void detectValuesLimitations();
     void SetCurrentTime();

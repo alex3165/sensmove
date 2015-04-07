@@ -4,10 +4,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'sensmove' do
-       pod 'Alamofire', '~> 1.1'
 end
 
 target 'sensmoveTests' do
-       pod 'Alamofire', '~> 1.1'
 end
 

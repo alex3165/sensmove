@@ -1,4 +1,6 @@
 #include "SMDataSessionManager.h"
+#include <SPI.h>
+#include <Adafruit_BLE_UART.h>
 
 SMDataSessionManager sessionManager = SMDataSessionManager();
 

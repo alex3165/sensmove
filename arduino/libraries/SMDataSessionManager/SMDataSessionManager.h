@@ -9,13 +9,6 @@
 
 /**
 *
-*	Include libraries
-*
-*/
-#include <Adafruit_BLE_UART.h>
-
-/**
-*
 *	Define constants
 *
 */

@@ -1,0 +1,64 @@
+//
+//  Adafruit Pro Trinket 3V-12MHz.xcconfig
+//  Board configuration file
+//  ----------------------------------
+//  Developed with embedXcode
+//
+//  Part of embedXcode
+//  Embedded Computing on Xcode
+//
+//  Created by  Rei Vilo on Oct 29, 2014
+//  Copyright   (c) 2010-2015 http://embedxcode.weebly.com
+//  Licence		All rights reserved
+//
+// Last update: Oct 30, 2014 release 223
+
+// Board identifier
+// See Boards.txt for <tag>.name=Arduino Uno (16 MHz)
+//
+BOARD_TAG  = protrinket3
+
+// Port (optionnal)
+// most common are /dev/tty.usbserial*, /dev/tty.usbmodem* or /dev/tty.uart*
+//
+BOARD_PORT = /dev/tty.usbmodem*
+
+// References for Xcode code-sense
+// See Boards.txt for <tag>.build.mcu=<GCC_PREPROCESSOR_DEFINITIONS>
+//
+GCC_PREPROCESSOR_DEFINITIONS = __AVR_ATmega328P__ ARDUINO ADAFRUIT
+
+// Specify the full path and name of the application
+// with /Contents/Resources/Java/** after
+//
+HEADER_SEARCH_PATHS = /Applications/Adafruit.app/Contents/Resources/Java/** /Applications/Adafruit.app/Contents/Java/** /Applications/Arduino.app/Contents/Resources/Java/** /Applications/Arduino.app/Contents/Java/**
+
+// Maximum RAM size in bytes
+// given by <tag>.upload.maximum_ram_size in boards.txt for Maple and Teensy
+//
+MAX_RAM_SIZE = 2560
+
+// Specific programmer options, no port
+//
+AVRDUDE_PROGRAMMER = usbtiny
+//AVRDUDE_OTHER_OPTIONS = -v
+AVRDUDE_NO_SERIAL_PORT = 1
+RESET_MESSAGE = 1
+
+//// MCU for AVRDUDE
+//// If not specified, AVRDUDE_MCU = value from boards.txt
+////
+//AVRDUDE_MCU = atmega328
+//
+//// Although compatible, the actual MCU may have a different speed.
+//// If not specified, F_CPU = value from boards.txt
+////
+////F_CPU = 16000000L
+//
+//// Fuses for AVRDUDE
+// To by-pass fuses, set AVR_IGNORE_FUSES = 1 otherwise AVR_IGNORE_FUSES = 0
+//AVR_IGNORE_FUSES = 1
+
+// Define fuses, only if different from default values
+//ISP_LOCK_FUSE_PRE ISP_LOCK_FUSE_POST ISP_HIGH_FUSE ISP_LOW_FUSE ISP_EXT_FUSE
+

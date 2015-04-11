@@ -1,0 +1,18 @@
+ 	
+	embedXcode
+	embedXcode+
+	----------------------------------
+	Embedded Computing on Xcode
+	
+	
+	© Rei VILO, 2010-2015
+	All rights reserved	
+	http://embedXcode.weebly.com/
+	
+	
+embedXcode  • Apr 07, 2015 release 2.7.6 • Updated support for Teensyduino 1.22
+embedXcode+ • Apr 07, 2015 release 2.7.6 • Updated support for Teensyduino 1.22
+embedXcode Tools • Apr 01, 2015 release 2.7.4 • Support for updated Spark Core
+
+	
+	

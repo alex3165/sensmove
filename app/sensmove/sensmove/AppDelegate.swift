@@ -16,7 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    
+        
+        let file = NSBundle(forClass: AppDelegate.self).pathForResource("SMData", ofType: "json")
+        
+         let datas = NSData(contentsOfFile: file!)!
+        
+        var parseError: NSError?
+        
+        let parsedObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(datas,
+            options: NSJSONReadingOptions.AllowFragments,
+            error:&parseError)
+        
+
+        if((file) != nil) {
+            let json = JSON(data: NSData(contentsOfFile: file!)!)
+            
+            var singletonDatas: SMData = SMData.sharedInstance
+            singletonDatas.initializeDatas(json)
+        }
+        
         return true
     }
 
@@ -49,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "alexprod.sensmove" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as NSURL
+        return urls[urls.count-1] as! NSURL
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {

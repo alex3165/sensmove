@@ -12,7 +12,7 @@ import Foundation
 class SMSensor: NSObject {
     
     var id: Int
-    let creationalDate = NSDate()
+    let creationalDate: NSDate
 
     required init(id:Int, creation:NSDate) {
         self.id = id

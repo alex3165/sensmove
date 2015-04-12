@@ -1,24 +1,27 @@
 //
-//  ViewController.swift
+//  SMHomeController.swift
 //  sensmove
 //
-//  Created by RIEUX Alexandre on 13/03/2015.
+//  Created by RIEUX Alexandre on 12/04/2015.
 //  Copyright (c) 2015 ___alexprod___. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SMHomeController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
+        var colorManager = SMColor();
+        var grey = colorManager.ligthGrey();
+        self.view.backgroundColor = grey;
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 

@@ -11,6 +11,7 @@ import UIKit
 class SMLoginController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var brandLabel: UILabel?
+    @IBOutlet weak var badCredentials: UILabel?
     
     @IBOutlet weak var identifier: UITextField?
     @IBOutlet weak var password: UITextField?
@@ -40,8 +41,9 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         var colorManager = SMColor()
         self.view.backgroundColor = colorManager.ligthGrey()
         
-        brandLabel?.textColor = colorManager.orange()
+        self.badCredentials?.textColor = colorManager.red()
         
+        brandLabel?.textColor = colorManager.orange()
     }
     
     @IBAction func validateCredentials(sender: AnyObject) {
@@ -56,17 +58,24 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         var userPassword: NSString;
         
         for user in usersArray {
-            userIdentifier = user["identifier"].stringValue
-            userPassword = user["password"].stringValue
+            userIdentifier = user["identifier"].stringValue as String
+            userPassword = user["password"].stringValue as String
             
-            if(userIdentifier == id && userPassword == pass) {
+            if userIdentifier == id && userPassword == pass {
                 println("Correct user and password navigate to home view")
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeController = storyboard.instantiateViewControllerWithIdentifier("homeController") as! UIViewController
-                self.navigationController?.pushViewController(homeController, animated: true)
+                self.showViewController(homeController, sender: homeController)
+            }else {
+                self.badCredentials?.hidden = false;
+                var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("onHideBadCredentials"), userInfo: nil, repeats: false)
             }
         }
+    }
+    
+    func onHideBadCredentials() {
+        self.badCredentials?.hidden = true;
     }
     
     

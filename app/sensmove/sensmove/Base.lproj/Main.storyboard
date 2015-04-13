@@ -6,6 +6,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
         </mutableArray>
         <mutableArray key="varela round.otf">
             <string>VarelaRound-Regular</string>
@@ -62,7 +63,6 @@
                                         </variation>
                                         <connections>
                                             <action selector="validateCredentials:" destination="oyM-0W-g9x" eventType="touchUpInside" id="gJP-mi-kvK"/>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="2Un-Bp-3PV"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUX-zw-qwA">
@@ -71,13 +71,30 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="104" width="230" height="30"/>
+                                            <rect key="frame" x="20" y="97" width="230" height="30"/>
                                         </variation>
                                     </textField>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops mauvais identifiant ou mot de passe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTu-7N-2Mg">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="-26" y="146" width="323" height="21"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="ZTu-7N-2Mg"/>
+                                    </mask>
+                                </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="65" y="325" width="270" height="233"/>
+                                    <mask key="subviews">
+                                        <include reference="ZTu-7N-2Mg"/>
+                                    </mask>
                                 </variation>
                             </view>
                         </subviews>
@@ -98,6 +115,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="badCredentials" destination="ZTu-7N-2Mg" id="EZW-Eu-vLf"/>
                         <outlet property="brandLabel" destination="8Kd-eL-RhN" id="cys-Xs-XEz"/>
                         <outlet property="identifier" destination="BHa-B8-WH2" id="CsM-0p-EX2"/>
                         <outlet property="password" destination="xUX-zw-qwA" id="nG8-l5-h4U"/>
@@ -132,7 +150,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-iE-Fbj">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="127" y="277" width="146" height="45"/>

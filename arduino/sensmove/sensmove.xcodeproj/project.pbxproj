@@ -25,6 +25,7 @@
 		223580F31AD9404800A43394 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 223580F11AD9404800A43394 /* README.md */; };
 		223581131AD9405000A43394 /* DateStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 223580F51AD9405000A43394 /* DateStrings.cpp */; };
 		223581141AD9405000A43394 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 223581111AD9405000A43394 /* Time.cpp */; };
+		A7987DED1AE3E11900799ED6 /* SMSdCardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7987DEC1AE3E11900799ED6 /* SMSdCardManager.cpp */; };
 		AA2A150411132645AA000006 /* abi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAA150411132645AA000006 /* abi.cpp */; };
 		AA2A150411132645AA000007 /* Arduino.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA150411132645AA000007 /* Arduino.h */; };
 		AA2A150411132645AA000008 /* binary.h in Sources */ = {isa = PBXBuildFile; fileRef = AAAA150411132645AA000008 /* binary.h */; };
@@ -578,6 +579,8 @@
 		223581101AD9405000A43394 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		223581111AD9405000A43394 /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
 		223581121AD9405000A43394 /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
+		A7987DEB1AE3E0E500799ED6 /* SMSdCardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSdCardManager.h; sourceTree = "<group>"; };
+		A7987DEC1AE3E11900799ED6 /* SMSdCardManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SMSdCardManager.cpp; sourceTree = "<group>"; };
 		AAAA150411132645AA000006 /* abi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abi.cpp; sourceTree = "<group>"; };
 		AAAA150411132645AA000007 /* Arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
 		AAAA150411132645AA000008 /* binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binary.h; sourceTree = "<group>"; };
@@ -995,6 +998,8 @@
 				223580B41AD93FAA00A43394 /* SMDataSessionManager.cpp */,
 				223580B51AD93FAA00A43394 /* SMDataSessionManager.h */,
 				223580B71AD93FB500A43394 /* SMSole.cpp */,
+				A7987DEB1AE3E0E500799ED6 /* SMSdCardManager.h */,
+				A7987DEC1AE3E11900799ED6 /* SMSdCardManager.cpp */,
 				223580B81AD93FB500A43394 /* SMSole.h */,
 				223580361AD939CF00A43394 /* LocalLibrary.cpp */,
 				223580381AD939CF00A43394 /* LocalLibrary.h */,
@@ -3067,6 +3072,7 @@
 				AA2A150411132645AA000183 /* at45dbx.c in Sources */,
 				AA2A150411132645AA000184 /* at45dbx.h in Sources */,
 				AA2A150411132645AA000185 /* at45dbx_mem.c in Sources */,
+				A7987DED1AE3E11900799ED6 /* SMSdCardManager.cpp in Sources */,
 				AA2A150411132645AA000186 /* at45dbx_mem.h in Sources */,
 				AA2A150411132645AA000189 /* flashc.c in Sources */,
 				AA2A150411132645AA00018A /* flashc.h in Sources */,

@@ -118,15 +118,6 @@
     [button setImage:[UIImage imageNamed:@"simpleMenuButton"] forState:UIControlStateNormal];
 }
 
-- (void)configureRightMenuButton:(UIButton *)button
-{
-    CGRect frame = button.frame;
-    frame = CGRectMake(0, 0, 25, 13);
-    button.frame = frame;
-    button.backgroundColor = [UIColor clearColor];
-    [button setImage:[UIImage imageNamed:@"simpleMenuButton"] forState:UIControlStateNormal];
-}
-
 - (void) configureSlideLayer:(CALayer *)layer
 {
     layer.shadowColor = [UIColor blackColor].CGColor;

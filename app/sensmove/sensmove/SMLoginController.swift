@@ -29,7 +29,6 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         self.password?.delegate = self
         
         initializeUI()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,8 +53,8 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         let users: JSON = datasSingleton.getUsers()
         var usersArray = users.arrayValue
         
-        var userIdentifier: NSString;
-        var userPassword: NSString;
+        var userIdentifier: NSString
+        var userPassword: NSString
         
         for user in usersArray {
             userIdentifier = user["identifier"].stringValue as String
@@ -64,19 +63,19 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
             if userIdentifier == id && userPassword == pass {
                 println("Correct user and password navigate to home view")
                 
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let homeController = storyboard.instantiateViewControllerWithIdentifier("homeController") as! UIViewController
-                self.showViewController(homeController, sender: homeController)
+                //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                //let homeController = storyboard.instantiateViewControllerWithIdentifier("homeController") as! UIViewController
+                //self.showViewController(homeController, sender: homeController)
                 return;
             }else {
-                self.badCredentials?.hidden = false;
+                self.badCredentials?.hidden = false
                 var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("onHideBadCredentials"), userInfo: nil, repeats: false)
             }
         }
     }
-    
+
     func onHideBadCredentials() {
-        self.badCredentials?.hidden = true;
+        self.badCredentials?.hidden = true
     }
     
     

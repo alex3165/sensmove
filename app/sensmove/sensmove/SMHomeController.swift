@@ -10,10 +10,16 @@ import UIKit
 
 class SMHomeController: UIViewController {
     
+
     var currentSession: SMSession;
     
     required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        var rightSole = SMSole(isRight: true)
+        var leftSole = SMSole(isRight: false)
+        
+        self.currentSession = SMSession(leftSole: leftSole, rightSole: rightSole)
+
+        super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
@@ -22,16 +28,6 @@ class SMHomeController: UIViewController {
         var colorManager = SMColor()
         var grey = colorManager.ligthGrey()
         self.view.backgroundColor = grey
-        
-        initializeSession()
-    }
-
-    func initializeSession() {
-
-        var rightSole = SMSole(isRight: true)
-        var leftSole = SMSole(isRight: false)
-
-        self.currentSession = SMSession(leftSole: leftSole, rightSole: rightSole)
     }
 
     override func didReceiveMemoryWarning() {

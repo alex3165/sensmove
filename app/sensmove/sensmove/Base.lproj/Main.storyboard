@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="579" y="-456"/>
         </scene>
-        <!--View Controller-->
+        <!--Side Menu Controller-->
         <scene sceneID="MaH-wU-ym2">
             <objects>
-                <viewController id="0dV-11-qfQ" sceneMemberID="viewController">
+                <viewController id="0dV-11-qfQ" customClass="SMSideMenuController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xzi-GU-rXp"/>
                         <viewControllerLayoutGuide type="bottom" id="HzH-Am-WjA"/>

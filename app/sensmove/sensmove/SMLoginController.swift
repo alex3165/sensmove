@@ -67,6 +67,7 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeController = storyboard.instantiateViewControllerWithIdentifier("homeController") as! UIViewController
                 self.showViewController(homeController, sender: homeController)
+                return;
             }else {
                 self.badCredentials?.hidden = false;
                 var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("onHideBadCredentials"), userInfo: nil, repeats: false)

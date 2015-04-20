@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01BB7D6408BB546F949F79F4 /* AMSlideMenuContentSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F11790EC984287227D09E3D /* AMSlideMenuContentSegue.h */; };
+		14415CA6BEDE664CAB8C587D /* UIViewController+AMSlideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DD06353CF09701AC95892E0 /* UIViewController+AMSlideMenu.h */; };
+		148774F63A22364FF240E22F /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AE401F84EE92906FF45706 /* AMSlideMenuLeftTableViewController.m */; };
+		1ABBC153DE0E3ED6328C1B33 /* AMSlideMenuRightMenuSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = E90818CF2D50999E80BDBC5E /* AMSlideMenuRightMenuSegue.h */; };
+		1F0ACB9529BA74B39AD2ABA4 /* AMSlideMenuMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB78CEDB17943ED5DF8FE35 /* AMSlideMenuMainViewController.m */; };
+		235752192FB9ECDFCA4DB4B5 /* Pods-sensmoveTests-AMSlideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 062F0A0922E8AB37542A014A /* Pods-sensmoveTests-AMSlideMenu-dummy.m */; };
+		34D83F0D2DF1ED075A7B0077 /* AMSlideMenuContentSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F11790EC984287227D09E3D /* AMSlideMenuContentSegue.h */; };
+		37A6D60178555321ECD3A617 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB3467636CC503E3BE463B /* AMSlideMenuRightTableViewController.m */; };
+		3A9722960D86C215FCADC321 /* AMSlideMenuRightTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCC02F119151DE4484277F3 /* AMSlideMenuRightTableViewController.h */; };
+		49EC6FF9D59CBF6A448C073A /* Pods-sensmove-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A9D9B00787A98BC6A9C2A2 /* Pods-sensmove-dummy.m */; };
+		49F404022BC7DD177ED5A334 /* Pods-sensmoveTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8BFCF17960EF4F8DB68A09 /* Pods-sensmoveTests-dummy.m */; };
+		4F07F8D884E33FC7348043FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB99E22C0E4CBBE8C14A385 /* Foundation.framework */; };
+		519B8BE34C2C23C0AFEAC78F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB99E22C0E4CBBE8C14A385 /* Foundation.framework */; };
+		54EB13977DE01A031FA661B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB99E22C0E4CBBE8C14A385 /* Foundation.framework */; };
+		59CDD95E3CC69836C7BF6B8D /* AMSlideMenuMainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C19019EEBF41B0A231D5A896 /* AMSlideMenuMainViewController.h */; };
+		60037F76D8AE800AC8FF468B /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C80A44AC5B8AF567A732D1 /* AMSlideMenuContentSegue.m */; };
+		66E587898985BA062816375E /* AMSlideMenuLeftMenuSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 176681E2E034ED393C70FC8A /* AMSlideMenuLeftMenuSegue.h */; };
+		700F13CD4C7E39C8B7AD8302 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F1D98789EE4DE5A67DD57 /* AMSlideMenuLeftMenuSegue.m */; };
+		9A882E4DD2F234F053111544 /* AMSlideMenuProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D15FB4731414F15137792E /* AMSlideMenuProtocols.h */; };
+		9A90933AC2D772B8E379CA76 /* Pods-sensmove-AMSlideMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1915B463CBDE586F9E856B51 /* Pods-sensmove-AMSlideMenu-dummy.m */; };
+		9F00A3B135367FB608DA5043 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F1D98789EE4DE5A67DD57 /* AMSlideMenuLeftMenuSegue.m */; };
+		A2A07D105109F34403678D97 /* AMSlideMenuMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB78CEDB17943ED5DF8FE35 /* AMSlideMenuMainViewController.m */; };
+		A2ADB8A24993A26401E3C085 /* AMSlideMenuProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D15FB4731414F15137792E /* AMSlideMenuProtocols.h */; };
+		A33729C11AEB72F187A08C9E /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C78BEEB8BFE8CD3301FCE2 /* UIViewController+AMSlideMenu.m */; };
+		A86A4B50BDF4444CD6B53633 /* AMSlideMenuLeftTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D03FDAD72B32BAE1195EA4D /* AMSlideMenuLeftTableViewController.h */; };
+		AC08F7C3022ADFB1FE98FE26 /* UIViewController+AMSlideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DD06353CF09701AC95892E0 /* UIViewController+AMSlideMenu.h */; };
+		B01EF1BC71BB1F2E5F4E85F5 /* AMSlideMenuLeftMenuSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 176681E2E034ED393C70FC8A /* AMSlideMenuLeftMenuSegue.h */; };
+		BE1CEBD7D611447632799F62 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 19C80A44AC5B8AF567A732D1 /* AMSlideMenuContentSegue.m */; };
+		BF93744D823FEB3BCA86B333 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AE401F84EE92906FF45706 /* AMSlideMenuLeftTableViewController.m */; };
+		C05DE46C3F3691C9C0ADCE4B /* AMSlideMenuRightMenuSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = E90818CF2D50999E80BDBC5E /* AMSlideMenuRightMenuSegue.h */; };
+		C2FB1F6846D7D3119A60FDF3 /* AMSlideMenuRightMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F39685AD2AEF1A6168994C32 /* AMSlideMenuRightMenuSegue.m */; };
+		CA4393D4EE4FB9ECCBF94E6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB99E22C0E4CBBE8C14A385 /* Foundation.framework */; };
+		CE6D54CE51D532F8719EC5E6 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C78BEEB8BFE8CD3301FCE2 /* UIViewController+AMSlideMenu.m */; };
+		E8BD8D29AF4BAB93D424E1B2 /* AMSlideMenuRightMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F39685AD2AEF1A6168994C32 /* AMSlideMenuRightMenuSegue.m */; };
+		EA7FB1DBDEA559E123DB34CC /* AMSlideMenuRightTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CCC02F119151DE4484277F3 /* AMSlideMenuRightTableViewController.h */; };
+		F26043171B6B08AE72B481F5 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB3467636CC503E3BE463B /* AMSlideMenuRightTableViewController.m */; };
+		F9D46214C5BE6F1DE015F23C /* AMSlideMenuMainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C19019EEBF41B0A231D5A896 /* AMSlideMenuMainViewController.h */; };
+		FC2A20727453D962831E6815 /* AMSlideMenuLeftTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D03FDAD72B32BAE1195EA4D /* AMSlideMenuLeftTableViewController.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E110F3C294E9D0623F1DD59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A9D4A152545A4F5B4E360B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA653F55A6CAAEA12850009A;
+			remoteInfo = "Pods-sensmove-AMSlideMenu";
+		};
+		C54323B0892E598F51767588 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A9D4A152545A4F5B4E360B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4654B450347803ED15B69D6A;
+			remoteInfo = "Pods-sensmoveTests-AMSlideMenu";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		015B8EEE12FDD36EA7D3ED10 /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		062F0A0922E8AB37542A014A /* Pods-sensmoveTests-AMSlideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-sensmoveTests-AMSlideMenu-dummy.m"; path = "../Pods-sensmoveTests-AMSlideMenu/Pods-sensmoveTests-AMSlideMenu-dummy.m"; sourceTree = "<group>"; };
+		08BA6C5CB11415950B6B7E96 /* Pods-sensmoveTests-AMSlideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-sensmoveTests-AMSlideMenu-prefix.pch"; path = "../Pods-sensmoveTests-AMSlideMenu/Pods-sensmoveTests-AMSlideMenu-prefix.pch"; sourceTree = "<group>"; };
+		10C631638A2BB65D69501E38 /* Pods-sensmoveTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sensmoveTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		176681E2E034ED393C70FC8A /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMSlideMenuLeftMenuSegue.h; path = AMSlideMenu/AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
+		1915B463CBDE586F9E856B51 /* Pods-sensmove-AMSlideMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sensmove-AMSlideMenu-dummy.m"; sourceTree = "<group>"; };
+		19C80A44AC5B8AF567A732D1 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AMSlideMenuContentSegue.m; path = AMSlideMenu/AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
+		1D03FDAD72B32BAE1195EA4D /* AMSlideMenuLeftTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMSlideMenuLeftTableViewController.h; path = AMSlideMenu/AMSlideMenuLeftTableViewController.h; sourceTree = "<group>"; };
+		1F5281669406A1145A9FC71C /* Pods-sensmove-AMSlideMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sensmove-AMSlideMenu.xcconfig"; sourceTree = "<group>"; };
+		1F59D4116CFF0C5FFA1D3DD2 /* Pods-sensmoveTests-AMSlideMenu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests-AMSlideMenu-Private.xcconfig"; path = "../Pods-sensmoveTests-AMSlideMenu/Pods-sensmoveTests-AMSlideMenu-Private.xcconfig"; sourceTree = "<group>"; };
+		21C78BEEB8BFE8CD3301FCE2 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AMSlideMenu.m"; path = "AMSlideMenu/UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
+		22B156039EB3615BBFEBC88F /* libPods-sensmove-AMSlideMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmove-AMSlideMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2310274FC92284B013FE9732 /* Pods-sensmoveTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-sensmoveTests-resources.sh"; sourceTree = "<group>"; };
+		2B01A9071D6C263F3E89F206 /* Pods-sensmoveTests-AMSlideMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests-AMSlideMenu.xcconfig"; path = "../Pods-sensmoveTests-AMSlideMenu/Pods-sensmoveTests-AMSlideMenu.xcconfig"; sourceTree = "<group>"; };
+		337FCEA9D49795195455BE8A /* Pods-sensmoveTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-sensmoveTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3986BA2F7E809C68BB8C606D /* Pods-sensmove-AMSlideMenu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sensmove-AMSlideMenu-Private.xcconfig"; sourceTree = "<group>"; };
+		3CDB3467636CC503E3BE463B /* AMSlideMenuRightTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AMSlideMenuRightTableViewController.m; path = AMSlideMenu/AMSlideMenuRightTableViewController.m; sourceTree = "<group>"; };
+		3E3F1D98789EE4DE5A67DD57 /* AMSlideMenuLeftMenuSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AMSlideMenuLeftMenuSegue.m; path = AMSlideMenu/AMSlideMenuLeftMenuSegue.m; sourceTree = "<group>"; };
+		3F61E1912AAC5AC84F53B94A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5CCC02F119151DE4484277F3 /* AMSlideMenuRightTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMSlideMenuRightTableViewController.h; path = AMSlideMenu/AMSlideMenuRightTableViewController.h; sourceTree = "<group>"; };
+		5F11790EC984287227D09E3D /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMSlideMenuContentSegue.h; path = AMSlideMenu/AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
+		609879F5A70959E23DB29CA5 /* Pods-sensmoveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sensmoveTests.release.xcconfig"; sourceTree = "<group>"; };
+		653B15D0C7C155B8B7D5D673 /* libPods-sensmove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71A9D9B00787A98BC6A9C2A2 /* Pods-sensmove-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sensmove-dummy.m"; sourceTree = "<group>"; };
+		78AE401F84EE92906FF45706 /* AMSlideMenuLeftTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AMSlideMenuLeftTableViewController.m; path = AMSlideMenu/AMSlideMenuLeftTableViewController.m; sourceTree = "<group>"; };
+		7A9F6143666C35586C6AF4E7 /* Pods-sensmove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sensmove.release.xcconfig"; sourceTree = "<group>"; };
+		816BF732DC800BE0CED7DF8C /* Pods-sensmoveTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sensmoveTests-environment.h"; sourceTree = "<group>"; };
+		87FA7CE0477D384111A1D5CD /* Pods-sensmove-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sensmove-environment.h"; sourceTree = "<group>"; };
+		8DD06353CF09701AC95892E0 /* UIViewController+AMSlideMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AMSlideMenu.h"; path = "AMSlideMenu/UIViewController+AMSlideMenu.h"; sourceTree = "<group>"; };
+		95D15FB4731414F15137792E /* AMSlideMenuProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMSlideMenuProtocols.h; path = AMSlideMenu/AMSlideMenuProtocols.h; sourceTree = "<group>"; };
+		96C2441080E00E2995CEBEEA /* Pods-sensmove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sensmove.debug.xcconfig"; sourceTree = "<group>"; };
+		9E30BD876C059D87AB1C875F /* libPods-sensmoveTests-AMSlideMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmoveTests-AMSlideMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB99E22C0E4CBBE8C14A385 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B0B2A52F72162FD712AF4040 /* Pods-sensmove-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sensmove-acknowledgements.plist"; sourceTree = "<group>"; };
+		BAB78CEDB17943ED5DF8FE35 /* AMSlideMenuMainViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AMSlideMenuMainViewController.m; path = AMSlideMenu/AMSlideMenuMainViewController.m; sourceTree = "<group>"; };
+		C19019EEBF41B0A231D5A896 /* AMSlideMenuMainViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMSlideMenuMainViewController.h; path = AMSlideMenu/AMSlideMenuMainViewController.h; sourceTree = "<group>"; };
+		E2B2E7C135CEAC140F8B8AF0 /* Pods-sensmove-AMSlideMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sensmove-AMSlideMenu-prefix.pch"; sourceTree = "<group>"; };
+		E90818CF2D50999E80BDBC5E /* AMSlideMenuRightMenuSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMSlideMenuRightMenuSegue.h; path = AMSlideMenu/AMSlideMenuRightMenuSegue.h; sourceTree = "<group>"; };
+		F13A993B339B134107B7D618 /* Pods-sensmove-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-sensmove-resources.sh"; sourceTree = "<group>"; };
+		F39685AD2AEF1A6168994C32 /* AMSlideMenuRightMenuSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AMSlideMenuRightMenuSegue.m; path = AMSlideMenu/AMSlideMenuRightMenuSegue.m; sourceTree = "<group>"; };
+		F4126DEE3229F345AA67D565 /* Pods-sensmove-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-sensmove-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F8E1B1885669B019F07E3D03 /* libPods-sensmoveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmoveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE8BFCF17960EF4F8DB68A09 /* Pods-sensmoveTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sensmoveTests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DC45CC91FAA45F2452F77CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA4393D4EE4FB9ECCBF94E6D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63F62979F411A9F81A1D49FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				519B8BE34C2C23C0AFEAC78F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB0E672AF0A0069DF1FC7153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54EB13977DE01A031FA661B3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBDA18CA177956CF979BA2C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F07F8D884E33FC7348043FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05F2D8AA0A3D16F4140E52D0 = {
+			isa = PBXGroup;
+			children = (
+				3F61E1912AAC5AC84F53B94A /* Podfile */,
+				DD61435891F89C8E3E1D58DC /* Frameworks */,
+				5676EFC542BED80A4FFD612A /* Pods */,
+				9E51251E00EB48BEF2C824F1 /* Products */,
+				19790007155EC997F354107A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		19790007155EC997F354107A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6365B89CD643ED7EC59BF7F /* Pods-sensmove */,
+				BECA51167C5F454824D19E67 /* Pods-sensmoveTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5676EFC542BED80A4FFD612A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC0A316A7B5E0D8A03044931 /* AMSlideMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E51251E00EB48BEF2C824F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				653B15D0C7C155B8B7D5D673 /* libPods-sensmove.a */,
+				22B156039EB3615BBFEBC88F /* libPods-sensmove-AMSlideMenu.a */,
+				F8E1B1885669B019F07E3D03 /* libPods-sensmoveTests.a */,
+				9E30BD876C059D87AB1C875F /* libPods-sensmoveTests-AMSlideMenu.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0D24CC04BA1AFA6544F683B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AFB99E22C0E4CBBE8C14A385 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BECA51167C5F454824D19E67 /* Pods-sensmoveTests */ = {
+			isa = PBXGroup;
+			children = (
+				337FCEA9D49795195455BE8A /* Pods-sensmoveTests-acknowledgements.markdown */,
+				10C631638A2BB65D69501E38 /* Pods-sensmoveTests-acknowledgements.plist */,
+				FE8BFCF17960EF4F8DB68A09 /* Pods-sensmoveTests-dummy.m */,
+				816BF732DC800BE0CED7DF8C /* Pods-sensmoveTests-environment.h */,
+				2310274FC92284B013FE9732 /* Pods-sensmoveTests-resources.sh */,
+				015B8EEE12FDD36EA7D3ED10 /* Pods-sensmoveTests.debug.xcconfig */,
+				609879F5A70959E23DB29CA5 /* Pods-sensmoveTests.release.xcconfig */,
+			);
+			name = "Pods-sensmoveTests";
+			path = "Target Support Files/Pods-sensmoveTests";
+			sourceTree = "<group>";
+		};
+		CC31B11CF2B0B30501F18342 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F5281669406A1145A9FC71C /* Pods-sensmove-AMSlideMenu.xcconfig */,
+				3986BA2F7E809C68BB8C606D /* Pods-sensmove-AMSlideMenu-Private.xcconfig */,
+				1915B463CBDE586F9E856B51 /* Pods-sensmove-AMSlideMenu-dummy.m */,
+				E2B2E7C135CEAC140F8B8AF0 /* Pods-sensmove-AMSlideMenu-prefix.pch */,
+				2B01A9071D6C263F3E89F206 /* Pods-sensmoveTests-AMSlideMenu.xcconfig */,
+				1F59D4116CFF0C5FFA1D3DD2 /* Pods-sensmoveTests-AMSlideMenu-Private.xcconfig */,
+				062F0A0922E8AB37542A014A /* Pods-sensmoveTests-AMSlideMenu-dummy.m */,
+				08BA6C5CB11415950B6B7E96 /* Pods-sensmoveTests-AMSlideMenu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-sensmove-AMSlideMenu";
+			sourceTree = "<group>";
+		};
+		D6365B89CD643ED7EC59BF7F /* Pods-sensmove */ = {
+			isa = PBXGroup;
+			children = (
+				F4126DEE3229F345AA67D565 /* Pods-sensmove-acknowledgements.markdown */,
+				B0B2A52F72162FD712AF4040 /* Pods-sensmove-acknowledgements.plist */,
+				71A9D9B00787A98BC6A9C2A2 /* Pods-sensmove-dummy.m */,
+				87FA7CE0477D384111A1D5CD /* Pods-sensmove-environment.h */,
+				F13A993B339B134107B7D618 /* Pods-sensmove-resources.sh */,
+				96C2441080E00E2995CEBEEA /* Pods-sensmove.debug.xcconfig */,
+				7A9F6143666C35586C6AF4E7 /* Pods-sensmove.release.xcconfig */,
+			);
+			name = "Pods-sensmove";
+			path = "Target Support Files/Pods-sensmove";
+			sourceTree = "<group>";
+		};
+		DD61435891F89C8E3E1D58DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0D24CC04BA1AFA6544F683B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC0A316A7B5E0D8A03044931 /* AMSlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5F11790EC984287227D09E3D /* AMSlideMenuContentSegue.h */,
+				19C80A44AC5B8AF567A732D1 /* AMSlideMenuContentSegue.m */,
+				176681E2E034ED393C70FC8A /* AMSlideMenuLeftMenuSegue.h */,
+				3E3F1D98789EE4DE5A67DD57 /* AMSlideMenuLeftMenuSegue.m */,
+				1D03FDAD72B32BAE1195EA4D /* AMSlideMenuLeftTableViewController.h */,
+				78AE401F84EE92906FF45706 /* AMSlideMenuLeftTableViewController.m */,
+				C19019EEBF41B0A231D5A896 /* AMSlideMenuMainViewController.h */,
+				BAB78CEDB17943ED5DF8FE35 /* AMSlideMenuMainViewController.m */,
+				95D15FB4731414F15137792E /* AMSlideMenuProtocols.h */,
+				E90818CF2D50999E80BDBC5E /* AMSlideMenuRightMenuSegue.h */,
+				F39685AD2AEF1A6168994C32 /* AMSlideMenuRightMenuSegue.m */,
+				5CCC02F119151DE4484277F3 /* AMSlideMenuRightTableViewController.h */,
+				3CDB3467636CC503E3BE463B /* AMSlideMenuRightTableViewController.m */,
+				8DD06353CF09701AC95892E0 /* UIViewController+AMSlideMenu.h */,
+				21C78BEEB8BFE8CD3301FCE2 /* UIViewController+AMSlideMenu.m */,
+				CC31B11CF2B0B30501F18342 /* Support Files */,
+			);
+			path = AMSlideMenu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4D92BB4DA630D75F3F9BC7C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D83F0D2DF1ED075A7B0077 /* AMSlideMenuContentSegue.h in Headers */,
+				B01EF1BC71BB1F2E5F4E85F5 /* AMSlideMenuLeftMenuSegue.h in Headers */,
+				A86A4B50BDF4444CD6B53633 /* AMSlideMenuLeftTableViewController.h in Headers */,
+				F9D46214C5BE6F1DE015F23C /* AMSlideMenuMainViewController.h in Headers */,
+				A2ADB8A24993A26401E3C085 /* AMSlideMenuProtocols.h in Headers */,
+				C05DE46C3F3691C9C0ADCE4B /* AMSlideMenuRightMenuSegue.h in Headers */,
+				3A9722960D86C215FCADC321 /* AMSlideMenuRightTableViewController.h in Headers */,
+				14415CA6BEDE664CAB8C587D /* UIViewController+AMSlideMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A4D18F143CCD52E92A39B3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01BB7D6408BB546F949F79F4 /* AMSlideMenuContentSegue.h in Headers */,
+				66E587898985BA062816375E /* AMSlideMenuLeftMenuSegue.h in Headers */,
+				FC2A20727453D962831E6815 /* AMSlideMenuLeftTableViewController.h in Headers */,
+				59CDD95E3CC69836C7BF6B8D /* AMSlideMenuMainViewController.h in Headers */,
+				9A882E4DD2F234F053111544 /* AMSlideMenuProtocols.h in Headers */,
+				1ABBC153DE0E3ED6328C1B33 /* AMSlideMenuRightMenuSegue.h in Headers */,
+				EA7FB1DBDEA559E123DB34CC /* AMSlideMenuRightTableViewController.h in Headers */,
+				AC08F7C3022ADFB1FE98FE26 /* UIViewController+AMSlideMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0E1386D50C48DEE852B46C6F /* Pods-sensmove */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FA3C4D6FF36B790375F82B7 /* Build configuration list for PBXNativeTarget "Pods-sensmove" */;
+			buildPhases = (
+				B2DD6F38F74204990D2C8D55 /* Sources */,
+				CB0E672AF0A0069DF1FC7153 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AECF257F8C9586134E7CCB87 /* PBXTargetDependency */,
+			);
+			name = "Pods-sensmove";
+			productName = "Pods-sensmove";
+			productReference = 653B15D0C7C155B8B7D5D673 /* libPods-sensmove.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4654B450347803ED15B69D6A /* Pods-sensmoveTests-AMSlideMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBAA1288292A317A8208528C /* Build configuration list for PBXNativeTarget "Pods-sensmoveTests-AMSlideMenu" */;
+			buildPhases = (
+				892A3E8EFB59BC9C6A6D1D31 /* Sources */,
+				FBDA18CA177956CF979BA2C1 /* Frameworks */,
+				4D92BB4DA630D75F3F9BC7C9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-sensmoveTests-AMSlideMenu";
+			productName = "Pods-sensmoveTests-AMSlideMenu";
+			productReference = 9E30BD876C059D87AB1C875F /* libPods-sensmoveTests-AMSlideMenu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		573392074773C29D8033BF74 /* Pods-sensmoveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 313586D162153CE9CD5635BB /* Build configuration list for PBXNativeTarget "Pods-sensmoveTests" */;
+			buildPhases = (
+				3FE5B964A8D9313F944789FA /* Sources */,
+				2DC45CC91FAA45F2452F77CA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C6F737C55EF3CD7E95B8D5A /* PBXTargetDependency */,
+			);
+			name = "Pods-sensmoveTests";
+			productName = "Pods-sensmoveTests";
+			productReference = F8E1B1885669B019F07E3D03 /* libPods-sensmoveTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AA653F55A6CAAEA12850009A /* Pods-sensmove-AMSlideMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BBD55D43AE0FEBB0DCC2151 /* Build configuration list for PBXNativeTarget "Pods-sensmove-AMSlideMenu" */;
+			buildPhases = (
+				C8F4024F6FED4B3E0B750254 /* Sources */,
+				63F62979F411A9F81A1D49FE /* Frameworks */,
+				6A4D18F143CCD52E92A39B3E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-sensmove-AMSlideMenu";
+			productName = "Pods-sensmove-AMSlideMenu";
+			productReference = 22B156039EB3615BBFEBC88F /* libPods-sensmove-AMSlideMenu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A9D4A152545A4F5B4E360B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 816F02216F8A580C5D8C9889 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05F2D8AA0A3D16F4140E52D0;
+			productRefGroup = 9E51251E00EB48BEF2C824F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E1386D50C48DEE852B46C6F /* Pods-sensmove */,
+				AA653F55A6CAAEA12850009A /* Pods-sensmove-AMSlideMenu */,
+				573392074773C29D8033BF74 /* Pods-sensmoveTests */,
+				4654B450347803ED15B69D6A /* Pods-sensmoveTests-AMSlideMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FE5B964A8D9313F944789FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F404022BC7DD177ED5A334 /* Pods-sensmoveTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		892A3E8EFB59BC9C6A6D1D31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE1CEBD7D611447632799F62 /* AMSlideMenuContentSegue.m in Sources */,
+				700F13CD4C7E39C8B7AD8302 /* AMSlideMenuLeftMenuSegue.m in Sources */,
+				BF93744D823FEB3BCA86B333 /* AMSlideMenuLeftTableViewController.m in Sources */,
+				1F0ACB9529BA74B39AD2ABA4 /* AMSlideMenuMainViewController.m in Sources */,
+				C2FB1F6846D7D3119A60FDF3 /* AMSlideMenuRightMenuSegue.m in Sources */,
+				F26043171B6B08AE72B481F5 /* AMSlideMenuRightTableViewController.m in Sources */,
+				235752192FB9ECDFCA4DB4B5 /* Pods-sensmoveTests-AMSlideMenu-dummy.m in Sources */,
+				CE6D54CE51D532F8719EC5E6 /* UIViewController+AMSlideMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2DD6F38F74204990D2C8D55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49EC6FF9D59CBF6A448C073A /* Pods-sensmove-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8F4024F6FED4B3E0B750254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60037F76D8AE800AC8FF468B /* AMSlideMenuContentSegue.m in Sources */,
+				9F00A3B135367FB608DA5043 /* AMSlideMenuLeftMenuSegue.m in Sources */,
+				148774F63A22364FF240E22F /* AMSlideMenuLeftTableViewController.m in Sources */,
+				A2A07D105109F34403678D97 /* AMSlideMenuMainViewController.m in Sources */,
+				E8BD8D29AF4BAB93D424E1B2 /* AMSlideMenuRightMenuSegue.m in Sources */,
+				37A6D60178555321ECD3A617 /* AMSlideMenuRightTableViewController.m in Sources */,
+				9A90933AC2D772B8E379CA76 /* Pods-sensmove-AMSlideMenu-dummy.m in Sources */,
+				A33729C11AEB72F187A08C9E /* UIViewController+AMSlideMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C6F737C55EF3CD7E95B8D5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-sensmoveTests-AMSlideMenu";
+			target = 4654B450347803ED15B69D6A /* Pods-sensmoveTests-AMSlideMenu */;
+			targetProxy = C54323B0892E598F51767588 /* PBXContainerItemProxy */;
+		};
+		AECF257F8C9586134E7CCB87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-sensmove-AMSlideMenu";
+			target = AA653F55A6CAAEA12850009A /* Pods-sensmove-AMSlideMenu */;
+			targetProxy = 1E110F3C294E9D0623F1DD59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		257D2DDF9B6A6E971C95A68A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BF2207B7CB763CA9C624F55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3986BA2F7E809C68BB8C606D /* Pods-sensmove-AMSlideMenu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sensmove-AMSlideMenu/Pods-sensmove-AMSlideMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3CD477A43E82F11E7D8AD167 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F59D4116CFF0C5FFA1D3DD2 /* Pods-sensmoveTests-AMSlideMenu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sensmoveTests-AMSlideMenu/Pods-sensmoveTests-AMSlideMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		62435783701DAFF11721CB2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3986BA2F7E809C68BB8C606D /* Pods-sensmove-AMSlideMenu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sensmove-AMSlideMenu/Pods-sensmove-AMSlideMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		697F974CD60A3E1C71F95BBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 015B8EEE12FDD36EA7D3ED10 /* Pods-sensmoveTests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7DB68008EE08027F3ABA2CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F59D4116CFF0C5FFA1D3DD2 /* Pods-sensmoveTests-AMSlideMenu-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sensmoveTests-AMSlideMenu/Pods-sensmoveTests-AMSlideMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		89BC53AB438F83B24FD870EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609879F5A70959E23DB29CA5 /* Pods-sensmoveTests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		96C5C57619AF710546014EC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C2441080E00E2995CEBEEA /* Pods-sensmove.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A75FA9483DC82E79FA1EE129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A9F6143666C35586C6AF4E7 /* Pods-sensmove.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DFA8D9209913A118FED1E257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		313586D162153CE9CD5635BB /* Build configuration list for PBXNativeTarget "Pods-sensmoveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				697F974CD60A3E1C71F95BBE /* Debug */,
+				89BC53AB438F83B24FD870EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BBD55D43AE0FEBB0DCC2151 /* Build configuration list for PBXNativeTarget "Pods-sensmove-AMSlideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62435783701DAFF11721CB2A /* Debug */,
+				2BF2207B7CB763CA9C624F55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FA3C4D6FF36B790375F82B7 /* Build configuration list for PBXNativeTarget "Pods-sensmove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96C5C57619AF710546014EC5 /* Debug */,
+				A75FA9483DC82E79FA1EE129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		816F02216F8A580C5D8C9889 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFA8D9209913A118FED1E257 /* Debug */,
+				257D2DDF9B6A6E971C95A68A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBAA1288292A317A8208528C /* Build configuration list for PBXNativeTarget "Pods-sensmoveTests-AMSlideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD477A43E82F11E7D8AD167 /* Debug */,
+				7DB68008EE08027F3ABA2CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A9D4A152545A4F5B4E360B6 /* Project object */;
+}

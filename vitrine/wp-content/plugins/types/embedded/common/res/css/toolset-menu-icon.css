@@ -1,0 +1,29 @@
+a[href="admin.php?page=dd_layouts"] .wp-menu-image img{
+	position: relative;
+	top: -2px;
+}
+
+a[href="admin.php?page=types_access"] .wp-menu-image img{
+	position: relative;
+	top: -3px;
+}
+
+a[href="admin.php?page=wpcf-ctt"] .wp-menu-image img{
+	position: relative;
+	top: -2px;
+}
+
+a[href="admin.php?page=ModuleManager_Modules"] .wp-menu-image img{
+	position: relative;
+	top: -4px;
+}
+
+a[href="admin.php?page=CRED_Forms"] .wp-menu-image img{
+	position: relative;
+	top: -2px;
+}
+
+a[href="admin.php?page=views"] .wp-menu-image img{
+	position: relative;
+	top: -1px;
+}

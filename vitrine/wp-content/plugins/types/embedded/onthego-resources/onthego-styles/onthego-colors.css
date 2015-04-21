@@ -1,0 +1,26 @@
+/*
+This file is a collection of generic colors used in our styles
+*/
+.ont-color-default {
+  color: #444444; }
+
+.ont-color-orange {
+  color: #f05a28; }
+
+.ont-color-gray {
+  color: #888; }
+
+.ont-color-white {
+  color: white; }
+
+.ont-color-menu {
+  color: #999999; }
+
+.ont-color-link {
+  color: #0074a2; }
+
+.ont-color-menu:hover {
+  color: #2ea2cc; }
+
+.ont-color-link:hover {
+  color: #0074a2; }

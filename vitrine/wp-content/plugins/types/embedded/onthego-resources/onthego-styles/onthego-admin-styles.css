@@ -1,0 +1,95 @@
+/*
+** Styles to be used in common by all plugins in admin
+**
+*/
+/* ADMIN MENU ICONS */
+li#toplevel_page_dd_layouts div.wp-menu-image:before, li#toplevel_page_dd_layouts .dashicons-admin-generic:before {
+  font-family: "onthegosystems-icons"!important;
+  content: "\f117";
+  font-size: 23px!important;
+  width: 30px;
+  padding-left: 3px;
+  padding-top: 5px; }
+
+li#toplevel_page_embedded-views div.wp-menu-image:before,
+li#toplevel_page_views div.wp-menu-image:before {
+  font-family: "onthegosystems-icons"!important;
+  content: "\f11e";
+  font-size: 23px!important;
+  width: 30px;
+  padding-left: 3px;
+  padding-top: 3px; }
+
+li#toplevel_page_ModuleManager_Modules div.wp-menu-image:before {
+  font-family: "onthegosystems-icons"!important;
+  content: "\f119";
+  font-size: 23px!important;
+  width: 30px;
+  padding-left: 3px;
+  padding-top: 3px; }
+
+li#toplevel_page_CRED_Forms div.wp-menu-image:before {
+  font-family: "onthegosystems-icons"!important;
+  content: "\f115";
+  font-size: 23px!important;
+  width: 30px;
+  padding-left: 3px;
+  padding-top: 3px; }
+
+li#toplevel_page_wpcf div.wp-menu-image:before {
+  font-family: "onthegosystems-icons"!important;
+  content: "\f11c";
+  font-size: 23px!important;
+  width: 30px;
+  padding-left: 3px;
+  padding-top: 4px; }
+
+li#toplevel_page_types_access div.wp-menu-image:before {
+  font-family: "onthegosystems-icons"!important;
+  content: "\f111";
+  font-size: 23px!important;
+  width: 30px;
+  padding-left: 3px;
+  padding-top: 3px; }
+
+li#toplevel_page_CRED_Commerce div.wp-menu-image:before {
+    font-family: "onthegosystems-icons"!important;
+    content: "\f115";
+    font-size: 23px!important;
+    width: 30px;
+    padding-left: 3px;
+    padding-top: 3px; }
+
+li#toplevel_page_toolset-packager div.wp-menu-image:before {
+    font-family: "onthegosystems-icons"!important;
+    content: "\f121";
+    font-size: 23px!important;
+    width: 30px;
+    padding-left: 3px;
+    padding-top: 3px; }
+
+/* POST EDIT PAGE SHORT TAGS BUTTONS ICONS */
+#wp-content-editor-tools [class^="icon-"] {
+  color: #888;
+  margin-top: -5px;
+  padding-right:3px;
+}
+  
+#wp-content-editor-tools .icon-views {
+  margin-top: -1px; }
+  
+/* CRED SPECIFIC */
+.code-editor-toolbar-button-cred-icon .icon-cred{position: relative!important;bottom:3px;}
+/* VIEWS SPECIFIC */
+i.icon-views.ont-icon-19 {
+  margin: 0 8px 0 0; }
+
+/* VIEWS VIEWS EDITOR PAGE*/
+.wpv-setting .code-editor-toolbar button > i.icon-views.ont-icon-36{margin-top: -7px;}
+
+/* MODULE MANAGER */
+.module-title h4 [class^="icon-"] {
+  position: relative;
+  top: 0px;
+  left: 2px;
+  padding-right: 4px; }

@@ -1,0 +1,81 @@
+.wpcf-group-area{
+	float:left;
+	width:100%;
+	clear:both;
+	margin-top:20px;	
+}
+.wpcf-profile-field-line{
+	position:relative;
+	float:left;
+	width:100%;
+	margin-top:20px;
+}
+
+.wpcf-repeater-profile-line-left{
+	width: 20%;
+	margin-right:10px;
+	float:left;	
+}
+.wpcf-repeater-profile-line-right{
+	width: 70%;
+	float:left;	
+}
+.wpcf-profile-line-left{
+	width: 20%;
+	margin-right:10px;
+	float:left;
+}
+.wpcf-profile-line-right{
+	width: 70%;
+	float:left;
+}
+.wpcf-profile-line-right img{
+	max-width:40%;
+	height:auto;
+}
+.wpcf-fields-form .CodeMirror-wrap
+{
+	border:1px solid #ccc;
+}
+.wpcf-admin-css-preview-style-edit{
+	background:#fff;
+	border:1px solid #ccc;
+	padding:10px;	
+}
+.wpcf-update-preview-btn{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#wpcf-update-preview-div{
+	border:1px solid #ccc;
+	background:#fff;
+	height:200px;
+	overflow:auto;
+	margin-bottom:10px;
+	padding:10px;
+}
+.widefat{
+	position:relative;
+	
+}
+#wpcf-admin-styles-box td{
+	padding-bottom:10px;	
+}
+/* FIXES */
+.wpcf-repeater-profile-line-right .wpcf-profile-line-right {
+    width: 100%;
+}
+.wpcf-repeater-profile-line-right .wpcf-profile-line-left {
+    display: none;
+}
+
+#createuser .wpcf-group-area {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+#createuser .wpcf-group-area .wpcf-profile-field-line {
+    margin-top: 0px;
+}
+#createuser .wpcf-profile-field-line .wpcf-profile-field-line {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,27 @@
+
+
+-------------------------------------------------------------------------------------------------------------------
+Common 1.5 (Apr 1, 2015)
+	- Tagged for Types 1.6.6, Views 1.8, CRED 1.3.6 and Layouts 1.1.
+	- Fixed issue when there is more than one CRED form on a page with the same taxonomy.
+	- Fixed a little problem with edit skype button modal window - was too narrow.
+	- Fixed empty title problem for filter "wpt_field_options" on user edit/add screen.
+		https://wp-types.com/forums/topic/populate-select-field-in-wpcf-um-group/
+	- Added filter "toolset_editor_add_form_buttons" to disable Toolset buttons on the post editor.
+	- Added placeholder attributes to fields.
+	- Updated CakePHP validation URL method to allow new TLD's.
+
+-------------------------------------------------------------------------------------------------------------------
+Common 1.4 (Feb 2 2015)
+	- Tagged for Views 1.7, Types 1.6.5, CRED 1.3.5 and Layouts 1.0 beta1
+	- Updated Installer to 1.5
+
+-------------------------------------------------------------------------------------------------------------------
+Common 1.3.1 (Dec 16 2014)
+	- Tagged for Views 1.7 beta1 and Layouts 1.0 beta1
+	- Fixed issue about Editor addon and ACF compatibility
+	- Fixed issue about branding loader
+
+-------------------------------------------------------------------------------------------------------------------
+Common 1.3 (Dec 15 2014)
+	- Tagged for Views 1.7 beta1 and Layouts 1.0 beta1

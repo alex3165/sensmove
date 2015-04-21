@@ -1,0 +1,286 @@
+/**
+** Do not edit onthego-styles-helper.css directly always
+** use this file otherwise changes will be lost at first compile.
+**  ONT CSS Helper
+**  a collection of rules to be used any where
+**/
+/* SET A NUMBER OF CLASSES TO FORCE THE SIZE OF THE ICON */
+.ont-icon-12 {
+  font-size: 12px !important; }
+
+.ont-icon-13 {
+  font-size: 13px !important; }
+
+.ont-icon-14 {
+  font-size: 14px !important; }
+
+.ont-icon-15 {
+  font-size: 15px !important; }
+
+.ont-icon-16 {
+  font-size: 16px !important; }
+
+.ont-icon-17 {
+  font-size: 17px !important; }
+
+.ont-icon-18 {
+  font-size: 18px !important; }
+
+.ont-icon-19 {
+  font-size: 19px !important; }
+
+.ont-icon-20 {
+  font-size: 20px !important; }
+
+.ont-icon-21 {
+  font-size: 21px !important; }
+
+.ont-icon-22 {
+  font-size: 22px !important; }
+
+.ont-icon-23 {
+  font-size: 23px !important; }
+
+.ont-icon-24 {
+  font-size: 24px !important; }
+
+.ont-icon-25 {
+  font-size: 25px !important; }
+
+.ont-icon-26 {
+  font-size: 26px !important; }
+
+.ont-icon-27 {
+  font-size: 27px !important; }
+
+.ont-icon-28 {
+  font-size: 28px !important; }
+
+.ont-icon-29 {
+  font-size: 29px !important; }
+
+.ont-icon-30 {
+  font-size: 30px !important; }
+
+.ont-icon-31 {
+  font-size: 31px !important; }
+
+.ont-icon-32 {
+  font-size: 32px !important; }
+
+.ont-icon-33 {
+  font-size: 33px !important; }
+
+.ont-icon-34 {
+  font-size: 34px !important; }
+
+.ont-icon-35 {
+  font-size: 35px !important; }
+
+.ont-icon-36 {
+  font-size: 36px !important; }
+
+.ont-icon-37 {
+  font-size: 37px !important; }
+
+.ont-icon-38 {
+  font-size: 38px !important; }
+
+.ont-icon-39 {
+  font-size: 39px !important; }
+
+.ont-icon-40 {
+  font-size: 40px !important; }
+
+.ont-icon-41 {
+  font-size: 41px !important; }
+
+.ont-icon-42 {
+  font-size: 42px !important; }
+
+.ont-icon-43 {
+  font-size: 43px !important; }
+
+.ont-icon-44 {
+  font-size: 44px !important; }
+
+.ont-icon-45 {
+  font-size: 45px !important; }
+
+.ont-icon-46 {
+  font-size: 46px !important; }
+
+.ont-icon-47 {
+  font-size: 47px !important; }
+
+.ont-icon-48 {
+  font-size: 48px !important; }
+
+.ont-icon-49 {
+  font-size: 49px !important; }
+
+.ont-icon-50 {
+  font-size: 50px !important; }
+
+.ont-icon-51 {
+  font-size: 51px !important; }
+
+.ont-icon-52 {
+  font-size: 52px !important; }
+
+.ont-icon-53 {
+  font-size: 53px !important; }
+
+.ont-icon-54 {
+  font-size: 54px !important; }
+
+.ont-icon-55 {
+  font-size: 55px !important; }
+
+.ont-icon-56 {
+  font-size: 56px !important; }
+
+.ont-icon-57 {
+  font-size: 57px !important; }
+
+.ont-icon-58 {
+  font-size: 58px !important; }
+
+.ont-icon-59 {
+  font-size: 59px !important; }
+
+.ont-icon-60 {
+  font-size: 60px !important; }
+
+.ont-icon-61 {
+  font-size: 61px !important; }
+
+.ont-icon-62 {
+  font-size: 62px !important; }
+
+.ont-icon-63 {
+  font-size: 63px !important; }
+
+.ont-icon-64 {
+  font-size: 64px !important; }
+
+.ont-icon-65 {
+  font-size: 65px !important; }
+
+.ont-icon-66 {
+  font-size: 66px !important; }
+
+.ont-icon-67 {
+  font-size: 67px !important; }
+
+.ont-icon-68 {
+  font-size: 68px !important; }
+
+.ont-icon-69 {
+  font-size: 69px !important; }
+
+.ont-icon-70 {
+  font-size: 70px !important; }
+
+.ont-icon-71 {
+  font-size: 71px !important; }
+
+.ont-icon-72 {
+  font-size: 72px !important; }
+
+.ont-icon-73 {
+  font-size: 73px !important; }
+
+.ont-icon-74 {
+  font-size: 74px !important; }
+
+.ont-icon-75 {
+  font-size: 75px !important; }
+
+.ont-icon-76 {
+  font-size: 76px !important; }
+
+.ont-icon-77 {
+  font-size: 77px !important; }
+
+.ont-icon-78 {
+  font-size: 78px !important; }
+
+.ont-icon-79 {
+  font-size: 79px !important; }
+
+.ont-icon-80 {
+  font-size: 80px !important; }
+
+.ont-icon-81 {
+  font-size: 81px !important; }
+
+.ont-icon-82 {
+  font-size: 82px !important; }
+
+.ont-icon-83 {
+  font-size: 83px !important; }
+
+.ont-icon-84 {
+  font-size: 84px !important; }
+
+.ont-icon-85 {
+  font-size: 85px !important; }
+
+.ont-icon-86 {
+  font-size: 86px !important; }
+
+.ont-icon-87 {
+  font-size: 87px !important; }
+
+.ont-icon-88 {
+  font-size: 88px !important; }
+
+.ont-icon-89 {
+  font-size: 89px !important; }
+
+.ont-icon-90 {
+  font-size: 90px !important; }
+
+.ont-icon-91 {
+  font-size: 91px !important; }
+
+.ont-icon-92 {
+  font-size: 92px !important; }
+
+.ont-icon-93 {
+  font-size: 93px !important; }
+
+.ont-icon-94 {
+  font-size: 94px !important; }
+
+.ont-icon-95 {
+  font-size: 95px !important; }
+
+.ont-icon-96 {
+  font-size: 96px !important; }
+
+/* RESET MARGIN AND PADDING FOR ALL OUR ICONS ONLY */
+[class^="icon-access"] {
+  margin: 0;
+  padding: 0; }
+
+[class^="icon-cred"] {
+  margin: 0;
+  padding: 0; }
+
+[class^="icon-layouts"] {
+  margin: 0;
+  padding: 0; }
+
+[class^="icon-module"] {
+  margin: 0;
+  padding: 0; }
+
+[class^="icon-types"] {
+  margin: 0;
+  padding: 0; }
+
+[class^="icon-views"] {
+  margin: 0;
+  padding: 0; }

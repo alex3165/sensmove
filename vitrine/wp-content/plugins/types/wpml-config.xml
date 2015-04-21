@@ -1,0 +1,8 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="0">wp-types-group</custom-type>
+        <custom-type translate="0">wp-types-user-group</custom-type>
+    </custom-types>
+</wpml-config>
+
+

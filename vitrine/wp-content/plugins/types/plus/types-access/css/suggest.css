@@ -1,0 +1,21 @@
+
+.types-suggest .dropdown { 
+    position: absolute;
+    z-index: 9;
+    visibility: hidden;
+    height: auto !important;
+}
+.types-suggest .dropdown option { 
+    padding: 5px !important;
+    overflow: hidden;
+    cursor: pointer;
+}
+.types-suggest .img-waiting { 
+    position: absolute;
+    z-index: 10;
+    display: none;
+    margin: 4px 0 0 -20px;
+}
+.types-suggest .toggle { 
+    display: none;
+}

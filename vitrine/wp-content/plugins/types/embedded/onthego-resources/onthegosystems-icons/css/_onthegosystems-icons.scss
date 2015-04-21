@@ -1,0 +1,75 @@
+//
+// Icon Font: onthegosystems-icons
+//
+
+@font-face {
+  font-family: "onthegosystems-icons";
+  src: font-url("../fonts/onthegosystems-icons_ea0d501b723f7b75d3147cf08210b5cf.eot");
+  src: font-url("../fonts/onthegosystems-icons_ea0d501b723f7b75d3147cf08210b5cf.eot?#iefix") format("embedded-opentype"),
+       font-url("../fonts/onthegosystems-icons_ea0d501b723f7b75d3147cf08210b5cf.woff") format("woff"),
+       font-url("../fonts/onthegosystems-icons_ea0d501b723f7b75d3147cf08210b5cf.ttf") format("truetype"),
+       font-url("../fonts/onthegosystems-icons_ea0d501b723f7b75d3147cf08210b5cf.svg#onthegosystems-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "onthegosystems-icons";
+    src: font-url("../fonts/onthegosystems-icons_ea0d501b723f7b75d3147cf08210b5cf.svg#onthegosystems-icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-access:before,
+.icon-access-logo:before,
+.icon-bootstrap:before,
+.icon-bootstrap-logo:before,
+.icon-cred:before,
+.icon-cred-logo:before,
+.icon-layouts:before,
+.icon-layouts-logo:before,
+.icon-module:before,
+.icon-module-logo:before,
+.icon-packager:before,
+.icon-packager-logo:before,
+.icon-toolset-logo:before,
+.icon-types:before,
+.icon-types-logo:before,
+.icon-views:before,
+.icon-views-logo:before,
+.icon-wpml-logo:before {
+  display: inline-block;
+  font-family: "onthegosystems-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-access:before { content: "\f110"; }
+.icon-access-logo:before { content: "\f111"; }
+.icon-bootstrap:before { content: "\f112"; }
+.icon-bootstrap-logo:before { content: "\f113"; }
+.icon-cred:before { content: "\f114"; }
+.icon-cred-logo:before { content: "\f115"; }
+.icon-layouts:before { content: "\f116"; }
+.icon-layouts-logo:before { content: "\f117"; }
+.icon-module:before { content: "\f118"; }
+.icon-module-logo:before { content: "\f119"; }
+.icon-packager:before { content: "\f120"; }
+.icon-packager-logo:before { content: "\f121"; }
+.icon-toolset-logo:before { content: "\f11a"; }
+.icon-types:before { content: "\f11b"; }
+.icon-types-logo:before { content: "\f11c"; }
+.icon-views:before { content: "\f11d"; }
+.icon-views-logo:before { content: "\f11e"; }
+.icon-wpml-logo:before { content: "\f11f"; }

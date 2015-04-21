@@ -1021,7 +1021,7 @@ section .widget-title:after {
 }
 .service,
 .employee {
-	padding: 30px;
+	padding: 30px 10px;
 }
 .service-title,
 .employee-name,
@@ -1633,6 +1633,12 @@ Center Services and Employees
 	vertical-align: top;
 	text-align: left;
 }
+
+.employee {
+	text-align: center;
+	width: 24% !important;
+}
+
 .page-template-page_services-php .service.col-xs-6,
 .page-template-page_employees-php .employee.col-xs-6,
 .services-area .col-xs-6,

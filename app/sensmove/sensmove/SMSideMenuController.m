@@ -43,7 +43,7 @@
 
 - (NSIndexPath *)initialIndexPathForLeftMenu
 {
-    return [NSIndexPath indexPathForRow:0 inSection:0];
+    return [NSIndexPath indexPathForRow:1 inSection:0];
 }
 
 - (NSString *)segueIdentifierForIndexPathInLeftMenu:(NSIndexPath *)indexPath
@@ -56,7 +56,6 @@
         case 2:
             identifier = @"secondRow";
             break;
-
         case 3:
             identifier = @"thirdRow";
             break;

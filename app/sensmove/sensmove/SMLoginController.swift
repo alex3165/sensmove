@@ -27,7 +27,7 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         
         self.identifier?.delegate = self
         self.password?.delegate = self
-        
+        checkUserFromKeychain()
         initializeUI()
     }
     
@@ -36,12 +36,14 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    private func checkUserFromKeychain() {
+        // var user: SMUser = SMUser.getUserFromKeychain()
+    }
+    
     func initializeUI(){
         var colorManager = SMColor()
         self.view.backgroundColor = colorManager.ligthGrey()
-        
         self.badCredentials?.textColor = colorManager.red()
-        
         brandLabel?.textColor = colorManager.orange()
     }
     
@@ -62,16 +64,19 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
             
             if userIdentifier == id && userPassword == pass {
                 println("Correct user and password navigate to home view")
-                
-                //let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                //let homeController = storyboard.instantiateViewControllerWithIdentifier("homeController") as! UIViewController
-                //self.showViewController(homeController, sender: homeController)
+                self.redirectToView("sideMenuController")
                 return;
             }else {
                 self.badCredentials?.hidden = false
                 var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("onHideBadCredentials"), userInfo: nil, repeats: false)
             }
         }
+    }
+    
+    private func redirectToView(view: NSString) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newController = storyboard.instantiateViewControllerWithIdentifier(view as String) as! UIViewController
+        self.showViewController(newController, sender: newController)
     }
 
     func onHideBadCredentials() {

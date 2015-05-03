@@ -10,32 +10,30 @@ import Foundation
 
 class SMUser: NSObject {
 
-    var name: NSString = ""
+    var name: NSString?
     var weight: NSNumber?
     var height: NSNumber?
     
-    var doctor: NSString = ""
-    var balance: NSString = ""
+    var doctor: NSString?
+    var balance: NSString?
     var averageForceLeft: NSNumber?
     var averageForceRight: NSNumber?
     
-    var diseaseDescription: NSString = ""
+    var diseaseDescription: NSString?
     
-    init(userSettings: NSDictionary) {
-        super.init()
-
-        self.name = userSettings["name"] as! NSString
+    func initWithDictionary(userSettings: NSDictionary) {
+        self.name = userSettings["name"] as? NSString
         self.weight = userSettings["weight"] as? NSNumber
         self.height = userSettings["height"] as? NSNumber
-            
-        self.doctor = userSettings["doctor"] as! NSString
-        self.balance = userSettings["balance"] as! NSString
+        
+        self.doctor = userSettings["doctor"] as? NSString
+        self.balance = userSettings["balance"] as? NSString
         self.averageForceLeft = userSettings["averageForceLeft"] as? NSNumber
         self.averageForceRight = userSettings["averageForceRight"] as? NSNumber
             
-        self.diseaseDescription = userSettings["diseaseDescription"] as! NSString
+        self.diseaseDescription = userSettings["diseaseDescription"] as? NSString
     }
-    
+
     func saveUserToKeychain() {
         var userInformations = toPropertyList()
         var datas : NSData = NSKeyedArchiver.archivedDataWithRootObject(userInformations)
@@ -44,18 +42,23 @@ class SMUser: NSObject {
     
     func getUserFromKeychain() -> SMUser {
         var userDatas: NSDictionary = NSUserDefaults.standardUserDefaults().objectForKey("user") as! NSDictionary
-        init(userSettings: userDatas)
+        var user: SMUser = SMUser.alloc()
+        user.initWithDictionary(userDatas)
 
-        return self;
+        return user;
     }
-    
+
     private func toPropertyList() -> NSDictionary {
-        var userDictionary: NSDictionary = NSDictionary.alloc()
-        userDictionary["name"] = self.name
-        userDictionary["weight"] = self.weight
-        userDictionary["height"] = self.height
-        
-        
+        var userDictionary: NSDictionary = [
+            "name": self.name!,
+            "weight": self.weight!,
+            "height": self.height!,
+            "doctor": self.doctor!,
+            "balance": self.balance!,
+            "averageForceLeft": self.averageForceLeft!,
+            "averageForceRight": self.averageForceRight!
+        ]
+
         return userDictionary
     }
     

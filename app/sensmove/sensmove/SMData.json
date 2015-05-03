@@ -4,13 +4,20 @@
              "id": 0,
              "identifier": "alex",
              "email": "alexr.3165@gmail.com",
-             "password": "test"
+             "password": "test",
+             "imageName": "alex.png"
         },
         {
              "id": 1,
              "identifier": "jseb",
              "email": "blabla@domain.tld",
              "password": "test"
+        },
+        {
+             "id": 2,
+             "identifier": "",
+             "email": "hello@domain.tld",
+             "password": ""
         }
     ]
 }

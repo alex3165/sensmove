@@ -1,16 +1,16 @@
 //
-//  sensmoveTests.swift
-//  sensmoveTests
+//  SMUserTest.swift
+//  sensmove
 //
-//  Created by RIEUX Alexandre on 13/03/2015.
+//  Created by RIEUX Alexandre on 20/04/2015.
 //  Copyright (c) 2015 ___alexprod___. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class sensmoveTests: XCTestCase {
-    
+class SMUserTest: XCTestCase {
+
     var user: SMUser?
     
     override func setUp() {
@@ -23,33 +23,16 @@ class sensmoveTests: XCTestCase {
         super.tearDown()
     }
 
-    func createUserAndSaveToKeychain() {
-
-    }
-    
-    func getUser() {
-        
-    }
-    
     func testExample() {
-        var userDictionary = [
-            "name": "Alexandre",
-            "weight": 70,
-            "height": 180,
-            "doctor": "TestDoctor",
-            "balance": "Great balance",
-            "averageForceLeft": 120,
-            "averageForceRight": 111
-        ]
-        self.user = SMUser.alloc()
-        self.user?.initWithDictionary(userDictionary)
+        // This is an example of a functional test case.
+        XCTAssert(true, "Pass")
     }
-    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
 }

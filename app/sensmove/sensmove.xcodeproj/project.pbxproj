@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22068C9D1AF65B3D0033DD6D /* simpleMenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */; };
+		22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */; };
 		221F74551ADC58EB0078A75E /* SMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74541ADC58EB0078A75E /* SMSession.swift */; };
 		221F74561ADC58EB0078A75E /* SMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74541ADC58EB0078A75E /* SMSession.swift */; };
 		221F74581ADC5A000078A75E /* SMSole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74571ADC5A000078A75E /* SMSole.swift */; };
 		221F74591ADC5A000078A75E /* SMSole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74571ADC5A000078A75E /* SMSole.swift */; };
+		2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */; };
+		2228F5D11AF68D9400151221 /* SMLeftMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */; };
 		223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A10671AE522A000BD19C5 /* SMSideMenuController.m */; };
 		223A10691AE522A000BD19C5 /* SMSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A10671AE522A000BD19C5 /* SMSideMenuController.m */; };
 		22415FD41AD9B2A200106E7A /* SMData.json in Resources */ = {isa = PBXBuildFile; fileRef = 22415FD31AD9B2A200106E7A /* SMData.json */; };
@@ -53,6 +57,9 @@
 		22BD4E681ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
 		22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE07871AE503FD0064F750 /* SMUserController.swift */; };
 		22FE07891AE503FD0064F750 /* SMUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE07871AE503FD0064F750 /* SMUserController.swift */; };
+		22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
+		22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
+		22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */; };
 		455D5CC518B5FAE23871590C /* libPods-sensmove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CA94D5CE6550D47794EA09 /* libPods-sensmove.a */; };
 		ED1852035FFEE94B19DC882C /* libPods-sensmoveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEC9439C1129318CE8145AF /* libPods-sensmoveTests.a */; };
 /* End PBXBuildFile section */
@@ -68,8 +75,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simpleMenuButton.png; sourceTree = "<group>"; };
+		22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simpleMenuButton@2x.png"; sourceTree = "<group>"; };
 		221F74541ADC58EB0078A75E /* SMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSession.swift; sourceTree = "<group>"; };
 		221F74571ADC5A000078A75E /* SMSole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSole.swift; sourceTree = "<group>"; };
+		2228F5CE1AF68D9400151221 /* SMLeftMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLeftMenuVC.h; sourceTree = "<group>"; };
+		2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLeftMenuVC.m; sourceTree = "<group>"; };
 		223A10661AE522A000BD19C5 /* SMSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSideMenuController.h; sourceTree = "<group>"; };
 		223A10671AE522A000BD19C5 /* SMSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSideMenuController.m; sourceTree = "<group>"; };
 		22415FD31AD9B2A200106E7A /* SMData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SMData.json; sourceTree = "<group>"; };
@@ -103,6 +114,8 @@
 		22BD4E631ADADDAE0022318B /* SMHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMHomeController.swift; sourceTree = "<group>"; };
 		22BD4E661ADADF860022318B /* SMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUser.swift; sourceTree = "<group>"; };
 		22FE07871AE503FD0064F750 /* SMUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserController.swift; sourceTree = "<group>"; };
+		22FFAAA71AE58ECB005A49CF /* SMUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserService.swift; sourceTree = "<group>"; };
+		22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserTest.swift; sourceTree = "<group>"; };
 		3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		41CA94D5CE6550D47794EA09 /* libPods-sensmove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBECF654EB87862462474F9 /* Pods-sensmove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmove/Pods-sensmove.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +181,7 @@
 		2251E0321AD2FF2B005FE3B8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				22FFAAA71AE58ECB005A49CF /* SMUserService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -201,6 +215,8 @@
 				2251E0301AD2FF00005FE3B8 /* Model */,
 				22B91C011AB33D9600497025 /* AppDelegate.swift */,
 				22BD4E631ADADDAE0022318B /* SMHomeController.swift */,
+				2228F5CE1AF68D9400151221 /* SMLeftMenuVC.h */,
+				2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */,
 				223A10661AE522A000BD19C5 /* SMSideMenuController.h */,
 				223A10671AE522A000BD19C5 /* SMSideMenuController.m */,
 				2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */,
@@ -218,6 +234,8 @@
 		22B91BFF1AB33D9600497025 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */,
+				22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */,
 				22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */,
 				22BD4E501ADA6D340022318B /* Roboto-Medium.ttf */,
 				22BD4E511ADA6D340022318B /* Roboto-Regular.ttf */,
@@ -232,6 +250,7 @@
 			children = (
 				22B91C1A1AB33D9600497025 /* sensmoveTests.swift */,
 				22B91C181AB33D9600497025 /* Supporting Files */,
+				22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */,
 			);
 			path = sensmoveTests;
 			sourceTree = "<group>";
@@ -353,7 +372,9 @@
 				22BD4E591ADA6D340022318B /* varela round.otf in Resources */,
 				22415FD41AD9B2A200106E7A /* SMData.json in Resources */,
 				22BD4E551ADA6D340022318B /* Roboto-Medium.ttf in Resources */,
+				22068C9D1AF65B3D0033DD6D /* simpleMenuButton.png in Resources */,
 				22BD4E531ADA6D340022318B /* Roboto-Light.ttf in Resources */,
+				22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */,
 				22B91C0F1AB33D9600497025 /* LaunchScreen.xib in Resources */,
 				22B91C0C1AB33D9600497025 /* Images.xcassets in Resources */,
 			);
@@ -450,11 +471,13 @@
 				2251E03D1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
 				221F74581ADC5A000078A75E /* SMSole.swift in Sources */,
 				22BD4E5D1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
+				2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
 				22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03B1AD3062E005FE3B8 /* SMForce.swift in Sources */,
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
 				223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
+				22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */,
 				2251E0341AD2FF61005FE3B8 /* SMColor.swift in Sources */,
 				2251E0401AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
 				22415FDC1AD9B5FE00106E7A /* SMData.swift in Sources */,
@@ -467,18 +490,21 @@
 			files = (
 				22BD4E651ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03A1AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
+				22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */,
 				22BD4E681ADADF860022318B /* SMUser.swift in Sources */,
 				22415FDD1AD9B5FE00106E7A /* SMData.swift in Sources */,
 				221F74591ADC5A000078A75E /* SMSole.swift in Sources */,
 				2251E03E1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
 				22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
 				22B91C1B1AB33D9600497025 /* sensmoveTests.swift in Sources */,
+				2228F5D11AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
 				2251E0411AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
 				22FE07891AE503FD0064F750 /* SMUserController.swift in Sources */,
 				221F74561ADC58EB0078A75E /* SMSession.swift in Sources */,
 				22BD4E5E1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				2251E0351AD2FF61005FE3B8 /* SMColor.swift in Sources */,
 				2251E03C1AD3062E005FE3B8 /* SMForce.swift in Sources */,
+				22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */,
 				22BD4E621ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				223A10691AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
 			);

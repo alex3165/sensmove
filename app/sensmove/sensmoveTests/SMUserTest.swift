@@ -23,16 +23,27 @@ class SMUserTest: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testUserCreation(){
+        var userDictionary = [
+            "name": "Alexandre",
+            "weight": 70,
+            "height": 180,
+            "doctor": "TestDoctor",
+            "balance": "Great balance",
+            "averageForceLeft": 120,
+            "averageForceRight": 111
+        ]
+        self.user = SMUser(userSettings: userDictionary)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testUserSaveToKeyChain(){
+        self.testUserCreation()
+        self.user?.saveUserToKeychain()
+    }
+    
+    func testGetUserFromKeychain(){
+        self.testUserSaveToKeyChain()
+        let userTwo: SMUser = SMUser.getUserFromKeychain()!
     }
 
 }

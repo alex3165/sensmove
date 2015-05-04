@@ -10,7 +10,7 @@ import Foundation
 
 class SMUser: NSObject {
 
-    var name: NSString?
+    var name: NSString
     var weight: NSNumber?
     var height: NSNumber?
     
@@ -21,8 +21,8 @@ class SMUser: NSObject {
     
     var diseaseDescription: NSString?
     
-    func initWithDictionary(userSettings: NSDictionary) {
-        self.name = userSettings["name"] as? NSString
+    init(userSettings: NSDictionary) {
+        self.name = userSettings["name"] as! NSString
         self.weight = userSettings["weight"] as? NSNumber
         self.height = userSettings["height"] as? NSNumber
         
@@ -39,18 +39,29 @@ class SMUser: NSObject {
         var datas : NSData = NSKeyedArchiver.archivedDataWithRootObject(userInformations)
         NSUserDefaults.standardUserDefaults().setObject(datas, forKey: "user")
     }
-    
-    func getUserFromKeychain() -> SMUser {
-        var userDatas: NSDictionary = NSUserDefaults.standardUserDefaults().objectForKey("user") as! NSDictionary
-        var user: SMUser = SMUser.alloc()
-        user.initWithDictionary(userDatas)
 
-        return user;
+    class func getUserFromKeychain() -> (SMUser?) {
+        var savedData = NSUserDefaults.standardUserDefaults().dataForKey("user")
+        var dict = NSKeyedUnarchiver.unarchiveObjectWithData(savedData!)
+        var userDatas = NSDictionary()
+        
+        if(dict != nil) {
+            userDatas = dict as! NSDictionary
+        }else{
+            return nil;
+        }
+        
+        var user: SMUser = SMUser.init(userSettings: userDatas)
+        return user
+    }
+    
+    func removeUserFromKeychain() {
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user")
     }
 
     private func toPropertyList() -> NSDictionary {
         var userDictionary: NSDictionary = [
-            "name": self.name!,
+            "name": self.name,
             "weight": self.weight!,
             "height": self.height!,
             "doctor": self.doctor!,

@@ -22,27 +22,9 @@ class sensmoveTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
-    func createUserAndSaveToKeychain() {
-
-    }
-    
-    func getUser() {
-        
-    }
     
     func testExample() {
-        var userDictionary = [
-            "name": "Alexandre",
-            "weight": 70,
-            "height": 180,
-            "doctor": "TestDoctor",
-            "balance": "Great balance",
-            "averageForceLeft": 120,
-            "averageForceRight": 111
-        ]
-        self.user = SMUser.alloc()
-        self.user?.initWithDictionary(userDictionary)
+
     }
     
     func testPerformanceExample() {

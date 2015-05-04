@@ -27,7 +27,7 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         
         self.identifier?.delegate = self
         self.password?.delegate = self
-        checkUserFromKeychain()
+        self.checkUserFromKeychain()
         initializeUI()
     }
     
@@ -37,7 +37,9 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     }
     
     private func checkUserFromKeychain() {
-        // var user: SMUser = SMUser.getUserFromKeychain()
+        // TODO: Retrieve user from user service
+        //var user: SMUser = SMUser.getUserFromKeychain()!
+        
     }
     
     func initializeUI(){
@@ -51,26 +53,28 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         var id: NSString = identifier!.text
         var pass: NSString = password!.text
         
-        let datasSingleton: SMData = SMData.sharedInstance
-        let users: JSON = datasSingleton.getUsers()
-        var usersArray = users.arrayValue
+        // TODO: use UserService instead
         
-        var userIdentifier: NSString
-        var userPassword: NSString
-        
-        for user in usersArray {
-            userIdentifier = user["identifier"].stringValue as String
-            userPassword = user["password"].stringValue as String
-            
-            if userIdentifier == id && userPassword == pass {
-                println("Correct user and password navigate to home view")
-                self.redirectToView("sideMenuController")
-                return;
-            }else {
-                self.badCredentials?.hidden = false
-                var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("onHideBadCredentials"), userInfo: nil, repeats: false)
-            }
-        }
+//        let datasSingleton: SMData = SMData.sharedInstance
+//        let users: JSON = datasSingleton.getUsers()
+//        var usersArray = users.arrayValue
+//        
+//        var userIdentifier: NSString
+//        var userPassword: NSString
+//        
+//        for user in usersArray {
+//            userIdentifier = user["identifier"].stringValue as String
+//            userPassword = user["password"].stringValue as String
+//            
+//            if userIdentifier == id && userPassword == pass {
+//                println("Correct user and password navigate to home view")
+//                self.redirectToView("sideMenuController")
+//                return;
+//            }else {
+//                self.badCredentials?.hidden = false
+//                var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("onHideBadCredentials"), userInfo: nil, repeats: false)
+//            }
+//        }
     }
     
     private func redirectToView(view: NSString) {

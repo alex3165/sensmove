@@ -2,20 +2,20 @@
     "user": [
         {
              "id": 0,
-             "identifier": "alex",
+             "name": "alex",
              "email": "alexr.3165@gmail.com",
              "password": "test",
              "imageName": "alex.png"
         },
         {
              "id": 1,
-             "identifier": "jseb",
+             "name": "jseb",
              "email": "blabla@domain.tld",
              "password": "test"
         },
         {
              "id": 2,
-             "identifier": "",
+             "name": "",
              "email": "hello@domain.tld",
              "password": ""
         }

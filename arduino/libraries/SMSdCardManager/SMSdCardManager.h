@@ -22,6 +22,7 @@ public:
     void readSession(char* reader);
 private:
     char* _nameSession;
+    File _myFile
     
 };
 

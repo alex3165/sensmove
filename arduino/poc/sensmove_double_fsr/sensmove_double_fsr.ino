@@ -33,6 +33,6 @@ void loop()
 {
 	firstSensorValue = analogRead(0);
 	secondSensorValue = analogRead(1);
-
-  	Serial.println("First sensor value : " + firstSensorValue + " Second sensor : " + secondSensorPin);
+        Serial.println(analogRead(0));
+  	//Serial.println("First sensor value : " + firstSensorValue + " Second sensor : " + secondSensorPin);
 }

@@ -27,7 +27,7 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         
         self.identifier?.delegate = self
         self.password?.delegate = self
-        self.checkUserFromKeychain()
+        // self.checkUserFromKeychain()
         initializeUI()
     }
     
@@ -39,7 +39,9 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     private func checkUserFromKeychain() {
         // TODO: Retrieve user from user service
         //var user: SMUser = SMUser.getUserFromKeychain()!
-        
+//        if(user.name !== nil) {
+//            self.redirectToView("sideMenuController")
+//        }
     }
     
     func initializeUI(){
@@ -50,9 +52,20 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func validateCredentials(sender: AnyObject) {
-        var id: NSString = identifier!.text
+        var username: NSString = identifier!.text
         var pass: NSString = password!.text
         
+        var userService = SMUserService.sharedInstance
+        
+        userService.loginUserWithUserNameAndPassword(username, passwd: pass, success: { (informations) -> () in
+            
+            var user: SMUser = SMUser(userSettings: informations)
+                user.saveUserToKeychain()
+
+                self.redirectToView("sideMenuController")
+            }, failure: { (error) -> () in
+                println(error)
+        })
         // TODO: use UserService instead
         
 //        let datasSingleton: SMData = SMData.sharedInstance

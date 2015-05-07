@@ -21,46 +21,46 @@ class SMUser: NSObject {
     
     var diseaseDescription: NSString?
     
-    init(userSettings: NSDictionary) {
-        self.name = userSettings["name"] as! NSString
-        self.weight = userSettings["weight"] as? NSNumber
-        self.height = userSettings["height"] as? NSNumber
+    init(userSettings: JSON) {
+        self.name = userSettings["name"].stringValue
+        self.weight = userSettings["weight"].numberValue
+        self.height = userSettings["height"].numberValue
         
-        self.doctor = userSettings["doctor"] as? NSString
-        self.balance = userSettings["balance"] as? NSString
-        self.averageForceLeft = userSettings["averageForceLeft"] as? NSNumber
-        self.averageForceRight = userSettings["averageForceRight"] as? NSNumber
+        self.doctor = userSettings["doctor"].stringValue
+        self.balance = userSettings["balance"].stringValue
+        self.averageForceLeft = userSettings["averageForceLeft"].numberValue
+        self.averageForceRight = userSettings["averageForceRight"].numberValue
             
-        self.diseaseDescription = userSettings["diseaseDescription"] as? NSString
+        self.diseaseDescription = userSettings["diseaseDescription"].stringValue
     }
 
     func saveUserToKeychain() {
         var userInformations = toPropertyList()
-        var datas : NSData = NSKeyedArchiver.archivedDataWithRootObject(userInformations)
+        var datas : NSData = userInformations.rawData()!
         NSUserDefaults.standardUserDefaults().setObject(datas, forKey: "user")
     }
 
     class func getUserFromKeychain() -> (SMUser?) {
-        var savedData = NSUserDefaults.standardUserDefaults().dataForKey("user")
-        var dict = NSKeyedUnarchiver.unarchiveObjectWithData(savedData!)
-        var userDatas = NSDictionary()
-        
-        if(dict != nil) {
-            userDatas = dict as! NSDictionary
-        }else{
-            return nil;
-        }
-        
-        var user: SMUser = SMUser.init(userSettings: userDatas)
-        return user
+        var savedData: NSData = NSUserDefaults.standardUserDefaults().dataForKey("user")!
+        var userDictionary: NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(savedData)! as! NSDictionary
+        //var jsonDatas: JSON = JSON(savedData)
+        var json: JSON = JSON(userDictionary)
+//        if(userDictionary) {
+//            var user: SMUser = SMUser.init(userSettings: userDictionary)
+//            return user
+//        }else{
+//            return nil;
+//        }
+        return SMUser(userSettings: json)
+
     }
     
     func removeUserFromKeychain() {
         NSUserDefaults.standardUserDefaults().removeObjectForKey("user")
     }
 
-    private func toPropertyList() -> NSDictionary {
-        var userDictionary: NSDictionary = [
+    private func toPropertyList() -> JSON {
+        var userJson: JSON = [
             "name": self.name,
             "weight": self.weight!,
             "height": self.height!,
@@ -70,7 +70,7 @@ class SMUser: NSObject {
             "averageForceRight": self.averageForceRight!
         ]
 
-        return userDictionary
+        return userJson
     }
     
 }

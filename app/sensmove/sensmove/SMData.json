@@ -1,23 +1,23 @@
 {
     "user": [
         {
-             "id": 0,
-             "name": "alex",
+             "usid": 0,
+             "username": "alex",
              "email": "alexr.3165@gmail.com",
-             "password": "test",
+             "userpassword": "test",
              "imageName": "alex.png"
         },
         {
-             "id": 1,
-             "name": "jseb",
+             "usid": 1,
+             "username": "jseb",
              "email": "blabla@domain.tld",
-             "password": "test"
+             "userpassword": "test"
         },
         {
-             "id": 2,
-             "name": "",
+             "usid": 2,
+             "username": "",
              "email": "hello@domain.tld",
-             "password": ""
+             "userpassword": ""
         }
     ]
 }

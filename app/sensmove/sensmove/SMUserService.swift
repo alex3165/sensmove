@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias SMLoginSuccess = (userInformations: NSDictionary) -> ()
+typealias SMLoginSuccess = (userInformations: JSON) -> ()
 typealias SMLoginFailure = (error: NSException) -> ()
 
 class SMUserService: NSObject {
@@ -27,8 +27,8 @@ class SMUserService: NSObject {
         var users = self.retrieveUsersFromDatasFile()
         
         for user in users {
-            if user["name"].stringValue as String == username && passwd == user["password"].stringValue as String {
-                success(userInformations: user.dictionaryValue as! NSDictionary)
+            if user["username"].stringValue as String == username && passwd == user["userpassword"].stringValue as String {
+                success(userInformations: user)
             }
         }
         

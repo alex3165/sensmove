@@ -24,7 +24,7 @@ class SMUserTest: XCTestCase {
     }
 
     func testUserCreation(){
-        var userDictionary = [
+        var userJson: JSON = [
             "name": "Alexandre",
             "weight": 70,
             "height": 180,
@@ -33,7 +33,7 @@ class SMUserTest: XCTestCase {
             "averageForceLeft": 120,
             "averageForceRight": 111
         ]
-        self.user = SMUser(userSettings: userDictionary)
+        self.user = SMUser(userSettings: userJson)
     }
     
     func testUserSaveToKeyChain(){

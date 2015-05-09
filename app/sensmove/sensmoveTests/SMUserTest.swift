@@ -43,7 +43,15 @@ class SMUserTest: XCTestCase {
     
     func testGetUserFromKeychain(){
         self.testUserSaveToKeyChain()
-        let userTwo: SMUser = SMUser.getUserFromKeychain()!
+        self.user = nil
+        self.user = SMUser.getUserFromKeychain()
+        var userOk: SMUser
+        
+        if(self.user != nil){
+            userOk = self.user!
+            assert(userOk.name!.isEqualToString("Alexandre"), "user name is correct so saving and retrieving from keychain is ok")
+        }
+
     }
 
 }

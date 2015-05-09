@@ -36,6 +36,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             singletonDatas.initializeDatas(json)
         }
         
+        var userService: SMUserService = SMUserService.sharedInstance
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newController: UIViewController
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+
+        if(userService.asUserInKeychain()) {
+            newController = storyboard.instantiateViewControllerWithIdentifier("sideMenuController") as! UIViewController
+        }else {
+            newController = storyboard.instantiateViewControllerWithIdentifier("loginController") as! UIViewController
+        }
+
+        self.window?.rootViewController = newController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

@@ -10,15 +10,15 @@ import Foundation
 
 class SMUser: NSObject {
 
-    var name: NSString
+    var name: NSString?
     var weight: NSNumber?
     var height: NSNumber?
-    
+
     var doctor: NSString?
     var balance: NSString?
     var averageForceLeft: NSNumber?
     var averageForceRight: NSNumber?
-    
+
     var diseaseDescription: NSString?
     
     init(userSettings: JSON) {
@@ -32,28 +32,42 @@ class SMUser: NSObject {
         self.averageForceRight = userSettings["averageForceRight"].numberValue
             
         self.diseaseDescription = userSettings["diseaseDescription"].stringValue
+        
+        super.init()
     }
 
     func saveUserToKeychain() {
-        var userInformations = toPropertyList()
+        var userInformations: JSON = toPropertyList()
         var datas : NSData = userInformations.rawData()!
         NSUserDefaults.standardUserDefaults().setObject(datas, forKey: "user")
     }
 
     class func getUserFromKeychain() -> (SMUser?) {
-        var savedData: NSData = NSUserDefaults.standardUserDefaults().dataForKey("user")!
-        var jsonDatas: JSON = JSON(savedData)
-        return SMUser(userSettings: jsonDatas)
+        var savedData: NSData? = NSUserDefaults.standardUserDefaults().dataForKey("user")
+        
+        if(savedData != nil) {
+            var jsonDatas: JSON = JSON(data: savedData!)
+            return SMUser(userSettings: jsonDatas)
+        }
 
+        return nil
     }
     
     func removeUserFromKeychain() {
         NSUserDefaults.standardUserDefaults().removeObjectForKey("user")
+        self.name = nil
+        self.weight = nil
+        self.height = nil
+        self.doctor = nil
+        self.balance = nil
+        self.averageForceLeft = nil
+        self.averageForceRight = nil
+        self.diseaseDescription = nil
     }
 
     private func toPropertyList() -> JSON {
         var userJson: JSON = [
-            "name": self.name,
+            "name": self.name!,
             "weight": self.weight!,
             "height": self.height!,
             "doctor": self.doctor!,

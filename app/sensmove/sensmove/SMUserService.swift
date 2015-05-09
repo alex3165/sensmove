@@ -13,7 +13,7 @@ typealias SMLoginFailure = (error: NSException) -> ()
 
 class SMUserService: NSObject {
 
-    var currentUser: SMUser? = SMUser.getUserFromKeychain()!
+    var currentUser: SMUser? = SMUser.getUserFromKeychain()
 
     class var sharedInstance: SMUserService {
         struct Static {
@@ -33,6 +33,14 @@ class SMUserService: NSObject {
         }
 
         failure(error: NSException(name: "loginError", reason: "No user or password", userInfo: nil))
+    }
+    
+    func removeCurrentUser(){
+        currentUser?.removeUserFromKeychain()
+    }
+    
+    func asUserInKeychain() -> Bool {
+        return self.currentUser?.name != nil
     }
 
     private func retrieveUsersFromDatasFile() -> [JSON] {

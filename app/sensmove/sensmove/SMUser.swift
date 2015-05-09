@@ -42,16 +42,8 @@ class SMUser: NSObject {
 
     class func getUserFromKeychain() -> (SMUser?) {
         var savedData: NSData = NSUserDefaults.standardUserDefaults().dataForKey("user")!
-        var userDictionary: NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(savedData)! as! NSDictionary
-        //var jsonDatas: JSON = JSON(savedData)
-        var json: JSON = JSON(userDictionary)
-//        if(userDictionary) {
-//            var user: SMUser = SMUser.init(userSettings: userDictionary)
-//            return user
-//        }else{
-//            return nil;
-//        }
-        return SMUser(userSettings: json)
+        var jsonDatas: JSON = JSON(savedData)
+        return SMUser(userSettings: jsonDatas)
 
     }
     

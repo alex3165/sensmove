@@ -25,11 +25,13 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 
 #import "SMLeftMenuVC.h"
-#import "SMUserService.swift"
+#import "sensmove-swift.h"
 
 @interface SMLeftMenuVC()
 
 @property (strong, nonatomic) UITableView *myTableView;
+@property (strong, nonatomic) SMUserService *userService;
+@property (nonatomic, weak) IBOutlet UILabel *firstName;
 
 @end
 
@@ -38,12 +40,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.userService = [SMUserService sharedInstance];
     [self initializeUserProfile];
 }
 
 -(void)initializeUserProfile
 {
-    
+    self.firstName.text = self.userService.currentUser.name;
 }
 
 @end

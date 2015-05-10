@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SMSession {
+class SMSession: NSObject {
     
     var startDate: NSDate = NSDate()
     var stopDate: NSDate = NSDate()
@@ -20,7 +20,8 @@ class SMSession {
         self.leftSole = leftSole
         self.rightSole = rightSole
         
-        startSession()
+        super.init()
+        self.startSession()
     }
     
     private func startSession() {

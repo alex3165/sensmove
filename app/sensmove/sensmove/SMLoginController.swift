@@ -50,7 +50,7 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         var pass: NSString = password!.text
         
         self.userService.loginUserWithUserNameAndPassword(username, passwd: pass, success: { (informations) -> () in
-                self.userService.currentUser? = SMUser(userSettings: informations)
+                self.userService.setUser(SMUser(userSettings: informations))
                 self.userService.currentUser?.saveUserToKeychain()
             
                 self.redirectToView("sideMenuController")
@@ -65,10 +65,8 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let newController: UIViewController = storyboard.instantiateViewControllerWithIdentifier(view) as! UIViewController
 
-        if (self.respondsToSelector(Selector("showViewController"))) {
-            self.showViewController(newController, sender: self)
-        } else {
-            self.navigationController?.pushViewController(newController, animated: true)
+        self.presentViewController(newController, animated: true) { () -> Void in
+            println("present new view controller done")
         }
     }
 

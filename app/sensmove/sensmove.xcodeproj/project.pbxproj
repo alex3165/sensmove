@@ -91,6 +91,7 @@
 		2251E0371AD3062E005FE3B8 /* SMForce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMForce.swift; sourceTree = "<group>"; };
 		2251E0381AD3062E005FE3B8 /* SMSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSensor.swift; sourceTree = "<group>"; };
 		2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLoginController.swift; sourceTree = "<group>"; };
+		228745A01AFEB8CE0069ACA1 /* sensmove-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sensmove-Bridging-Header.h"; sourceTree = "<group>"; };
 		22B91BFC1AB33D9600497025 /* sensmove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensmove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B91C001AB33D9600497025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B91C011AB33D9600497025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 				22B91C031AB33D9600497025 /* sensmove.xcdatamodeld */,
 				22B91BFF1AB33D9600497025 /* Supporting Files */,
 				22415FD31AD9B2A200106E7A /* SMData.json */,
+				228745A01AFEB8CE0069ACA1 /* sensmove-Bridging-Header.h */,
 			);
 			path = sensmove;
 			sourceTree = "<group>";
@@ -559,6 +561,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -577,7 +581,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = sensmove;
+				PRODUCT_NAME = sensmove;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -601,6 +608,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -612,7 +621,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = sensmove;
+				PRODUCT_NAME = sensmove;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -626,6 +638,7 @@
 				INFOPLIST_FILE = sensmove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -639,6 +652,7 @@
 				INFOPLIST_FILE = sensmove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -10,6 +10,7 @@ import UIKit
 
 class SMHomeController: UIViewController {
     
+    @IBOutlet weak var startButton: UIButton!
 
     var currentSession: SMSession;
     

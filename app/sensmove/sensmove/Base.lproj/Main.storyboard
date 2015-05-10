@@ -35,7 +35,7 @@
                                     <constraint firstAttribute="height" constant="145" id="czO-gD-zzG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="SENSMOVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kd-eL-RhN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SENSMOVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kd-eL-RhN">
                                 <rect key="frame" x="81" y="237" width="159" height="21"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="26"/>
                                 <nil key="highlightedColor"/>
@@ -82,6 +82,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="8Kd-eL-RhN" secondAttribute="centerX" id="9g2-mY-sda"/>
+                            <constraint firstItem="8Kd-eL-RhN" firstAttribute="top" secondItem="qWa-CO-WyE" secondAttribute="bottom" constant="22" id="UPw-wr-mky"/>
                             <constraint firstAttribute="centerX" secondItem="qWa-CO-WyE" secondAttribute="centerX" id="fX3-UI-rOi"/>
                             <constraint firstItem="BCf-WL-tME" firstAttribute="top" secondItem="qWa-CO-WyE" secondAttribute="bottom" constant="120" id="gaU-ie-IO9"/>
                             <constraint firstItem="qWa-CO-WyE" firstAttribute="top" secondItem="JFj-zV-wLC" secondAttribute="bottom" constant="50" id="hJm-qH-KfX"/>
@@ -99,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5L-0E-qnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306" y="-432"/>
+            <point key="canvasLocation" x="300" y="-432"/>
         </scene>
         <!--Side Menu Controller-->
         <scene sceneID="MaH-wU-ym2">
@@ -141,12 +142,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6w-tr-Lw1">
-                                                    <rect key="frame" x="80" y="54" width="105" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NumberOfSessions" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDg-rB-KlM">
                                                     <rect key="frame" x="106" y="88" width="149" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -223,6 +218,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="firstName" destination="DA6-fn-1IX" id="TsM-km-oZV"/>
                         <segue destination="mEs-0Q-9PU" kind="custom" identifier="firstRow" customClass="AMSlideMenuContentSegue" id="J4B-5S-dMv"/>
                         <segue destination="kBd-LC-i4x" kind="custom" identifier="secondRow" customClass="AMSlideMenuContentSegue" id="2ap-2I-mB9"/>
                         <segue destination="tbb-Ug-qhR" kind="custom" identifier="thirdRow" customClass="AMSlideMenuContentSegue" id="ISZ-ru-taY"/>
@@ -250,7 +246,7 @@
                                     <navigationItem title="SENSMOVE" id="mi5-dT-qxa"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-iE-Fbj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-iE-Fbj">
                                 <rect key="frame" x="87" y="261" width="146" height="45"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -258,6 +254,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="6zi-iE-Fbj" secondAttribute="centerY" id="17g-NX-u82"/>
+                            <constraint firstAttribute="centerX" secondItem="6zi-iE-Fbj" secondAttribute="centerX" id="56F-G1-C0G"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SENSMOVE" id="4bE-Nm-d2L"/>
                 </viewController>

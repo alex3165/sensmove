@@ -53,5 +53,10 @@ class SMUserTest: XCTestCase {
         }
 
     }
+    
+    func testRemoveUserFromKeychain(){
+        testUserCreation()
+        self.user?.removeUserFromKeychain()
+    }
 
 }

@@ -8,10 +8,10 @@
 
 import Foundation
 
-typealias SMLoginSuccess = (userInformations: JSON) -> ()
-typealias SMLoginFailure = (error: NSException) -> ()
+ typealias SMLoginSuccess = (userInformations: JSON) -> ()
+ typealias SMLoginFailure = (error: NSException) -> ()
 
-class SMUserService: NSObject {
+@objc class SMUserService: NSObject {
 
     var currentUser: SMUser? = SMUser.getUserFromKeychain()
 
@@ -29,10 +29,15 @@ class SMUserService: NSObject {
         for user in users {
             if user["username"].stringValue as String == username && passwd == user["userpassword"].stringValue as String {
                 success(userInformations: user)
+                return;
             }
         }
 
         failure(error: NSException(name: "loginError", reason: "No user or password", userInfo: nil))
+    }
+    
+    func setUser(user: SMUser) {
+        self.currentUser = user
     }
     
     func removeCurrentUser(){

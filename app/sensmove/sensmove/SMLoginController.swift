@@ -50,8 +50,9 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         var pass: NSString = password!.text
         
         self.userService.loginUserWithUserNameAndPassword(username, passwd: pass, success: { (informations) -> () in
-                self.userService.setUser(SMUser(userSettings: informations))
-                self.userService.currentUser?.saveUserToKeychain()
+                var userToSave: SMUser = SMUser(userSettings: informations)
+                self.userService.setUser(userToSave)
+                self.userService.saveUserToKeychain()
             
                 self.redirectToView("sideMenuController")
 

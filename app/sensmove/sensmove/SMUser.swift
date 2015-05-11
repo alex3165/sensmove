@@ -10,7 +10,9 @@ import Foundation
 
 class SMUser: NSObject {
 
+    var id: NSNumber?
     var name: NSString?
+    var picturePath: NSString?
     var weight: NSNumber?
     var height: NSNumber?
 
@@ -22,7 +24,9 @@ class SMUser: NSObject {
     var diseaseDescription: NSString?
     
     init(userSettings: JSON) {
-        self.name = userSettings["name"].stringValue
+        self.id = userSettings["username"].numberValue
+        self.name = userSettings["username"].stringValue
+        self.picturePath = userSettings["picture"].stringValue
         self.weight = userSettings["weight"].numberValue
         self.height = userSettings["height"].numberValue
         
@@ -53,21 +57,24 @@ class SMUser: NSObject {
         return nil
     }
     
-    func removeUserFromKeychain() {
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("user")
-        self.name = nil
-        self.weight = nil
-        self.height = nil
-        self.doctor = nil
-        self.balance = nil
-        self.averageForceLeft = nil
-        self.averageForceRight = nil
-        self.diseaseDescription = nil
-    }
+//    func removeUserFromKeychain() {
+//        NSUserDefaults.standardUserDefaults().removeObjectForKey("user")
+//        self.name = nil
+//        self.picturePath = nil
+//        self.weight = nil
+//        self.height = nil
+//        self.doctor = nil
+//        self.balance = nil
+//        self.averageForceLeft = nil
+//        self.averageForceRight = nil
+//        self.diseaseDescription = nil
+//    }
 
     private func toPropertyList() -> JSON {
         var userJson: JSON = [
-            "name": self.name!,
+            "id": self.id!,
+            "username": self.name!,
+            "picture": self.picturePath!,
             "weight": self.weight!,
             "height": self.height!,
             "doctor": self.doctor!,

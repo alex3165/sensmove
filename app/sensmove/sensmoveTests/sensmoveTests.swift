@@ -34,4 +34,21 @@ class sensmoveTests: XCTestCase {
         }
     }
     
+    func testSingleton(){
+        
+        
+        var userJson: JSON = [
+            "name": "Alexandre",
+            "weight": 70,
+            "height": 180,
+            "doctor": "TestDoctor",
+            "balance": "Great balance",
+            "averageForceLeft": 120,
+            "averageForceRight": 111
+        ]
+        
+
+        
+    }
+    
 }

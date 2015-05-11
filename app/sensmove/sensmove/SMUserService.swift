@@ -27,7 +27,7 @@ import Foundation
         var users = self.retrieveUsersFromDatasFile()
 
         for user in users {
-            if user["username"].stringValue as String == username && passwd == user["userpassword"].stringValue as String {
+            if user["username"].stringValue as String == username && passwd == user["password"].stringValue as String {
                 success(userInformations: user)
                 return;
             }
@@ -40,8 +40,12 @@ import Foundation
         self.currentUser = user
     }
     
+    func saveUserToKeychain(){
+        self.currentUser?.saveUserToKeychain()
+    }
+    
     func removeCurrentUser(){
-        currentUser?.removeUserFromKeychain()
+        //self.currentUser?.removeUserFromKeychain()
     }
     
     func asUserInKeychain() -> Bool {

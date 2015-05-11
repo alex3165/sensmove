@@ -23,9 +23,9 @@ class SMUserTest: XCTestCase {
         super.tearDown()
     }
 
-    func testUserCreation(){
+    func getUserJson() -> JSON!{
         var userJson: JSON = [
-            "name": "Alexandre",
+            "username": "Alexandre",
             "weight": 70,
             "height": 180,
             "doctor": "TestDoctor",
@@ -33,7 +33,11 @@ class SMUserTest: XCTestCase {
             "averageForceLeft": 120,
             "averageForceRight": 111
         ]
-        self.user = SMUser(userSettings: userJson)
+        return userJson
+    }
+    
+    func testUserCreation(){
+        self.user = SMUser(userSettings: self.getUserJson())
     }
     
     func testUserSaveToKeyChain(){
@@ -54,9 +58,22 @@ class SMUserTest: XCTestCase {
 
     }
     
+    func testUserServiceSave(){
+        var userService: SMUserService = SMUserService.sharedInstance
+        userService.setUser(SMUser(userSettings: self.getUserJson()))
+        userService.saveUserToKeychain()
+    }
+    
+    func testUserServiceGet(){
+        var userServiceTwo: SMUserService = SMUserService.sharedInstance
+        if(userServiceTwo.currentUser != nil){
+            assert(userServiceTwo.currentUser!.name!.isEqualToString("Alexandre"), "User is correctely retrieved")
+        }
+        
+    }
+    
     func testRemoveUserFromKeychain(){
-        testUserCreation()
-        self.user?.removeUserFromKeychain()
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user")
     }
 
 }

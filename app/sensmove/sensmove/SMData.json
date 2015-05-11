@@ -1,14 +1,18 @@
 {
     "user": [
         {
-             "usid": 0,
+             "id": 0,
              "username": "alex",
              "email": "alexr.3165@gmail.com",
-             "userpassword": "test",
-             "imageName": "alex.png"
+             "password": "test",
+             "picture": "alex.png",
+             "doctor": "TestDoctor",
+             "balance": "Great balance",
+             "averageForceLeft": 120,
+             "averageForceRight": 111
         },
         {
-             "usid": 1,
+             "id": 1,
              "username": "jseb",
              "email": "blabla@domain.tld",
              "userpassword": "test"

@@ -32,6 +32,7 @@
 @property (strong, nonatomic) UITableView *myTableView;
 @property (strong, nonatomic) SMUserService *userService;
 @property (nonatomic, weak) IBOutlet UILabel *firstName;
+@property (nonatomic, weak) IBOutlet UIImageView *userPicture;
 
 @end
 
@@ -44,9 +45,18 @@
     [self initializeUserProfile];
 }
 
--(void)initializeUserProfile
+- (void)initializeUserProfile
 {
     self.firstName.text = self.userService.currentUser.name;
+    [self setImage];
+}
+
+- (void)setImage
+{
+    self.userPicture.layer.cornerRadius = self.userPicture.frame.size.height /2;
+    self.userPicture.layer.masksToBounds = YES;
+    self.userPicture.layer.borderWidth = 0;
+    self.userPicture.image =  [UIImage imageNamed:self.userService.currentUser.picturePath];
 }
 
 @end

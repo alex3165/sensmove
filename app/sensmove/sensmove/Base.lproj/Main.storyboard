@@ -219,6 +219,7 @@
                     </tableView>
                     <connections>
                         <outlet property="firstName" destination="DA6-fn-1IX" id="TsM-km-oZV"/>
+                        <outlet property="userPicture" destination="v9h-JL-xpi" id="nA9-rT-6QW"/>
                         <segue destination="mEs-0Q-9PU" kind="custom" identifier="firstRow" customClass="AMSlideMenuContentSegue" id="J4B-5S-dMv"/>
                         <segue destination="kBd-LC-i4x" kind="custom" identifier="secondRow" customClass="AMSlideMenuContentSegue" id="2ap-2I-mB9"/>
                         <segue destination="tbb-Ug-qhR" kind="custom" identifier="thirdRow" customClass="AMSlideMenuContentSegue" id="ISZ-ru-taY"/>

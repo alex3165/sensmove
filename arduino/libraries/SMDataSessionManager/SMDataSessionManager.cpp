@@ -1,6 +1,6 @@
 #include "Arduino.h"
 #include "SMDataSessionManager.h"
-
+#include "Adafruit_BLE_UART.h"
 /**
 *
 *	Bluetooth necessary objects
@@ -26,7 +26,7 @@ void SMDataSessionManager::InitializeBluetooth() {
   BTLEserial.begin();
 }
 
-void SMDataSessionManager::BleLoopCommunication() {
+void SMDataSessionManager::BleLoopCommunication(unsigned int fsrReading) {
 
 	BTLEserial.pollACI(); // Tell the nRF8001 to do whatever it should be working on.
 
@@ -58,18 +58,20 @@ void SMDataSessionManager::BleLoopCommunication() {
 		Serial.println(F(" bytes available from BTLE"));
 
 		RetrievingBleDatas();
-	}
-
-	//BTLEserial.print(fsrReading);
+	} 
+	/*
+	* 	Send data by bluetooth
+	*/
+	BTLEserial.print(fsrReading);
 	}
 }
 
 void SMDataSessionManager::RetrievingBleDatas() {
 
 	if (bleCommunicationCounter < 1) { // first ble communication
-		while (BTLEserial.available()) {
-		  lastData += BTLEserial.read();
-		}
+		// while (BTLEserial.available()) {
+		//   lastData += BTLEserial.read();
+		// }
 	}
 
 	bleCommunicationCounter++;

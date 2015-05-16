@@ -24,17 +24,16 @@ class SMDataSessionManager {
     ~SMDataSessionManager();
 
     // bool SendDatasOverBluetooth();
-    void BleLoopCommunication();
+    void BleLoopCommunication(unsigned int fsrReading);
     void RetrievingBleDatas();
 
   private:
-    uint16_t sessionId;
+    unsigned int sessionId;
 
-    uint16_t currentTime; // Current time set by the first bluetooth communication
-    uint16_t startSessionTime;
-  	uint16_t bleCommunicationCounter;
-
-    String lastData;
+    unsigned int currentTime; // Current time set by the first bluetooth communication
+    unsigned int startSessionTime;
+  	unsigned int bleCommunicationCounter;
+    char lastData[]; 
 
     // void detectValuesLimitations();
     void SetCurrentTime();

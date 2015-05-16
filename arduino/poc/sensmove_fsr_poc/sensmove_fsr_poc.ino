@@ -51,13 +51,14 @@ int LEDbrightness;
 *
 */
 void setup(void) {
-  Serial.begin(9600);   // We'll send debugging information via the Serial monitor
+   Serial.begin(9600);
+
   pinMode(LEDpin, OUTPUT);
-  if(!accel.begin()) {
+  //if(!accel.begin()) {
     // There was a problem detecting the LSM303 ... check your connections
-    Serial.println("Ooops, no LSM303 detected ... Check your wiring!");
-    while(1);
-  }
+    //Serial.println("Ooops, no LSM303 detected ... Check your wiring!");
+    //while(1);
+ // }
   lastDisplayTime = millis();
 
 }
@@ -72,10 +73,10 @@ void setup(void) {
 void loop(void) {
   
   sensors_event_t accelEvent;
-  accel.getEvent(&accelEvent);
-  accelX = map(accelEvent.acceleration.x, -20, 20, 0, 255);
-  accelY = map(accelEvent.acceleration.y, -20, 20, 0, 255);
-  accelZ = map(accelEvent.acceleration.z, -20, 20, 0, 255);
+ // accel.getEvent(&accelEvent);
+ // accelX = map(accelEvent.acceleration.x, -20, 20, 0, 255);
+ // accelY = map(accelEvent.acceleration.y, -20, 20, 0, 255);
+ // accelZ = map(accelEvent.acceleration.z, -20, 20, 0, 255);
 
   fsrReading1 = analogRead(fsrAnalogPin1);
   fsrReading2 = analogRead(fsrAnalogPin2);
@@ -120,8 +121,7 @@ void loop(void) {
 
   // LED gets brighter the harder you press
   analogWrite(LEDpin, LEDbrightness);
- 
+ Serial.println();
   delay(100); // change the frequency of loop
-  Serial.println(" \n\n\n\n\n\n\n\n ");
 
 }

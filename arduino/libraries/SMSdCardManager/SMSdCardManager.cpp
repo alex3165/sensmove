@@ -15,21 +15,21 @@
 //SMSdCardManager::SMSdCardManager(char* nameSession){
 //    _nameSession = nameSession
 //}
-SMSdCardManager::SMSdCardManager{
-    if (!SD.begin(10)) {
+SMSdCardManager::SMSdCardManager(int port){
+    if (!SD.begin(port)) {
         Serial.println("initialization failed!");
         return;
     }
 }
 
 void SMSdCardManager::createSession(char* nameSession){
-    myFile = SD.open(nameSession, FILE_WRITE);
-    if (myFile) {
+    _myFile = SD.open(nameSession, FILE_WRITE);
+    if (_myFile) {
         Serial.print("Opening file ");
-        Serial.println(nameFile);
+        Serial.println(nameSession);
     } else {
         Serial.print("error opening ");
-        Serial.println(nameFile);
+        Serial.println(nameSession);
     }
     
 }

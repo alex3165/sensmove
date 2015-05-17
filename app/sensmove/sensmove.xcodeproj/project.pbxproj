@@ -57,6 +57,16 @@
 		22BD4E681ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
 		22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE07871AE503FD0064F750 /* SMUserController.swift */; };
 		22FE07891AE503FD0064F750 /* SMUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE07871AE503FD0064F750 /* SMUserController.swift */; };
+		22FE1ECF1B079BCF006BB6B5 /* SMBLEInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ECE1B079BCF006BB6B5 /* SMBLEInfo.swift */; };
+		22FE1ED01B079BCF006BB6B5 /* SMBLEInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ECE1B079BCF006BB6B5 /* SMBLEInfo.swift */; };
+		22FE1ED21B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */; };
+		22FE1ED31B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */; };
+		22FE1ED81B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */; };
+		22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */; };
+		22FE1EDB1B07A38A006BB6B5 /* SMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */; };
+		22FE1EDC1B07A38A006BB6B5 /* SMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */; };
+		22FE1EDE1B07A6EB006BB6B5 /* SMBLECentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1EDD1B07A6EB006BB6B5 /* SMBLECentral.swift */; };
+		22FE1EDF1B07A6EB006BB6B5 /* SMBLECentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1EDD1B07A6EB006BB6B5 /* SMBLECentral.swift */; };
 		22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
 		22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
 		22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */; };
@@ -115,6 +125,11 @@
 		22BD4E631ADADDAE0022318B /* SMHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMHomeController.swift; sourceTree = "<group>"; };
 		22BD4E661ADADF860022318B /* SMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUser.swift; sourceTree = "<group>"; };
 		22FE07871AE503FD0064F750 /* SMUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserController.swift; sourceTree = "<group>"; };
+		22FE1ECE1B079BCF006BB6B5 /* SMBLEInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBLEInfo.swift; sourceTree = "<group>"; };
+		22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBLEPeripheral.swift; sourceTree = "<group>"; };
+		22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDataExtensions.swift; sourceTree = "<group>"; };
+		22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMConstants.swift; sourceTree = "<group>"; };
+		22FE1EDD1B07A6EB006BB6B5 /* SMBLECentral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBLECentral.swift; sourceTree = "<group>"; };
 		22FFAAA71AE58ECB005A49CF /* SMUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserService.swift; sourceTree = "<group>"; };
 		22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserTest.swift; sourceTree = "<group>"; };
 		3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +182,7 @@
 				22BD4E661ADADF860022318B /* SMUser.swift */,
 				221F74541ADC58EB0078A75E /* SMSession.swift */,
 				221F74571ADC5A000078A75E /* SMSole.swift */,
+				22FE1ECE1B079BCF006BB6B5 /* SMBLEInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -183,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				22FFAAA71AE58ECB005A49CF /* SMUserService.swift */,
+				22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */,
+				22FE1EDD1B07A6EB006BB6B5 /* SMBLECentral.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -236,6 +254,8 @@
 		22B91BFF1AB33D9600497025 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */,
+				22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */,
 				22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */,
 				22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */,
 				22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */,
@@ -472,17 +492,22 @@
 				22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */,
 				22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
 				2251E03D1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
+				22FE1ED81B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
 				221F74581ADC5A000078A75E /* SMSole.swift in Sources */,
 				22BD4E5D1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
+				22FE1ECF1B079BCF006BB6B5 /* SMBLEInfo.swift in Sources */,
 				22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03B1AD3062E005FE3B8 /* SMForce.swift in Sources */,
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
 				223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
+				22FE1EDE1B07A6EB006BB6B5 /* SMBLECentral.swift in Sources */,
 				22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */,
+				22FE1ED21B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */,
 				2251E0341AD2FF61005FE3B8 /* SMColor.swift in Sources */,
 				2251E0401AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
+				22FE1EDB1B07A38A006BB6B5 /* SMConstants.swift in Sources */,
 				22415FDC1AD9B5FE00106E7A /* SMData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,17 +523,22 @@
 				22415FDD1AD9B5FE00106E7A /* SMData.swift in Sources */,
 				221F74591ADC5A000078A75E /* SMSole.swift in Sources */,
 				2251E03E1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
+				22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
 				22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
 				22B91C1B1AB33D9600497025 /* sensmoveTests.swift in Sources */,
 				2228F5D11AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
+				22FE1ED01B079BCF006BB6B5 /* SMBLEInfo.swift in Sources */,
 				2251E0411AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
 				22FE07891AE503FD0064F750 /* SMUserController.swift in Sources */,
 				221F74561ADC58EB0078A75E /* SMSession.swift in Sources */,
 				22BD4E5E1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				2251E0351AD2FF61005FE3B8 /* SMColor.swift in Sources */,
+				22FE1EDF1B07A6EB006BB6B5 /* SMBLECentral.swift in Sources */,
 				2251E03C1AD3062E005FE3B8 /* SMForce.swift in Sources */,
+				22FE1ED31B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */,
 				22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */,
 				22BD4E621ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				22FE1EDC1B07A38A006BB6B5 /* SMConstants.swift in Sources */,
 				223A10691AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

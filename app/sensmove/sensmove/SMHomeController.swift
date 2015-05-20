@@ -10,31 +10,39 @@ import UIKit
 
 class SMHomeController: UIViewController {
     
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var loaderView: UIView!
 
-    var currentSession: SMSession;
+    var currentSession: SMSession?;
     
     required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
         var rightSole = SMSole(isRight: true)
         var leftSole = SMSole(isRight: false)
-        
-        self.currentSession = SMSession(leftSole: leftSole, rightSole: rightSole)
 
-        super.init(coder: aDecoder)
+        self.currentSession = SMSession(leftSole: leftSole, rightSole: rightSole)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var colorManager = SMColor()
-        var grey = colorManager.ligthGrey()
-        self.view.backgroundColor = grey
+        let locations: [Float] = [0.2, 1]
+        var smGradient: SMGradient = SMGradient(locations: locations)
+        smGradient.setFrameFromRect(self.loaderView.bounds)
+        smGradient.setCRadius(95)
+
+        self.loaderView.layer.insertSublayer(smGradient, atIndex: 0)
+
+        let colorManager: SMColor = SMColor()
+        self.view.backgroundColor = colorManager.ligthGrey()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
 
 }
 

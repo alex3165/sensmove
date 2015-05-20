@@ -11,7 +11,6 @@
         </mutableArray>
         <mutableArray key="varela round.otf">
             <string>VarelaRound-Regular</string>
-            <string>VarelaRound-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -41,16 +40,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCf-WL-tME">
-                                <rect key="frame" x="25" y="315" width="270" height="233"/>
+                                <rect key="frame" x="25" y="327" width="270" height="221"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifiant" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-B8-WH2">
-                                        <rect key="frame" x="20" y="32" width="230" height="30"/>
+                                        <rect key="frame" x="20" y="20" width="230" height="30"/>
                                         <accessibility key="accessibilityConfiguration" label="Identifiant"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GM-Ib-Xv5">
-                                        <rect key="frame" x="75" y="183" width="110" height="30"/>
+                                        <rect key="frame" x="75" y="171" width="110" height="30"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <state key="normal" title="Valider">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,13 +59,13 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUX-zw-qwA">
-                                        <rect key="frame" x="20" y="97" width="230" height="30"/>
+                                        <rect key="frame" x="20" y="85" width="230" height="30"/>
                                         <accessibility key="accessibilityConfiguration" label="Mot de passe"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oops mauvais identifiant ou mot de passe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTu-7N-2Mg">
-                                        <rect key="frame" x="-26" y="146" width="323" height="21"/>
+                                        <rect key="frame" x="-26" y="134" width="323" height="21"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -247,20 +246,33 @@
                                     <navigationItem title="SENSMOVE" id="mi5-dT-qxa"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-iE-Fbj">
-                                <rect key="frame" x="87" y="261" width="146" height="45"/>
-                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cG4-eh-nhB">
+                                <rect key="frame" x="65" y="189" width="190" height="190"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqo-Mo-mVu">
+                                        <rect key="frame" x="43" y="80" width="104" height="29"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="IET-R5-KEc"/>
+                                    <constraint firstAttribute="height" constant="190" id="muQ-gA-CAz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="6zi-iE-Fbj" secondAttribute="centerY" id="17g-NX-u82"/>
-                            <constraint firstAttribute="centerX" secondItem="6zi-iE-Fbj" secondAttribute="centerX" id="56F-G1-C0G"/>
+                            <constraint firstAttribute="centerX" secondItem="cG4-eh-nhB" secondAttribute="centerX" id="76i-nM-44F"/>
+                            <constraint firstAttribute="centerY" secondItem="cG4-eh-nhB" secondAttribute="centerY" id="doG-2m-Crx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SENSMOVE" id="4bE-Nm-d2L"/>
+                    <connections>
+                        <outlet property="loaderView" destination="cG4-eh-nhB" id="GMF-02-tP8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

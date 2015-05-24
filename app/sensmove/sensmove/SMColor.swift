@@ -23,6 +23,10 @@ extension SMColor{
         return SMColor(red: 244, green: 85, blue: 28);
     }
 
+    func lightOrange() -> SMColor {
+        return SMColor(red: 248, green: 115, blue: 74);
+    }
+
     func ligthGrey() -> SMColor {
         return SMColor(red: 240, green: 240, blue: 240);
     }

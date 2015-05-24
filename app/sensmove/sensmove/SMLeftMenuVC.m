@@ -47,7 +47,7 @@
 
 - (void)initializeUserProfile
 {
-    self.firstName.text = self.userService.currentUser.name;
+    self.firstName.text = self.userService.currentUser.firstName;
     [self setImage];
 }
 

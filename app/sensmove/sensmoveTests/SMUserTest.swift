@@ -53,7 +53,7 @@ class SMUserTest: XCTestCase {
         
         if(self.user != nil){
             userOk = self.user!
-            assert(userOk.name!.isEqualToString("Alexandre"), "user name is correct so saving and retrieving from keychain is ok")
+            assert(userOk.firstName!.isEqualToString("Alexandre"), "user name is correct so saving and retrieving from keychain is ok")
         }
 
     }
@@ -67,7 +67,7 @@ class SMUserTest: XCTestCase {
     func testUserServiceGet(){
         var userServiceTwo: SMUserService = SMUserService.sharedInstance
         if(userServiceTwo.currentUser != nil){
-            assert(userServiceTwo.currentUser!.name!.isEqualToString("Alexandre"), "User is correctely retrieved")
+            assert(userServiceTwo.currentUser!.firstName!.isEqualToString("Alexandre"), "User is correctely retrieved")
         }
         
     }

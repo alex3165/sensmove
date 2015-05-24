@@ -2,18 +2,22 @@
     "user": [
         {
              "id": 0,
-             "username": "alex",
+             "firstname": "Alexandre",
+             "lastname": "Rieux",
              "email": "alexr.3165@gmail.com",
              "password": "test",
-             "picture": "alex.png",
-             "doctor": "TestDoctor",
+             "picturePath": "alex.png",
+             "doctor": "Mme Prat",
              "balance": "Great balance",
+             "weight": 70,
+             "height": 180,
              "averageForceLeft": 120,
-             "averageForceRight": 111
+             "averageForceRight": 111,
+             "diseaseDescription": "Alexandre left leg's taller than the right, the shift is about 1 centimeter."
         },
         {
              "id": 1,
-             "username": "jseb",
+             "firstname": "Jean-Sébastien",
              "email": "blabla@domain.tld",
              "userpassword": "test"
         },

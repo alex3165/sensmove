@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22068C9D1AF65B3D0033DD6D /* simpleMenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */; };
 		22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */; };
+		221A64741B12680900C662CD /* SMTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221A64731B12680900C662CD /* SMTrackController.swift */; };
 		221F74551ADC58EB0078A75E /* SMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74541ADC58EB0078A75E /* SMSession.swift */; };
 		221F74561ADC58EB0078A75E /* SMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74541ADC58EB0078A75E /* SMSession.swift */; };
 		221F74581ADC5A000078A75E /* SMSole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74571ADC5A000078A75E /* SMSole.swift */; };
@@ -89,6 +90,7 @@
 /* Begin PBXFileReference section */
 		22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simpleMenuButton.png; sourceTree = "<group>"; };
 		22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simpleMenuButton@2x.png"; sourceTree = "<group>"; };
+		221A64731B12680900C662CD /* SMTrackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTrackController.swift; sourceTree = "<group>"; };
 		221F74541ADC58EB0078A75E /* SMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSession.swift; sourceTree = "<group>"; };
 		221F74571ADC5A000078A75E /* SMSole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSole.swift; sourceTree = "<group>"; };
 		2228F5CE1AF68D9400151221 /* SMLeftMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLeftMenuVC.h; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				22B91BFF1AB33D9600497025 /* Supporting Files */,
 				22415FD31AD9B2A200106E7A /* SMData.json */,
 				228745A01AFEB8CE0069ACA1 /* sensmove-Bridging-Header.h */,
+				221A64731B12680900C662CD /* SMTrackController.swift */,
 			);
 			path = sensmove;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */,
 				228950811B0D243200D6FF88 /* SMGradient.swift in Sources */,
 				22FE1ED21B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */,
+				221A64741B12680900C662CD /* SMTrackController.swift in Sources */,
 				2251E0341AD2FF61005FE3B8 /* SMColor.swift in Sources */,
 				2251E0401AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
 				22FE1EDB1B07A38A006BB6B5 /* SMConstants.swift in Sources */,

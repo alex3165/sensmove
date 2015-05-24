@@ -27,7 +27,7 @@ import Foundation
         var users = self.retrieveUsersFromDatasFile()
 
         for user in users {
-            if user["username"].stringValue as String == username && passwd == user["password"].stringValue as String {
+            if user[kFirstName].stringValue as String == username && passwd == user["password"].stringValue as String {
                 success(userInformations: user)
                 return;
             }
@@ -49,7 +49,7 @@ import Foundation
     }
     
     func asUserInKeychain() -> Bool {
-        return self.currentUser?.name != nil
+        return self.currentUser?.firstName != nil
     }
 
     private func retrieveUsersFromDatasFile() -> [JSON] {

@@ -8,10 +8,23 @@
 
 import Foundation
 
+let kId: String = "id"
+let kFirstName: String = "firstname"
+let kLastName: String = "lastname"
+let kPicturePath: String = "picturePath"
+let kWeight: String = "weight"
+let kHeight: String = "height"
+let kBalance: String = "balance"
+let kDoctor: String = "doctor"
+let kForceLeft: String = "averageForceLeft"
+let kForceRight: String = "averageForceRight"
+let kDiseaseDescription: String = "diseaseDescription"
+
 class SMUser: NSObject {
 
     var id: NSNumber?
-    var name: NSString?
+    var firstName: NSString?
+    var lastName: NSString?
     var picturePath: NSString?
     var weight: NSNumber?
     var height: NSNumber?
@@ -24,18 +37,19 @@ class SMUser: NSObject {
     var diseaseDescription: NSString?
     
     init(userSettings: JSON) {
-        self.id = userSettings["username"].numberValue
-        self.name = userSettings["username"].stringValue
-        self.picturePath = userSettings["picture"].stringValue
-        self.weight = userSettings["weight"].numberValue
-        self.height = userSettings["height"].numberValue
-        
-        self.doctor = userSettings["doctor"].stringValue
-        self.balance = userSettings["balance"].stringValue
-        self.averageForceLeft = userSettings["averageForceLeft"].numberValue
-        self.averageForceRight = userSettings["averageForceRight"].numberValue
+        self.id = userSettings[kId].numberValue
+        self.firstName = userSettings[kFirstName].stringValue
+        self.lastName = userSettings[kLastName].stringValue
+        self.picturePath = userSettings[kPicturePath].stringValue
+        self.weight = userSettings[kWeight].numberValue
+        self.height = userSettings[kHeight].numberValue
+
+        self.doctor = userSettings[kDoctor].stringValue
+        self.balance = userSettings[kBalance].stringValue
+        self.averageForceLeft = userSettings[kForceLeft].numberValue
+        self.averageForceRight = userSettings[kForceRight].numberValue
             
-        self.diseaseDescription = userSettings["diseaseDescription"].stringValue
+        self.diseaseDescription = userSettings[kDiseaseDescription].stringValue
         
         super.init()
     }
@@ -72,15 +86,17 @@ class SMUser: NSObject {
 
     private func toPropertyList() -> JSON {
         var userJson: JSON = [
-            "id": self.id!,
-            "username": self.name!,
-            "picture": self.picturePath!,
-            "weight": self.weight!,
-            "height": self.height!,
-            "doctor": self.doctor!,
-            "balance": self.balance!,
-            "averageForceLeft": self.averageForceLeft!,
-            "averageForceRight": self.averageForceRight!
+            kId: self.id!,
+            kFirstName: self.firstName!,
+            kLastName: self.lastName!,
+            kPicturePath: self.picturePath!,
+            kWeight: self.weight!,
+            kHeight: self.height!,
+            kDoctor: self.doctor!,
+            kBalance: self.balance!,
+            kForceLeft: self.averageForceLeft!,
+            kForceRight: self.averageForceRight!,
+            kDiseaseDescription: self.diseaseDescription!
         ]
 
         return userJson

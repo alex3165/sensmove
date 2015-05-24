@@ -48,11 +48,13 @@ void setup(void)
 */
 void loop()
 {
+  
   // Tell the nRF8001 to do whatever it should be working on.
   BTLEserial.pollACI();
 
   // Ask what is our current status
   aci_evt_opcode_t status = BTLEserial.getState();
+  //Serial.println(status);
 
   if (status != laststatus) {  // If the status changed....
     // print it out!

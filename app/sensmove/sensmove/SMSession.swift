@@ -10,29 +10,22 @@ import Foundation
 
 class SMSession: NSObject {
     
-    var startDate: NSDate = NSDate()
-    var stopDate: NSDate = NSDate()
-    
-    var leftSole: SMSole
-    var rightSole: SMSole
+    var id: NSString
+    var name: NSString
+    var date: NSDate
+    var duration: NSNumber
+    var averageLeftForce: NSNumber?
+    var averageRightForce: NSNumber?
 
-    init(leftSole: SMSole, rightSole: SMSole) {
-        self.leftSole = leftSole
-        self.rightSole = rightSole
-        
+    init(sessionSettings: JSON) {
+
+        self.id = sessionSettings["id"].stringValue
+        self.name = sessionSettings["name"].stringValue
+        self.date = NSDate(timeIntervalSince1970: sessionSettings["date"].doubleValue)
+        self.duration = sessionSettings["duration"].numberValue
+        self.averageLeftForce = sessionSettings["leftForce"].numberValue
+        self.averageRightForce = sessionSettings["rightForce"].numberValue
+
         super.init()
-        self.startSession()
-    }
-    
-    private func startSession() {
-        self.startDate = NSDate()
-    }
-    
-    func stopSession() {
-        
-    }
-    
-    private func instantiateSoles() {
-        
     }
 }

@@ -17,10 +17,10 @@ class SMHomeController: UIViewController {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        var rightSole = SMSole(isRight: true)
-        var leftSole = SMSole(isRight: false)
+//        var rightSole = SMSole(isRight: true)
+//        var leftSole = SMSole(isRight: false)
 
-        self.currentSession = SMSession(leftSole: leftSole, rightSole: rightSole)
+        //self.currentSession = SMSession(leftSole: leftSole, rightSole: rightSole)
     }
     
     override func viewDidLoad() {
@@ -42,7 +42,12 @@ class SMHomeController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func handleTap(sender: UITapGestureRecognizer) {
+        if sender.state == .Ended {
+            let trackController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("trackView") as! UIViewController
+            self.navigationController?.pushViewController(trackController, animated: true)
+        }
+    }
 
 }
 

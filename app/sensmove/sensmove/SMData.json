@@ -13,7 +13,25 @@
              "height": 180,
              "averageForceLeft": 120,
              "averageForceRight": 111,
-             "diseaseDescription": "Alexandre left leg's taller than the right, the shift is about 1 centimeter."
+             "diseaseDescription": "Alexandre left leg's taller than the right, the shift is about 1 centimeter.",
+             "sessions": [
+                {
+                    "id": "univalexrieux01",
+                    "name": "Marche universitaire",
+                    "date": 1429274609,
+                    "duration": 10000,
+                    "leftforce": 100,
+                    "rightforce": 90
+                },
+                {
+                    "id": "etrmaraalexrieux02",
+                    "name": "Entrainement running marathon 01",
+                    "date": 1432658924,
+                    "duration": 9888,
+                    "leftforce": 102,
+                    "rightforce": 88
+                }
+             ]
         },
         {
              "id": 1,

@@ -19,7 +19,7 @@ class SMData {
     func getUsers() -> JSON {
         return self.jsonDatas["user"]
     }
-    
+
     class var sharedInstance: SMData {
             struct Static {
                 static let instance: SMData = SMData()

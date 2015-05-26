@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		22068C9D1AF65B3D0033DD6D /* simpleMenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */; };
 		22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */; };
+		2219FBD11B1515BC006A26A0 /* SMSessionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2219FBD01B1515BC006A26A0 /* SMSessionData.json */; };
+		2219FBD21B1515BC006A26A0 /* SMSessionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2219FBD01B1515BC006A26A0 /* SMSessionData.json */; };
+		2219FBD71B1516AD006A26A0 /* SMSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2219FBD61B1516AD006A26A0 /* SMSessionController.swift */; };
+		2219FBD81B1516AD006A26A0 /* SMSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2219FBD61B1516AD006A26A0 /* SMSessionController.swift */; };
 		221A64741B12680900C662CD /* SMTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221A64731B12680900C662CD /* SMTrackController.swift */; };
 		221F74551ADC58EB0078A75E /* SMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74541ADC58EB0078A75E /* SMSession.swift */; };
 		221F74561ADC58EB0078A75E /* SMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74541ADC58EB0078A75E /* SMSession.swift */; };
@@ -90,6 +94,8 @@
 /* Begin PBXFileReference section */
 		22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simpleMenuButton.png; sourceTree = "<group>"; };
 		22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simpleMenuButton@2x.png"; sourceTree = "<group>"; };
+		2219FBD01B1515BC006A26A0 /* SMSessionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SMSessionData.json; sourceTree = "<group>"; };
+		2219FBD61B1516AD006A26A0 /* SMSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSessionController.swift; sourceTree = "<group>"; };
 		221A64731B12680900C662CD /* SMTrackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTrackController.swift; sourceTree = "<group>"; };
 		221F74541ADC58EB0078A75E /* SMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSession.swift; sourceTree = "<group>"; };
 		221F74571ADC5A000078A75E /* SMSole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSole.swift; sourceTree = "<group>"; };
@@ -246,14 +252,16 @@
 				223A10671AE522A000BD19C5 /* SMSideMenuController.m */,
 				2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */,
 				22FE07871AE503FD0064F750 /* SMUserController.swift */,
+				221A64731B12680900C662CD /* SMTrackController.swift */,
+				2219FBD61B1516AD006A26A0 /* SMSessionController.swift */,
 				22B91C081AB33D9600497025 /* Main.storyboard */,
 				22B91C0B1AB33D9600497025 /* Images.xcassets */,
 				22B91C0D1AB33D9600497025 /* LaunchScreen.xib */,
 				22B91C031AB33D9600497025 /* sensmove.xcdatamodeld */,
 				22B91BFF1AB33D9600497025 /* Supporting Files */,
 				22415FD31AD9B2A200106E7A /* SMData.json */,
+				2219FBD01B1515BC006A26A0 /* SMSessionData.json */,
 				228745A01AFEB8CE0069ACA1 /* sensmove-Bridging-Header.h */,
-				221A64731B12680900C662CD /* SMTrackController.swift */,
 			);
 			path = sensmove;
 			sourceTree = "<group>";
@@ -406,6 +414,7 @@
 				22BD4E531ADA6D340022318B /* Roboto-Light.ttf in Resources */,
 				22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */,
 				22B91C0F1AB33D9600497025 /* LaunchScreen.xib in Resources */,
+				2219FBD11B1515BC006A26A0 /* SMSessionData.json in Resources */,
 				22B91C0C1AB33D9600497025 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +425,7 @@
 			files = (
 				22BD4E541ADA6D340022318B /* Roboto-Light.ttf in Resources */,
 				22BD4E5A1ADA6D340022318B /* varela round.otf in Resources */,
+				2219FBD21B1515BC006A26A0 /* SMSessionData.json in Resources */,
 				22415FD51AD9B2A200106E7A /* SMData.json in Resources */,
 				22BD4E581ADA6D340022318B /* Roboto-Regular.ttf in Resources */,
 				22BD4E561ADA6D340022318B /* Roboto-Medium.ttf in Resources */,
@@ -497,6 +507,7 @@
 				2251E0391AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
 				22B91C021AB33D9600497025 /* AppDelegate.swift in Sources */,
 				22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */,
+				2219FBD71B1516AD006A26A0 /* SMSessionController.swift in Sources */,
 				22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
 				2251E03D1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
 				22FE1ED81B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
@@ -545,6 +556,7 @@
 				22FE1EDF1B07A6EB006BB6B5 /* SMBLECentral.swift in Sources */,
 				2251E03C1AD3062E005FE3B8 /* SMForce.swift in Sources */,
 				228950821B0D243200D6FF88 /* SMGradient.swift in Sources */,
+				2219FBD81B1516AD006A26A0 /* SMSessionController.swift in Sources */,
 				22FE1ED31B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */,
 				22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */,
 				22BD4E621ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,

@@ -15,6 +15,7 @@ class SMUserController: UIViewController {
     
     @IBOutlet weak var firstName: UILabel?
     @IBOutlet weak var lastName: UILabel?
+    @IBOutlet weak var email: UILabel?
     @IBOutlet weak var weight: UILabel?
     @IBOutlet weak var height: UILabel?
     @IBOutlet weak var doctor: UILabel?
@@ -64,6 +65,7 @@ class SMUserController: UIViewController {
         
         self.firstName?.text = self.userService.currentUser?.firstName as? String
         self.lastName?.text = self.userService.currentUser?.lastName as? String
+        self.email?.text = self.userService.currentUser?.email as? String
         self.weight?.text = String(stringInterpolationSegment: self.userService.currentUser?.weight as! NSInteger)
         self.height?.text = String(stringInterpolationSegment: self.userService.currentUser?.height as! NSInteger)
         self.doctor?.text = self.userService.currentUser?.doctor as? String

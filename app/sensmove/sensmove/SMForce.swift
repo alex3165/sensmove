@@ -21,7 +21,7 @@ class SMForce: SMSensor {
         
         self.initializeVisual()
     }
-    
+
     required init(id: Int, creation: NSDate) {
         fatalError("init(id:creation:) has not been implemented")
     }

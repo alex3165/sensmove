@@ -17,25 +17,25 @@ enum ConnectionMode:Int {
     case Controller
 }
 
-protocol BLEPeripheralDelegate: Any {
-    
+protocol SMBLEPeripheralDelegate: Any {
+
     var connectionMode:ConnectionMode { get }
     func didReceiveData(newData:NSData)
     func connectionFinalized()
     func uartDidEncounterError(error:NSString)
-    
+
 }
 
-class BLEPeripheral: NSObject, CBPeripheralDelegate {
+class SMBLEPeripheral: NSObject, CBPeripheralDelegate {
 
     var currentPeripheral:CBPeripheral!
-    var delegate:BLEPeripheralDelegate!
+    var delegate:SMBLEPeripheralDelegate!
     var uartService:CBService?
     var rxCharacteristic:CBCharacteristic?
     var txCharacteristic:CBCharacteristic?
     var knownServices:[CBService] = []
     
-    init(peripheral:CBPeripheral, delegate:BLEPeripheralDelegate){
+    init(peripheral:CBPeripheral, delegate:SMBLEPeripheralDelegate){
         super.init()
 
         self.currentPeripheral = peripheral
@@ -54,15 +54,13 @@ class BLEPeripheral: NSObject, CBPeripheralDelegate {
         printLog(self, "didConnect", "Starting service discovery")
         
         switch withMode.rawValue {
-        case ConnectionMode.UART.rawValue,
-        ConnectionMode.PinIO.rawValue,
-        ConnectionMode.Controller.rawValue:
+        case ConnectionMode.UART.rawValue, ConnectionMode.PinIO.rawValue, ConnectionMode.Controller.rawValue:
             currentPeripheral.discoverServices([uartServiceUUID()])
         case ConnectionMode.Info.rawValue:
             currentPeripheral.discoverServices(nil)
             break
         default:
-            //printLog(self, "didConnect", "non-matching mode")
+            printLog(self, "didConnect", "non-matching mode")
             break
         }
     }
@@ -70,9 +68,7 @@ class BLEPeripheral: NSObject, CBPeripheralDelegate {
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
         
         //Respond to finding a new service on peripheral
-        
         if error != nil {
-            
             //            handleError("\(self.classForCoder.description()) didDiscoverServices : Error discovering services")
             printLog(self, "didDiscoverServices", "\(error.debugDescription)")
             
@@ -90,26 +86,18 @@ class BLEPeripheral: NSObject, CBPeripheralDelegate {
             if (s.characteristics != nil){
                 self.peripheral(peripheral, didDiscoverCharacteristicsForService: s, error: nil)    // If characteristics have already been discovered, do not check again
             }
-                
-                //UART or Pin I/O mode
+            // UART or Pin I/O mode
             else if delegate.connectionMode == ConnectionMode.UART || delegate.connectionMode == ConnectionMode.PinIO || delegate.connectionMode == ConnectionMode.Controller {
                 if UUIDsAreEqual(s.UUID, uartServiceUUID()) {
                     uartService = s
                     peripheral.discoverCharacteristics([txCharacteristicUUID(), rxCharacteristicUUID()], forService: uartService)
                 }
             }
-                
-                // Info mode
+            // Info mode
             else if delegate.connectionMode == ConnectionMode.Info {
                 knownServices.append(s)
                 peripheral.discoverCharacteristics(nil, forService: s)
             }
-            
-            // Device Information
-            //            else if UUIDsAreEqual(s.UUID, BLEPeripheral.deviceInformationServiceUUID()){
-            //                println("\(self.classForCoder.description()) didDiscoverServices : Device Information")
-            //                peripheral.discoverCharacteristics(nil, forService: s)
-            //            }
         }
         
         printLog(self, "didDiscoverServices", "all top-level services discovered")
@@ -147,7 +135,7 @@ class BLEPeripheral: NSObject, CBPeripheralDelegate {
                     txCharacteristic = c
                     break
                 default:
-                    //                    printLog(self, "didDiscoverCharacteristicsForService", "Found Characteristic: Unknown")
+                    printLog(self, "didDiscoverCharacteristicsForService", "Found Characteristic: Unknown")
                     break
                 }
                 
@@ -159,8 +147,7 @@ class BLEPeripheral: NSObject, CBPeripheralDelegate {
                 })
             }
         }
-            
-            // Info mode
+        // Info mode
         else if delegate.connectionMode == ConnectionMode.Info {
             
             for c in (service.characteristics as! [CBCharacteristic]) {
@@ -186,7 +173,6 @@ class BLEPeripheral: NSObject, CBPeripheralDelegate {
             printLog(self, "didDiscoverDescriptorsForCharacteristic", "\(error.debugDescription)")
             //            return
         }
-            
         else {
             if characteristic.descriptors.count != 0 {
                 for d in characteristic.descriptors {

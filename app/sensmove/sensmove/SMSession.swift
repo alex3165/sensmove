@@ -28,4 +28,16 @@ class SMSession: NSObject {
 
         super.init()
     }
+
+    func toPropertyList() -> NSDictionary {
+        var sessionJson: NSDictionary = [
+            "id": self.id,
+            "name": self.name,
+            "date": self.date.timeIntervalSince1970,
+            "duration": self.duration,
+            "leftForce": self.averageLeftForce!,
+            "rightForce": self.averageRightForce!
+        ]
+        return sessionJson
+    }
 }

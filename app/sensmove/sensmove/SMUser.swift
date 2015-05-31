@@ -39,7 +39,7 @@ class SMUser: NSObject {
 
     var diseaseDescription: NSString?
     
-    var sessions: [SMSession]?
+    var sessions: NSMutableArray?
     
     init(userSettings: JSON) {
         self.id = userSettings[kId].numberValue
@@ -57,8 +57,9 @@ class SMUser: NSObject {
             
         self.diseaseDescription = userSettings[kDiseaseDescription].stringValue
         
+        self.sessions = NSMutableArray();
         for session in userSettings[kSessions].arrayValue {
-            self.sessions?.append(SMSession(sessionSettings: session))
+            self.sessions?.addObject(SMSession(sessionSettings: session))
         }
 
         super.init()
@@ -66,7 +67,7 @@ class SMUser: NSObject {
     
 
     func saveUserToKeychain() {
-        var userInformations: JSON = toPropertyList()
+        var userInformations: JSON = self.toPropertyList() as JSON
         var datas : NSData = userInformations.rawData()!
         NSUserDefaults.standardUserDefaults().setObject(datas, forKey: "user")
     }
@@ -83,7 +84,7 @@ class SMUser: NSObject {
     }
 
     private func toPropertyList() -> JSON {
-        var userJson: JSON = [
+        var userJson: NSDictionary = [
             kId: self.id!,
             kFirstName: self.firstName!,
             kLastName: self.lastName!,
@@ -96,10 +97,23 @@ class SMUser: NSObject {
             kForceLeft: self.averageForceLeft!,
             kForceRight: self.averageForceRight!,
             kDiseaseDescription: self.diseaseDescription!,
-            kSessions: self.sessions!
+            kSessions: self.sessionList()
         ]
 
-        return userJson
+        return JSON(userJson)
+    }
+
+    func sessionList() -> NSArray {
+
+        var sessionsList = NSMutableArray()
+        var tempSession: SMSession;
+
+        for(var index = 0; index < self.sessions!.count; index++){
+            tempSession = self.sessions!.objectAtIndex(index) as! SMSession
+            sessionsList.addObject(tempSession.toPropertyList())
+        }
+
+        return sessionsList.copy() as! NSArray
     }
     
 }

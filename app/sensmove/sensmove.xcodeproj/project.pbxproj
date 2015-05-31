@@ -36,6 +36,8 @@
 		2251E03E1AD3062E005FE3B8 /* SMSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251E0381AD3062E005FE3B8 /* SMSensor.swift */; };
 		2251E0401AD3065D005FE3B8 /* SMLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */; };
 		2251E0411AD3065D005FE3B8 /* SMLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */; };
+		227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */; };
+		227A6B8D1B19E6AF00EFA360 /* SMHeaderSessionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A6B8C1B19E6AF00EFA360 /* SMHeaderSessionViewCell.swift */; };
 		228950811B0D243200D6FF88 /* SMGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228950801B0D243200D6FF88 /* SMGradient.swift */; };
 		228950821B0D243200D6FF88 /* SMGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228950801B0D243200D6FF88 /* SMGradient.swift */; };
 		22B91C021AB33D9600497025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91C011AB33D9600497025 /* AppDelegate.swift */; };
@@ -111,6 +113,8 @@
 		2251E0371AD3062E005FE3B8 /* SMForce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMForce.swift; sourceTree = "<group>"; };
 		2251E0381AD3062E005FE3B8 /* SMSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSensor.swift; sourceTree = "<group>"; };
 		2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLoginController.swift; sourceTree = "<group>"; };
+		227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSessionViewCell.swift; sourceTree = "<group>"; };
+		227A6B8C1B19E6AF00EFA360 /* SMHeaderSessionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMHeaderSessionViewCell.swift; sourceTree = "<group>"; };
 		228745A01AFEB8CE0069ACA1 /* sensmove-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sensmove-Bridging-Header.h"; sourceTree = "<group>"; };
 		228950801B0D243200D6FF88 /* SMGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMGradient.swift; sourceTree = "<group>"; };
 		22B91BFC1AB33D9600497025 /* sensmove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensmove.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +207,8 @@
 			children = (
 				2251E0331AD2FF61005FE3B8 /* SMColor.swift */,
 				228950801B0D243200D6FF88 /* SMGradient.swift */,
+				227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */,
+				227A6B8C1B19E6AF00EFA360 /* SMHeaderSessionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				2251E03B1AD3062E005FE3B8 /* SMForce.swift in Sources */,
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
+				227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */,
 				223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
 				22FE1EDE1B07A6EB006BB6B5 /* SMBLECentral.swift in Sources */,
 				22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */,
@@ -526,6 +533,7 @@
 				22FE1ED21B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */,
 				221A64741B12680900C662CD /* SMTrackController.swift in Sources */,
 				2251E0341AD2FF61005FE3B8 /* SMColor.swift in Sources */,
+				227A6B8D1B19E6AF00EFA360 /* SMHeaderSessionViewCell.swift in Sources */,
 				2251E0401AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
 				22FE1EDB1B07A38A006BB6B5 /* SMConstants.swift in Sources */,
 				22415FDC1AD9B5FE00106E7A /* SMData.swift in Sources */,

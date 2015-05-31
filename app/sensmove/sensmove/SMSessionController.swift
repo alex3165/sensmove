@@ -10,12 +10,17 @@ import UIKit
 
 class SMSessionController: UITableViewController {
 
-    var userService: SMUserService?
-    
+    var userService: SMUserService
+    var userSessions: NSMutableArray!
+
+    required init(coder aDecoder: NSCoder) {
+        self.userService = SMUserService.sharedInstance
+        self.userSessions = self.userService.currentUser?.sessions
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.userService = SMUserService.sharedInstance
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +39,7 @@ class SMSessionController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return self.userSessions.count
     }
 
     /*

@@ -9,5 +9,17 @@
 import UIKit
 
 class SMTrackSessionService: NSObject {
-   
+
+    var currentSession: SMSession?
+    
+    class var sharedInstance: SMTrackSessionService {
+        struct Static {
+            static let instance: SMTrackSessionService = SMTrackSessionService()
+        }
+        return Static.instance
+    }
+    
+    func createNewSession(){
+        self.currentSession = SMSession(userInfos: SMUserService.sharedInstance.currentUser!)
+    }
 }

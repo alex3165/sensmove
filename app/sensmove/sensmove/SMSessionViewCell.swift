@@ -38,7 +38,7 @@ class SMSessionViewCell: UITableViewCell {
         self.sessionTitle?.text = session.name as String
         self.averageLeftForces?.text = session.averageLeftForce?.stringValue
         self.averageRightForces?.text = session.averageRightForce?.stringValue
-        self.sessionDuration?.text = session.duration.stringValue
+        self.sessionDuration?.text = session.duration!.stringValue
     }
     
     func designComponents() {

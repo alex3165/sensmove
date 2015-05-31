@@ -63,6 +63,8 @@
 		22BD4E651ADADDAF0022318B /* SMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E631ADADDAE0022318B /* SMHomeController.swift */; };
 		22BD4E671ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
 		22BD4E681ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
+		22C78E661B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */; };
+		22C78E671B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */; };
 		22CC928D1B1B451200D98E9E /* SMSessionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */; };
 		22CC928F1B1B50ED00D98E9E /* SMTrackSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */; };
 		22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE07871AE503FD0064F750 /* SMUserController.swift */; };
@@ -139,6 +141,7 @@
 		22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		22BD4E631ADADDAE0022318B /* SMHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMHomeController.swift; sourceTree = "<group>"; };
 		22BD4E661ADADF860022318B /* SMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUser.swift; sourceTree = "<group>"; };
+		22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLiveForcesTrack.swift; sourceTree = "<group>"; };
 		22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTrackSessionService.swift; sourceTree = "<group>"; };
 		22FE07871AE503FD0064F750 /* SMUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserController.swift; sourceTree = "<group>"; };
 		22FE1ECE1B079BCF006BB6B5 /* SMBLEInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBLEInfo.swift; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 				2251E0331AD2FF61005FE3B8 /* SMColor.swift */,
 				228950801B0D243200D6FF88 /* SMGradient.swift */,
 				227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */,
+				22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -538,6 +542,7 @@
 				2251E0401AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
 				22FE1EDB1B07A38A006BB6B5 /* SMConstants.swift in Sources */,
 				22415FDC1AD9B5FE00106E7A /* SMData.swift in Sources */,
+				22C78E661B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +555,7 @@
 				22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */,
 				22BD4E681ADADF860022318B /* SMUser.swift in Sources */,
 				22415FDD1AD9B5FE00106E7A /* SMData.swift in Sources */,
+				22C78E671B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */,
 				221F74591ADC5A000078A75E /* SMSole.swift in Sources */,
 				2251E03E1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
 				22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,

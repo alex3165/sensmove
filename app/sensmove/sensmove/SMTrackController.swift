@@ -9,11 +9,19 @@
 import UIKit
 import CoreBluetooth
 import Foundation
+import SceneKit
 
 class SMTrackController: UIViewController { // , SMBLEPeripheralDelegate
     
+    //@IBOutlet weak var solesGraph: SCNView?
+    
+    var smLiveGraph: SMLiveForcesTrack?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.smLiveGraph = SMLiveForcesTrack()
+        //self.solesGraph?.scene = self.smLiveGraph
     }
 
     override func didReceiveMemoryWarning() {

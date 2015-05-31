@@ -352,14 +352,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="track view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ff-Gv-nIY">
-                                <rect key="frame" x="121" y="273" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="track view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ff-Gv-nIY">
+                                <rect key="frame" x="121" y="50" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2F2-5g-emP" customClass="SCNView">
+                                <rect key="frame" x="24" y="183" width="272" height="202"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2F2-5g-emP" firstAttribute="leading" secondItem="PLM-oX-XaF" secondAttribute="leadingMargin" constant="8" id="5S0-jf-1nV"/>
+                            <constraint firstItem="0Ff-Gv-nIY" firstAttribute="top" secondItem="HJU-qr-8Wf" secondAttribute="bottom" constant="30" id="Bou-0t-kEr"/>
+                            <constraint firstItem="2F2-5g-emP" firstAttribute="centerX" secondItem="0Ff-Gv-nIY" secondAttribute="centerX" id="ION-jx-t12"/>
+                            <constraint firstAttribute="centerX" secondItem="2F2-5g-emP" secondAttribute="centerX" id="qIs-g2-9eK"/>
+                            <constraint firstItem="az0-dm-rmq" firstAttribute="top" secondItem="2F2-5g-emP" secondAttribute="bottom" constant="183" id="vTC-7Q-A86"/>
+                            <constraint firstAttribute="centerY" secondItem="2F2-5g-emP" secondAttribute="centerY" id="yc8-T1-d7t"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwe-7y-dYr" userLabel="First Responder" sceneMemberID="firstResponder"/>

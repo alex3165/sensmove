@@ -37,13 +37,13 @@
              "id": 1,
              "firstname": "Jean-Sébastien",
              "email": "blabla@domain.tld",
-             "userpassword": "test"
+             "password": "test"
         },
         {
-             "usid": 2,
-             "username": "",
+             "id": 2,
+             "firstname": "",
              "email": "hello@domain.tld",
-             "userpassword": ""
+             "password": ""
         }
     ]
 }

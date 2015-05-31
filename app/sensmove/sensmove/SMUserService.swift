@@ -8,10 +8,10 @@
 
 import Foundation
 
- typealias SMLoginSuccess = (userInformations: JSON) -> ()
- typealias SMLoginFailure = (error: NSException) -> ()
+typealias SMLoginSuccess = (userInformations: JSON) -> ()
+typealias SMLoginFailure = (error: NSException) -> ()
 
-@objc class SMUserService: NSObject {
+class SMUserService: NSObject {
 
     var currentUser: SMUser? = SMUser.getUserFromKeychain()
 

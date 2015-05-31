@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-sensmove-ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-sensmove.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E1386D50C48DEE852B46C6F</key>
+		<key>1153E097CCA9E53B109BC4F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4654B450347803ED15B69D6A</key>
+		<key>33D112AE6AE2DBC327AE1186</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>573392074773C29D8033BF74</key>
+		<key>ACC50551246CD30D92DBC9E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA653F55A6CAAEA12850009A</key>
+		<key>B6A50247120A4FC8CF4ECB8D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAEE5C816A62F3B3D3D6FC15</key>
 		<dict>
 			<key>primary</key>
 			<true/>

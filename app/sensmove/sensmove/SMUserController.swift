@@ -53,7 +53,7 @@ class SMUserController: UIViewController {
         self.profilePicture!.layer.cornerRadius = self.profilePicture!.frame.size.height/2;
         self.profilePicture!.layer.masksToBounds = true;
         self.profilePicture!.layer.borderColor = colorManager.lightOrange().CGColor
-        self.profilePicture!.layer.borderWidth = 6.0;
+        self.profilePicture!.layer.borderWidth = 5.0;
         self.profilePicture!.image =  UIImage(named: self.userService.currentUser?.picturePath as! String)
 
         let locations: [Float] = [0.2, 1]

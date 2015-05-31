@@ -40,12 +40,13 @@ import Foundation
         self.currentUser = user
     }
     
-    func saveUserToKeychain(){
-        self.currentUser?.saveUserToKeychain()
+    func addSessionToCurrentUser(session: SMSession) {
+        self.currentUser?.sessions?.addObject(session)
+        self.saveUserToKeychain()
     }
     
-    func removeCurrentUser(){
-        //self.currentUser?.removeUserFromKeychain()
+    func saveUserToKeychain(){
+        self.currentUser?.saveUserToKeychain()
     }
     
     func asUserInKeychain() -> Bool {

@@ -10,28 +10,25 @@ import UIKit
 import CoreBluetooth
 import Foundation
 
-class SMTrackController: UIViewController { //, SMBLEPeripheralDelegate
-
+class SMTrackController: UIViewController { // , SMBLEPeripheralDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     func didReceiveData(newData:NSData) {
         
     }
-    
+
     func connectionFinalized() {
         
     }
-    
+
     func uartDidEncounterError(error:NSString) {
         
     }

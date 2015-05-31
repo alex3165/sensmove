@@ -33,6 +33,7 @@
 @property (strong, nonatomic) SMUserService *userService;
 @property (nonatomic, weak) IBOutlet UILabel *firstName;
 @property (nonatomic, weak) IBOutlet UIImageView *userPicture;
+@property (nonatomic, weak) IBOutlet UILabel *numberOfSessions;
 
 @end
 
@@ -49,6 +50,8 @@
 {
     self.firstName.text = self.userService.currentUser.firstName;
     [self setImage];
+
+    self.numberOfSessions.text = [NSString stringWithFormat:@"%lu sessions", self.userService.currentUser.sessions.count];
 }
 
 - (void)setImage

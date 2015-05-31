@@ -25,6 +25,7 @@ class SMBLECentral: NSObject, CBCentralManagerDelegate {
         }
     }
     
+    // TODO : fill the function, connect to the device when discovering pheripheral
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         
     }

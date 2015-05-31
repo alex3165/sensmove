@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0E1386D50C48DEE852B46C6F"
+               BlueprintIdentifier = "ACC50551246CD30D92DBC9E6"
                BuildableName = "libPods-sensmove.a"
                BlueprintName = "Pods-sensmove"
                ReferencedContainer = "container:Pods.xcodeproj">

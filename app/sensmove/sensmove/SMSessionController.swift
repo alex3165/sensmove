@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SMSessionController: UITableViewController {
+class SMSessionController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
 
     var userService: SMUserService
     var userSessions: NSMutableArray!
@@ -33,7 +33,7 @@ class SMSessionController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,15 +42,11 @@ class SMSessionController: UITableViewController {
         return self.userSessions.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
-        return cell
+        let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexPath) as! SMSessionViewCell
+        currentCell.setSessionViewFromModel(self.userSessions.objectAtIndex(indexPath.row) as! SMSession)
+        return currentCell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

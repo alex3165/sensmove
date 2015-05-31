@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4654B450347803ED15B69D6A"
+               BlueprintIdentifier = "33D112AE6AE2DBC327AE1186"
                BuildableName = "libPods-sensmoveTests-AMSlideMenu.a"
                BlueprintName = "Pods-sensmoveTests-AMSlideMenu"
                ReferencedContainer = "container:Pods.xcodeproj">

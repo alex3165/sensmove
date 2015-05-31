@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 ___alexprod___. All rights reserved.
 //
 
-#ifndef sensmove_SMSdCardManager_h
-#define sensmove_SMSdCardManager_h
+#ifndef _SMSdCardManager_h
+#define _SMSdCardManager_h
 
 class SMSdCardManager{
     

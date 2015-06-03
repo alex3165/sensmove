@@ -12,7 +12,7 @@ import CoreBluetooth
 
 extension NSData {
     
-    func hexRepresentationWithSpaces(spaces:Bool) ->NSString {
+    func hexRepresentationWithSpaces(spaces:Bool) -> NSString {
         
         var byteArray = [UInt8](count: self.length, repeatedValue: 0x0)
         // The Test Data is moved into the 8bit Array.

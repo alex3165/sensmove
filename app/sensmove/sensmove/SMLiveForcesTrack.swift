@@ -6,22 +6,29 @@
 //  Copyright (c) 2015 ___alexprod___. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import SceneKit
 
 class SMLiveForcesTrack: SCNScene {
-
+    
+    var trackSessionService: SMTrackSessionService?
+    
     override init() {
-        let sphereGeometry = SCNSphere(radius: 1.0)
-        let sphereNode = SCNNode(geometry: sphereGeometry)
-
         super.init()
-
-        self.rootNode.addChildNode(sphereNode)
+        
+        self.trackSessionService = SMTrackSessionService.sharedInstance
+        
+        if let sole = self.trackSessionService?.currentSession?.rightSole {
+            RACObserve(sole, "forceSensors").subscribeNext({ (forceSensors) -> Void in
+                for sensor: SMForce in forceSensors as! [SMForce] {
+                    self.rootNode.addChildNode(sensor.getNode())
+                }
+            })
+        }
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }

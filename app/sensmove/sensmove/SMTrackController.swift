@@ -13,7 +13,8 @@ import SceneKit
 
 class SMTrackController: UIViewController { // , SMBLEPeripheralDelegate
     
-    //@IBOutlet weak var solesGraph: SCNView?
+    @IBOutlet weak var solesGraph: SCNView?
+    var trackSessionService: SMTrackSessionService?
     
     var smLiveGraph: SMLiveForcesTrack?
     
@@ -21,7 +22,17 @@ class SMTrackController: UIViewController { // , SMBLEPeripheralDelegate
         super.viewDidLoad()
         
         self.smLiveGraph = SMLiveForcesTrack()
-        //self.solesGraph?.scene = self.smLiveGraph
+        self.solesGraph?.scene = self.smLiveGraph
+
+        self.solesGraph?.autoenablesDefaultLighting = true
+        self.solesGraph?.allowsCameraControl = true
+
+        self.trackSessionService = SMTrackSessionService.sharedInstance
+        self.trackSessionService?.createNewSession()
+
+//        RACObserve(self.trackSessionService?.currentSession, "rightSole").subscribeCompleted { () -> Void in
+//        }
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -26,6 +26,7 @@
 
 #import "SMLeftMenuVC.h"
 #import "sensmove-swift.h"
+#import "ReactiveCocoa.h"
 
 @interface SMLeftMenuVC()
 
@@ -50,7 +51,13 @@
 {
     self.firstName.text = self.userService.currentUser.firstName;
     [self setImage];
-
+    
+//    [RACObserve(self.userService, currentUser.sessions.count) subscribeNext:^(id x) {
+//        
+//    }];
+    
+    // [NSString stringWithFormat:@"%@i", value];
+    
     self.numberOfSessions.text = [NSString stringWithFormat:@"%lu sessions", self.userService.currentUser.sessions.count];
 }
 

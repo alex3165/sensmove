@@ -8,14 +8,27 @@
 
 import Foundation
 
-class SMSole {
+class SMSole: NSObject {
     
-    var isRight: Bool
+    let isRight: Bool
 
-    var forceSensors: [SMForce] = []
-    var accelerometerSensors: [SMAccelerometer] = []
-    
-    init(isRight: Bool) {
+    dynamic var forceSensors: [SMForce] = []
+    dynamic var accelerometerSensors: [SMAccelerometer] = []
+
+    init(simpleVectors: JSON, isRight: Bool) {
+
         self.isRight = isRight
+        super.init()
+        
+        self.initializeSensors(simpleVectors)
+    }
+    
+    func initializeSensors(forceVectors: JSON) {
+
+        var index: Int = 0
+
+        for (key: String, vector: JSON) in forceVectors {
+            forceSensors.append(SMForce(id: index++, pos: vector))
+        }
     }
 }

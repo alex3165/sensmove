@@ -21,12 +21,15 @@ class SMSession: NSObject {
     var rightSole: SMSole?
     var leftSole: SMSole?
 
-    init(userInfos: SMUser){
+    init(sensorsVectors: JSON){
         self.name = "new_session"
         self.date = NSDate()
         self.id = NSString(format:"%@%ui", self.name, self.date.timeIntervalSince1970)
         self.isActive = true
 
+        self.rightSole = SMSole(simpleVectors: sensorsVectors["right"], isRight: true)
+        self.leftSole = SMSole(simpleVectors: sensorsVectors["left"], isRight: false)
+        
         super.init()
     }
 

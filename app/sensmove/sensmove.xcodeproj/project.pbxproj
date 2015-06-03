@@ -45,6 +45,16 @@
 		22B91C0C1AB33D9600497025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B91C0B1AB33D9600497025 /* Images.xcassets */; };
 		22B91C0F1AB33D9600497025 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B91C0D1AB33D9600497025 /* LaunchScreen.xib */; };
 		22B91C1B1AB33D9600497025 /* sensmoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91C1A1AB33D9600497025 /* sensmoveTests.swift */; };
+		22BA89D11B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */ = {isa = PBXBuildFile; fileRef = 22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */; };
+		22BA89D21B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */ = {isa = PBXBuildFile; fileRef = 22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */; };
+		22BA89D81B1C916E0001A1C4 /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D51B1C916E0001A1C4 /* RAC.swift */; };
+		22BA89D91B1C916E0001A1C4 /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D51B1C916E0001A1C4 /* RAC.swift */; };
+		22BA89DA1B1C916E0001A1C4 /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D61B1C916E0001A1C4 /* RACObserve.swift */; };
+		22BA89DB1B1C916E0001A1C4 /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D61B1C916E0001A1C4 /* RACObserve.swift */; };
+		22BA89DC1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */; };
+		22BA89DD1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */; };
+		22BA89E01B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA89DF1B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a */; };
+		22BA89E11B1CA9390001A1C4 /* SMTrackSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */; };
 		22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */; };
 		22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */; };
 		22BD4E531ADA6D340022318B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */; };
@@ -129,6 +139,11 @@
 		22B91C141AB33D9600497025 /* sensmoveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sensmoveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B91C191AB33D9600497025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B91C1A1AB33D9600497025 /* sensmoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensmoveTests.swift; sourceTree = "<group>"; };
+		22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SMSensorsVectors.json; sourceTree = "<group>"; };
+		22BA89D51B1C916E0001A1C4 /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC.swift; sourceTree = "<group>"; };
+		22BA89D61B1C916E0001A1C4 /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACObserve.swift; sourceTree = "<group>"; };
+		22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Extensions.swift"; sourceTree = "<group>"; };
+		22BA89DF1B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-sensmove-ReactiveCocoa.a"; path = "Pods/../build/Debug-iphoneos/libPods-sensmove-ReactiveCocoa.a"; sourceTree = "<group>"; };
 		22BD4E4B1ADA6B0F0022318B /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "sensmoveTests/Roboto-Light.ttf"; sourceTree = SOURCE_ROOT; };
@@ -163,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BA89E01B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a in Frameworks */,
 				455D5CC518B5FAE23871590C /* libPods-sensmove.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +267,7 @@
 		22B91BFE1AB33D9600497025 /* sensmove */ = {
 			isa = PBXGroup;
 			children = (
+				22BA89D41B1C913C0001A1C4 /* Util */,
 				22415FD71AD9B40F00106E7A /* LIbrary */,
 				2251E0321AD2FF2B005FE3B8 /* Service */,
 				2251E0311AD2FF09005FE3B8 /* View */,
@@ -271,6 +288,7 @@
 				22B91C031AB33D9600497025 /* sensmove.xcdatamodeld */,
 				22B91BFF1AB33D9600497025 /* Supporting Files */,
 				22415FD31AD9B2A200106E7A /* SMData.json */,
+				22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */,
 				2219FBD01B1515BC006A26A0 /* SMSessionData.json */,
 				228745A01AFEB8CE0069ACA1 /* sensmove-Bridging-Header.h */,
 			);
@@ -280,7 +298,6 @@
 		22B91BFF1AB33D9600497025 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */,
 				22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */,
 				22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */,
 				22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */,
@@ -311,6 +328,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		22BA89D41B1C913C0001A1C4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				22BA89D51B1C916E0001A1C4 /* RAC.swift */,
+				22BA89D61B1C916E0001A1C4 /* RACObserve.swift */,
+				22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */,
+				22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		58BDDEF6A9453DFA07768D1D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +353,7 @@
 		AC3B0E47F36311D3ADEFFEBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22BA89DF1B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a */,
 				41CA94D5CE6550D47794EA09 /* libPods-sensmove.a */,
 				BFEC9439C1129318CE8145AF /* libPods-sensmoveTests.a */,
 			);
@@ -424,6 +453,7 @@
 				22068C9D1AF65B3D0033DD6D /* simpleMenuButton.png in Resources */,
 				22BD4E531ADA6D340022318B /* Roboto-Light.ttf in Resources */,
 				22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */,
+				22BA89D11B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */,
 				22B91C0F1AB33D9600497025 /* LaunchScreen.xib in Resources */,
 				2219FBD11B1515BC006A26A0 /* SMSessionData.json in Resources */,
 				22B91C0C1AB33D9600497025 /* Images.xcassets in Resources */,
@@ -435,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BD4E541ADA6D340022318B /* Roboto-Light.ttf in Resources */,
+				22BA89D21B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */,
 				22BD4E5A1ADA6D340022318B /* varela round.otf in Resources */,
 				2219FBD21B1515BC006A26A0 /* SMSessionData.json in Resources */,
 				22415FD51AD9B2A200106E7A /* SMData.json in Resources */,
@@ -518,11 +549,13 @@
 				2251E0391AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
 				22B91C021AB33D9600497025 /* AppDelegate.swift in Sources */,
 				22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */,
+				22BA89D81B1C916E0001A1C4 /* RAC.swift in Sources */,
 				2219FBD71B1516AD006A26A0 /* SMSessionController.swift in Sources */,
 				22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
 				2251E03D1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
 				22FE1ED81B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
 				221F74581ADC5A000078A75E /* SMSole.swift in Sources */,
+				22BA89DC1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */,
 				22BD4E5D1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
 				22FE1ECF1B079BCF006BB6B5 /* SMBLEInfo.swift in Sources */,
@@ -535,6 +568,7 @@
 				223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
 				22FE1EDE1B07A6EB006BB6B5 /* SMBLECentral.swift in Sources */,
 				22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */,
+				22BA89DA1B1C916E0001A1C4 /* RACObserve.swift in Sources */,
 				228950811B0D243200D6FF88 /* SMGradient.swift in Sources */,
 				22FE1ED21B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */,
 				221A64741B12680900C662CD /* SMTrackController.swift in Sources */,
@@ -550,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BA89E11B1CA9390001A1C4 /* SMTrackSessionService.swift in Sources */,
 				22BD4E651ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03A1AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
 				22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */,
@@ -560,7 +595,9 @@
 				2251E03E1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
 				22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
 				22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
+				22BA89DD1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */,
 				22B91C1B1AB33D9600497025 /* sensmoveTests.swift in Sources */,
+				22BA89D91B1C916E0001A1C4 /* RAC.swift in Sources */,
 				2228F5D11AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
 				22CC928D1B1B451200D98E9E /* SMSessionViewCell.swift in Sources */,
 				22FE1ED01B079BCF006BB6B5 /* SMBLEInfo.swift in Sources */,
@@ -574,6 +611,7 @@
 				228950821B0D243200D6FF88 /* SMGradient.swift in Sources */,
 				2219FBD81B1516AD006A26A0 /* SMSessionController.swift in Sources */,
 				22FE1ED31B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */,
+				22BA89DB1B1C916E0001A1C4 /* RACObserve.swift in Sources */,
 				22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */,
 				22BD4E621ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				22FE1EDC1B07A38A006BB6B5 /* SMConstants.swift in Sources */,
@@ -707,6 +745,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sensmove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -722,6 +764,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sensmove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 			};

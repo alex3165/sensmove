@@ -17,23 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
+        var singletonDatas: SMData = SMData.sharedInstance
         
-        let file = NSBundle(forClass: AppDelegate.self).pathForResource("SMData", ofType: "json")
-        
-         let datas = NSData(contentsOfFile: file!)!
-        
-        var parseError: NSError?
-        
-        let parsedObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(datas,
-            options: NSJSONReadingOptions.AllowFragments,
-            error:&parseError)
-        
+        singletonDatas.getDatasFromFile("SMData", success: { (datas) -> () in
 
-        if((file) != nil) {
-            let json = JSON(data: NSData(contentsOfFile: file!)!)
+            singletonDatas.initializeUsers(JSON(data: datas))
+
+        }) { (error) -> () in
             
-            var singletonDatas: SMData = SMData.sharedInstance
-            singletonDatas.initializeDatas(json)
+            println("Error parse file into data")
+            
         }
         
         var userService: SMUserService = SMUserService.sharedInstance

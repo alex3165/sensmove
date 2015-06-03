@@ -9,4 +9,3 @@ end
 target 'sensmoveTests' do
        pod 'AMSlideMenu', '~> 1.5.4'
 end
-

@@ -11,9 +11,8 @@ import UIKit
 class SMGradient: CAGradientLayer {
     init(locations: NSArray) {
         super.init()
-        let colorManager: SMColor = SMColor()
         
-        self.colors = [colorManager.orange().CGColor, colorManager.red().CGColor]
+        self.colors = [SMColor.orange().CGColor, SMColor.red().CGColor]
         self.locations = locations as [AnyObject]
 
     }

@@ -48,11 +48,10 @@ class SMUserController: UIViewController {
     }
     
     func setupUserProfileView() {
-        var colorManager: SMColor = SMColor()
         
         self.profilePicture!.layer.cornerRadius = self.profilePicture!.frame.size.height/2;
         self.profilePicture!.layer.masksToBounds = true;
-        self.profilePicture!.layer.borderColor = colorManager.lightOrange().CGColor
+        self.profilePicture!.layer.borderColor = SMColor.lightOrange().CGColor
         self.profilePicture!.layer.borderWidth = 5.0;
         self.profilePicture!.image =  UIImage(named: self.userService.currentUser?.picturePath as! String)
 

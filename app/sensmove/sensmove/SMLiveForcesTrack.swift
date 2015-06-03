@@ -20,8 +20,9 @@ class SMLiveForcesTrack: SCNScene {
         self.trackSessionService = SMTrackSessionService.sharedInstance
         
         if let sole = self.trackSessionService?.currentSession?.rightSole {
+
             RACObserve(sole, "forceSensors").subscribeNext({ (forceSensors) -> Void in
-                for sensor: SMForce in forceSensors as! [SMForce] {
+                for sensor: SMForce in sole.forceSensors {
                     self.rootNode.addChildNode(sensor.getNode())
                 }
             })

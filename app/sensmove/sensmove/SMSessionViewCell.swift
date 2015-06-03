@@ -16,13 +16,9 @@ class SMSessionViewCell: UITableViewCell {
     @IBOutlet weak var sendReport: UIButton?
     @IBOutlet weak var sessionTitle: UILabel?
     @IBOutlet weak var headerView: UIView?
-
-    var colorManager: SMColor?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        self.colorManager = SMColor()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -42,12 +38,12 @@ class SMSessionViewCell: UITableViewCell {
     }
     
     func designComponents() {
-        self.headerView?.backgroundColor = self.colorManager?.ligthGrey()
+        self.headerView?.backgroundColor = SMColor.ligthGrey()
         
-        self.sessionDuration?.textColor = self.colorManager?.red()
-        self.averageRightForces?.textColor = self.colorManager?.red()
-        self.averageLeftForces?.textColor = self.colorManager?.red()
+        self.sessionDuration?.textColor = SMColor.red()
+        self.averageRightForces?.textColor = SMColor.red()
+        self.averageLeftForces?.textColor = SMColor.red()
 
-        self.sendReport?.setTitleColor(self.colorManager?.middleGrey(), forState: UIControlState.Normal)
+        self.sendReport?.setTitleColor(SMColor.middleGrey(), forState: UIControlState.Normal)
     }
 }

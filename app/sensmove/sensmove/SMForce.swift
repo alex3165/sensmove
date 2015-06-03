@@ -27,10 +27,12 @@ class SMForce: SMSensor {
     }
 
     func initializeVisual(position: JSON){
-        var Sphere = SCNSphere(radius: 0.3)
+        var Sphere = SCNSphere(radius: 5)
+        Sphere.firstMaterial?.diffuse.contents = SMColor.orange()
         self.forceNode = SCNNode(geometry: Sphere)
         self.forceNode?.position.x = position["x"].floatValue
         self.forceNode?.position.y = position["y"].floatValue
+        self.forceNode?.position.z = 10
     }
 
     // Update the z position of pressions measurement

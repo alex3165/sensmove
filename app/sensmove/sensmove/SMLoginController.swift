@@ -39,10 +39,9 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     }
     
     func initializeUI(){
-        var colorManager = SMColor()
-        self.view.backgroundColor = colorManager.ligthGrey()
-        self.badCredentials?.textColor = colorManager.red()
-        brandLabel?.textColor = colorManager.orange()
+        self.view.backgroundColor = SMColor.ligthGrey()
+        self.badCredentials?.textColor = SMColor.red()
+        brandLabel?.textColor = SMColor.orange()
     }
     
     @IBAction func validateCredentials(sender: AnyObject) {

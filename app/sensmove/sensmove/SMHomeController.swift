@@ -32,9 +32,7 @@ class SMHomeController: UIViewController {
         smGradient.setCRadius(95)
 
         self.loaderView.layer.insertSublayer(smGradient, atIndex: 0)
-
-        let colorManager: SMColor = SMColor()
-        self.view.backgroundColor = colorManager.ligthGrey()
+        self.view.backgroundColor = SMColor.ligthGrey()
     }
 
     override func didReceiveMemoryWarning() {

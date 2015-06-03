@@ -37,7 +37,6 @@ class SMBLEPeripheral: NSObject, CBPeripheralDelegate {
     
     init(peripheral:CBPeripheral, delegate:SMBLEPeripheralDelegate){
         super.init()
-
         self.currentPeripheral = peripheral
         self.currentPeripheral.delegate = self
         self.delegate = delegate

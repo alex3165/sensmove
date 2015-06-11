@@ -40,4 +40,8 @@ class SMTrackSessionService: NSObject {
     func getLeftSole() -> SMSole {
         return (self.currentSession?.leftSole as SMSole?)!
     }
+    
+    func sensorsValuesFromString(){
+        
+    }
 }

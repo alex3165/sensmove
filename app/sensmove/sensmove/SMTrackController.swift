@@ -11,7 +11,14 @@ import CoreBluetooth
 import Foundation
 import SceneKit
 
-class SMTrackController: UIViewController { // , SMBLEPeripheralDelegate
+class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
+    
+    enum ConnectionStatus:Int {
+        case Idle = 0
+        case Scanning
+        case Connected
+        case Connecting
+    }
     
     @IBOutlet weak var printButton: UIButton?
     @IBOutlet weak var solesGraph: SCNView?
@@ -19,6 +26,15 @@ class SMTrackController: UIViewController { // , SMBLEPeripheralDelegate
     var trackSessionService: SMTrackSessionService?
     
     var peripheral: SMBLEPeripheral?
+    
+    // Current central manager
+    var centralManager: CBCentralManager?
+    
+    // Current received datas
+    var datas:NSMutableData?
+    
+    // current discovered peripheral
+    private var currentPeripheral:CBPeripheral?
     
     var smLiveGraph: SMLiveForcesTrack?
     
@@ -31,13 +47,17 @@ class SMTrackController: UIViewController { // , SMBLEPeripheralDelegate
         self.trackSessionService = SMTrackSessionService.sharedInstance
         self.trackSessionService?.createNewSession()
 
+        self.datas = NSMutableData()
         
         self.smLiveGraph = SMLiveForcesTrack()
         self.solesGraph?.scene = self.smLiveGraph
         
-        self.peripheral = SMBLEPeripheral()
-//        RACObserve(self.trackSessionService?.currentSession, "rightSole").subscribeCompleted { () -> Void in
-//        }
+        self.centralManager = CBCentralManager(delegate: self, queue: nil)
+
+        //self.peripheral = SMBLEPeripheral()
+        RACObserve(self, "datas").subscribeNext { (datas) -> Void in
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,18 +65,76 @@ class SMTrackController: UIViewController { // , SMBLEPeripheralDelegate
         // Dispose of any resources that can be recreated.
     }
 
-    func didReceiveData(newData:NSData) {
-        
+    // MARK: Central manager delegates methods
+    func centralManagerDidUpdateState(central: CBCentralManager!){
+        if(centralManager?.state == CBCentralManagerState.PoweredOn) {
+            self.centralManager?.scanForPeripheralsWithServices(nil, options: [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(bool: true)])
+            printLog(self, "centralManagerDidUpdateState", "Scanning")
+        }
     }
-
-    func connectionFinalized() {
-        
+    
+    
+    func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
+        if(self.currentPeripheral != peripheral && peripheral.name == "SENS"){
+            self.currentPeripheral = peripheral
+            self.centralManager?.connectPeripheral(peripheral, options: nil)
+        }
     }
+    
+    func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
 
-    func uartDidEncounterError(error:NSString) {
+        self.centralManager?.stopScan()
+        
+        self.datas?.length = 0
+        
+        peripheral.delegate = self
+        
+        if peripheral.services == nil {
+            peripheral.discoverServices([uartServiceUUID()])
+        }
         
     }
     
+    func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
+
+        if((error) != nil) {
+            printLog(error, "didDiscoverServices", "error when discovering services")
+            return
+        }
+        
+        for service in peripheral.services as! [CBService] {
+            if service.characteristics != nil {
+                printLog(service.characteristics, "didDiscoverServices", "characteristics already known")
+            }
+            if service.UUID.isEqual(uartServiceUUID()) {
+                peripheral.discoverCharacteristics([txCharacteristicUUID(), rxCharacteristicUUID()], forService: service)
+            }
+        }
+    }
+    
+    func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
+
+        printLog(service.characteristics, "didDiscoverCharacteristicsForService", "Discover characteristique")
+        
+        if service.UUID.isEqual(uartServiceUUID()) {
+            for characteristic in service.characteristics as! [CBCharacteristic] {
+                if characteristic.UUID.isEqual(txCharacteristicUUID()) || characteristic.UUID.isEqual(rxCharacteristicUUID()) {
+                    peripheral.setNotifyValue(true, forCharacteristic: characteristic)
+                }
+            }
+        }
+    }
+    
+    func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
+        printLog(characteristic, "didUpdateValueForCharacteristic", "Append new datas")
+        self.didReceiveDatasFromBle(characteristic.value)
+    }
+
+    func didReceiveDatasFromBle(datas: NSData){
+        
+    }
+    
+    // MARK: tests methods
     @IBAction func startAction(sender:UIButton!) {
 
     }
@@ -68,14 +146,5 @@ class SMTrackController: UIViewController { // , SMBLEPeripheralDelegate
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

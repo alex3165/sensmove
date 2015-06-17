@@ -25,10 +25,10 @@ class SMSole: NSObject {
     
     func initializeSensors(forceVectors: JSON) {
 
-        var index: Int = 0
+        var index: Int = forceVectors.count - 1
 
         for (key: String, vector: JSON) in forceVectors {
-            forceSensors.append(SMForce(id: index++, pos: vector))
+            forceSensors.append(SMForce(id: index--, pos: vector))
         }
     }
 }

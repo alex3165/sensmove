@@ -27,7 +27,7 @@ class SMForce: SMSensor {
     }
 
     func initializeVisual(position: JSON){
-        var Sphere = SCNSphere(radius: 5)
+        var Sphere = SCNSphere(radius: 7.5)
         Sphere.firstMaterial?.diffuse.contents = SMColor.orange()
         self.forceNode = SCNNode(geometry: Sphere)
         self.forceNode?.position.x = position["x"].floatValue

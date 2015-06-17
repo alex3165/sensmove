@@ -41,8 +41,8 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.solesGraph?.autoenablesDefaultLighting = true
-//        self.solesGraph?.allowsCameraControl = true
+//        self.solesGraph?.autoenablesDefaultLighting = true
+        self.solesGraph?.allowsCameraControl = true
 
         self.trackSessionService = SMTrackSessionService.sharedInstance
         self.trackSessionService?.createNewSession()
@@ -51,6 +51,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         
         self.smLiveGraph = SMLiveForcesTrack()
         self.solesGraph?.scene = self.smLiveGraph
+
         
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
 
@@ -136,14 +137,14 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     // MARK: tests methods
     @IBAction func startAction(sender:UIButton!) {
-
+//        self.solesGraph?
     }
     
     @IBAction func printAction(sender:UIButton!) {
 
-        for node: SCNNode in self.smLiveGraph?.rootNode.childNodes as! [SCNNode] {
-            print("x: \(node.position.x), y: \(node.position.y) |||")
-        }
+//        for node: SCNNode in self.smLiveGraph?.rootNode.childNodes as! [SCNNode] {
+//            print("x: \(node.position.x), y: \(node.position.y) |||")
+//        }
         
     }
 

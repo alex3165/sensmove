@@ -4,8 +4,10 @@
 target 'sensmove' do
        pod 'AMSlideMenu', '~> 1.5.4'
        pod 'ReactiveCocoa', '~> 2.3'
+       pod 'PNChart'
 end
 
 target 'sensmoveTests' do
        pod 'AMSlideMenu', '~> 1.5.4'
+       pod 'PNChart'
 end

@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AMSlideMenu" "${PODS_ROOT}/Headers/Public/ReactiveCocoa"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AMSlideMenu" -isystem "${PODS_ROOT}/Headers/Public/ReactiveCocoa"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-sensmove-AMSlideMenu" -l"Pods-sensmove-ReactiveCocoa"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AMSlideMenu" "${PODS_ROOT}/Headers/Public/PNChart" "${PODS_ROOT}/Headers/Public/ReactiveCocoa" "${PODS_ROOT}/Headers/Public/UICountingLabel"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AMSlideMenu" -isystem "${PODS_ROOT}/Headers/Public/PNChart" -isystem "${PODS_ROOT}/Headers/Public/ReactiveCocoa" -isystem "${PODS_ROOT}/Headers/Public/UICountingLabel"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-sensmove-AMSlideMenu" -l"Pods-sensmove-PNChart" -l"Pods-sensmove-ReactiveCocoa" -l"Pods-sensmove-UICountingLabel" -framework "CoreGraphics" -framework "Foundation" -framework "QuartzCore" -framework "UIKit"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

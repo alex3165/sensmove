@@ -39,6 +39,8 @@
 		227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */; };
 		228950811B0D243200D6FF88 /* SMGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228950801B0D243200D6FF88 /* SMGradient.swift */; };
 		228950821B0D243200D6FF88 /* SMGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228950801B0D243200D6FF88 /* SMGradient.swift */; };
+		228FAD331B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */; };
+		228FAD341B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */; };
 		22B91C021AB33D9600497025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91C011AB33D9600497025 /* AppDelegate.swift */; };
 		22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22B91C031AB33D9600497025 /* sensmove.xcdatamodeld */; };
 		22B91C0A1AB33D9600497025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B91C081AB33D9600497025 /* Main.storyboard */; };
@@ -129,6 +131,7 @@
 		227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSessionViewCell.swift; sourceTree = "<group>"; };
 		228745A01AFEB8CE0069ACA1 /* sensmove-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sensmove-Bridging-Header.h"; sourceTree = "<group>"; };
 		228950801B0D243200D6FF88 /* SMGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMGradient.swift; sourceTree = "<group>"; };
+		228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBluetoothSimulator.swift; sourceTree = "<group>"; };
 		22B91BFC1AB33D9600497025 /* sensmove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensmove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B91C001AB33D9600497025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B91C011AB33D9600497025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +243,7 @@
 				22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */,
 				22FE1EDD1B07A6EB006BB6B5 /* SMBLECentral.swift */,
 				22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */,
+				228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -563,6 +567,7 @@
 				2251E03B1AD3062E005FE3B8 /* SMForce.swift in Sources */,
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
+				228FAD331B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
 				227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */,
 				22CC928F1B1B50ED00D98E9E /* SMTrackSessionService.swift in Sources */,
 				223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
@@ -594,6 +599,7 @@
 				221F74591ADC5A000078A75E /* SMSole.swift in Sources */,
 				2251E03E1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
 				22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
+				228FAD341B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
 				22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
 				22BA89DD1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */,
 				22B91C1B1AB33D9600497025 /* sensmoveTests.swift in Sources */,

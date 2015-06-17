@@ -56,9 +56,26 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
 
         //self.peripheral = SMBLEPeripheral()
-        RACObserve(self, "datas").subscribeNext { (datas) -> Void in
+//        RACObserve(self, "datas").subscribeNext { (datas) -> Void in
+//            
+//        }
+        var bleSimulator = SMBluetoothSimulator()
+        
+        RACObserve(bleSimulator, "data").subscribeNext { (next:AnyObject!) -> Void in
             
+            if let data = next as? NSData {
+                self.didReceiveDatasFromBle(data)
+            }
         }
+        
+        self.initCharts()
+    }
+    
+    func initCharts() {
+        var barChart: PNBarChart = PNBarChart(frame: CGRectMake(0, 135.0, UIScreen.mainScreen().bounds.width, 200.0))
+//        [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+//        [barChart setYValues:@[@1,  @10, @2, @6, @3]];
+//        [barChart strokeChart];
     }
 
     override func didReceiveMemoryWarning() {
@@ -132,6 +149,8 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
 
     func didReceiveDatasFromBle(datas: NSData){
+        var jsonData: JSON = JSON(data: datas)
+        var fsr: Array<JSON> = jsonData["fsr"].arrayValue
         
     }
     

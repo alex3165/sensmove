@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-sensmove-PNChart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-sensmove-ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-sensmove-UICountingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,6 +34,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-sensmoveTests-PNChart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-sensmoveTests-UICountingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-sensmoveTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,47 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E1386D50C48DEE852B46C6F</key>
+		<key>13077EBB753D5872B36FEF70</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1153E097CCA9E53B109BC4F4</key>
+		<key>223BCF56D23628EFE7E9EB32</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33D112AE6AE2DBC327AE1186</key>
+		<key>32948C31AB7840C6E29A89E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4654B450347803ED15B69D6A</key>
+		<key>3784F94614E152EE50513466</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>573392074773C29D8033BF74</key>
+		<key>9D10179BD61FA789409C1D0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA653F55A6CAAEA12850009A</key>
+		<key>A3C3BFB22FB3CEA740FA93C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ACC50551246CD30D92DBC9E6</key>
+		<key>B5FCB89EA2DF9D2E3EFFB690</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B6A50247120A4FC8CF4ECB8D</key>
+		<key>C1C95F555C44D793AD2809E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FAEE5C816A62F3B3D3D6FC15</key>
+		<key>D66744D4E159557719C4A13D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

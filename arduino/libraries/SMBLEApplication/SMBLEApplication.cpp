@@ -1,25 +1,33 @@
+/*
+*   SMBLEApplication.cpp - BLE module to communicate with a device
+*   Created by Alexandre Rieux, March 30, 2015.
+*   Copyright SensMove.
+*/
+
+// header
 #include "SMBLEApplication.h"
 
-/**
-*	Constructor for the BLE manager
+/*
+*	Constructor of the BLE manager
 */
 SMBLEApplication::SMBLEApplication(){
 
 	// sessionId = 0;
 	// startSessionTime = 0;
 	// bleCommunicationCounter = 0;
-	// BTLEserial = malloc(sizeof(Adafruit_BLE_UART));
 	laststatus = ACI_EVT_DISCONNECTED;
 	BTLEserial = new Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
-	// laststatus = ACI_EVT_DISCONNECTED;
-	// InitializeBluetooth();
 	
 }
 
+/*
+* 	Destructor of the BLE manager
+*/
 SMBLEApplication::~SMBLEApplication() {
 
 }
-/**
+
+/*
 *	Initialization of the bluetooth module
 */
  void SMBLEApplication::InitializeBluetooth() {
@@ -28,10 +36,39 @@ SMBLEApplication::~SMBLEApplication() {
   
  }
 
-void SMBLEApplication::BleLoopCommunication(char* jsonData) {
+/*
+* 	BLeLoopCommunication : Manage the BLE communication
+* 	Should be called in a loop
+*	@param: String largeData - string to send 
+*/
+void SMBLEApplication::BleLoopCommunication(String largeData) {
+int jsonDataLength = largeData.length();
+Serial.println(jsonDataLength/19);
+String data;
+for(int i= 0;  i< jsonDataLength+1; i++){
+	if(i == jsonDataLength){
+		data =	largeData.substring(i*19);
+		sendData(data);
+
+	} else {
+		data = largeData.substring(i*19,(i+1)*19);
+		sendData(data);
+
+	}
+}
+
+}
+
+/*
+* 	SendData : Method to send a String 
+*	@param:  String data - string to send, the string length must be inferior to 20 byte arrays (BLE limitations)
+*/
+void SMBLEApplication::sendData(String data){
+
+	// Waiting for call back to send next split data 
 
  	BTLEserial->pollACI(); // Tell the nRF8001 to do whatever it should be working on.
- 	aci_evt_opcode_t status = BTLEserial->getState(); // Ask what is our current status
+	aci_evt_opcode_t status = BTLEserial->getState(); // Ask what is our current status
 
  	if (status != laststatus) {  // If the status changed....
 
@@ -50,22 +87,16 @@ void SMBLEApplication::BleLoopCommunication(char* jsonData) {
 
 	if (status == ACI_EVT_CONNECTED) { // If phone device is connected
 
-	/*
-	*   To receiving datas
-	*/
-	if (BTLEserial->available()) {
-		Serial.print("* ");
-		Serial.print(BTLEserial->available());
-		Serial.println(F(" bytes available from BTLE"));
+		// To receiving datas
+		if (BTLEserial->available()) {
+			Serial.print("* ");
+			Serial.print(BTLEserial->available());
+			Serial.println(F(" bytes available from BTLE"));
 
-	} 
-	/*
-	* 	Send data by bluetooth
-	*/
-	BTLEserial->print(jsonData);
+		}
+
+		// Send data by bluetooth
+		BTLEserial->print(data);
+		
 	}
 }
-
-// void SMBLEApplication::SetCurrentTime() {
-
-// }

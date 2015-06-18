@@ -4,22 +4,35 @@
 #include "SMDataManager.h"
 #include "SMBLEApplication.h"
 
-SMBLEApplication bleApplication = SMBLEApplication();
-int pins[] = {6,0,2,3,5,4,1}; 
-SMDataManager dataJson = SMDataManager(pins, 7);
-void setup() {
 
+SMBLEApplication bleApplication = SMBLEApplication();
+int fsrPins[] = {6,0,2,3,5,4,1}; 
+int accPins[] = {6,0,2}; 
+
+  //String thisString = String(13);
+//String secondString = String(thisString + "coco");
+
+SMDataManager dataJson = SMDataManager(fsrPins, sizeof(fsrPins)/2, accPins, sizeof(accPins)/2);
+void setup() {
 	Serial.begin(9600);
 	while(!Serial); // Leonardo/Micro should wait for serial init
-        
-        bleApplication.InitializeBluetooth();
+               //dataJson.updateData();
+
+     bleApplication.InitializeBluetooth();
 }
 
 void loop() {
-    	//Serial.println(sizeof(hello)/2);
+//Serial.println("hello");
        dataJson.updateData();
-       bleApplication.BleLoopCommunication(dataJson.sendJsonData());
 
+      String jsonData = dataJson.getJsonData();
+       //int jsonDataLength = dataJson.getJsonDataLength();
+     //Serial.println(jsonData);
+     //Serial.println(jsonDataLength);
+       bleApplication.BleLoopCommunication(jsonData);
 
-      delay(1000);
+             // Serial.println(jsonData);
+             // Serial.println(jsonDataLength);
+        delay(1000);
+
 }

@@ -1,30 +1,53 @@
-//
-//  SMSdCardManager.h  - Tool class for browsing a SD card and registrating a session easily
-//  sensmove
-//
-//  Created by Jean-Sébastien Pélerin on 30/05/2015.
-//  Copyright (c) 2015 ___alexprod___. All rights reserved.
-//
-#include "Arduino.h"
-#include "ArduinoJson.h"
+/*
+*   SMDataManager.h - I/O library for managing sensors value and sending it over bluetooth.
+*   Created by Alexandre Rieux, March 30, 2015.
+*   Copyright SensMove.
+*/
 
+/*
+*  Dependencies
+*/
+#include "Arduino.h"
+
+/*
+*  Define file
+*/
 #ifndef _SMDataManager_h
 #define _SMDataManager_h
 
+/*
+*  Class
+*/
 class SMDataManager {
+
 	public:
-		SMDataManager(int* fsr, int dataLength);
+		// constructors
+		SMDataManager(int* fsr, int fsrLength, int *acc, int accLength);
 		~SMDataManager();
+
+		// public methods
 		void updateData();
-		char* sendJsonData();
+		String getJsonData();
+		// String getAccArrayData();
+		// String getFsrArrayData();
+		// int getJsonDataLength();
 
 	private:
-		// JsonObject& jsonData;
-		// void 
-		int * fsrPins;
-		int * fsrData;
-		int tabLength;
-		char * jsonChar;
+		// private methods
+		String createStringArray(int *array, int arrayLength);
+
+		// attributes
+		// int _jsonDataLength;
+		int *_fsrPins;//
+		int *_accPins;//
+
+		int *_fsrData;//
+		int *_accData;//
+
+		int _fsrLength;//
+		int _accLength;//
+		String _jsonData;//
+		static int _index;
 
 };
 

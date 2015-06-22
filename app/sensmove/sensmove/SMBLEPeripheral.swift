@@ -9,80 +9,84 @@
 import Foundation
 import CoreBluetooth
 
-enum ConnectionMode:Int {
-    case PinIO
-    case UART
-    case DeviceList
-    case Info
-    case Controller
-}
-
-protocol SMBLEPeripheralDelegate: Any {
-
-    var connectionMode:ConnectionMode { get }
-    func didReceiveData(newData:NSData)
-    func connectionFinalized()
-    func uartDidEncounterError(error:NSString)
-
-}
 
 class SMBLEPeripheral: NSObject, CBPeripheralDelegate {
 
-    var currentPeripheral:CBPeripheral!
-    var delegate:SMBLEPeripheralDelegate!
-    var uartService:CBService?
-    var rxCharacteristic:CBCharacteristic?
-    var txCharacteristic:CBCharacteristic?
-    var knownServices:[CBService] = []
+    var currentPeripheral: CBPeripheral?
+    var peripheralManager: CBPeripheralManager?
+    var txCharacteristic: CBCharacteristic?
 
-    init(peripheral:CBPeripheral, delegate:SMBLEPeripheralDelegate){
+    init(peripheral: CBPeripheral){ //, delegate:SMBLEPeripheralDelegate
         super.init()
         self.currentPeripheral = peripheral
-        self.currentPeripheral.delegate = self
-        self.delegate = delegate
-    }
-    
-    func didConnect(withMode:ConnectionMode) {
+        self.currentPeripheral!.delegate = self
 
+        self.txCharacteristic = CBMutableCharacteristic(type: txCharacteristicUUID(), properties: CBCharacteristicProperties.Notify, value: nil, permissions: CBAttributePermissions.Readable)
+        
+        //self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
+        
+//        let activeSignal = RACObserve(SMTrackSessionService.sharedInstance.currentSession, "isActive").subscribeNext { (AnyObject) -> Void in
+//            
+//        }
+
+        
+        
+//        let peripheralSet = RACObserve(self, "currentPeripheral").filter { $0 != nil }
+//        
+//        RACSignal.combineLatest([activeSignal, peripheralSet]).subscribeNext { (AnyObject) -> Void in
+//            
+//        }
     }
 
-    func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
-
-    }
-    
-    func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
-
-    }
-    
-    func peripheral(peripheral: CBPeripheral!, didDiscoverDescriptorsForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
+    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
         
     }
     
-    
-    //    func peripheral(peripheral: CBPeripheral!, didUpdateValueForDescriptor descriptor: CBDescriptor!, error: NSError!) {
-    //
-    //        if error != nil {
-    //            handleError("Error reading descriptor value \(error.debugDescription)")
-    //            printLog(self, "didUpdateValueForDescriptor", "\(error.debugDescription)")
-    //            return
-    //        }
-    //
-    //        else {
-    //            println("descriptor value = \(descriptor.value)")
-    //            println("descriptor description = \(descriptor.description)")
-    //        }
-    //
-    //    }
-    
-    
-    func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
+    func writeString(string:NSString){
 
+        let data = NSData(bytes: string.UTF8String, length: string.length)
+
+        writeRawData(data)
     }
     
-    
-    func peripheral(peripheral: CBPeripheral!, didDiscoverIncludedServicesForService service: CBService!, error: NSError!) {
+    func writeRawData(data:NSData) {
         
+        var writeType:CBCharacteristicWriteType = CBCharacteristicWriteType.WithoutResponse
+        
+        //send data in lengths of <= 20 bytes
+        let dataLength = data.length
+        let limit = 20
+        
+        //Below limit, send as-is
+        if dataLength <= limit {
+            currentPeripheral!.writeValue(data, forCharacteristic: txCharacteristic, type: writeType)
+        }
+            
+            //Above limit, send in lengths <= 20 bytes
+        else {
+            
+            var len = limit
+            var loc = 0
+            var idx = 0 //for debug
+            
+            while loc < dataLength {
+                
+                var rmdr = dataLength - loc
+                if rmdr <= len {
+                    len = rmdr
+                }
+                
+                let range = NSMakeRange(loc, len)
+                var newBytes = [UInt8](count: len, repeatedValue: 0)
+                data.getBytes(&newBytes, range: range)
+                let newData = NSData(bytes: newBytes, length: len)
+                //                    println("\(self.classForCoder.description()) writeRawData : packet_\(idx) : \(newData.hexRepresentationWithSpaces(true))")
+                self.currentPeripheral!.writeValue(newData, forCharacteristic: self.txCharacteristic, type: writeType)
+                
+                loc += len
+                idx += 1
+            }
+        }
     }
-
 
 }

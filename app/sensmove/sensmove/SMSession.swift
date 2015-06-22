@@ -16,7 +16,7 @@ class SMSession: NSObject {
     var duration: NSNumber?
     var averageLeftForce: NSNumber?
     var averageRightForce: NSNumber?
-    var isActive: Bool
+    dynamic var isActive: Bool
     
     var rightSole: SMSole?
     var leftSole: SMSole?

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C1C95F555C44D793AD2809E0"
+               BlueprintIdentifier = "5398C87D1FCC2741500291C2"
                BuildableName = "libPods-sensmove-AMSlideMenu.a"
                BlueprintName = "Pods-sensmove-AMSlideMenu"
                ReferencedContainer = "container:Pods.xcodeproj">

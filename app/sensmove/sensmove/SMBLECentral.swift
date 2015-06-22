@@ -33,14 +33,14 @@ class SMBLECentral: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
 
     override init(){
         super.init()
-        self.centralManager = CBCentralManager(delegate: self, queue: nil)
+        // self.centralManager = CBCentralManager(delegate: self, queue: nil)
 
-        self.startScan()
+//        self.startScan()
     }
 
-    func startScan(){
-        self.centralManager?.scanForPeripheralsWithServices(nil, options: [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(bool: true)])
-    }
+//    func startScan(){
+//        self.centralManager?.scanForPeripheralsWithServices(nil, options: [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(bool: true)])
+//    }
 
     func centralManagerDidUpdateState(central: CBCentralManager!){
         if(centralManager?.state == CBCentralManagerState.PoweredOn) {

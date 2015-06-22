@@ -25,16 +25,14 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
     var trackSessionService: SMTrackSessionService?
     
-    var peripheral: SMBLEPeripheral?
-    
     // Current central manager
     var centralManager: CBCentralManager?
     
     // Current received datas
-    var datas:NSMutableData?
+    var datas: NSMutableData?
     
     // current discovered peripheral
-    private var currentPeripheral:CBPeripheral?
+    private var currentPeripheral: CBPeripheral?
     
     var smLiveGraph: SMLiveForcesTrack?
     
@@ -42,8 +40,9 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         super.viewDidLoad()
 
 //        self.solesGraph?.autoenablesDefaultLighting = true
-        self.solesGraph?.allowsCameraControl = true
+//        self.solesGraph?.allowsCameraControl = true
 
+        
         self.trackSessionService = SMTrackSessionService.sharedInstance
         self.trackSessionService?.createNewSession()
 
@@ -57,25 +56,14 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
         //self.peripheral = SMBLEPeripheral()
 //        RACObserve(self, "datas").subscribeNext { (datas) -> Void in
-//            
 //        }
         var bleSimulator = SMBluetoothSimulator()
-        
         RACObserve(bleSimulator, "data").subscribeNext { (next:AnyObject!) -> Void in
             
             if let data = next as? NSData {
                 self.didReceiveDatasFromBle(data)
             }
         }
-        
-        self.initCharts()
-    }
-    
-    func initCharts() {
-        var barChart: PNBarChart = PNBarChart(frame: CGRectMake(0, 135.0, UIScreen.mainScreen().bounds.width, 200.0))
-//        [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
-//        [barChart setYValues:@[@1,  @10, @2, @6, @3]];
-//        [barChart strokeChart];
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,9 +71,10 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: Central manager delegates methods
+     // MARK: Central manager delegates methods
     func centralManagerDidUpdateState(central: CBCentralManager!){
         if(centralManager?.state == CBCentralManagerState.PoweredOn) {
+
             self.centralManager?.scanForPeripheralsWithServices(nil, options: [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(bool: true)])
             printLog(self, "centralManagerDidUpdateState", "Scanning")
         }
@@ -93,14 +82,17 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
-        if(self.currentPeripheral != peripheral && peripheral.name == "SENS"){
+        if(self.currentPeripheral != peripheral && peripheral.name == "SL18902"){
             self.currentPeripheral = peripheral
+            
+            //SMBLEPeripheral(peripheral: self.currentPeripheral!)
+
             self.centralManager?.connectPeripheral(peripheral, options: nil)
         }
     }
     
     func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
-
+        
         self.centralManager?.stopScan()
         
         self.datas?.length = 0
@@ -148,7 +140,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.didReceiveDatasFromBle(characteristic.value)
     }
 
-    func didReceiveDatasFromBle(datas: NSData){
+    func didReceiveDatasFromBle(datas: NSData) {
         var jsonData: JSON = JSON(data: datas)
         var fsr: Array<JSON> = jsonData["fsr"].arrayValue
         
@@ -156,15 +148,10 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     // MARK: tests methods
     @IBAction func startAction(sender:UIButton!) {
-//        self.solesGraph?
+
     }
     
     @IBAction func printAction(sender:UIButton!) {
-
-//        for node: SCNNode in self.smLiveGraph?.rootNode.childNodes as! [SCNNode] {
-//            print("x: \(node.position.x), y: \(node.position.y) |||")
-//        }
-        
     }
 
 }

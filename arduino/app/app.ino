@@ -1,6 +1,5 @@
 #include <SPI.h>
 #include <Adafruit_BLE_UART.h>
-#include <ArduinoJson.h>
 #include "SMDataManager.h"
 #include "SMBLEApplication.h"
 
@@ -16,23 +15,21 @@ SMDataManager dataJson = SMDataManager(fsrPins, sizeof(fsrPins)/2, accPins, size
 void setup() {
 	Serial.begin(9600);
 	while(!Serial); // Leonardo/Micro should wait for serial init
-               //dataJson.updateData();
 
-     bleApplication.InitializeBluetooth();
+     bleApplication.initializeBluetooth();
 }
 
 void loop() {
-//Serial.println("hello");
-       dataJson.updateData();
-
+  
+      dataJson.updateData();
+      //bleApplication.receiveData();
       String jsonData = dataJson.getJsonData();
-       //int jsonDataLength = dataJson.getJsonDataLength();
-     //Serial.println(jsonData);
-     //Serial.println(jsonDataLength);
-       bleApplication.BleLoopCommunication(jsonData);
-
-             // Serial.println(jsonData);
-             // Serial.println(jsonDataLength);
-        delay(1000);
+      //int jsonDataLength = dataJson.getJsonDataLength();
+      //Serial.println(jsonData);
+      //Serial.println(jsonDataLength);
+       bleApplication.bleLoopCommunication(jsonData);
+       // Serial.println(jsonData);
+       // Serial.println(jsonDataLength);
+       delay(1000);
 
 }

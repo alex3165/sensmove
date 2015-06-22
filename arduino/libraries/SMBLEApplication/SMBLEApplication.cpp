@@ -15,9 +15,9 @@ SMBLEApplication::SMBLEApplication(){
 	// sessionId = 0;
 	// startSessionTime = 0;
 	// bleCommunicationCounter = 0;
-	laststatus = ACI_EVT_DISCONNECTED;
-	BTLEserial = new Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
-	
+	_laststatus = ACI_EVT_DISCONNECTED;
+	_BTLESerial = new Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
+	_sessionStarted = false;
 }
 
 /*
@@ -25,37 +25,117 @@ SMBLEApplication::SMBLEApplication(){
 */
 SMBLEApplication::~SMBLEApplication() {
 
+	free(_BTLESerial);
+
 }
 
 /*
-*	Initialization of the bluetooth module
+*	initializeBluetooth: Initialization of the bluetooth module
 */
- void SMBLEApplication::InitializeBluetooth() {
- 	BTLEserial->setDeviceName("SENS"); /* 7 characters max! */
-   	BTLEserial->begin();
+ void SMBLEApplication::initializeBluetooth() {
+ 	_BTLESerial->setDeviceName("SL18902"); /* 7 characters max! */
+   	_BTLESerial->begin();
   
  }
 
 /*
-* 	BLeLoopCommunication : Manage the BLE communication
+* 	bLeLoopCommunication : Manage the BLE communication
 * 	Should be called in a loop
 *	@param: String largeData - string to send 
 */
-void SMBLEApplication::BleLoopCommunication(String largeData) {
-int jsonDataLength = largeData.length();
-Serial.println(jsonDataLength/19);
-String data;
-for(int i= 0;  i< jsonDataLength+1; i++){
-	if(i == jsonDataLength){
-		data =	largeData.substring(i*19);
-		sendData(data);
+void SMBLEApplication::bleLoopCommunication(String largeData) {
+
+	String dataExtDevice;
+	String dataCurDevice;
+	if(!_sessionStarted){
+		//Session did not started, wait for start request
+
+		dataExtDevice = receiveData();
+		_sessionStarted = dataExtDevice.equals(String("start"));
+		// Serial.println(_sessionStarted);
 
 	} else {
-		data = largeData.substring(i*19,(i+1)*19);
-		sendData(data);
+		//Send Sensors Data to the external device
+
+		int jsonDataLength = largeData.length()/17;
+
+		// if(jsonDataLength>0){
+			for(int i= 0;  i< jsonDataLength+1; i++){
+				if(i == jsonDataLength){
+					dataCurDevice =	"$" +largeData.substring(i*17) +"$";
+					sendData(dataCurDevice);
+					Serial.println(dataCurDevice);
+				} else {
+					dataCurDevice = "$" + largeData.substring(i*17,(i+1)*17) + "$";
+					sendData(dataCurDevice);
+					Serial.println(dataCurDevice);
+
+				}
+
+			}
+
+		// }
+		
+		//Check if their is a request from the external device
+		dataExtDevice = receiveData();
+		_sessionStarted = !dataExtDevice.equals(String("stop"));
 
 	}
+		
+
+
+
 }
+
+/*
+*	receiveData: function to wait for data from an external device
+*	@return data received from the external device
+*/
+String SMBLEApplication::receiveData(){
+	String stringBle = String("");
+ 	_BTLESerial->pollACI(); // Tell the nRF8001 to do whatever it should be working on.
+	updateStatus();
+
+	if (_laststatus == ACI_EVT_CONNECTED) { // If phone device is connected
+
+			// To receiving datas
+			while (_BTLESerial->available()) {
+		       char data = _BTLESerial->read();
+		       stringBle = stringBle + String(data);
+			}
+			if(stringBle.length()>0){
+				Serial.println(stringBle);
+			}
+		
+	}
+	return stringBle;
+}
+
+/*
+* updateStatus : get
+*
+*/
+void SMBLEApplication::updateStatus(){
+
+	aci_evt_opcode_t status = _BTLESerial->getState(); // Ask what is our current status
+
+	
+	if (status != _laststatus) {  // If the status changed....
+
+	if (status == ACI_EVT_DEVICE_STARTED) {
+	    Serial.println(F("* Advertising started"));
+	}
+	if (status == ACI_EVT_CONNECTED) {
+	    Serial.println(F("* Connected!"));
+	}
+	if (status == ACI_EVT_DISCONNECTED) {
+	    Serial.println(F("* Disconnected or advertising timed out"));
+	}
+
+	_laststatus = status; // OK set the last status change to this one
+	}
+
+	_laststatus = status;
 
 }
 
@@ -67,36 +147,16 @@ void SMBLEApplication::sendData(String data){
 
 	// Waiting for call back to send next split data 
 
- 	BTLEserial->pollACI(); // Tell the nRF8001 to do whatever it should be working on.
-	aci_evt_opcode_t status = BTLEserial->getState(); // Ask what is our current status
+ 	_BTLESerial->pollACI(); // Tell the nRF8001 to do whatever it should be working on.
 
- 	if (status != laststatus) {  // If the status changed....
+	updateStatus();
 
-		if (status == ACI_EVT_DEVICE_STARTED) {
-		    Serial.println(F("* Advertising started"));
-		}
-		if (status == ACI_EVT_CONNECTED) {
-		    Serial.println(F("* Connected!"));
-		}
-		if (status == ACI_EVT_DISCONNECTED) {
-		    Serial.println(F("* Disconnected or advertising timed out"));
-		}
+	if (_laststatus == ACI_EVT_CONNECTED) { // If phone device is connected
 
-		laststatus = status; // OK set the last status change to this one
-	}
-
-	if (status == ACI_EVT_CONNECTED) { // If phone device is connected
-
-		// To receiving datas
-		if (BTLEserial->available()) {
-			Serial.print("* ");
-			Serial.print(BTLEserial->available());
-			Serial.println(F(" bytes available from BTLE"));
-
-		}
-
-		// Send data by bluetooth
-		BTLEserial->print(data);
-		
-	}
+	// Send data by bluetooth
+	_BTLESerial->print(data);
+				
+ }
+	
+	
 }

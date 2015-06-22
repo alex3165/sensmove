@@ -237,11 +237,11 @@ size_t Adafruit_BLE_UART::write(uint8_t * buffer, uint8_t len)
   uint8_t bytesThisPass, sent = 0;
 
 #ifdef BLE_RW_DEBUG
-  Serial.print(F("\tWriting out to BTLE:"));
-  for (uint8_t i=0; i<len; i++) {
-    Serial.print(F(" 0x")); Serial.print(buffer[i], HEX);
-  }
-  Serial.println();
+  // Serial.print(F("\tWriting out to BTLE:"));
+  // for (uint8_t i=0; i<len; i++) {
+  //   Serial.print(F(" 0x")); Serial.print(buffer[i], HEX);
+  // }
+  // Serial.println();
 #endif
 
   while(len) { // Parcelize into chunks

@@ -36,24 +36,24 @@ public:
   ~SMBLEApplication();
 
   // public methods
-  void InitializeBluetooth();
-  void BleLoopCommunication(String largeData);
+  void initializeBluetooth();
+  String receiveData();
+  void bleLoopCommunication(String largeData);
 
 private:
 
   // private methods
   void sendData(String data);
+  void updateStatus();
 
 
   // Attributes
-  Adafruit_BLE_UART* BTLEserial;
-  aci_evt_opcode_t laststatus;
-  // unsigned int sessionId;
-  // unsigned int currentTime; // Current time set by the first bluetooth communication
+  Adafruit_BLE_UART* _BTLESerial;
+  aci_evt_opcode_t _laststatus;
+  boolean _sessionStarted;
   // unsigned int startSessionTime;
   // unsigned int bleCommunicationCounter;
   // void detectValuesLimitations();
-  // void SetCurrentTime();
 };
 
 #endif

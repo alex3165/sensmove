@@ -13,7 +13,11 @@ import SceneKit
 
 class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
-    @IBOutlet weak var printButton: UIButton?
+    // For development
+    //@IBOutlet weak var printButton: UIButton?
+    
+
+    @IBOutlet weak var stopSessionButton: UIButton?
 
     var trackSessionService: SMTrackSessionService?
     
@@ -54,8 +58,15 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
             }
         }
         /// ******************
+        
+        self.uiInitialize()
     }
 
+    func uiInitialize() {
+        self.stopSessionButton?.backgroundColor = SMColor.red()
+        self.stopSessionButton?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -137,11 +148,11 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
     
     // MARK: tests methods
-    @IBAction func startAction(sender:UIButton!) {
-
-    }
-    
-    @IBAction func printAction(sender:UIButton!) {
-    }
+//    @IBAction func startAction(sender:UIButton!) {
+//
+//    }
+//    
+//    @IBAction func printAction(sender:UIButton!) {
+//    }
 
 }

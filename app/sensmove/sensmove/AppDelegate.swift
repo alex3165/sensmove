@@ -15,17 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
         var singletonDatas: SMData = SMData.sharedInstance
-        
+
+        /// Parse data from SMData then initialize users
         singletonDatas.getDatasFromFile("SMData", success: { (datas) -> () in
 
             singletonDatas.initializeUsers(JSON(data: datas))
 
         }) { (error) -> () in
             
-            println("Error parse file into data")
+            printLog(error, "didFinishLaunchingWithOptions", "Error while parsing datas from SMData")
             
         }
         
@@ -34,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let newController: UIViewController
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
+        /// if user exist redirect to main home view (sideMenuController) otherwise redirect to login controller
         if(userService.asUserInKeychain()) {
             newController = storyboard.instantiateViewControllerWithIdentifier("sideMenuController") as! UIViewController
         }else {

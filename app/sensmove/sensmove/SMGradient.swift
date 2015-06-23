@@ -8,7 +8,15 @@
 
 import UIKit
 
+
+/**
+*
+*   Custom layer that follow sensmove design pattern with correct gradient and customizable border radius
+*
+*/
 class SMGradient: CAGradientLayer {
+    
+    
     init(locations: NSArray) {
         super.init()
         

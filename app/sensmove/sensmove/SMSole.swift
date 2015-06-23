@@ -12,18 +12,30 @@ class SMSole: NSObject {
     
     let isRight: Bool
 
-    dynamic var forceSensors: [SMForce] = []
-    dynamic var accelerometerSensors: [SMAccelerometer] = []
+    var forceSensors: [SMForce] = []
+    var accelerometerSensors: [SMAccelerometer] = []
 
+    /**
+    *
+    *   Initialize new sole object
+    *   :param:  simpleVectors  x / y positions of vectors
+    *   :param:  isRight  Boolean that specify if the sole is right or left
+    */
     init(simpleVectors: JSON, isRight: Bool) {
 
         self.isRight = isRight
         super.init()
         
-        self.initializeSensors(simpleVectors)
+        self.createSensortsFromVectors(simpleVectors)
     }
     
-    func initializeSensors(forceVectors: JSON) {
+    /**
+    *
+    *   Create force sensors from JSON object
+    *   :param:  forceVectors  JSON object
+    *
+    */
+    func createSensortsFromVectors(forceVectors: JSON) {
 
         var index: Int = forceVectors.count - 1
 

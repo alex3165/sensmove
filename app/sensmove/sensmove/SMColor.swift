@@ -8,6 +8,12 @@
 import UIKit
 typealias SMColor = UIColor
 
+
+/**
+*
+*   Custom sensmove colors (class methods)
+*
+*/
 extension SMColor{
     
     convenience init(red: Int, green: Int, blue: Int)

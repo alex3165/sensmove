@@ -28,4 +28,6 @@
 
 @interface SMLeftMenuVC : AMSlideMenuLeftTableViewController
 
+    - (void)setSessions:(NSString *)numberOfSessions;
+
 @end

@@ -28,8 +28,8 @@ class SMUserController: UIViewController {
     
     @IBOutlet weak var editButton: UIButton?
     
+    /// User service that return current user
     var userService: SMUserService
-    
     
     required init(coder aDecoder: NSCoder) {
         self.userService = SMUserService.sharedInstance
@@ -46,7 +46,10 @@ class SMUserController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    /**
+    *   Setup the user profile from SMUserService currentUser informations
+    */
     func setupUserProfileView() {
         
         self.profilePicture!.layer.cornerRadius = self.profilePicture!.frame.size.height/2;

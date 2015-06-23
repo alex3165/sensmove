@@ -16,32 +16,19 @@ class SMBLEPeripheral: NSObject, CBPeripheralDelegate {
     var peripheralManager: CBPeripheralManager?
     var txCharacteristic: CBCharacteristic?
 
-    init(peripheral: CBPeripheral){ //, delegate:SMBLEPeripheralDelegate
+    init(peripheral: CBPeripheral) {
         super.init()
         self.currentPeripheral = peripheral
         self.currentPeripheral!.delegate = self
 
         self.txCharacteristic = CBMutableCharacteristic(type: txCharacteristicUUID(), properties: CBCharacteristicProperties.Notify, value: nil, permissions: CBAttributePermissions.Readable)
-        
-        //self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
-        
-//        let activeSignal = RACObserve(SMTrackSessionService.sharedInstance.currentSession, "isActive").subscribeNext { (AnyObject) -> Void in
-//            
-//        }
-
-        
-        
-//        let peripheralSet = RACObserve(self, "currentPeripheral").filter { $0 != nil }
-//        
-//        RACSignal.combineLatest([activeSignal, peripheralSet]).subscribeNext { (AnyObject) -> Void in
-//            
-//        }
     }
 
     func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
         
     }
     
+    // Shorthand method that convert string into data and call writeRawData
     func writeString(string:NSString){
 
         let data = NSData(bytes: string.UTF8String, length: string.length)
@@ -49,6 +36,7 @@ class SMBLEPeripheral: NSObject, CBPeripheralDelegate {
         writeRawData(data)
     }
     
+    // Send datas over bluetooth (write on characteristic)
     func writeRawData(data:NSData) {
         
         var writeType:CBCharacteristicWriteType = CBCharacteristicWriteType.WithoutResponse

@@ -21,22 +21,6 @@ class SMLiveForcesTrack: SCNScene {
         self.trackSessionService = SMTrackSessionService.sharedInstance
         
         self.createLights()
-//        var cameraNode = SCNNode()
-//        cameraNode.camera = SCNCamera()
-//        //                cameraNode.camera?.xFov = 303.181519
-//        cameraNode.position = SCNVector3Make(0, 0, 25)
-////        cameraNode.rotation = SCNVector4(x: -0.995538, y: 0.075670, z: -0.056372, w: 2.034063)
-////        cameraNode.scale = SCNVector3(x: 1.000000, y: 1.000000, z: 1.000000)
-//        self.rootNode.addChildNode(cameraNode)
-        
-//        var sphere = SCNSphere(radius: 5)
-//        var sphereNode = SCNNode(geometry: sphere)
-//        self.rootNode.addChildNode(sphereNode)
-
-//        var cameraNode = SCNNode()
-//        cameraNode.camera = SCNCamera()
-//        cameraNode.position = SCNVector3Make(0, 0, 100)
-//        self.rootNode.addChildNode(cameraNode)
 
         if let sole = self.trackSessionService?.currentSession?.rightSole {
 
@@ -48,7 +32,6 @@ class SMLiveForcesTrack: SCNScene {
 
             })
         }
-        //        Optional(<SCNNode: 0x12de1f000 'kSCNFreeViewCameraName' pos(303.181519 419.555328 -121.379990) rot(-0.995538 0.075670 -0.056372 2.034063) scale(1.000000 1.000000 1.000000) | camera=<SCNCamera: 0x1741783c0 'kSCNFreeViewCameraNameCamera'> | no child>)
 
     }
     

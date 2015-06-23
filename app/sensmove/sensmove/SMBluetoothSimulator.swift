@@ -9,16 +9,20 @@
 import UIKit
 
 class SMBluetoothSimulator: NSObject {
-   
-    var timer: NSTimer?
+    
+    /// Observable data for RACObserve
     dynamic var data: NSData?
     
     override init() {
         super.init()
         
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("startSimulator"), userInfo: nil, repeats: true)
+        /// Timer that call startSimulator every 5 seconds
+        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("startSimulator"), userInfo: nil, repeats: true)
     }
     
+    /**
+    *   Create datas and store it into data variable
+    */
     func startSimulator() {
         var jsonData: JSON = [
             "fsr": [

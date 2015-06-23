@@ -35,19 +35,25 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
+
+    /**
+    *   Initialize login controller UI
+    */
     func initializeUI(){
         self.view.backgroundColor = SMColor.ligthGrey()
         self.badCredentials?.textColor = SMColor.red()
         brandLabel?.textColor = SMColor.orange()
     }
     
+    /**
+    *   Action triggered when use tap on main home button
+    */
     @IBAction func validateCredentials(sender: AnyObject) {
         var username: NSString = identifier!.text
         var pass: NSString = password!.text
         
+        /// Try login user with login and password entered
         self.userService.loginUserWithUserNameAndPassword(username, passwd: pass, success: { (informations) -> () in
                 var userToSave: SMUser = SMUser(userSettings: informations)
                 self.userService.setUser(userToSave)
@@ -57,10 +63,15 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
 
             }, failure: { (error) -> () in
                 self.badCredentials?.hidden = false
+                /// Trigger timer that hide failure message in 2 seconds
                 var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("onHideBadCredentials"), userInfo: nil, repeats: false)
         })
     }
     
+    /**
+    *   Redirect to the given view
+    *   :param: view The view to redirect at
+    */
     func redirectToView(view: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let newController: UIViewController = storyboard.instantiateViewControllerWithIdentifier(view) as! UIViewController
@@ -70,6 +81,9 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         }
     }
 
+    /**
+    *   Hide failure message
+    */
     func onHideBadCredentials() {
         self.badCredentials?.hidden = true
     }

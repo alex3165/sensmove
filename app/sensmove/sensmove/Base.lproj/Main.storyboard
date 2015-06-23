@@ -388,10 +388,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xg-yS-RHk">
-                                <rect key="frame" x="24" y="136" width="272" height="341"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </sceneKitView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -400,7 +396,6 @@
                     </view>
                     <connections>
                         <outlet property="printButton" destination="aKN-vN-7R6" id="kg1-BO-ajl"/>
-                        <outlet property="solesGraph" destination="7xg-yS-RHk" id="ddF-p0-3Gn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwe-7y-dYr" userLabel="First Responder" sceneMemberID="firstResponder"/>

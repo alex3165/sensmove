@@ -47,20 +47,33 @@
     [self initializeUserProfile];
 }
 
+/**
+ *  Initialize user profile in left side menu
+ */
 - (void)initializeUserProfile
 {
     self.firstName.text = self.userService.currentUser.firstName;
     [self setImage];
-    
-//    [RACObserve(self.userService, currentUser.sessions.count) subscribeNext:^(id x) {
-//        
-//    }];
-    
-    // [NSString stringWithFormat:@"%@i", value];
-    
-    self.numberOfSessions.text = [NSString stringWithFormat:@"%lu sessions", self.userService.currentUser.sessions.count];
+
+    /// Observe change on sessions array then set the correct value in side menu
+    [RACObserve(self.userService.currentUser, sessions) subscribeNext:^(NSMutableArray *sessions) {
+        if (sessions != nil) {
+            [self setSessions:[NSString stringWithFormat:@"%lu sessions", sessions.count]];
+        }
+    }];
 }
 
+/**
+ *  Set number of session text
+ *  :param: numberOfSessions
+ */
+- (void)setSessions:(NSString *)numberOfSessions {
+    self.numberOfSessions.text = numberOfSessions;
+}
+
+/**
+ *  Set user picture
+ */
 - (void)setImage
 {
     self.userPicture.layer.cornerRadius = self.userPicture.frame.size.height /2;

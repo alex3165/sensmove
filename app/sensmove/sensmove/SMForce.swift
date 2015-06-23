@@ -11,17 +11,30 @@ import SceneKit
 
 class SMForce: SMSensor {
 
+    dynamic var forcePressure: Float
     private var forceNode: SCNNode?
 
     required init(id: Int, pos: JSON) {
+        
+        self.forcePressure = 0.0
+
         super.init(id: id, creation: NSDate())
-        self.initializeVisual(pos)
+        
+        // self.initializeVisual(pos)
     }
 
     required init(id: Int, creation: NSDate) {
         fatalError("init(id:creation:) has not been implemented")
     }
 
+    // Update the force pressure on sensor
+    func updateForce(force: Float) {
+        self.forcePressure = force
+        
+        // self.updateZ(self.forcePressure)
+    }
+    
+    // Get the current node with it's state
     func getNode() -> SCNNode {
         return self.forceNode!
     }
@@ -32,7 +45,7 @@ class SMForce: SMSensor {
         self.forceNode = SCNNode(geometry: Sphere)
         self.forceNode?.position.x = position["x"].floatValue
         self.forceNode?.position.y = position["y"].floatValue
-        self.forceNode?.position.z = 10
+        self.forceNode?.position.z = self.forcePressure
     }
 
     // Update the z position of pressions measurement

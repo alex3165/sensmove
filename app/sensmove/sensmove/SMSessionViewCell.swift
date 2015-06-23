@@ -23,20 +23,20 @@ class SMSessionViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     func setSessionViewFromModel(session: SMSession) {
         
         self.designComponents()
         
+        // Set values for components
         self.sessionTitle?.text = session.name as String
         self.averageLeftForces?.text = session.averageLeftForce?.stringValue
         self.averageRightForces?.text = session.averageRightForce?.stringValue
         self.sessionDuration?.text = session.duration!.stringValue
     }
     
+    // Set colors for differents component of session view
     func designComponents() {
         self.headerView?.backgroundColor = SMColor.ligthGrey()
         

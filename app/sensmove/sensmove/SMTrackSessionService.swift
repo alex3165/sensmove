@@ -13,6 +13,7 @@ class SMTrackSessionService: NSObject {
 
     var currentSession: SMSession?
 
+    // Singleton instance of current class
     class var sharedInstance: SMTrackSessionService {
         struct Static {
             static let instance: SMTrackSessionService = SMTrackSessionService()
@@ -20,7 +21,8 @@ class SMTrackSessionService: NSObject {
         return Static.instance
     }
 
-    func createNewSession(){
+    // Create new force / acceleration tracking
+    func createNewSession() {
         
         var singletonDatas: SMData = SMData.sharedInstance
         singletonDatas.getDatasFromFile("SMSensorsVectors", success: { (datas) -> () in
@@ -30,18 +32,18 @@ class SMTrackSessionService: NSObject {
             
         }) { (error) -> () in
             
+            printLog(error, "createNewSession", "Error when creating new session")
+            
         }
     }
 
+    // return the right sole object
     func getRightSole() -> SMSole {
         return (self.currentSession?.rightSole as SMSole?)!
     }
 
+    // return the left sole object
     func getLeftSole() -> SMSole {
         return (self.currentSession?.leftSole as SMSole?)!
-    }
-    
-    func sensorsValuesFromString(){
-        
     }
 }

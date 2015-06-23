@@ -41,11 +41,22 @@
 #pragma mark - Overriden Methods -
 /*----------------------------------------------------*/
 
+/**
+ *
+ *  Set initial index path to the first element in menu
+ *
+ */
 - (NSIndexPath *)initialIndexPathForLeftMenu
 {
     return [NSIndexPath indexPathForRow:1 inSection:0];
 }
 
+/**
+ *
+ *  Handle tap on element in side left menu
+ *  :param: indexPath The index of tapped item
+ *
+ */
 - (NSString *)segueIdentifierForIndexPathInLeftMenu:(NSIndexPath *)indexPath
 {
     NSString *identifier = @"";
@@ -64,12 +75,21 @@
     return identifier;
 }
 
+/**
+ *
+ *  Left menu width
+ *
+ */
 - (CGFloat)leftMenuWidth
 {
     return 250;
 }
 
-
+/**
+ *
+ *  Left menu button
+ *
+ */
 - (void)configureLeftMenuButton:(UIButton *)button
 {
     CGRect frame = button.frame;
@@ -79,7 +99,7 @@
     [button setImage:[UIImage imageNamed:@"simpleMenuButton"] forState:UIControlStateNormal];
 }
 
-- (void) configureSlideLayer:(CALayer *)layer
+- (void)configureSlideLayer:(CALayer *)layer
 {
     layer.shadowColor = [UIColor blackColor].CGColor;
     layer.shadowOpacity = 1;
@@ -89,11 +109,11 @@
     layer.shadowPath =[UIBezierPath bezierPathWithRect:self.view.layer.bounds].CGPath;
 }
 
-- (UIViewAnimationOptions) openAnimationCurve {
+- (UIViewAnimationOptions)openAnimationCurve {
     return UIViewAnimationOptionCurveEaseOut;
 }
 
-- (UIViewAnimationOptions) closeAnimationCurve {
+- (UIViewAnimationOptions)closeAnimationCurve {
     return UIViewAnimationOptionCurveEaseOut;
 }
 

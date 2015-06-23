@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Keys constant for user
 let kId: String = "id"
 let kFirstName: String = "firstname"
 let kLastName: String = "lastname"
@@ -24,6 +25,7 @@ let kSessions: String = "sessions"
 
 class SMUser: NSObject {
 
+    /// User informations
     var id: NSNumber?
     var firstName: NSString?
     var lastName: NSString?
@@ -38,9 +40,13 @@ class SMUser: NSObject {
     var averageForceRight: NSNumber?
 
     var diseaseDescription: NSString?
+
+    dynamic var sessions: NSMutableArray?
     
-    var sessions: NSMutableArray?
-    
+    /**
+    *   Init user model from user settings in params
+    *   :param: userSettings the user settings
+    */
     init(userSettings: JSON) {
         self.id = userSettings[kId].numberValue
         self.firstName = userSettings[kFirstName].stringValue
@@ -65,13 +71,16 @@ class SMUser: NSObject {
         super.init()
     }
     
-
+    /**
+    *   Save user to keychain
+    */
     func saveUserToKeychain() {
         var userInformations: JSON = self.toPropertyList() as JSON
         var datas : NSData = userInformations.rawData()!
         NSUserDefaults.standardUserDefaults().setObject(datas, forKey: "user")
     }
 
+    // Retrieve user from keychain (Class method)
     class func getUserFromKeychain() -> (SMUser?) {
         var savedData: NSData? = NSUserDefaults.standardUserDefaults().dataForKey("user")
         
@@ -83,6 +92,7 @@ class SMUser: NSObject {
         return nil
     }
 
+    // Convert current user model into JSON object for keychain storage
     private func toPropertyList() -> JSON {
         var userJson: NSDictionary = [
             kId: self.id!,
@@ -103,6 +113,7 @@ class SMUser: NSObject {
         return JSON(userJson)
     }
 
+    // Transform SMSession into NSarray in order to store it in keychain
     func sessionList() -> NSArray {
 
         var sessionsList = NSMutableArray()

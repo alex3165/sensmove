@@ -13,15 +13,7 @@ import SceneKit
 
 class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
-    enum ConnectionStatus:Int {
-        case Idle = 0
-        case Scanning
-        case Connected
-        case Connecting
-    }
-    
     @IBOutlet weak var printButton: UIButton?
-    @IBOutlet weak var solesGraph: SCNView?
 
     var trackSessionService: SMTrackSessionService?
     
@@ -34,22 +26,17 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     // current discovered peripheral
     private var currentPeripheral: CBPeripheral?
     
-    var smLiveGraph: SMLiveForcesTrack?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.solesGraph?.autoenablesDefaultLighting = true
-//        self.solesGraph?.allowsCameraControl = true
-
         
         self.trackSessionService = SMTrackSessionService.sharedInstance
+        
+        /// Trigger new session when opening track controller
         self.trackSessionService?.createNewSession()
 
         self.datas = NSMutableData()
-        
-        self.smLiveGraph = SMLiveForcesTrack()
-        self.solesGraph?.scene = self.smLiveGraph
 
         
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
@@ -57,6 +44,8 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         //self.peripheral = SMBLEPeripheral()
 //        RACObserve(self, "datas").subscribeNext { (datas) -> Void in
 //        }
+
+        /// For development
         var bleSimulator = SMBluetoothSimulator()
         RACObserve(bleSimulator, "data").subscribeNext { (next:AnyObject!) -> Void in
             
@@ -64,6 +53,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
                 self.didReceiveDatasFromBle(data)
             }
         }
+        /// ******************
     }
 
     override func didReceiveMemoryWarning() {

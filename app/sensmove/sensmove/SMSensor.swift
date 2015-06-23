@@ -9,9 +9,19 @@
 
 import Foundation
 
+
+/**
+*
+*   Sensor primary class, used by SMForce and SMAccelerometer classes
+*
+*/
+
 class SMSensor: NSObject {
     
+    // Sensor Id
     var id: Int
+    
+    // Sensor creational date
     let creationalDate: NSDate
 
     required init(id:Int, creation:NSDate) {

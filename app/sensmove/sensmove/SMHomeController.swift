@@ -11,21 +11,21 @@ import UIKit
 class SMHomeController: UIViewController {
     
     @IBOutlet weak var loaderView: UIView!
-
-    var currentSession: SMSession?;
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-//        var rightSole = SMSole(isRight: true)
-//        var leftSole = SMSole(isRight: false)
-
-        //self.currentSession = SMSession(leftSole: leftSole, rightSole: rightSole)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.createStartButton()
+    }
 
+    /**
+    *   Graphicaly create main button
+    */
+    func createStartButton() {
         let locations: [Float] = [0.2, 1]
         var smGradient: SMGradient = SMGradient(locations: locations)
         smGradient.setFrameFromRect(self.loaderView.bounds)
@@ -37,9 +37,12 @@ class SMHomeController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    /**
+    *   Listen for tap action on main start button
+    *   :param: sender  Gesture type
+    */
     @IBAction func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .Ended {
             let trackController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("trackView") as! UIViewController

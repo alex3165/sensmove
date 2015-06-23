@@ -1,0 +1,312 @@
+.wpt-form-fieldset {
+    background-color: #ffffff;
+    padding: 0 15px 15px 15px;
+    border: 1px solid #cccccc;
+    border-color: #cccccc;
+    margin: 15px 0 25px 0;
+}
+.wpt-form-fieldset fieldset {
+    margin-bottom: 0;
+}
+.wpt-fields-form fieldset {
+    width: auto;
+}
+.wpt-form-fieldset legend {
+    font-weight: bold;
+}
+.wpt-form-fieldset .legend-collapsed
+,.wpt-form-fieldset .legend-expanded
+,.wpt-fields-form .ui-draggable .wpt-form-fieldset .wpt-form-fieldset legend
+,img.ui-datepicker-trigger
+{
+    cursor: pointer;
+}
+.wpt-form-fieldset .legend-collapsed
+{
+    padding-left: 15px;
+    background-image: url('../images/expand.png');
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+}
+.wpt-form-fieldset .legend-expanded {
+    padding-left: 15px;
+    background-image: url('../images/collapse.png');
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+.wpt-form-fieldset .collapsed {
+    display: none;
+}
+.wpt-field
+,.cred-field
+,.cred-group
+,.form-item
+{
+    margin-bottom: 15px;
+}
+.wpt-field-item {
+    margin-bottom: 10px;
+}
+.wpt-form-fieldset .wpt-form-item:first-child {
+    margin-top: 5px;
+}
+.wpt-form-submit {
+    margin-top: 15px;
+}
+.wpt-form-description {
+    font-size: 0.85em;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+.wpt-form-description-fieldset {
+    font-size: 1em;
+    font-style: normal;
+    margin: 10px 0;
+}
+.wpt-form-textarea
+,.wpt-form-textfield {
+    width: 100%;
+}
+ul.wpt-form-set, ul.wpt-form-set-children {
+	list-style-type: none;
+}
+.wpt-form-description-textarea,
+.wpt-form-description-checkboxes,
+.wpt-form-description-radios {
+    font-size: 1em;
+    font-style: normal;
+    margin-bottom: 5px;
+}
+.wpt-form-label {
+    white-space: nowrap;
+}
+.wpt-form-textfield-label,
+.wpt-form-textarea-label {
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+}
+.wpt-form-title-checkboxes,
+.wpt-form-title-radios,
+.wpt-form-select-label {
+    font-size: 1em;
+    font-weight: bold;
+}
+.wpt-form-error {
+    background-color: #ffffe0;
+    border: 1px solid #e6db55;
+    padding: 5px 10px;
+    width: auto;
+    margin: 10px 0;
+    display: block;
+}
+input.wpt-form-error {
+    background-color: #F8F8F8;
+    border-color: red !important;
+}
+.wpt-fields-form .ui-sortable {
+    padding: 0 0 10px 0;
+}
+.wpt-fields-form .ui-sortable-placeholder {
+    border: 1px dashed #CCCCCC;
+    width: auto;
+    visibility: visible !important;
+}
+.ui-sortable .wpt-form-textarea
+,.ui-sortable .wpt-form-textfield {
+	width: 70%;
+}
+.wpt-form-fields-delete,
+.wpt-fields-form-move-field {
+    float: left;
+    margin-top: 10px;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.wpt-fields-form-move-field {
+    cursor: move;
+}
+.wpt-fields-form .taxonomy-title {
+    margin-top: 10px;
+    font-style: italic;
+}
+.wpt-form-textfield.wpt-new-taxonomy-title {
+	max-width: 420px;
+    width: 100%;
+}
+.cred-taxonomy-auxilliary
+,.wpt-hierarchical-taxonomy-add-new
+,.wpt-taxonomy-show-popular-list {
+	margin-top: 10px;
+}
+.wpt-taxonomy-show-popular-list {
+	padding: 10px;
+	border: solid 1px #ccc;
+}
+.wpt-message {
+    padding: 0 0.6em;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1em 0 1em 0;
+}
+.wpt-error {
+    background-color: #FFEBE8;
+    border-color: #CC0000;
+    padding: 5px;
+}
+.wpt-hidden,
+.wpt-hide {
+    display: none;
+}
+
+.wpt-form-label {
+    margin-bottom: 5px;
+}
+.wpt-form-description {
+    margin: 5px 0;
+    font-size: 1em;
+}
+img.ui-datepicker-trigger, img.ui-datepicker-readonly
+{
+    margin-left: 5px;
+}
+.wpt-cp-preview {
+    width: 22px;
+    height: 22px;
+    float: left;
+    border: 1px solid #BBBBBB;
+}
+.wpt-repdrag
+,.wpt-credfile-delete
+,.wpt-credfile-undo {
+    margin: 0 5px 0 0;
+}
+.wpt-repdelete, .wpt-date-clear {
+	margin: 0 0 0 5px;
+}
+.wpt-repadd {
+    margin-top: 5px !important;
+}
+.wpt-repctl {
+    margin-top: 5px;
+}
+/* STRANGE */
+#ui-datepicker-div {
+    display: none;
+}
+.cred-form div.mce-toolbar-grp
+{
+    z-index: 3;
+}
+.wp-editor-container {
+	border: 1px solid #e5e5e5;
+}
+
+/* Credfile */
+img.wpt-credfile-preview,
+img.wpt-credfile-preview-upload {
+    height: 150px;
+    width: auto;
+}
+
+/* Skype */
+.wpt-skype .button {
+    display: block;
+}
+#wpt-skype-edit-button-popup h3 {
+    clear: both;
+}
+#wpt-skype-edit-button-popup .button-secondary {
+    display: block;
+    clear: both;
+    margin-top: 80px;
+}
+#wpt-skype-edit-button-popup div {
+    float: left;
+    margin-right: 25px;
+}
+#wpt-skype-edit-button-popup input {
+    margin-top: 5px;
+    vertical-align: top;
+}
+
+/* File */
+.wpt-file-preview img {
+    border: 1px solid #A0A0A0;
+    height: 50px;
+    margin-top: 10px;
+    width: auto;
+}
+
+#media-upload {
+    background: none;
+}
+#media-upload #media-search {
+    height: auto;
+    margin: 0;
+    position: static;
+}
+
+/* Taxonomy */
+.tagchecklist {
+    margin-left:15px;
+	overflow:hidden;
+}
+
+.tagchecklist span {
+    cursor: default;
+    display: block;
+    float: left;
+    font-size: 13px;
+    line-height: 1.8em;
+    margin-right: 25px;
+    white-space: nowrap;
+}
+
+.tagchecklist span a {
+    background: url("../images/xit.gif") no-repeat scroll 0 2px rgba(0, 0, 0, 0);
+}
+
+.tagchecklist span a:hover {
+    background: url("../images/xit.gif") no-repeat scroll -10px 2px rgba(0, 0, 0, 0);
+}
+
+.ntdelbutton {
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 12px;
+    margin: 4px 0 0 -10px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    width: 10px;
+}
+
+/* Autocomplete */
+.wpt-suggest-taxonomy-term {
+	position: absolute;
+	display: none;
+	min-width: 100px;
+	outline: solid #ccc 1px;
+	padding: 0px;
+	background-color: Window;
+	overflow: hidden;
+}
+
+.wpt-suggest-taxonomy-term li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	font: menu;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.wpt-suggest-taxonomy-term-select {
+	background-color: Highlight;
+	color: HighlightText;
+}

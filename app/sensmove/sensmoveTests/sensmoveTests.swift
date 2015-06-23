@@ -11,6 +11,8 @@ import XCTest
 
 class sensmoveTests: XCTestCase {
     
+    var user: SMUser?
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,8 +24,7 @@ class sensmoveTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+
     }
     
     func testPerformanceExample() {
@@ -31,6 +32,23 @@ class sensmoveTests: XCTestCase {
         self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testSingleton(){
+        
+        
+        var userJson: JSON = [
+            "name": "Alexandre",
+            "weight": 70,
+            "height": 180,
+            "doctor": "TestDoctor",
+            "balance": "Great balance",
+            "averageForceLeft": 120,
+            "averageForceRight": 111
+        ]
+        
+
+        
     }
     
 }

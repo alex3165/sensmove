@@ -1,33 +1,3 @@
-
-# Default Xcode ignore
-#
-
-build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
+*.DS_Store
+arduino/sensmove/sensmove/Builds
 xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-
-# Custom ignoring files
-#
-
-.DS_Store
-/back/vendor/*
-/back/app/config/parameters.yml
-/back/app/cache/*
-/back/app/logs/*
-app/Pods/Pods.xcodeproj/xcuserdata/pacejz.xcuserdatad/
-app/app.xcodeproj/project.xcworkspace/xcuserdata/pacejz.xcuserdatad/
-app/app.xcodeproj/xcuserdata/pacejz.xcuserdatad/
-app/app.xcworkspace/xcuserdata/pacejz.xcuserdatad/

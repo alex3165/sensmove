@@ -1,0 +1,295 @@
+/*
+    Document   : editor
+    Created on : May 17, 2013, 10:59:41 AM
+    Author     : srdjan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*Clearfix*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+/*eof clearfix*/
+
+body {
+	overflow: hidden;
+}
+
+.ac_results {
+    z-index: 160001;
+}
+
+#wpcontent,
+.auto-fold #wpcontent {
+	margin: 0;
+}
+
+#wpbody-content {
+	padding: 0;
+}
+
+#types-editor-modal {
+	position: relative;
+}
+
+	#wpcf-ajax #types-editor-modal {
+	}
+
+	#types-editor-modal .tab {
+		display: none;
+	}
+
+.types-media-frame-menu {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	float: left;
+	width: 199px;
+	border-right: 1px solid #d9d9d9;
+	box-shadow: inset -6px 0 6px -6px rgba(0,0,0,0.2);
+}
+
+.types-media-menu {
+	margin: 0;
+	padding: 16px 0;
+}
+
+	.types-media-menu>a,
+	.types-media-menu>p {
+		display: block;
+		padding: 4px 20px;
+		line-height: 18px;
+		font-size: 14px;
+		text-shadow: 0 1px 0 #fff;
+		text-decoration: none;
+	}
+
+	.types-media-menu .active,
+	.types-media-menu .active:hover {
+		color: #333;
+		font-weight: bold;
+	}
+
+	.types-media-menu .separator,
+	.types-media-frame-content .separator {
+		height: 0;
+		margin: 12px 20px;
+		padding: 0;
+		border-top: 1px solid #dfdfdf;
+		border-bottom: 1px solid #fff;
+	}
+
+.types-media-frame-title,
+.types-media-frame-content,
+.types-media-frame-toolbar {
+	float: right;
+	width: 549px;
+}
+
+.types-media-frame-title-inner,
+.types-media-frame-content-inner {
+	padding: 0 16px;
+}
+
+.types-media-frame-title {
+	border-bottom: 1px solid #dfdfdf;
+	box-shadow: 0 4px 4px -4px rgba(0,0,0,0.1);
+}
+
+	.types-media-frame-title h1 {
+		font-size: 22px;
+		font-weight: 200;
+		line-height: 1;
+	}
+
+	.types-media-frame-title i {
+		font-size: 22px;
+	}
+
+.types-media-frame-content h2 {
+	font-size: 20px;
+	line-height: 1;
+	font-weight: normal;
+}
+
+.types-media-frame-content h3 {
+	font-size: 13px;
+	line-height: 1;
+}
+
+.types-media-frame-content-inner {
+	height: 450px;
+	overflow-y: auto;
+}
+
+.types-media-frame-toolbar {
+	border-top: 1px solid #dfdfdf;
+	box-shadow: 0 -4px 4px -4px rgba(0,0,0,0.1);
+}
+
+.types-media-frame-toolbar-inner {
+	overflow: hidden;
+	padding: 16px;
+}
+
+.types-media-toolbar-primary {
+	float: right;
+}
+
+#wpfooter {
+	display: none;
+}
+
+/*Templates styling*/
+#cb-sel,
+#types-modal-css-class {
+	margin-right: 15px;
+}
+
+.input-title {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.help-text {
+	display: block;
+	margin: 0 0 0 3px;
+	font-size: 11px;
+	color: #595959;
+}
+
+#cb-sel,
+#cb-not-sel,
+[id^="cbs-sel-"],
+[id*=" cbs-sel-"],
+[id^="cbs-not-sel-"],
+[id*=" cbs-not-sel-"],
+#date-style,
+#email-title,
+#file-title,
+#image-title,
+#image-alt,
+#numeric-format,
+#types-modal-css,
+#types-modal-css-class,
+#types-modal-style,
+#url-title {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+}
+
+label {
+	display: block;
+}
+
+	.media-menu label,
+	.form-inline label {
+		display: inline;
+	}
+
+.group-nested {
+	margin: 10px 0 0 20px;
+}
+
+	.group-nested p {
+		line-height: 25px;
+	}
+
+#types-editor-modal input[disabled] {
+	background: #f4f4f4;
+	color: #7f7f7f;
+}
+
+
+/*icons styling*/
+i {
+	margin: 5px;
+}
+
+.icon-book {
+    color: #007CBD;
+	text-decoration: none!important;
+}
+
+.icon-question-sign,
+.icon-warning-sign {
+	color: #ccc;
+	cursor: pointer;
+}
+
+	.icon-question-sign:hover {
+		color: #007CBD;
+		transition: all 0.15s linear 0s;
+	}
+
+.icon-warning-sign:hover {
+	color: #d54e21;
+	transition: all 0.15s linear 0s;
+}
+
+.icon-checkboxes,
+.icon-numeric,
+.icon-radio-button,
+.icon-select-box,
+.icon-text-area,
+.icon-text-field,
+.icon-wysiwyg {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin: 0 10px 0 0;
+}
+
+.icon-checkboxes {
+	background-image: url(../images/icon-checkboxes.png);
+}
+
+.icon-numeric {
+	width: 24px;
+	background-image: url(../images/icon-numeric.png);
+}
+
+.icon-radio-button {
+	background-image: url(../images/icon-radio-button.png);
+}
+
+.icon-select-box {
+	background-image: url(../images/icon-select.png);
+}
+
+.icon-text-area {
+	background-image: url(../images/icon-textarea.png);
+}
+
+.icon-text-field {
+	background-image: url(../images/icon-textfield.png);
+}
+
+.icon-wysiwyg {
+	width: 22px;
+	background-image: url(../images/icon-wysiwyg.png);
+}
+
+/*media queries*/
+@media all and (max-width: 749px) {
+	.types-media-frame-title,
+	.types-media-frame-content,
+	.types-media-frame-toolbar {
+		float: right;
+		width: 399px;
+	}
+}

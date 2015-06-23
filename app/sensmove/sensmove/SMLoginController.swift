@@ -18,7 +18,10 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var validation: UIButton?
     
+    var userService: SMUserService
+    
     required init(coder aDecoder: NSCoder) {
+        self.userService = SMUserService.sharedInstance
         super.init(coder: aDecoder)
     }
     
@@ -27,55 +30,62 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         
         self.identifier?.delegate = self
         self.password?.delegate = self
-        
         initializeUI()
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
+
+    /**
+    *   Initialize login controller UI
+    */
     func initializeUI(){
-        var colorManager = SMColor()
-        self.view.backgroundColor = colorManager.ligthGrey()
-        
-        self.badCredentials?.textColor = colorManager.red()
-        
-        brandLabel?.textColor = colorManager.orange()
+        self.view.backgroundColor = SMColor.ligthGrey()
+        self.badCredentials?.textColor = SMColor.red()
+        brandLabel?.textColor = SMColor.orange()
     }
     
+    /**
+    *   Action triggered when use tap on main home button
+    */
     @IBAction func validateCredentials(sender: AnyObject) {
-        var id: NSString = identifier!.text
+        var username: NSString = identifier!.text
         var pass: NSString = password!.text
         
-        let datasSingleton: SMData = SMData.sharedInstance
-        let users: JSON = datasSingleton.getUsers()
-        var usersArray = users.arrayValue
-        
-        var userIdentifier: NSString;
-        var userPassword: NSString;
-        
-        for user in usersArray {
-            userIdentifier = user["identifier"].stringValue as String
-            userPassword = user["password"].stringValue as String
+        /// Try login user with login and password entered
+        self.userService.loginUserWithUserNameAndPassword(username, passwd: pass, success: { (informations) -> () in
+                var userToSave: SMUser = SMUser(userSettings: informations)
+                self.userService.setUser(userToSave)
+                self.userService.saveUserToKeychain()
             
-            if userIdentifier == id && userPassword == pass {
-                println("Correct user and password navigate to home view")
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let homeController = storyboard.instantiateViewControllerWithIdentifier("homeController") as! UIViewController
-                self.showViewController(homeController, sender: homeController)
-            }else {
-                self.badCredentials?.hidden = false;
+                self.redirectToView("sideMenuController")
+
+            }, failure: { (error) -> () in
+                self.badCredentials?.hidden = false
+                /// Trigger timer that hide failure message in 2 seconds
                 var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("onHideBadCredentials"), userInfo: nil, repeats: false)
-            }
-        }
+        })
     }
     
+    /**
+    *   Redirect to the given view
+    *   :param: view The view to redirect at
+    */
+    func redirectToView(view: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newController: UIViewController = storyboard.instantiateViewControllerWithIdentifier(view) as! UIViewController
+
+        self.presentViewController(newController, animated: true) { () -> Void in
+            println("present new view controller done")
+        }
+    }
+
+    /**
+    *   Hide failure message
+    */
     func onHideBadCredentials() {
-        self.badCredentials?.hidden = true;
+        self.badCredentials?.hidden = true
     }
     
     

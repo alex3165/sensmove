@@ -1,0 +1,120 @@
+Changelog
+
+15 Apr 2015 - 1.30
+--------------------------------------
+- added new image sizes;
+- changed content_width;
+- fixed read more button for latest news widget;
+- small dynamic styles changes.
+
+1 Apr 2015 - 1.28
+--------------------------------------
+- a quick fix to match the new Page Builder by SiteOrigin changes.
+
+26 Mar 2015 - 1.27
+--------------------------------------
+- added some more filters for the Page Builder plugin;
+- added number of posts option for the latest posts widget;
+- small CSS additions.
+
+11 Mar 2015 - 1.26
+--------------------------------------
+- updated fr_FR, de_DE, de_AT and pt_PT language files.
+
+23 Feb 2015 - 1.25
+--------------------------------------
+- fixed header text block going above the menu when the menu is set to top;
+- increased header max-height defaults;
+- replaced screenshot and updated readme.txt with new license info for the screenshot;
+- changed wrong text domain in searchform.php.
+
+15 Feb 2015 - 1.24
+--------------------------------------
+- new options added in the Customizer;
+- added pt_PT language files;
+- small changes in custom-header.php, fp-services.php, styles.php
+
+
+6 Feb 2015 - 1.23
+--------------------------------------
+- updated Fontawesome to the latest version;
+- added some new options in some widgets;
+- added video support for the projects section;
+- added a check for a Moesia extension;
+- added support for some more Theme Hooks Alliance hooks.
+
+28 Jan 2015 - 1.22
+--------------------------------------
+- added translation files for de_DE, de_AT and fr_FR;
+- minor CSS and PHP adjustments.
+
+19 Jan 2015 - 1.21
+--------------------------------------
+- added Menu tab in Customizer with some new options;
+- moved the nav bar inside a function;
+- added support for parts of Theme Hook Alliance;
+- added missing image size;
+- some CSS improvements.
+
+
+13 Jan 2015 - 1.20
+--------------------------------------
+- font-family fix employees position;
+- added button text option in latest news option;
+- excluded #site-navigation offset from smooth scrolling function;
+- added header logo option for individual pages;
+- added search icon in the menu bar with toggle option in the Customizer.
+
+
+4 Jan 2015 - 1.19
+--------------------------------------
+- services/employees page templates layout fix;
+- removed redundant esc_textarea from fp-call-to-action.php;
+- small CSS changes;
+- added CSS support for menu icons;
+- added home.php file;
+- added support for masonry and full width blog index layouts;
+- added imagesLoaded script and provided license info for it in readme.txt
+
+
+17 Dec 2014 - 1.18
+--------------------------------------
+- switched to inline-block for services/employees to allow centering
+- new size option for site logo
+- new size option for welcome logo
+- layout fix when only welcome logo and button are set
+
+
+10 Dec 2014 - 1.17
+--------------------------------------
+- small CSS fixes
+- new widget options
+- small change to the sticky menu
+- small change to the smooth scrolling code
+
+
+17 Nov 2014 - 1.16
+--------------------------------------
+- small addition to style.css
+
+
+17 Nov 2014 - 1.15
+--------------------------------------
+- added jquery.sticky.js
+- changed old sticky menu js code from scripts.js to jquery.sticky
+- changed CSS for the sticky menu
+- added license details in readme.txt for jquery.sticky.js
+- added category_name argument for services/testimonials/projects/employees widgets
+
+11 Nov 2014
+--------------------------------------
+- ADDED: page templates, single page header image ability, visual styles for Page Builder rows
+- FIXED: various issues in CSS
+- switched from jQuery Waypoints sticky to custom code
+- removed waypoints-sticky.js and waypoints-sticky.min.js
+- bumped version number
+
+30 Oct 2014
+--------------------------------------
+- Fix for Safari layout issue
+- Created changelog.txt

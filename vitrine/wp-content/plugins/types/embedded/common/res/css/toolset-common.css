@@ -1,0 +1,62 @@
+/* ----------------------------------------------------------------------------
+Common styles for all the Toolset family
+---------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------
+Toolset Primary Button Style - use with .button.button-primary-toolset classnames
+---------------------------------------------------------------------------- */
+
+.wp-core-ui .button-primary-toolset {
+	background: #f6921e;
+	border-color: #EF6223;
+ 	-webkit-box-shadow: inset 0 1px 0 rgba(239, 239, 239, 0.5), 0 1px 0 rgba(0,0,0,.15);
+ 	box-shadow: inset 0 1px 0 rgba(239, 239, 239, 0.5), 0 1px 0 rgba(0,0,0,.15);
+ 	color: #fff !important;
+	text-decoration: none;
+}
+
+.wp-core-ui .button-primary-toolset.hover,
+.wp-core-ui .button-primary-toolset:hover,
+.wp-core-ui .button-primary-toolset.focus,
+.wp-core-ui .button-primary-toolset:focus {
+	background: #EF6223;
+	border-color: #EF6223;
+	-webkit-box-shadow: inset 0 1px 0 rgba(239, 239, 239, 0.5);
+ 	box-shadow: inset 0 1px 0 rgba(239, 239, 239, 0.5);
+	color: #fff !important;
+}
+
+.wp-core-ui .button-primary-toolset.focus,
+.wp-core-ui .button-primary-toolset:focus {
+	border-color: #EF6223;
+	-webkit-box-shadow: inset 0 1px 0 rgba(120,200,230,0.6), 1px 1px 2px rgba(0,0,0,0.4);
+	box-shadow: inset 0 1px 0 rgba(120,200,230,0.6), 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.wp-core-ui .button-primary-toolset.active,
+.wp-core-ui .button-primary-toolset.active:hover,
+.wp-core-ui .button-primary-toolset.active:focus,
+.wp-core-ui .button-primary-toolset:active {
+	background: #f6921e;
+	border-color: #EF6223;
+	color: rgba(255,255,255,0.95);
+ 	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+ 	box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+}
+
+.wp-core-ui .button-primary-toolset[disabled],
+.wp-core-ui .button-primary-toolset:disabled,
+.wp-core-ui .button-primary-toolset.disabled {
+	color: #94cde7 !important;
+	background: #298cba !important;
+	border-color: #1b607f !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.1) !important;
+	cursor: default;
+}
+
+/* ----------------------------------------------------------------------------
+Generic CSS to be applied anywhere
+---------------------------------------------------------------------------- */
+.padding-top-30{padding-top:30px;}

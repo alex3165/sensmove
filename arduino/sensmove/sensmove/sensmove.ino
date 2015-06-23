@@ -1,8 +1,6 @@
 #include "Arduino.h"
 
 #include "SMDataSessionManager.h"
-#include "SPI.h"
-#include <Adafruit_BLE_UART.h>
 
 SMDataSessionManager sessionManager = SMDataSessionManager();
 
@@ -16,5 +14,5 @@ void setup() {
 }
 
 void loop() {
-    sessionManager.BleLoopCommunication();
+    //sessionManager.BleLoopCommunication();
 }

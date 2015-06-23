@@ -31,10 +31,18 @@ class SMTrackSessionService: NSObject {
             self.currentSession = SMSession(sensorsVectors: sensorsJson)
             
         }) { (error) -> () in
-            
+
             printLog(error, "createNewSession", "Error when creating new session")
-            
+
         }
+    }
+    
+    func stopCurrentSession() {
+        var currentUser: SMUser = SMUserService().currentUser!
+        currentUser.addNewSession(self.currentSession!)
+        currentUser.saveUserToKeychain()
+
+        self.currentSession = nil
     }
 
     // return the right sole object

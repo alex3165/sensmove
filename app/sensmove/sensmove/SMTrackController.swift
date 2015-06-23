@@ -11,14 +11,15 @@ import CoreBluetooth
 import Foundation
 import SceneKit
 
-class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
+class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, SMChronometerDelegate {
     
     // For development
     //@IBOutlet weak var printButton: UIButton?
     
-
+    @IBOutlet weak var timeCountdown: UILabel?
     @IBOutlet weak var stopSessionButton: UIButton?
 
+    var chronometer: SMChronometer?
     var trackSessionService: SMTrackSessionService?
     
     // Current central manager
@@ -33,12 +34,14 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         self.trackSessionService = SMTrackSessionService.sharedInstance
         
         /// Trigger new session when opening track controller
         self.trackSessionService?.createNewSession()
+        self.chronometer = SMChronometer()
+        self.chronometer?.delegate = self
+        self.chronometer?.startChronometer()
 
         self.datas = NSMutableData()
 
@@ -62,17 +65,30 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.uiInitialize()
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     func uiInitialize() {
         self.stopSessionButton?.backgroundColor = SMColor.red()
         self.stopSessionButton?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)
     }
+
+    /**
+    *
+    *   Delegate method triggered every second
+    *   :param: newTime new time string formated
+    *
+    */
+    func updateChronometer(newTime: String) {
+        self.timeCountdown?.text = newTime
+    }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func stopSessionAction(sender: AnyObject) {
+        
     }
 
-     // MARK: Central manager delegates methods
+     /// MARK: Central manager delegates methods
     func centralManagerDidUpdateState(central: CBCentralManager!){
         if(centralManager?.state == CBCentralManagerState.PoweredOn) {
 
@@ -80,7 +96,6 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
             printLog(self, "centralManagerDidUpdateState", "Scanning")
         }
     }
-    
     
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         if(self.currentPeripheral != peripheral && peripheral.name == "SL18902"){

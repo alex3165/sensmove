@@ -21,6 +21,9 @@
 		221F74591ADC5A000078A75E /* SMSole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74571ADC5A000078A75E /* SMSole.swift */; };
 		2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */; };
 		2228F5D11AF68D9400151221 /* SMLeftMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */; };
+		222E182D1B39F07800AE7795 /* SMResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E182C1B39F07800AE7795 /* SMResultController.swift */; };
+		222E182F1B39FC8000AE7795 /* SMChronometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E182E1B39FC8000AE7795 /* SMChronometer.swift */; };
+		222E18301B39FC8000AE7795 /* SMChronometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E182E1B39FC8000AE7795 /* SMChronometer.swift */; };
 		223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A10671AE522A000BD19C5 /* SMSideMenuController.m */; };
 		223A10691AE522A000BD19C5 /* SMSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A10671AE522A000BD19C5 /* SMSideMenuController.m */; };
 		22415FD41AD9B2A200106E7A /* SMData.json in Resources */ = {isa = PBXBuildFile; fileRef = 22415FD31AD9B2A200106E7A /* SMData.json */; };
@@ -125,6 +128,8 @@
 		221F74571ADC5A000078A75E /* SMSole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSole.swift; sourceTree = "<group>"; };
 		2228F5CE1AF68D9400151221 /* SMLeftMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLeftMenuVC.h; sourceTree = "<group>"; };
 		2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLeftMenuVC.m; sourceTree = "<group>"; };
+		222E182C1B39F07800AE7795 /* SMResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMResultController.swift; sourceTree = "<group>"; };
+		222E182E1B39FC8000AE7795 /* SMChronometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMChronometer.swift; sourceTree = "<group>"; };
 		223A10661AE522A000BD19C5 /* SMSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSideMenuController.h; sourceTree = "<group>"; };
 		223A10671AE522A000BD19C5 /* SMSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSideMenuController.m; sourceTree = "<group>"; };
 		22415FD31AD9B2A200106E7A /* SMData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SMData.json; sourceTree = "<group>"; };
@@ -260,6 +265,7 @@
 				22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */,
 				22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */,
 				228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */,
+				222E182E1B39FC8000AE7795 /* SMChronometer.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 				22FE07871AE503FD0064F750 /* SMUserController.swift */,
 				221A64731B12680900C662CD /* SMTrackController.swift */,
 				2219FBD61B1516AD006A26A0 /* SMSessionController.swift */,
+				222E182C1B39F07800AE7795 /* SMResultController.swift */,
 				22B91C081AB33D9600497025 /* Main.storyboard */,
 				22B91C0B1AB33D9600497025 /* Images.xcassets */,
 				22B91C0D1AB33D9600497025 /* LaunchScreen.xib */,
@@ -617,6 +624,7 @@
 				22C20A9F1B3837F9005F803E /* PNLineChart.swift in Sources */,
 				22BA89DC1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */,
 				22BD4E5D1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
+				222E182D1B39F07800AE7795 /* SMResultController.swift in Sources */,
 				22C20A9E1B3837F9005F803E /* PNChartLabel.swift in Sources */,
 				22C20A9A1B3837F9005F803E /* PNBar.swift in Sources */,
 				2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
@@ -627,6 +635,7 @@
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
 				22C20AA11B3837F9005F803E /* PNValue.swift in Sources */,
+				222E182F1B39FC8000AE7795 /* SMChronometer.swift in Sources */,
 				228FAD331B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
 				227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */,
 				22CC928F1B1B50ED00D98E9E /* SMTrackSessionService.swift in Sources */,
@@ -669,6 +678,7 @@
 				2251E0411AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
 				22FE07891AE503FD0064F750 /* SMUserController.swift in Sources */,
 				221F74561ADC58EB0078A75E /* SMSession.swift in Sources */,
+				222E18301B39FC8000AE7795 /* SMChronometer.swift in Sources */,
 				22BD4E5E1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				2251E0351AD2FF61005FE3B8 /* SMColor.swift in Sources */,
 				2251E03C1AD3062E005FE3B8 /* SMForce.swift in Sources */,

@@ -15,6 +15,8 @@ let kSessionDate: String = "date"
 let kSessionDuration: String = "duration"
 let kAverageLeftForce: String = "leftForce"
 let kAverageRightForce: String = "rightForce"
+let kRightSole: String = "rightSole"
+let kLeftSole: String = "leftSole"
 
 class SMSession: NSObject {
     
@@ -73,7 +75,7 @@ class SMSession: NSObject {
     *   :returns:  sessionJson  session formatted for storage
     */
     func toPropertyList() -> NSDictionary {
-        var sessionJson: NSDictionary = [
+        var sessionJson: NSMutableDictionary = [
             kSessionId: self.id,
             kSessionName: self.name,
             kSessionDate: self.date.timeIntervalSince1970,
@@ -81,6 +83,15 @@ class SMSession: NSObject {
             kAverageLeftForce: self.averageLeftForce!,
             kAverageRightForce: self.averageRightForce!
         ]
+
+        if self.rightSole != nil {
+            sessionJson.setValue(self.rightSole!.toPropertyList(), forKey: kRightSole)
+        }
+
+        if self.leftSole != nil {
+            sessionJson.setValue(self.leftSole!.toPropertyList(), forKey: kLeftSole)
+        }
+
         return sessionJson
     }
 }

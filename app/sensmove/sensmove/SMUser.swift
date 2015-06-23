@@ -80,7 +80,20 @@ class SMUser: NSObject {
         NSUserDefaults.standardUserDefaults().setObject(datas, forKey: "user")
     }
 
-    // Retrieve user from keychain (Class method)
+    /**
+    *   Add new session to user session
+    *   :param: session The new session to add
+    */
+    func addNewSession(session: SMSession) {
+        self.sessions?.addObject(session)
+    }
+    
+    /**
+    *
+    *   Retrieve user from keychain (Class method)
+    *   :returns:   SMUser  The stored user
+    *
+    */
     class func getUserFromKeychain() -> (SMUser?) {
         var savedData: NSData? = NSUserDefaults.standardUserDefaults().dataForKey("user")
         

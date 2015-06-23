@@ -1,27 +1,48 @@
-//
-//  SMSdCardManager.cpp
-//  sensmove
-//
-//  Created by Jean-Sébastien Pélerin on 19/04/2015.
-//  Copyright (c) 2015 ___alexprod___. All rights reserved.
-//
+/*
+*   SMSdCardManager.cpp  - Tool class for browsing a SD card and registrating a session easily
+*   Created by Jean-Sébastien Pélerin, April 04, 2015.
+*   Copyright SensMove.
+*/
 
+
+// header
 #include "SMSdCardManager.h"
-#include "Arduino.h"
-// include the SD library:
-#include <SPI.h>
-#include <SD.h>
 
-//SMSdCardManager::SMSdCardManager(char* nameSession){
-//    _nameSession = nameSession
-//}
-SMSdCardManager::SMSdCardManager(int port){
+/*
+* 
+*   @param: 
+*/
+SMSdCardManager::SMSdCardManager(char* nameSession){
+    _myFile = new File();
+    _nameSession = nameSession;
+
+}
+
+/*
+* 
+*   @param: 
+*/
+SMSdCardManager::~SMSdCardManager(){
+
+}
+
+/*
+* 
+*   @param: 
+*/
+void SMSdCardManager::initializeSDCard(){
     if (!SD.begin(port)) {
         Serial.println("initialization failed!");
         return;
+    } else {
+        Serial.println("initialization is ok")
     }
 }
 
+/*
+* 
+*   @param: 
+*/
 void SMSdCardManager::createSession(char* nameSession){
     _myFile = SD.open(nameSession, FILE_WRITE);
     if (_myFile) {
@@ -35,25 +56,58 @@ void SMSdCardManager::createSession(char* nameSession){
 }
 
 
-
+/*
+* 
+*   @param: 
+*/
 void SMSdCardManager::readFolderContent(char* nameFolder){
     
 }
+
+/*
+* 
+*   @param: 
+*/
 void SMSdCardManager::createFolder(char* nameFolder){
     
 }
+
+/*
+* 
+*   @param: 
+*/
 void SMSdCardManager::deleteFolder(char* nameFolder){
     
 }
+
+/*
+* 
+*   @param: 
+*/
 void SMSdCardManager::closeSession(){
     
 }
+
+/*
+* 
+*   @param: 
+*/
 void SMSdCardManager::deleteSession(){
     
 }
+
+/*
+* 
+*   @param: 
+*/
 void SMSdCardManager::recordSession(){
     
 }
+
+/*
+* 
+*   @param: 
+*/
 void SMSdCardManager::readSession(char* reader){
     
 }

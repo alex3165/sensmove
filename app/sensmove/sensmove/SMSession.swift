@@ -17,6 +17,8 @@ let kAverageLeftForce: String = "leftForce"
 let kAverageRightForce: String = "rightForce"
 let kRightSole: String = "rightSole"
 let kLeftSole: String = "leftSole"
+let kSessionComment: String = "sessionComment"
+let kSessionActivity: String = "activity"
 
 class SMSession: NSObject {
     
@@ -26,6 +28,8 @@ class SMSession: NSObject {
     var duration: NSTimeInterval?
     var averageLeftForce: NSNumber?
     var averageRightForce: NSNumber?
+    var sessionComment: String?
+    var activity: String?
 
     /// Observable variable
     dynamic var isActive: Bool
@@ -43,7 +47,8 @@ class SMSession: NSObject {
         self.date = NSDate()
         self.id = NSString(format:"%@%ui", self.name, self.date.timeIntervalSince1970)
         self.isActive = true
-
+        self.sessionComment = ""
+        self.activity = ""
         self.rightSole = SMSole(simpleVectors: sensorsVectors["right"], isRight: true)
         self.leftSole = SMSole(simpleVectors: sensorsVectors["left"], isRight: false)
         
@@ -59,14 +64,23 @@ class SMSession: NSObject {
         self.id = sessionSettings[kSessionId].stringValue
         self.name = sessionSettings[kSessionName].stringValue
         self.date = NSDate(timeIntervalSince1970: sessionSettings[kSessionDate].doubleValue)
+        self.isActive = false
+
+        super.init()
+        
         self.duration = sessionSettings[kSessionDuration].doubleValue
         self.averageLeftForce = sessionSettings[kAverageLeftForce].numberValue
         self.averageRightForce = sessionSettings[kAverageRightForce].numberValue
-        self.isActive = false
+        
+        self.sessionComment = self.getPropertyValueFromKey(kSessionComment, settings: sessionSettings)
+        self.activity = self.getPropertyValueFromKey(kSessionActivity, settings: sessionSettings)
+
         self.rightSole = nil
         self.leftSole = nil
-
-        super.init()
+    }
+    
+    func getPropertyValueFromKey(key: String, settings: JSON) -> String {
+        return settings[key] != nil ? settings[key].stringValue : ""
     }
 
     func setDuration(timeInterval: NSTimeInterval) {
@@ -92,7 +106,9 @@ class SMSession: NSObject {
             kSessionDate: self.date.timeIntervalSince1970,
             kSessionDuration: self.duration!,
             kAverageLeftForce: self.averageLeftForce!,
-            kAverageRightForce: self.averageRightForce!
+            kAverageRightForce: self.averageRightForce!,
+            kSessionActivity: self.activity!,
+            kSessionComment: self.sessionComment!
         ]
 
         if self.rightSole != nil {

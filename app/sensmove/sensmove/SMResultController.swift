@@ -23,12 +23,13 @@ class SMResultController: UIViewController {
     
     @IBOutlet weak var saveSession: UIButton?
     @IBOutlet weak var deleteSession: UIButton?
-    
+
     var trackSessionService: SMTrackSessionService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.initializeUI()
         self.trackSessionService = SMTrackSessionService.sharedInstance
     }
 
@@ -37,8 +38,41 @@ class SMResultController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func initializeUI() {
+        self.saveSession?.backgroundColor = SMColor.green()
+        self.saveSession?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)
+        
+        self.deleteSession?.backgroundColor = SMColor.red()
+        self.deleteSession?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)
+        
+        self.duration?.textColor = SMColor.orange()
+        self.jumps?.textColor = SMColor.orange()
+        self.walks?.textColor = SMColor.orange()
+        self.balance?.textColor = SMColor.orange()
+        self.averageLeftForce?.textColor = SMColor.orange()
+        self.averageRightForce?.textColor = SMColor.orange()
+    }
 
     @IBAction func saveSessionAction(sender: AnyObject) {
+
+        if let sessionTextName = self.sessionName?.text {
+            if count(sessionTextName) > 0 {
+                self.trackSessionService?.currentSession?.name = sessionTextName
+            }
+        }
+
+        if let descriptionText = self.sessionComment?.text {
+            if count(descriptionText) > 0 {
+                self.trackSessionService?.currentSession?.sessionComment = descriptionText
+            }
+        }
+        
+        if let activityText = self.sessionComment?.text {
+            if count(activityText) > 0 {
+                self.trackSessionService?.currentSession?.activity = activityText
+            }
+        }
+
         self.trackSessionService?.saveCurrentSession()
         self.redirectToHomeView()
     }
@@ -48,10 +82,11 @@ class SMResultController: UIViewController {
         self.redirectToHomeView()
     }
     
-    
     func redirectToHomeView() {
-        let homeController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeController") as! UIViewController
-        self.navigationController?.presentViewController(homeController, animated: true, completion: nil)
+        let sidemenuController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("sideMenuController") as! UIViewController
+
+        let navigationController: UINavigationController = UINavigationController(rootViewController: sidemenuController)
+        self.presentViewController(navigationController, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

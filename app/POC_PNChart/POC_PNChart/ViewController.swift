@@ -8,19 +8,36 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        var bluetoothSimul = SMBluetoothSimulator()
+        
         var bounds: CGRect = UIScreen.mainScreen().bounds
         var pn: PNBarChart = PNBarChart(frame: CGRect(x: 0, y: 135.0, width: bounds.width, height: bounds.height))
-        pn.xLabels = ["SEP 1", "SEP 2", "SEP3", "SEP 4", "SEP 5"]
-        pn.yValues = [1,10,2,6,3]
+        pn.xLabels = ["FSR1", "FSR2", "FSR3", "FSR4", "FSR5", "FSR6","FSR7"]
+        pn.yValues = [10,2,6,3,3,2,3,4]
         pn.strokeChart()
-        RACObserve(bluetoothSimul,"data")
+
+        var bluetoothSimul = SMBluetoothSimulator()
+        RACObserve(bluetoothSimul, "data").subscribeNext { (next:AnyObject!) -> Void in
+            if let data = next as? NSData {
+                var jsonData: JSON = JSON(data: data)
+                var fsr: Array<JSON> = jsonData["fsr"].arrayValue
+                var arrayPN: Array<Float> = []
+//                pn.yValues = []
+                for value in fsr {
+                    arrayPN += [value.floatValue]
+
+//                    pn.yValues.append(value.intValue)
+                }
+                pn.yValues = arrayPN
+                pn.strokeChart()
+
+            }
+        }
+
         
         self.view.addSubview(pn)
         // Do any additional setup after loading the view, typically from a nib.

@@ -28,6 +28,8 @@
 		A7519D161B3873790029024D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7519D151B3873790029024D /* Images.xcassets */; };
 		A7519D191B3873790029024D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7519D171B3873790029024D /* LaunchScreen.xib */; };
 		A7519D251B3873790029024D /* POC_PNChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7519D241B3873790029024D /* POC_PNChartTests.swift */; };
+		A797A5E91B3AA75D00058155 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A797A5E81B3AA75D00058155 /* SwiftyJSON.swift */; };
+		A797A5EA1B3AA75D00058155 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A797A5E81B3AA75D00058155 /* SwiftyJSON.swift */; };
 		FF9B65CC09779BF0D938901C /* libPods-POC_PNChart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F70798EC78F3DA3180902A /* libPods-POC_PNChart.a */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +63,6 @@
 		A71938C91B3884660015ED6E /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAC.swift; path = PNChartSwift/RAC.swift; sourceTree = "<group>"; };
 		A71938CA1B3884660015ED6E /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RACObserve.swift; path = PNChartSwift/RACObserve.swift; sourceTree = "<group>"; };
 		A71938CB1B3884660015ED6E /* RACSignal+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RACSignal+Extensions.swift"; path = "PNChartSwift/RACSignal+Extensions.swift"; sourceTree = "<group>"; };
-		A719392F1B3887410015ED6E /* POC_PNChart-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POC_PNChart-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7519D091B3873790029024D /* POC_PNChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POC_PNChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7519D0D1B3873790029024D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7519D0E1B3873790029024D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +73,9 @@
 		A7519D1E1B3873790029024D /* POC_PNChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POC_PNChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7519D231B3873790029024D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7519D241B3873790029024D /* POC_PNChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POC_PNChartTests.swift; sourceTree = "<group>"; };
+		A797A5E71B3AA75D00058155 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		A797A5E81B3AA75D00058155 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		A797A5EB1B3AA7BA00058155 /* POC_PNChart-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POC_PNChart-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		B234D9CEE3AF20B96BFEF65D /* Pods-POC_PNChartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC_PNChartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-POC_PNChartTests/Pods-POC_PNChartTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB86B18BD1F25484A7F4A620 /* Pods-POC_PNChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC_PNChart.release.xcconfig"; path = "Pods/Target Support Files/Pods-POC_PNChart/Pods-POC_PNChart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,8 +182,8 @@
 				A7519D2E1B3876200029024D /* Library */,
 				A7519D0E1B3873790029024D /* AppDelegate.swift */,
 				A7519D101B3873790029024D /* ViewController.swift */,
-				A719392F1B3887410015ED6E /* POC_PNChart-Bridging-Header.h */,
 				A71938C71B38835D0015ED6E /* SMBluetoothSimulator.swift */,
+				A797A5EB1B3AA7BA00058155 /* POC_PNChart-Bridging-Header.h */,
 				A7519D121B3873790029024D /* Main.storyboard */,
 				A7519D151B3873790029024D /* Images.xcassets */,
 				A7519D171B3873790029024D /* LaunchScreen.xib */,
@@ -216,6 +220,8 @@
 		A7519D2E1B3876200029024D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A797A5E71B3AA75D00058155 /* SwiftyJSON.h */,
+				A797A5E81B3AA75D00058155 /* SwiftyJSON.swift */,
 				A71938AD1B387D7D0015ED6E /* PNChartSwift */,
 			);
 			name = Library;
@@ -409,6 +415,7 @@
 				A7519D111B3873790029024D /* ViewController.swift in Sources */,
 				A71938C81B38835D0015ED6E /* SMBluetoothSimulator.swift in Sources */,
 				A7519D0F1B3873790029024D /* AppDelegate.swift in Sources */,
+				A797A5E91B3AA75D00058155 /* SwiftyJSON.swift in Sources */,
 				A71938C21B387D7D0015ED6E /* PNChartLabel.swift in Sources */,
 				A71938C41B387D7D0015ED6E /* PNLineChartData.swift in Sources */,
 				A71938C51B387D7D0015ED6E /* PNValue.swift in Sources */,
@@ -421,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7519D251B3873790029024D /* POC_PNChartTests.swift in Sources */,
+				A797A5EA1B3AA75D00058155 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

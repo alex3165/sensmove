@@ -15,6 +15,7 @@ protocol SMChronometerDelegate {
 class SMChronometer: NSObject {
    
     var startTime: NSTimeInterval?
+    var elapsedTime: NSTimeInterval?
     var timer: NSTimer?
     var delegate: SMChronometerDelegate! = nil
 
@@ -32,6 +33,15 @@ class SMChronometer: NSObject {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
     }
 
+    func stopChronometer() {
+        self.timer?.invalidate()
+        delegate.updateChronometer("00:00")
+    }
+
+    func getElapsedTime() -> NSTimeInterval {
+        return self.elapsedTime!
+    }
+    
     /**
     *
     *   Calcul new time and convert to string then pass it to the
@@ -40,14 +50,14 @@ class SMChronometer: NSObject {
     */
     func updateTime() {
         var currentTime = NSDate.timeIntervalSinceReferenceDate()
-        var elapsedTime: NSTimeInterval = currentTime - self.startTime!
-        
-        let minutes = UInt8(elapsedTime / 60.0)
-        
-        elapsedTime -= (NSTimeInterval(minutes) * 60)
-        
-        let seconds = UInt8(elapsedTime)
-        
+        self.elapsedTime = currentTime - self.startTime!
+
+        let minutes = UInt8(self.elapsedTime! / 60.0)
+
+        self.elapsedTime! -= (NSTimeInterval(minutes) * 60)
+
+        let seconds = UInt8(self.elapsedTime!)
+
         let strMinutes = String(format: "%02d", minutes)
         let strSeconds = String(format: "%02d", seconds)
 

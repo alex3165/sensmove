@@ -45,8 +45,8 @@ class SMHomeController: UIViewController {
     */
     @IBAction func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .Ended {
-            let trackController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("trackView") as! UIViewController
-            self.navigationController?.pushViewController(trackController, animated: true)
+            let trackController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("navSession") as! UIViewController
+            self.navigationController?.presentViewController(trackController, animated: true, completion: nil)
         }
     }
 

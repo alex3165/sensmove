@@ -41,8 +41,9 @@ class SMUser: NSObject {
 
     var diseaseDescription: NSString?
 
-    dynamic var sessions: NSMutableArray?
-    
+    var sessions: NSMutableArray
+    dynamic var numberOfSession: Int
+
     /**
     *   Init user model from user settings in params
     *   :param: userSettings the user settings
@@ -65,8 +66,9 @@ class SMUser: NSObject {
         
         self.sessions = NSMutableArray();
         for session in userSettings[kSessions].arrayValue {
-            self.sessions?.addObject(SMSession(sessionSettings: session))
+            self.sessions.addObject(SMSession(sessionSettings: session))
         }
+        self.numberOfSession = self.sessions.count
 
         super.init()
     }
@@ -79,13 +81,18 @@ class SMUser: NSObject {
         var datas : NSData = userInformations.rawData()!
         NSUserDefaults.standardUserDefaults().setObject(datas, forKey: "user")
     }
+    
+    func removeObjectToKeychain() {
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user")
+    }
 
     /**
     *   Add new session to user session
     *   :param: session The new session to add
     */
     func addNewSession(session: SMSession) {
-        self.sessions?.addObject(session)
+        self.sessions.addObject(session)
+        self.numberOfSession++;
     }
     
     /**
@@ -96,9 +103,9 @@ class SMUser: NSObject {
     */
     class func getUserFromKeychain() -> (SMUser?) {
         var savedData: NSData? = NSUserDefaults.standardUserDefaults().dataForKey("user")
-        
-        if(savedData != nil) {
-            var jsonDatas: JSON = JSON(data: savedData!)
+
+        if let datas = savedData {
+            var jsonDatas: JSON = JSON(data: datas)
             return SMUser(userSettings: jsonDatas)
         }
 
@@ -132,8 +139,8 @@ class SMUser: NSObject {
         var sessionsList = NSMutableArray()
         var tempSession: SMSession;
 
-        for(var index = 0; index < self.sessions!.count; index++){
-            tempSession = self.sessions!.objectAtIndex(index) as! SMSession
+        for(var index = 0; index < self.sessions.count; index++){
+            tempSession = self.sessions.objectAtIndex(index) as! SMSession
             sessionsList.addObject(tempSession.toPropertyList())
         }
 

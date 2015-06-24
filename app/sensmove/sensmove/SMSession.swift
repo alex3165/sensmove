@@ -23,7 +23,7 @@ class SMSession: NSObject {
     var id: NSString
     var name: NSString
     var date: NSDate
-    var duration: NSNumber?
+    var duration: NSTimeInterval?
     var averageLeftForce: NSNumber?
     var averageRightForce: NSNumber?
 
@@ -59,7 +59,7 @@ class SMSession: NSObject {
         self.id = sessionSettings[kSessionId].stringValue
         self.name = sessionSettings[kSessionName].stringValue
         self.date = NSDate(timeIntervalSince1970: sessionSettings[kSessionDate].doubleValue)
-        self.duration = sessionSettings[kSessionDuration].numberValue
+        self.duration = sessionSettings[kSessionDuration].doubleValue
         self.averageLeftForce = sessionSettings[kAverageLeftForce].numberValue
         self.averageRightForce = sessionSettings[kAverageRightForce].numberValue
         self.isActive = false
@@ -69,6 +69,17 @@ class SMSession: NSObject {
         super.init()
     }
 
+    func setDuration(timeInterval: NSTimeInterval) {
+        self.duration = timeInterval
+    }
+
+    func setLeftForce(leftForce: Float) {
+        self.averageLeftForce = NSNumber(float: leftForce)
+    }
+
+    func setRightForce(rightForce: Float) {
+        self.averageRightForce = NSNumber(float: rightForce)
+    }
     /**
     *
     *   Format session object for keychain storage

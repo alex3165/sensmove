@@ -15,65 +15,68 @@ class SMUserTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
 
     func getUserJson() -> JSON!{
         var userJson: JSON = [
-            "username": "Alexandre",
-            "weight": 70,
-            "height": 180,
+            "id": 32,
+            "firstname": "Addison",
+            "lastname": "Richards",
+            "email": "addison.richards26@example.com",
+            "password": "funfun",
+            "weight": 64,
+            "height": 172,
             "doctor": "TestDoctor",
             "balance": "Great balance",
             "averageForceLeft": 120,
-            "averageForceRight": 111
+            "averageForceRight": 111,
+            "diseaseDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas auctor justo vel mattis.",
+            "sessions": []
         ]
         return userJson
     }
     
-    func testUserCreation(){
+    func testUserCreation() {
         self.user = SMUser(userSettings: self.getUserJson())
     }
     
-    func testUserSaveToKeyChain(){
+    func testUserSaveToKeyChain() {
         self.testUserCreation()
         self.user?.saveUserToKeychain()
     }
     
-    func testGetUserFromKeychain(){
+    func testGetUserFromKeychain() {
         self.testUserSaveToKeyChain()
         self.user = nil
         self.user = SMUser.getUserFromKeychain()
-        var userOk: SMUser
-        
-        if(self.user != nil){
-            userOk = self.user!
-            assert(userOk.firstName!.isEqualToString("Alexandre"), "user name is correct so saving and retrieving from keychain is ok")
+
+        if let localUser = self.user {
+            XCTAssert(localUser.firstName!.isEqualToString("Addison"), "Save and fetch user from keychain Ok")
+        }else {
+            XCTAssert(false, "Cannot fetch user from keychain")
         }
 
     }
-    
-    func testUserServiceSave(){
+
+    func testUserServiceSave() {
         var userService: SMUserService = SMUserService.sharedInstance
         userService.setUser(SMUser(userSettings: self.getUserJson()))
         userService.saveUserToKeychain()
     }
     
-    func testUserServiceGet(){
-        var userServiceTwo: SMUserService = SMUserService.sharedInstance
-        if(userServiceTwo.currentUser != nil){
-            assert(userServiceTwo.currentUser!.firstName!.isEqualToString("Alexandre"), "User is correctely retrieved")
+    func testUserServiceGet() {
+        if let currentUser = SMUserService.sharedInstance.currentUser {
+            XCTAssert(currentUser.firstName!.isEqualToString("Addison"), "User is correctely retrieved")
         }
         
     }
     
-    func testRemoveUserFromKeychain(){
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("user")
+    func testRemoveUserFromKeychain() {
+        SMUserService.sharedInstance.currentUser?.removeObjectToKeychain()
     }
 
 }

@@ -10,10 +10,26 @@ import UIKit
 
 class SMResultController: UIViewController {
 
+    @IBOutlet weak var duration: UILabel?
+    @IBOutlet weak var jumps: UILabel?
+    @IBOutlet weak var walks: UILabel?
+    @IBOutlet weak var balance: UILabel?
+    @IBOutlet weak var averageLeftForce: UILabel?
+    @IBOutlet weak var averageRightForce: UILabel?
+    
+    @IBOutlet weak var sessionName: UITextField?
+    @IBOutlet weak var activityType: UITextField?
+    @IBOutlet weak var sessionComment: UITextField?
+    
+    @IBOutlet weak var saveSession: UIButton?
+    @IBOutlet weak var deleteSession: UIButton?
+    
+    var trackSessionService: SMTrackSessionService?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.trackSessionService = SMTrackSessionService.sharedInstance
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +38,21 @@ class SMResultController: UIViewController {
     }
     
 
+    @IBAction func saveSessionAction(sender: AnyObject) {
+        self.trackSessionService?.saveCurrentSession()
+        self.redirectToHomeView()
+    }
+
+    @IBAction func deleteSessionAction(sender: AnyObject) {
+        self.trackSessionService?.deleteCurrentSession()
+        self.redirectToHomeView()
+    }
+    
+    
+    func redirectToHomeView() {
+        let homeController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeController") as! UIViewController
+        self.navigationController?.presentViewController(homeController, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

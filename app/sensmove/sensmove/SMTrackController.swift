@@ -21,7 +21,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
     var chronometer: SMChronometer?
     var trackSessionService: SMTrackSessionService?
-    
+
     // Current central manager
     var centralManager: CBCentralManager?
     
@@ -34,7 +34,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.trackSessionService = SMTrackSessionService.sharedInstance
         
         /// Trigger new session when opening track controller
@@ -46,7 +46,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.datas = NSMutableData()
 
         
-        self.centralManager = CBCentralManager(delegate: self, queue: nil)
+        //self.centralManager = CBCentralManager(delegate: self, queue: nil)
 
         //self.peripheral = SMBLEPeripheral()
 //        RACObserve(self, "datas").subscribeNext { (datas) -> Void in
@@ -85,7 +85,12 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
     
     @IBAction func stopSessionAction(sender: AnyObject) {
-        
+        self.chronometer?.stopChronometer()
+        let elapsedTime = self.chronometer?.getElapsedTime()
+        self.trackSessionService?.stopCurrentSession(elapsedTime!)
+
+        let resultController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("resultView") as! UIViewController
+        self.navigationController?.presentViewController(resultController, animated: false, completion: nil)
     }
 
      /// MARK: Central manager delegates methods
@@ -96,17 +101,18 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
             printLog(self, "centralManagerDidUpdateState", "Scanning")
         }
     }
-    
+
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         if(self.currentPeripheral != peripheral && peripheral.name == "SL18902"){
             self.currentPeripheral = peripheral
-            
+
+            /// TODO: Instantiate peripheral and use it
             //SMBLEPeripheral(peripheral: self.currentPeripheral!)
 
             self.centralManager?.connectPeripheral(peripheral, options: nil)
         }
     }
-    
+
     func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
         
         self.centralManager?.stopScan()
@@ -120,7 +126,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         }
         
     }
-    
+
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
 
         if((error) != nil) {
@@ -137,7 +143,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
             }
         }
     }
-    
+
     func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
 
         printLog(service.characteristics, "didDiscoverCharacteristicsForService", "Discover characteristique")
@@ -150,7 +156,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
             }
         }
     }
-    
+
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
         printLog(characteristic, "didUpdateValueForCharacteristic", "Append new datas")
         self.didReceiveDatasFromBle(characteristic.value)

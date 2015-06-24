@@ -18,19 +18,19 @@ class SMUserService: NSObject {
     // The current user retrieved from keychain storage or nil if not exist
     var currentUser: SMUser? = SMUser.getUserFromKeychain()
 
+    static let sharedInstance = SMUserService()
     // Singleton instance of SMUserService
-    class var sharedInstance: SMUserService {
-        struct Static {
-            static let instance: SMUserService = SMUserService()
-        }
-
-        return Static.instance
-    }
+//    class var sharedInstance: SMUserService {
+//        struct Static {
+//            static let instance: SMUserService = SMUserService()
+//        }
+//
+//        return Static.instance
+//    }
 
     /** 
     * 
-    * Description : Login method with username and password, pass SMLoginSuccess block of login succeed
-    * or SMLoginFailure if not.
+    * Description : Login method with username and password, pass SMLoginSuccess block of login succeed or SMLoginFailure if not.
     *
     */
     func loginUserWithUserNameAndPassword(username: NSString, passwd: NSString, success: SMLoginSuccess, failure: SMLoginFailure) {
@@ -53,7 +53,7 @@ class SMUserService: NSObject {
     
     // Add new session to the currentUser then save to keychain
     func addSessionToCurrentUser(session: SMSession) {
-        self.currentUser?.sessions?.addObject(session)
+        self.currentUser?.addNewSession(session)
         self.saveUserToKeychain()
     }
     
@@ -62,9 +62,9 @@ class SMUserService: NSObject {
         self.currentUser?.saveUserToKeychain()
     }
     
-    // Check if firstName of currentUser is set
+    /// Check if firstName of currentUser is set
     func asUserInKeychain() -> Bool {
-        return self.currentUser?.firstName != nil
+        return self.currentUser != nil
     }
 
     // Return every users stored in SMData file

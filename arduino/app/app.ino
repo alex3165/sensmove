@@ -20,16 +20,23 @@ void setup() {
 }
 
 void loop() {
-  
+    
+    if(bleApplication.getSessionStarted()){
+      //External device is connected and has sent the start request
+      
+      //Send data to device
       dataJson.updateData();
-      //bleApplication.receiveData();
       String jsonData = dataJson.getJsonData();
-      //int jsonDataLength = dataJson.getJsonDataLength();
-      //Serial.println(jsonData);
-      //Serial.println(jsonDataLength);
-       bleApplication.bleLoopCommunication(jsonData);
-       // Serial.println(jsonData);
-       // Serial.println(jsonDataLength);
+      bleApplication.sendInstruction(jsonData);
+      delay(5000);
+
+      
+    } else {
+      //Waiting instruction from the external device to manage and send Data
+       bleApplication.waitInstruction();
        delay(1000);
+
+    
+    }
 
 }

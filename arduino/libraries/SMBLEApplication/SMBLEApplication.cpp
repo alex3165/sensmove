@@ -38,35 +38,39 @@ SMBLEApplication::~SMBLEApplication() {
   
  }
 
+
+
+
 /*
-* 	bLeLoopCommunication : Manage the BLE communication
-* 	Should be called in a loop
+*	waitInstruction: Session did not started, wait for start request
+*
+*/
+void SMBLEApplication::waitInstruction(){
+	
+	String dataExtDevice;
+	dataExtDevice = receiveData();
+	_sessionStarted = dataExtDevice.equals(String(STARTSESSION));
+
+}
+
+/*
+* 	sendInstruction: Send Sensors Data to the external device
 *	@param: String largeData - string to send 
 */
-void SMBLEApplication::bleLoopCommunication(String largeData) {
+void SMBLEApplication::sendInstruction(String largeData){
 
-	String dataExtDevice;
-	String dataCurDevice;
-	if(!_sessionStarted){
-		//Session did not started, wait for start request
+		String dataCurDevice;
+		String dataExtDevice;
 
-		dataExtDevice = receiveData();
-		_sessionStarted = dataExtDevice.equals(String("start"));
-		// Serial.println(_sessionStarted);
+		int jsonDataLength = largeData.length()/BLEFRAME;
 
-	} else {
-		//Send Sensors Data to the external device
-
-		int jsonDataLength = largeData.length()/17;
-
-		// if(jsonDataLength>0){
 			for(int i= 0;  i< jsonDataLength+1; i++){
 				if(i == jsonDataLength){
-					dataCurDevice =	"$" +largeData.substring(i*17) +"$";
+					dataCurDevice =	"$" +largeData.substring(i*BLEFRAME) +"$";
 					sendData(dataCurDevice);
 					Serial.println(dataCurDevice);
 				} else {
-					dataCurDevice = "$" + largeData.substring(i*17,(i+1)*17) + "$";
+					dataCurDevice = "$" + largeData.substring(i*BLEFRAME,(i+1)*BLEFRAME) + "$";
 					sendData(dataCurDevice);
 					Serial.println(dataCurDevice);
 
@@ -74,24 +78,22 @@ void SMBLEApplication::bleLoopCommunication(String largeData) {
 
 			}
 
-		// }
 		
 		//Check if their is a request from the external device
 		dataExtDevice = receiveData();
-		_sessionStarted = !dataExtDevice.equals(String("stop"));
-
-	}
-		
+		_sessionStarted = !dataExtDevice.equals(String(STOPSESSION));
 
 
 
 }
+
 
 /*
 *	receiveData: function to wait for data from an external device
 *	@return data received from the external device
 */
 String SMBLEApplication::receiveData(){
+
 	String stringBle = String("");
  	_BTLESerial->pollACI(); // Tell the nRF8001 to do whatever it should be working on.
 	updateStatus();
@@ -110,6 +112,27 @@ String SMBLEApplication::receiveData(){
 	}
 	return stringBle;
 }
+
+/*
+*
+*
+*/
+
+aci_evt_opcode_t SMBLEApplication::getlastStatus(){
+	return _laststatus;
+
+ } 
+
+ /*
+ *
+ *
+ */
+
+ boolean SMBLEApplication::getSessionStarted(){
+ 	return _sessionStarted;
+
+ }
+
 
 /*
 * updateStatus : get

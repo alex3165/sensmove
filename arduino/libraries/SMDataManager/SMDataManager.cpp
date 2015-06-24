@@ -18,13 +18,11 @@ int SMDataManager::_index=0;
 *	dataLength : length of the fsr array
 */
 SMDataManager::SMDataManager(int fsr[], int fsrLength, int acc[], int accLength){
+
 	_fsrPins = new int[fsrLength];
 	_fsrData = new int[fsrLength];
 	_accPins = new int[accLength];
 	_accData = new int[accLength];
-
-	
-
 
 	for(int i = 0; i < fsrLength; i++){
 		_fsrPins[i] = fsr[i];
@@ -37,15 +35,17 @@ SMDataManager::SMDataManager(int fsr[], int fsrLength, int acc[], int accLength)
 	_accLength = accLength;
 
 	_jsonData = String("undefined");
-	//_index = 0;
 }
 
 /*
 * 	Destructor of the Data Manager
-*	@param: 
+*	 
 */
 SMDataManager::~SMDataManager(){
-
+	delete [] _fsrPins;
+	delete [] _fsrData;
+	delete [] _accPins;
+	delete [] _accData;
 }
 
 

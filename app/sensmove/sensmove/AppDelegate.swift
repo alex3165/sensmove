@@ -15,26 +15,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
-        
-        let file = NSBundle(forClass: AppDelegate.self).pathForResource("SMData", ofType: "json")
-        
-         let datas = NSData(contentsOfFile: file!)!
-        
-        var parseError: NSError?
-        
-        let parsedObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(datas,
-            options: NSJSONReadingOptions.AllowFragments,
-            error:&parseError)
-        
+        var singletonDatas: SMData = SMData.sharedInstance
 
-        if((file) != nil) {
-            let json = JSON(data: NSData(contentsOfFile: file!)!)
+        /// Parse data from SMData then initialize users
+        singletonDatas.getDatasFromFile("SMData", success: { (datas) -> () in
+
+            singletonDatas.initializeUsers(JSON(data: datas))
+
+        }) { (error) -> () in
             
-            var singletonDatas: SMData = SMData.sharedInstance
-            singletonDatas.initializeDatas(json)
+            printLog(error, "didFinishLaunchingWithOptions", "Error while parsing datas from SMData")
+            
         }
+        
+        var userService: SMUserService = SMUserService.sharedInstance
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newController: UIViewController
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+
+        /// if user exist redirect to main home view (sideMenuController) otherwise redirect to login controller
+        if(userService.asUserInKeychain()) {
+            newController = storyboard.instantiateViewControllerWithIdentifier("sideMenuController") as! UIViewController
+        }else {
+            newController = storyboard.instantiateViewControllerWithIdentifier("loginController") as! UIViewController
+        }
+
+        self.window?.rootViewController = newController
+        self.window?.makeKeyAndVisible()
         
         return true
     }

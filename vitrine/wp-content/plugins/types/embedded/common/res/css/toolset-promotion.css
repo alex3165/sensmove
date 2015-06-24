@@ -1,0 +1,155 @@
+
+.toolset-modal
+{
+    font-family: "Open Sans";
+    font-size: 15px;
+    width: 550px;
+    background-color: #fff;
+    padding: 45px 0 42px 0;
+    position: relative;
+
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(50, 50, 50, 0.38);
+    -moz-box-shadow:    5px 5px 15px 0px rgba(50, 50, 50, 0.38);
+    box-shadow:         5px 5px 15px 0px rgba(50, 50, 50, 0.38);
+
+}
+
+.toolset-modal h2
+{
+    color: #fff;
+    position: relative;
+    background-color: #333;
+    padding: 15px 30px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.toolset-modal .icon-toolset-logo
+{
+    color: #f05a28;
+    position: absolute;
+    top: 6px;
+    left: 23px;
+    font-size: 53px;
+}
+
+.toolset-modal ul:before
+{
+    content: "";
+    display: table;
+}
+
+.toolset-modal .content
+{
+    padding: 0 28px;
+}
+
+.toolset-modal ul
+{
+    display: table-row;
+}
+
+.toolset-modal li:first-child
+{
+    min-width: 75px;
+}
+
+.toolset-modal li:last-child
+{
+    padding-right: 0;
+    min-width: 115px;
+}
+
+.toolset-modal li
+,.js-close-promotional-message
+{
+    background: transparent url(../images/toolset.promotion/icons.png) no-repeat;
+}
+
+.toolset-modal li
+{
+    display: table-cell;
+    font-size: 13px;
+    font-weight: 700;
+    height: 52px;
+    padding: 0 20px 0 38px;
+}
+
+
+.toolset-modal li.layout{background-position: 0  -65px}
+.toolset-modal li.toolset-search{background-position: 0 -130px}
+.toolset-modal li.list  {background-position: 0 -195px}
+.toolset-modal li.form  {background-position: 0 -260px}
+.toolset-modal li.more  {background-position: 0 -325px}
+
+.toolset-modal .full img
+{
+    padding-bottom: 19px;
+}
+
+.toolset-modal .full
+{
+    background: transparent url(../images/toolset.promotion/full.jpg) no-repeat;
+    padding-left: 298px;
+    min-height: 165px;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.toolset-modal .icons
+{
+    border: 1px solid #777;
+    border-width: 1px 0;
+    padding-top: 18px;
+}
+
+.toolset-modal .description
+{
+    font-size: 13px;
+    color: #4d4d4d;
+    margin: 30px 0;
+}
+
+.toolset-modal em
+{
+    font-weight: 600;
+}
+
+.toolset-modal .button
+{
+    padding: 10px 15px;
+    background-color: #f05a28;
+    color: #fff;
+    text-decoration: none;
+    margin-top: -10px;
+    height: auto;
+    font-size: 18px;
+    line-height: 1em;
+}
+
+.toolset-modal .learn
+{
+    font-size: 15px;
+    color: #f05a28;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.ddl-dialogs-container
+{
+    display: none;
+}
+
+.js-close-promotional-message
+{
+    background-position: 0 -480px;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 20px;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repositories>
+    <repository>
+        <id>wpml</id>
+        <apiurl>http://api.wpml.org/</apiurl>
+        <products>http://d2salfytceyqoe.cloudfront.net/wpml-products.json</products>
+    </repository>
+    <repository>
+        <id>toolset</id>
+        <apiurl>http://api.wp-types.com/</apiurl>
+        <products>http://d7j863fr5jhrr.cloudfront.net/toolset-products.json</products>
+    </repository>
+</repositories>

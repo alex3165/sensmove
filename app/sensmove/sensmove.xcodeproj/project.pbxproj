@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1014C8140350A3588A11470C /* libPods-sensmoveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B94D8E5AA476BF36C49CC0 /* libPods-sensmoveTests.a */; };
+		22068C9D1AF65B3D0033DD6D /* simpleMenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */; };
+		22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */; };
+		2219FBD11B1515BC006A26A0 /* SMSessionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2219FBD01B1515BC006A26A0 /* SMSessionData.json */; };
+		2219FBD21B1515BC006A26A0 /* SMSessionData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2219FBD01B1515BC006A26A0 /* SMSessionData.json */; };
+		2219FBD71B1516AD006A26A0 /* SMSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2219FBD61B1516AD006A26A0 /* SMSessionController.swift */; };
+		2219FBD81B1516AD006A26A0 /* SMSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2219FBD61B1516AD006A26A0 /* SMSessionController.swift */; };
+		221A64741B12680900C662CD /* SMTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221A64731B12680900C662CD /* SMTrackController.swift */; };
+		221F74551ADC58EB0078A75E /* SMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74541ADC58EB0078A75E /* SMSession.swift */; };
+		221F74561ADC58EB0078A75E /* SMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74541ADC58EB0078A75E /* SMSession.swift */; };
+		221F74581ADC5A000078A75E /* SMSole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74571ADC5A000078A75E /* SMSole.swift */; };
+		221F74591ADC5A000078A75E /* SMSole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F74571ADC5A000078A75E /* SMSole.swift */; };
+		2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */; };
+		2228F5D11AF68D9400151221 /* SMLeftMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */; };
+		223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A10671AE522A000BD19C5 /* SMSideMenuController.m */; };
+		223A10691AE522A000BD19C5 /* SMSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223A10671AE522A000BD19C5 /* SMSideMenuController.m */; };
 		22415FD41AD9B2A200106E7A /* SMData.json in Resources */ = {isa = PBXBuildFile; fileRef = 22415FD31AD9B2A200106E7A /* SMData.json */; };
 		22415FD51AD9B2A200106E7A /* SMData.json in Resources */ = {isa = PBXBuildFile; fileRef = 22415FD31AD9B2A200106E7A /* SMData.json */; };
 		22415FDC1AD9B5FE00106E7A /* SMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22415FDB1AD9B5FE00106E7A /* SMData.swift */; };
@@ -21,12 +37,27 @@
 		2251E03E1AD3062E005FE3B8 /* SMSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251E0381AD3062E005FE3B8 /* SMSensor.swift */; };
 		2251E0401AD3065D005FE3B8 /* SMLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */; };
 		2251E0411AD3065D005FE3B8 /* SMLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */; };
+		227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */; };
+		228950811B0D243200D6FF88 /* SMGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228950801B0D243200D6FF88 /* SMGradient.swift */; };
+		228950821B0D243200D6FF88 /* SMGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228950801B0D243200D6FF88 /* SMGradient.swift */; };
+		228FAD331B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */; };
+		228FAD341B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */; };
 		22B91C021AB33D9600497025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91C011AB33D9600497025 /* AppDelegate.swift */; };
 		22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22B91C031AB33D9600497025 /* sensmove.xcdatamodeld */; };
 		22B91C0A1AB33D9600497025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B91C081AB33D9600497025 /* Main.storyboard */; };
 		22B91C0C1AB33D9600497025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B91C0B1AB33D9600497025 /* Images.xcassets */; };
 		22B91C0F1AB33D9600497025 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B91C0D1AB33D9600497025 /* LaunchScreen.xib */; };
 		22B91C1B1AB33D9600497025 /* sensmoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91C1A1AB33D9600497025 /* sensmoveTests.swift */; };
+		22BA89D11B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */ = {isa = PBXBuildFile; fileRef = 22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */; };
+		22BA89D21B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */ = {isa = PBXBuildFile; fileRef = 22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */; };
+		22BA89D81B1C916E0001A1C4 /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D51B1C916E0001A1C4 /* RAC.swift */; };
+		22BA89D91B1C916E0001A1C4 /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D51B1C916E0001A1C4 /* RAC.swift */; };
+		22BA89DA1B1C916E0001A1C4 /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D61B1C916E0001A1C4 /* RACObserve.swift */; };
+		22BA89DB1B1C916E0001A1C4 /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D61B1C916E0001A1C4 /* RACObserve.swift */; };
+		22BA89DC1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */; };
+		22BA89DD1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */; };
+		22BA89E01B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA89DF1B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a */; };
+		22BA89E11B1CA9390001A1C4 /* SMTrackSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */; };
 		22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */; };
 		22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */; };
 		22BD4E531ADA6D340022318B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */; };
@@ -45,6 +76,33 @@
 		22BD4E651ADADDAF0022318B /* SMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E631ADADDAE0022318B /* SMHomeController.swift */; };
 		22BD4E671ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
 		22BD4E681ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
+		22C20A981B3837F9005F803E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C20A8A1B3837F9005F803E /* Images.xcassets */; };
+		22C20A991B3837F9005F803E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C20A8B1B3837F9005F803E /* Info.plist */; };
+		22C20A9A1B3837F9005F803E /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A8D1B3837F9005F803E /* PNBar.swift */; };
+		22C20A9B1B3837F9005F803E /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A8E1B3837F9005F803E /* PNBarChart.swift */; };
+		22C20A9C1B3837F9005F803E /* PNChartConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A8F1B3837F9005F803E /* PNChartConfig.swift */; };
+		22C20A9D1B3837F9005F803E /* PNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A901B3837F9005F803E /* PNChartDelegate.swift */; };
+		22C20A9E1B3837F9005F803E /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A931B3837F9005F803E /* PNChartLabel.swift */; };
+		22C20A9F1B3837F9005F803E /* PNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A941B3837F9005F803E /* PNLineChart.swift */; };
+		22C20AA01B3837F9005F803E /* PNLineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A951B3837F9005F803E /* PNLineChartData.swift */; };
+		22C20AA11B3837F9005F803E /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A961B3837F9005F803E /* PNValue.swift */; };
+		22C20AA21B3837F9005F803E /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A971B3837F9005F803E /* view.swift */; };
+		22C78E661B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */; };
+		22C78E671B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */; };
+		22CC928D1B1B451200D98E9E /* SMSessionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */; };
+		22CC928F1B1B50ED00D98E9E /* SMTrackSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */; };
+		22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE07871AE503FD0064F750 /* SMUserController.swift */; };
+		22FE07891AE503FD0064F750 /* SMUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE07871AE503FD0064F750 /* SMUserController.swift */; };
+		22FE1ED21B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */; };
+		22FE1ED31B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */; };
+		22FE1ED81B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */; };
+		22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */; };
+		22FE1EDB1B07A38A006BB6B5 /* SMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */; };
+		22FE1EDC1B07A38A006BB6B5 /* SMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */; };
+		22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
+		22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
+		22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */; };
+		294C05DE63DFA537C62BC1A9 /* libPods-sensmove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48BCA881402655856765B7 /* libPods-sensmove.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +116,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simpleMenuButton.png; sourceTree = "<group>"; };
+		22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "simpleMenuButton@2x.png"; sourceTree = "<group>"; };
+		2219FBD01B1515BC006A26A0 /* SMSessionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SMSessionData.json; sourceTree = "<group>"; };
+		2219FBD61B1516AD006A26A0 /* SMSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSessionController.swift; sourceTree = "<group>"; };
+		221A64731B12680900C662CD /* SMTrackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTrackController.swift; sourceTree = "<group>"; };
+		221F74541ADC58EB0078A75E /* SMSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSession.swift; sourceTree = "<group>"; };
+		221F74571ADC5A000078A75E /* SMSole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSole.swift; sourceTree = "<group>"; };
+		2228F5CE1AF68D9400151221 /* SMLeftMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLeftMenuVC.h; sourceTree = "<group>"; };
+		2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLeftMenuVC.m; sourceTree = "<group>"; };
+		223A10661AE522A000BD19C5 /* SMSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSideMenuController.h; sourceTree = "<group>"; };
+		223A10671AE522A000BD19C5 /* SMSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSideMenuController.m; sourceTree = "<group>"; };
 		22415FD31AD9B2A200106E7A /* SMData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SMData.json; sourceTree = "<group>"; };
 		22415FDB1AD9B5FE00106E7A /* SMData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMData.swift; sourceTree = "<group>"; };
+		2251A7AC6261162110E7EFF5 /* Pods-sensmoveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.release.xcconfig"; sourceTree = "<group>"; };
 		2251E0331AD2FF61005FE3B8 /* SMColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMColor.swift; sourceTree = "<group>"; };
 		2251E0361AD3062E005FE3B8 /* SMAccelerometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMAccelerometer.swift; sourceTree = "<group>"; };
 		2251E0371AD3062E005FE3B8 /* SMForce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMForce.swift; sourceTree = "<group>"; };
 		2251E0381AD3062E005FE3B8 /* SMSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSensor.swift; sourceTree = "<group>"; };
 		2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLoginController.swift; sourceTree = "<group>"; };
+		227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSessionViewCell.swift; sourceTree = "<group>"; };
+		228745A01AFEB8CE0069ACA1 /* sensmove-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sensmove-Bridging-Header.h"; sourceTree = "<group>"; };
+		228950801B0D243200D6FF88 /* SMGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMGradient.swift; sourceTree = "<group>"; };
+		228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBluetoothSimulator.swift; sourceTree = "<group>"; };
 		22B91BFC1AB33D9600497025 /* sensmove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensmove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B91C001AB33D9600497025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B91C011AB33D9600497025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +149,11 @@
 		22B91C141AB33D9600497025 /* sensmoveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sensmoveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B91C191AB33D9600497025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B91C1A1AB33D9600497025 /* sensmoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensmoveTests.swift; sourceTree = "<group>"; };
+		22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SMSensorsVectors.json; sourceTree = "<group>"; };
+		22BA89D51B1C916E0001A1C4 /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC.swift; sourceTree = "<group>"; };
+		22BA89D61B1C916E0001A1C4 /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACObserve.swift; sourceTree = "<group>"; };
+		22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Extensions.swift"; sourceTree = "<group>"; };
+		22BA89DF1B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-sensmove-ReactiveCocoa.a"; path = "Pods/../build/Debug-iphoneos/libPods-sensmove-ReactiveCocoa.a"; sourceTree = "<group>"; };
 		22BD4E4B1ADA6B0F0022318B /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "sensmoveTests/Roboto-Light.ttf"; sourceTree = SOURCE_ROOT; };
@@ -87,6 +166,31 @@
 		22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		22BD4E631ADADDAE0022318B /* SMHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMHomeController.swift; sourceTree = "<group>"; };
 		22BD4E661ADADF860022318B /* SMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUser.swift; sourceTree = "<group>"; };
+		22C20A8A1B3837F9005F803E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		22C20A8B1B3837F9005F803E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22C20A8D1B3837F9005F803E /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBar.swift; sourceTree = "<group>"; };
+		22C20A8E1B3837F9005F803E /* PNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBarChart.swift; sourceTree = "<group>"; };
+		22C20A8F1B3837F9005F803E /* PNChartConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartConfig.swift; sourceTree = "<group>"; };
+		22C20A901B3837F9005F803E /* PNChartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartDelegate.swift; sourceTree = "<group>"; };
+		22C20A911B3837F9005F803E /* PNChartSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChartSwift.h; sourceTree = "<group>"; };
+		22C20A931B3837F9005F803E /* PNChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartLabel.swift; sourceTree = "<group>"; };
+		22C20A941B3837F9005F803E /* PNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChart.swift; sourceTree = "<group>"; };
+		22C20A951B3837F9005F803E /* PNLineChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartData.swift; sourceTree = "<group>"; };
+		22C20A961B3837F9005F803E /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
+		22C20A971B3837F9005F803E /* view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
+		22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLiveForcesTrack.swift; sourceTree = "<group>"; };
+		22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTrackSessionService.swift; sourceTree = "<group>"; };
+		22FE07871AE503FD0064F750 /* SMUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserController.swift; sourceTree = "<group>"; };
+		22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBLEPeripheral.swift; sourceTree = "<group>"; };
+		22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDataExtensions.swift; sourceTree = "<group>"; };
+		22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMConstants.swift; sourceTree = "<group>"; };
+		22FFAAA71AE58ECB005A49CF /* SMUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserService.swift; sourceTree = "<group>"; };
+		22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserTest.swift; sourceTree = "<group>"; };
+		3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF48BCA881402655856765B7 /* libPods-sensmove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBECF654EB87862462474F9 /* Pods-sensmove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmove/Pods-sensmove.debug.xcconfig"; sourceTree = "<group>"; };
+		F4B94D8E5AA476BF36C49CC0 /* libPods-sensmoveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmoveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE2B84740EFA177EC0EC40A /* Pods-sensmove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmove.release.xcconfig"; path = "Pods/Target Support Files/Pods-sensmove/Pods-sensmove.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +198,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BA89E01B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a in Frameworks */,
+				294C05DE63DFA537C62BC1A9 /* libPods-sensmove.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1014C8140350A3588A11470C /* libPods-sensmoveTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +217,7 @@
 		22415FD71AD9B40F00106E7A /* LIbrary */ = {
 			isa = PBXGroup;
 			children = (
+				22C20A891B3837F9005F803E /* PNChartSwift */,
 				22BD4E5F1ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
 				22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 				22BD4E5B1ADA71C60022318B /* TPKeyboardAvoidingScrollView.h */,
@@ -128,6 +236,8 @@
 				2251E0381AD3062E005FE3B8 /* SMSensor.swift */,
 				22415FDB1AD9B5FE00106E7A /* SMData.swift */,
 				22BD4E661ADADF860022318B /* SMUser.swift */,
+				221F74541ADC58EB0078A75E /* SMSession.swift */,
+				221F74571ADC5A000078A75E /* SMSole.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -136,6 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				2251E0331AD2FF61005FE3B8 /* SMColor.swift */,
+				228950801B0D243200D6FF88 /* SMGradient.swift */,
+				227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */,
+				22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -143,6 +256,10 @@
 		2251E0321AD2FF2B005FE3B8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				22FFAAA71AE58ECB005A49CF /* SMUserService.swift */,
+				22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */,
+				22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */,
+				228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -153,6 +270,8 @@
 				22B91BFE1AB33D9600497025 /* sensmove */,
 				22B91C171AB33D9600497025 /* sensmoveTests */,
 				22B91BFD1AB33D9600497025 /* Products */,
+				58BDDEF6A9453DFA07768D1D /* Pods */,
+				AC3B0E47F36311D3ADEFFEBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,19 +287,30 @@
 		22B91BFE1AB33D9600497025 /* sensmove */ = {
 			isa = PBXGroup;
 			children = (
+				22BA89D41B1C913C0001A1C4 /* Util */,
 				22415FD71AD9B40F00106E7A /* LIbrary */,
 				2251E0321AD2FF2B005FE3B8 /* Service */,
 				2251E0311AD2FF09005FE3B8 /* View */,
 				2251E0301AD2FF00005FE3B8 /* Model */,
 				22B91C011AB33D9600497025 /* AppDelegate.swift */,
 				22BD4E631ADADDAE0022318B /* SMHomeController.swift */,
+				2228F5CE1AF68D9400151221 /* SMLeftMenuVC.h */,
+				2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */,
+				223A10661AE522A000BD19C5 /* SMSideMenuController.h */,
+				223A10671AE522A000BD19C5 /* SMSideMenuController.m */,
 				2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */,
+				22FE07871AE503FD0064F750 /* SMUserController.swift */,
+				221A64731B12680900C662CD /* SMTrackController.swift */,
+				2219FBD61B1516AD006A26A0 /* SMSessionController.swift */,
 				22B91C081AB33D9600497025 /* Main.storyboard */,
 				22B91C0B1AB33D9600497025 /* Images.xcassets */,
 				22B91C0D1AB33D9600497025 /* LaunchScreen.xib */,
 				22B91C031AB33D9600497025 /* sensmove.xcdatamodeld */,
 				22B91BFF1AB33D9600497025 /* Supporting Files */,
 				22415FD31AD9B2A200106E7A /* SMData.json */,
+				22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */,
+				2219FBD01B1515BC006A26A0 /* SMSessionData.json */,
+				228745A01AFEB8CE0069ACA1 /* sensmove-Bridging-Header.h */,
 			);
 			path = sensmove;
 			sourceTree = "<group>";
@@ -188,6 +318,9 @@
 		22B91BFF1AB33D9600497025 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */,
+				22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */,
+				22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */,
 				22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */,
 				22BD4E501ADA6D340022318B /* Roboto-Medium.ttf */,
 				22BD4E511ADA6D340022318B /* Roboto-Regular.ttf */,
@@ -202,6 +335,7 @@
 			children = (
 				22B91C1A1AB33D9600497025 /* sensmoveTests.swift */,
 				22B91C181AB33D9600497025 /* Supporting Files */,
+				22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */,
 			);
 			path = sensmoveTests;
 			sourceTree = "<group>";
@@ -214,6 +348,73 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		22BA89D41B1C913C0001A1C4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				22BA89D51B1C916E0001A1C4 /* RAC.swift */,
+				22BA89D61B1C916E0001A1C4 /* RACObserve.swift */,
+				22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */,
+				22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		22C20A891B3837F9005F803E /* PNChartSwift */ = {
+			isa = PBXGroup;
+			children = (
+				22C20A8A1B3837F9005F803E /* Images.xcassets */,
+				22C20A8B1B3837F9005F803E /* Info.plist */,
+				22C20A8C1B3837F9005F803E /* PNBarChart */,
+				22C20A8F1B3837F9005F803E /* PNChartConfig.swift */,
+				22C20A901B3837F9005F803E /* PNChartDelegate.swift */,
+				22C20A911B3837F9005F803E /* PNChartSwift.h */,
+				22C20A921B3837F9005F803E /* PNLineChart */,
+				22C20A961B3837F9005F803E /* PNValue.swift */,
+				22C20A971B3837F9005F803E /* view.swift */,
+			);
+			path = PNChartSwift;
+			sourceTree = "<group>";
+		};
+		22C20A8C1B3837F9005F803E /* PNBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				22C20A8D1B3837F9005F803E /* PNBar.swift */,
+				22C20A8E1B3837F9005F803E /* PNBarChart.swift */,
+			);
+			path = PNBarChart;
+			sourceTree = "<group>";
+		};
+		22C20A921B3837F9005F803E /* PNLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				22C20A931B3837F9005F803E /* PNChartLabel.swift */,
+				22C20A941B3837F9005F803E /* PNLineChart.swift */,
+				22C20A951B3837F9005F803E /* PNLineChartData.swift */,
+			);
+			path = PNLineChart;
+			sourceTree = "<group>";
+		};
+		58BDDEF6A9453DFA07768D1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCBECF654EB87862462474F9 /* Pods-sensmove.debug.xcconfig */,
+				FBE2B84740EFA177EC0EC40A /* Pods-sensmove.release.xcconfig */,
+				3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */,
+				2251A7AC6261162110E7EFF5 /* Pods-sensmoveTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC3B0E47F36311D3ADEFFEBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22BA89DF1B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a */,
+				AF48BCA881402655856765B7 /* libPods-sensmove.a */,
+				F4B94D8E5AA476BF36C49CC0 /* libPods-sensmoveTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,9 +422,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22B91C1E1AB33D9600497025 /* Build configuration list for PBXNativeTarget "sensmove" */;
 			buildPhases = (
+				550A82A5E47F2B9D19F3AC05 /* Check Pods Manifest.lock */,
 				22B91BF81AB33D9600497025 /* Sources */,
 				22B91BF91AB33D9600497025 /* Frameworks */,
 				22B91BFA1AB33D9600497025 /* Resources */,
+				F14EFCD9BBB4FB7EE6505580 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,9 +441,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22B91C211AB33D9600497025 /* Build configuration list for PBXNativeTarget "sensmoveTests" */;
 			buildPhases = (
+				5ABA2D3CEF395D08668D2268 /* Check Pods Manifest.lock */,
 				22B91C101AB33D9600497025 /* Sources */,
 				22B91C111AB33D9600497025 /* Frameworks */,
 				22B91C121AB33D9600497025 /* Resources */,
+				43BA152BBFAEA9B4708C49E3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +468,7 @@
 				TargetAttributes = {
 					22B91BFB1AB33D9600497025 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = CDXYM5HGQM;
 					};
 					22B91C131AB33D9600497025 = {
 						CreatedOnToolsVersion = 6.2;
@@ -297,10 +503,16 @@
 				22B91C0A1AB33D9600497025 /* Main.storyboard in Resources */,
 				22BD4E571ADA6D340022318B /* Roboto-Regular.ttf in Resources */,
 				22BD4E591ADA6D340022318B /* varela round.otf in Resources */,
+				22C20A981B3837F9005F803E /* Images.xcassets in Resources */,
 				22415FD41AD9B2A200106E7A /* SMData.json in Resources */,
 				22BD4E551ADA6D340022318B /* Roboto-Medium.ttf in Resources */,
+				22C20A991B3837F9005F803E /* Info.plist in Resources */,
+				22068C9D1AF65B3D0033DD6D /* simpleMenuButton.png in Resources */,
 				22BD4E531ADA6D340022318B /* Roboto-Light.ttf in Resources */,
+				22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */,
+				22BA89D11B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */,
 				22B91C0F1AB33D9600497025 /* LaunchScreen.xib in Resources */,
+				2219FBD11B1515BC006A26A0 /* SMSessionData.json in Resources */,
 				22B91C0C1AB33D9600497025 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +522,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BD4E541ADA6D340022318B /* Roboto-Light.ttf in Resources */,
+				22BA89D21B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */,
 				22BD4E5A1ADA6D340022318B /* varela round.otf in Resources */,
+				2219FBD21B1515BC006A26A0 /* SMSessionData.json in Resources */,
 				22415FD51AD9B2A200106E7A /* SMData.json in Resources */,
 				22BD4E581ADA6D340022318B /* Roboto-Regular.ttf in Resources */,
 				22BD4E561ADA6D340022318B /* Roboto-Medium.ttf in Resources */,
@@ -319,24 +533,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43BA152BBFAEA9B4708C49E3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		550A82A5E47F2B9D19F3AC05 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5ABA2D3CEF395D08668D2268 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F14EFCD9BBB4FB7EE6505580 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sensmove/Pods-sensmove-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22B91BF81AB33D9600497025 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221F74551ADC58EB0078A75E /* SMSession.swift in Sources */,
 				22BD4E611ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				2251E0391AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
 				22B91C021AB33D9600497025 /* AppDelegate.swift in Sources */,
+				22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */,
+				22BA89D81B1C916E0001A1C4 /* RAC.swift in Sources */,
+				2219FBD71B1516AD006A26A0 /* SMSessionController.swift in Sources */,
+				22C20AA21B3837F9005F803E /* view.swift in Sources */,
 				22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
 				2251E03D1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
+				22FE1ED81B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
+				221F74581ADC5A000078A75E /* SMSole.swift in Sources */,
+				22C20A9D1B3837F9005F803E /* PNChartDelegate.swift in Sources */,
+				22C20A9F1B3837F9005F803E /* PNLineChart.swift in Sources */,
+				22BA89DC1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */,
 				22BD4E5D1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
+				22C20A9E1B3837F9005F803E /* PNChartLabel.swift in Sources */,
+				22C20A9A1B3837F9005F803E /* PNBar.swift in Sources */,
+				2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
+				22C20A9B1B3837F9005F803E /* PNBarChart.swift in Sources */,
+				22C20AA01B3837F9005F803E /* PNLineChartData.swift in Sources */,
 				22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03B1AD3062E005FE3B8 /* SMForce.swift in Sources */,
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
+				22C20AA11B3837F9005F803E /* PNValue.swift in Sources */,
+				228FAD331B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
+				227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */,
+				22CC928F1B1B50ED00D98E9E /* SMTrackSessionService.swift in Sources */,
+				223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
+				22C20A9C1B3837F9005F803E /* PNChartConfig.swift in Sources */,
+				22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */,
+				22BA89DA1B1C916E0001A1C4 /* RACObserve.swift in Sources */,
+				228950811B0D243200D6FF88 /* SMGradient.swift in Sources */,
+				22FE1ED21B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */,
+				221A64741B12680900C662CD /* SMTrackController.swift in Sources */,
 				2251E0341AD2FF61005FE3B8 /* SMColor.swift in Sources */,
 				2251E0401AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
+				22FE1EDB1B07A38A006BB6B5 /* SMConstants.swift in Sources */,
 				22415FDC1AD9B5FE00106E7A /* SMData.swift in Sources */,
+				22C78E661B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,18 +649,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BA89E11B1CA9390001A1C4 /* SMTrackSessionService.swift in Sources */,
 				22BD4E651ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03A1AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
+				22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */,
 				22BD4E681ADADF860022318B /* SMUser.swift in Sources */,
 				22415FDD1AD9B5FE00106E7A /* SMData.swift in Sources */,
+				22C78E671B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */,
+				221F74591ADC5A000078A75E /* SMSole.swift in Sources */,
 				2251E03E1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
+				22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
+				228FAD341B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
 				22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
+				22BA89DD1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */,
 				22B91C1B1AB33D9600497025 /* sensmoveTests.swift in Sources */,
+				22BA89D91B1C916E0001A1C4 /* RAC.swift in Sources */,
+				2228F5D11AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
+				22CC928D1B1B451200D98E9E /* SMSessionViewCell.swift in Sources */,
 				2251E0411AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
+				22FE07891AE503FD0064F750 /* SMUserController.swift in Sources */,
+				221F74561ADC58EB0078A75E /* SMSession.swift in Sources */,
 				22BD4E5E1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				2251E0351AD2FF61005FE3B8 /* SMColor.swift in Sources */,
 				2251E03C1AD3062E005FE3B8 /* SMForce.swift in Sources */,
+				228950821B0D243200D6FF88 /* SMGradient.swift in Sources */,
+				2219FBD81B1516AD006A26A0 /* SMSessionController.swift in Sources */,
+				22FE1ED31B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */,
+				22BA89DB1B1C916E0001A1C4 /* RACObserve.swift in Sources */,
+				22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */,
 				22BD4E621ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				22FE1EDC1B07A38A006BB6B5 /* SMConstants.swift in Sources */,
+				223A10691AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +732,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -426,7 +752,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = sensmove;
+				PRODUCT_NAME = sensmove;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -450,6 +779,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -461,36 +792,54 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = sensmove;
+				PRODUCT_NAME = sensmove;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		22B91C1F1AB33D9600497025 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCBECF654EB87862462474F9 /* Pods-sensmove.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sensmove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		22B91C201AB33D9600497025 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBE2B84740EFA177EC0EC40A /* Pods-sensmove.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sensmove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		22B91C221AB33D9600497025 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -512,6 +861,7 @@
 		};
 		22B91C231AB33D9600497025 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2251A7AC6261162110E7EFF5 /* Pods-sensmoveTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;

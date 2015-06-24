@@ -25,7 +25,7 @@
 #	Ethernet Firmata GSM LiquidCrystal Robot_Control Robot_Motor 
 #	RobotIRremote SD Servo SpacebrewYun Stepper Temboo TFT WiFi 
 #
-APP_LIBS_LIST = 0
+APP_LIBS_LIST = SPI
 
 # List user's libraries here 
 # default = 0 = none

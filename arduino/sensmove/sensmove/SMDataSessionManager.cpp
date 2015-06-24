@@ -1,5 +1,6 @@
 #include "Arduino.h"
 #include "SMDataSessionManager.h"
+#include "Adafruit_BLE_UART.h"
 
 /**
 *

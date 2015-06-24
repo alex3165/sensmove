@@ -1,0 +1,274 @@
+
+.wpt-form-fieldset {
+    background-color: #ffffff;
+    padding: 0 15px 15px 15px;
+    border: 1px solid #cccccc;
+    border-color: #cccccc;
+    margin: 15px 0 25px 0;
+}
+.wpt-form-fieldset fieldset {
+    margin-bottom: 0;
+}
+.wpt-fields-form fieldset {
+    width: auto;
+}
+.wpt-form-fieldset legend {
+    font-weight: bold;
+}
+.wpt-form-fieldset .legend-collapsed {
+    padding-left: 15px;
+    background-image: url('../images/expand.png');
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+    cursor: pointer;
+}
+.wpt-form-fieldset .legend-expanded {
+    padding-left: 15px;
+    background-image: url('../images/collapse.png');
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+    cursor: pointer;
+}
+.wpt-form-fieldset .collapsed {
+    display: none;
+}
+.wpt-field {
+    margin-bottom: 15px;
+}
+.wpt-field-item {
+    margin-bottom: 10px;
+}
+.wpt-form-fieldset .wpt-form-item:first-child {
+    margin-top: 5px;
+}
+.wpt-form-submit {
+    margin-top: 15px;
+}
+.wpt-form-description {
+    font-size: 0.85em;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+.wpt-form-description-fieldset {
+    font-size: 1em;
+    font-style: normal;
+    margin: 10px 0;
+}
+.wpt-form-item-radio, .wpt-form-item-checkbox {
+    margin-bottom: 0px !important;
+}
+.wpt-form-textarea {
+    width: 100%;
+}
+.wpt-form-description-textarea,
+.wpt-form-description-checkboxes,
+.wpt-form-description-radios {
+    font-size: 1em;
+    font-style: normal;
+    margin-bottom: 5px;
+}
+.wpt-form-label {
+    white-space: nowrap;
+}
+.wpt-form-textfield-label,
+.wpt-form-textarea-label {
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+}
+.wpt-form-title-checkboxes,
+.wpt-form-title-radios,
+.wpt-form-select-label {
+    font-size: 1em;
+    font-weight: bold;
+}
+.wpt-form-error {
+    background-color: #ffffe0;
+    border: 1px solid #e6db55;
+    padding: 5px 10px;
+    width: auto;
+    margin: 10px 0;
+    display: block;
+}
+input.wpt-form-error {
+    background-color: #F8F8F8;
+    border-color: red !important;
+}
+.wpt-fields-form .ui-draggable .wpt-form-fieldset .wpt-form-fieldset legend {
+    cursor: pointer;
+}
+.wpt-fields-form .ui-sortable {
+    padding: 0 0 10px 0;
+}
+.wpt-fields-form .ui-sortable-placeholder {
+    border: 1px dashed #CCCCCC;
+    width: auto;
+    visibility: visible !important;
+}
+.wpt-form-fields-delete,
+.wpt-fields-form-move-field {
+    float: left;
+    margin-top: 10px;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.wpt-fields-form-move-field {
+    cursor: move;
+}
+.wpt-fields-form .taxonomy-title {
+    margin-top: 10px;
+    font-style: italic;
+}
+.wpt-message {
+    padding: 0 0.6em;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1em 0 1em 0;
+}
+.wpt-error {
+    background-color: #FFEBE8;
+    border-color: #CC0000;
+    padding: 5px;
+}
+.wpt-hidden,
+.wpt-hide {
+    display: none;
+}
+
+.wpt-form-label {
+    margin-bottom: 5px;
+}
+.wpt-form-description {
+    margin: 5px 0;
+    font-size: 1em;
+}
+img.ui-datepicker-trigger {
+    margin-left: 5px;
+    cursor: pointer;
+}
+.wpt-form-textfield,
+.wpt-form-textarea {
+    width: 100%;
+}
+.wpt-cp-preview {
+    width: 22px;
+    height: 22px;
+    float: left;
+    border: 1px solid #BBBBBB;
+}
+.wpt-repdrag {
+    background-image: url('../images/move.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 20px;
+    height: 22px;
+    float: left;
+    margin: 0 5px 0 0;
+    background-color: #F3F3F3;
+    border: 1px solid #BBBBBB;
+    cursor: move;
+    clear: both;
+}
+.wpt-repadd {
+    margin-top: 5px !important;
+}
+.wpt-repctl {
+    margin-top: 5px;
+}
+/* STRANGE */
+#ui-datepicker-div {
+    display: none;
+}
+#wpt-skype-edit-button-popup h3 {
+    clear: both;
+}
+#wpt-skype-edit-button-popup .button-secondary {
+    display: block;
+    clear: both;
+    margin-top: 80px;
+}
+#wpt-skype-edit-button-popup div {
+    float: left;
+    margin-right: 25px;
+}
+#wpt-skype-edit-button-popup input {
+    margin-top: 5px;
+    vertical-align: top;
+}
+
+/* File */
+.wpt-file-preview img {
+    border: 1px solid #A0A0A0;
+    height: 50px;
+    margin-top: 10px;
+    width: auto;
+}
+.wpt-file .textfield,
+.wpt-image .textfield,
+.wpt-audio .textfield,
+.wpt-video .textfield {
+    width: 70%;
+}
+#media-upload {
+    background: none;
+}
+#media-upload #media-search {
+    height: auto;
+    margin: 0;
+    position: static;
+}
+
+/* ----------------------------------------------------------------------------
+3.0 - Toolset Primary Button Style
+---------------------------------------------------------------------------- */
+
+.wp-core-ui .button-primary-toolset {
+	background: #f6921e;
+	border-color: #EF6223;
+ 	-webkit-box-shadow: inset 0 1px 0 rgba(239, 239, 239, 0.5), 0 1px 0 rgba(0,0,0,.15);
+ 	box-shadow: inset 0 1px 0 rgba(239, 239, 239, 0.5), 0 1px 0 rgba(0,0,0,.15);
+ 	color: #fff;
+	text-decoration: none;
+}
+
+.wp-core-ui .button-primary-toolset.hover,
+.wp-core-ui .button-primary-toolset:hover,
+.wp-core-ui .button-primary-toolset.focus,
+.wp-core-ui .button-primary-toolset:focus {
+	background: #EF6223;
+	border-color: #EF6223;
+	-webkit-box-shadow: inset 0 1px 0 rgba(239, 239, 239, 0.5);
+ 	box-shadow: inset 0 1px 0 rgba(239, 239, 239, 0.5);
+	color: #fff;
+}
+
+.wp-core-ui .button-primary-toolset.focus,
+.wp-core-ui .button-primary-toolset:focus {
+	border-color: #EF6223;
+	-webkit-box-shadow: inset 0 1px 0 rgba(120,200,230,0.6), 1px 1px 2px rgba(0,0,0,0.4);
+	box-shadow: inset 0 1px 0 rgba(120,200,230,0.6), 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.wp-core-ui .button-primary-toolset.active,
+.wp-core-ui .button-primary-toolset.active:hover,
+.wp-core-ui .button-primary-toolset.active:focus,
+.wp-core-ui .button-primary-toolset:active {
+	background: #f6921e;
+	border-color: #EF6223;
+	color: rgba(255,255,255,0.95);
+ 	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+ 	box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
+}
+
+.wp-core-ui .button-primary-toolset[disabled],
+.wp-core-ui .button-primary-toolset:disabled,
+.wp-core-ui .button-primary-toolset.disabled {
+	color: #94cde7 !important;
+	background: #298cba !important;
+	border-color: #1b607f !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.1) !important;
+	cursor: default;
+}

@@ -1,0 +1,135 @@
+.wpcf-promo-tabs {
+    margin-left: 5px;
+    margin-top: 40px;
+}
+.wpcf-contextual-help-wrap {
+	padding: 0;
+	margin-left: -4px;
+    margin: 0;
+    padding: 8px 20px 12px;
+    margin-left: -4px;
+    padding: 0;
+    overflow: auto;
+    position: relative;
+}
+
+.wpcf-contextual-help-tabs-wrap {
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.wpcf-contextual-help-columns {
+	position: relative;
+}
+
+.wpcf-contextual-help-back {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 200px;
+	right: 170px;
+	border-width: 0 1px;
+	border-style: solid;
+}
+
+.wpcf-contextual-help-wrap.no-sidebar .wpcf-contextual-help-back {
+	right: 0;
+	border-right-width: 0;
+	-webkit-border-bottom-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.wpcf-contextual-help-sidebar {
+    float: right;
+    overflow: auto;
+    padding: 0 8px 0 12px;
+    width: 150px;
+}
+.wpcf-contextual-help-tabs {
+	float: left;
+    width: 200px !important;
+    position: relative;
+	margin: 0;
+}
+
+.wpcf-contextual-help-tabs ul {
+    border-bottom: 1px solid #DFDFDF;
+    margin: 0;
+    padding: 0;
+    margin: 1em 0;
+    list-style: none;
+}
+
+.wpcf-contextual-help-tabs li {
+	margin-bottom: 0;
+	list-style-type: none;
+	border-style: solid;
+	border-width: 1px 0;
+	border-color: transparent;
+    background-color: #F1F1F1;
+    background-image: -moz-linear-gradient(center top , #F9F9F9, #ECECEC);
+    border-bottom-color: #DFDFDF;
+    border-top: 1px solid #FFFFFF;
+    font-weight: bold;
+    padding: 15px 5px 15px 15px;
+}
+
+.wpcf-contextual-help-tabs a {
+	display: block;
+	padding: 5px 5px 5px 12px;
+	line-height: 18px;
+	text-decoration: none;
+    display: block;
+    line-height: 18px;
+    padding: 5px 5px 5px 12px;
+    text-decoration: none;
+}
+
+.wpcf-contextual-help-tabs .active {
+	margin: 0 -1px 0 0;
+	border-width: 1px 0 1px 1px;
+	border-style: solid;
+}
+
+
+.wpcf-help-tab-content {
+	display: none;
+	margin: 0 22px 12px 0;
+	line-height: 1.6em;
+}
+
+.wpcf-help-tab-content.active {
+	display: block;
+}
+
+.wpcf-help-tab-content li {
+	list-style-type: disc;
+	margin-left: 18px;
+}
+
+.wpcf-contextual-help-sidebar {
+	width: 150px;
+	float: right;
+	padding: 0 8px 0 12px;
+	overflow: auto;
+}
+
+.wpcf-tab-content {
+    border: 1px solid #DFDFDF;
+    bottom: 0;
+    left: 200px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.wpcf-contextual-help-tabs a:hover {
+	color: #333;
+}
+
+.wpcf-contextual-help-tabs .active {
+	border-color: #ccc;
+}
+
+.wpcf-contextual-help-tabs .active a{
+	color: #333;
+}

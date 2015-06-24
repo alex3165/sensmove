@@ -1,0 +1,149 @@
+/*------------------------------------------------
+*  wpcf Notification
+*-----------------------------------------------*/
+.wpcf-notif {
+	color: #454545;
+	font-size: 12px;
+	line-height: 20px;
+	font-family: 'Arial', 'Helvetica', sans-serif;
+
+	padding: 10px 0 10px 0;
+	margin: 15px 0;
+	background: #ffffe0;
+	border: 1px solid #e6db55;
+
+    width: 98%;
+
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.wpcf-notif-congrats {
+	font-size: 110%;
+}
+
+.wpcf-notif p {
+	margin: 0px;
+	padding: 5px 15px;
+}
+
+.wpcf-notif a {
+	color: #454545;
+	text-decoration: underline;
+}
+
+.wpcf-notif a:hover {
+	color: #616161;
+	text-decoration: underline;
+}
+
+.wpcf-notif .hr {
+	height: 1px;
+	width: 100%;
+	margin: 15px 0;
+	background: #f0e98d;
+}
+
+.wpcf-notif small {
+	font-size: 10px;
+}
+
+.wpcf-notif small a {
+	color: #d10000;
+}
+
+.wpcf-notif span {
+	margin: 0 15px;
+}
+
+.wpcf-notif ul {
+	margin: 5px 15px 0 15px;
+	padding: 0;
+	list-style: none;
+}
+
+.wpcf-notif ul li {
+	padding: 2px 0 1px 10px;
+	background: url('images/wpcf/wpcf-list-style.png') 0 10px no-repeat;
+}
+
+.wpcf-notif a.wpcf-button {
+	margin: 0 15px;
+
+	color: #95958b;
+	font-size: 10px;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+.wpcf-notif a.wpcf-button:hover {
+	text-decoration: none;
+}
+
+.wpcf-notif a.wpcf-button.hide {
+	float: right;
+}
+
+.wpcf-notif span.wpcf-button-arrow {
+	width: 12px;
+	height: 13px;
+	margin: 3px 0 0 10px;
+	vertical-align: top;
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.wpcf-notif span.wpcf-button-arrow.show {
+	background: url('images/wpcf/wpcf-arrows-show.png') right center no-repeat;
+}
+
+.wpcf-notif span.wpcf-button-arrow.hide {
+	background: url('images/wpcf/wpcf-arrows-hide.png') right center no-repeat;
+}
+
+.wpcf-notif .wpcf-notif-dropdown {
+	margin: 10px 0 0 0;
+	padding: 15px 0 15px 0;
+	border-top: 1px solid #f0e98d;
+}
+
+.wpcf-notif .icon-toolset
+{
+    width: 100%;
+}
+
+.wpcf-notif .icon-toolset:before
+{
+    color: #f05a28;
+    float: left;
+    font-size: 70px;
+    padding: 0 15px;
+}
+
+.wpcf-notif .wpcf-notif-header
+{
+    font-size: 30px;
+    color: #e25527;
+    font-style: italic;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+.wpcf-notif a.wpcf-notif-more
+{
+    color: #0074a2;
+    float: right;
+    font-size: 21px;
+    padding-right: 15px;
+    text-decoration: underline;
+}
+
+.wpcf-notif .wpcf-notif-description
+{
+    font-size: 14px;
+    margin-top: 0;
+    padding-top: 0;
+}
+

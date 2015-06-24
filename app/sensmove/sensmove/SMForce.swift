@@ -10,34 +10,46 @@ import Foundation
 import SceneKit
 
 class SMForce: SMSensor {
-    
-    private var Pos3D: SCNVector3?
-    private var Node: SCNNode?
-    
-    required init(id:Int, creation:NSDate, pos:SCNVector3) {
+
+    dynamic var forcePressure: Float
+    private var forceNode: SCNNode?
+
+    required init(id: Int, pos: JSON) {
         
-        self.Pos3D = pos
-        super.init(id: id, creation: creation)
+        self.forcePressure = 0.0
+
+        super.init(id: id, creation: NSDate())
         
-        self.initializeVisual()
+        // self.initializeVisual(pos)
     }
-    
+
     required init(id: Int, creation: NSDate) {
         fatalError("init(id:creation:) has not been implemented")
     }
+
+    // Update the force pressure on sensor
+    func updateForce(force: Float) {
+        self.forcePressure = force
+        
+        // self.updateZ(self.forcePressure)
+    }
     
+    // Get the current node with it's state
     func getNode() -> SCNNode {
-        return self.Node!
+        return self.forceNode!
     }
-    
-    func initializeVisual(){
-        var Sphere = SCNSphere(radius: 0.3)
-        self.Node = SCNNode(geometry: Sphere)
-        self.Node?.position = self.Pos3D!
+
+    func initializeVisual(position: JSON){
+        var Sphere = SCNSphere(radius: 7.5)
+        Sphere.firstMaterial?.diffuse.contents = SMColor.orange()
+        self.forceNode = SCNNode(geometry: Sphere)
+        self.forceNode?.position.x = position["x"].floatValue
+        self.forceNode?.position.y = position["y"].floatValue
+        self.forceNode?.position.z = self.forcePressure
     }
-    
+
     // Update the z position of pressions measurement
     func updateZ(zPos: Float) {
-        self.Pos3D?.z = zPos
+        self.forceNode?.position.z = zPos
     }
 }

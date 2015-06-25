@@ -4,25 +4,33 @@
 #include "SMBLEApplication.h"
 
 
-SMBLEApplication bleApplication = SMBLEApplication();
+// Create an instance of dataManager
 int fsrPins[] = {6,0,2,3,5,4,1}; 
 int accPins[] = {6,0,2}; 
-
-  //String thisString = String(13);
-//String secondString = String(thisString + "coco");
-
 SMDataManager dataJson = SMDataManager(fsrPins, sizeof(fsrPins)/2, accPins, sizeof(accPins)/2);
+// Create an instance of SMBLEApplication
+SMBLEApplication bleApplication = SMBLEApplication();
+
+/*
+* Arduino Setup
+*
+*/
 void setup() {
 	Serial.begin(9600);
 	while(!Serial); // Leonardo/Micro should wait for serial init
-
+    // Initialize the SMBLEApplication instance
      bleApplication.initializeBluetooth();
 }
 
+
+/*
+* Arduino Loop
+*
+*/
 void loop() {
     
     if(bleApplication.getSessionStarted()){
-      //External device is connected and has sent the start request
+      // Session has been started
       
       //Send data to device
       dataJson.updateData();
@@ -32,9 +40,11 @@ void loop() {
 
       
     } else {
+      // Session has not been started
+
       //Waiting instruction from the external device to manage and send Data
-       bleApplication.waitInstruction();
-       Serial.println("Waiting...");
+      bleApplication.waitInstruction();
+      Serial.println("Waiting...");
       delay(5000);
 
     

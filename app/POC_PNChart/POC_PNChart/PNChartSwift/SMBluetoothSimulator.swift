@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SMBluetoothSimulator: NSObject {
+@objc class SMBluetoothSimulator: NSObject {
     
     var timer: NSTimer?
     dynamic var data: NSData?

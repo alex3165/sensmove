@@ -1,17 +1,19 @@
 /*
-  SD card test
-
-
- The circuit:
-  * SD card attached to SPI bus as follows:
- ** MOSI - pin 11 on Arduino Uno/Duemilanove/Diecimila
- ** MISO - pin 12 on Arduino Uno/Duemilanove/Diecimila
- ** CLK - pin 13 on Arduino Uno/Duemilanove/Diecimila
- ** CS - depends on your SD card shield or module.
-
- */
+* SD card test
+*
+*
+* The circuit:
+*  * SD card attached to SPI bus as follows:
+* ** MOSI - pin 11 on Arduino Uno/Duemilanove/Diecimila
+* ** MISO - pin 12 on Arduino Uno/Duemilanove/Diecimila
+* ** CLK - pin 13 on Arduino Uno/Duemilanove/Diecimila
+* ** CS - depends on your SD card shield or module.
+*
+*/
  
-// include the SD library:
+/*
+*  Dependencies
+*/
 #include <SPI.h>
 #include <SD.h>
 
@@ -77,7 +79,7 @@ void setup()
 
   volumesize = volume.blocksPerCluster();    // clusters are collections of blocks
   volumesize *= volume.clusterCount();       // we'll have a lot of clusters
-  volumesize *= 512;                            // SD card blocks are always 512 bytes
+  volumesize *= 512;                           // SD card blocks are always 512 bytes
   Serial.print("Volume size (bytes): ");
   Serial.println(volumesize);
   Serial.print("Volume size (Kbytes): ");

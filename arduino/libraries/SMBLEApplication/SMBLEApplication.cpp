@@ -12,9 +12,6 @@
 */
 SMBLEApplication::SMBLEApplication(){
 
-	// sessionId = 0;
-	// startSessionTime = 0;
-	// bleCommunicationCounter = 0;
 	_laststatus = ACI_EVT_DISCONNECTED;
 	_BTLESerial = new Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
 	_sessionStarted = false;
@@ -31,6 +28,7 @@ SMBLEApplication::~SMBLEApplication() {
 
 /*
 *	initializeBluetooth: Initialization of the bluetooth module
+*
 */
  void SMBLEApplication::initializeBluetooth() {
  	_BTLESerial->setDeviceName("SL18902"); /* 7 characters max! */
@@ -114,20 +112,18 @@ String SMBLEApplication::receiveData(){
 }
 
 /*
-*
-*
+*	getlasStatus: getter of the status of _BTLESerial so as to know wether the device is connected or not
+*	@return lastStatus registered in the _BTLESerial
 */
-
 aci_evt_opcode_t SMBLEApplication::getlastStatus(){
 	return _laststatus;
 
  } 
 
- /*
- *
- *
- */
-
+/*
+*	getlasStatus: getter of the status of _BTLESerial so as to know wether the device is connected or not
+*	@return boolean sessionStarted : true if the session has started, false otherwhise
+*/
  boolean SMBLEApplication::getSessionStarted(){
  	return _sessionStarted;
 
@@ -135,7 +131,7 @@ aci_evt_opcode_t SMBLEApplication::getlastStatus(){
 
 
 /*
-* updateStatus : get
+* updateStatus : function used to update the _BTLESerial status, should be used in each loop
 *
 */
 void SMBLEApplication::updateStatus(){

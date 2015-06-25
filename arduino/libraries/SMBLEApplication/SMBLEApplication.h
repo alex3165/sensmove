@@ -39,11 +39,10 @@ public:
 
   // public methods
   void initializeBluetooth();
-  // void bleLoopCommunication(String largeData);
   void waitInstruction();
   void sendInstruction(String largeData);
 
-  // void getBTLESerial();
+  //getters
   aci_evt_opcode_t getlastStatus();
   boolean getSessionStarted();
 

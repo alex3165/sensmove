@@ -5,10 +5,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'POC_PNChart' do
 	pod 'ReactiveCocoa', '~> 2.3'
+    pod 'PNChart', '~> 0.8.3'
 end
 
 target 'POC_PNChartTests' do
     pod 'ReactiveCocoa', '~> 2.3'
-
+    pod 'PNChart', '~> 0.8.3'
 end
 

@@ -66,11 +66,10 @@ void SMDataManager::updateData(){
 	String array1 = createStringArray(_fsrData,_fsrLength);
 	String array2 = createStringArray(_accData,_accLength);
 	
+	// Construction of the json data whe are going to send later by bluetooth LE
 	_jsonData = "{\"index\":" +  String(_index) + "\"fsr\":" + array1 + ",\"acc\":" + array2 + "}";   
-	// Serial.println(_jsonData);
 
 	_index ++;
-
 
 }
 

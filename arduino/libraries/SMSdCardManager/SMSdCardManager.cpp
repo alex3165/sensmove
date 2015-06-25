@@ -56,56 +56,56 @@ void SMSdCardManager::createSession(char* nameSession){
 }
 
 
-/*
-* 
-*   @param: 
-*/
-void SMSdCardManager::readFolderContent(char* nameFolder){
+// /*
+// *   readFolderContent
+// *   @param: 
+// */
+// void SMSdCardManager::readFolderContent(char* nameFolder){
     
-}
+// }
+
+// /*
+// *   createFolder
+// *   @param: 
+// */
+// void SMSdCardManager::createFolder(char* nameFolder){
+    
+// }
+
+// /*
+// *   deleteFolder
+// *   @param: 
+// */
+// void SMSdCardManager::deleteFolder(char* nameFolder){
+    
+// }
 
 /*
-* 
-*   @param: 
-*/
-void SMSdCardManager::createFolder(char* nameFolder){
-    
-}
-
-/*
-* 
-*   @param: 
-*/
-void SMSdCardManager::deleteFolder(char* nameFolder){
-    
-}
-
-/*
-* 
-*   @param: 
+*   closeSession: close the session in which we are pointing
+*   
 */
 void SMSdCardManager::closeSession(){
     
 }
 
 /*
-* 
-*   @param: 
+*   deleteSession: delete the session in which we are pointing
+*    
 */
 void SMSdCardManager::deleteSession(){
     
 }
 
 /*
-* 
-*   @param: 
+*   recordSession
+*
 */
 void SMSdCardManager::recordSession(){
     
 }
 
 /*
-* 
+*   readSession
 *   @param: 
 */
 void SMSdCardManager::readSession(char* reader){

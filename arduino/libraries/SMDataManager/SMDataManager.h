@@ -27,10 +27,10 @@ class SMDataManager {
 
 		// public methods
 		void updateData();
+
+		//getter
 		String getJsonData();
-		// String getAccArrayData();
-		// String getFsrArrayData();
-		// int getJsonDataLength();
+
 
 	private:
 		// private methods

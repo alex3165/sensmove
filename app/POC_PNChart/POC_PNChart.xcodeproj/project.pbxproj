@@ -8,16 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		66FDD222950B544A3DBD3E48 /* libPods-POC_PNChartTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69EE298B24640623ACBA0A48 /* libPods-POC_PNChartTests.a */; };
-		A71938BD1B387D7D0015ED6E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A71938AF1B387D7D0015ED6E /* Info.plist */; };
-		A71938BE1B387D7D0015ED6E /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938B11B387D7D0015ED6E /* PNBar.swift */; };
-		A71938BF1B387D7D0015ED6E /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938B21B387D7D0015ED6E /* PNBarChart.swift */; };
-		A71938C01B387D7D0015ED6E /* PNChartConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938B31B387D7D0015ED6E /* PNChartConfig.swift */; };
-		A71938C11B387D7D0015ED6E /* PNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938B41B387D7D0015ED6E /* PNChartDelegate.swift */; };
-		A71938C21B387D7D0015ED6E /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938B71B387D7D0015ED6E /* PNChartLabel.swift */; };
-		A71938C31B387D7D0015ED6E /* PNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938B81B387D7D0015ED6E /* PNLineChart.swift */; };
-		A71938C41B387D7D0015ED6E /* PNLineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938B91B387D7D0015ED6E /* PNLineChartData.swift */; };
-		A71938C51B387D7D0015ED6E /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938BA1B387D7D0015ED6E /* PNValue.swift */; };
-		A71938C61B387D7D0015ED6E /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938BB1B387D7D0015ED6E /* view.swift */; };
 		A71938C81B38835D0015ED6E /* SMBluetoothSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938C71B38835D0015ED6E /* SMBluetoothSimulator.swift */; };
 		A71938CC1B3884660015ED6E /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938C91B3884660015ED6E /* RAC.swift */; };
 		A71938CD1B3884660015ED6E /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71938CA1B3884660015ED6E /* RACObserve.swift */; };
@@ -30,6 +20,8 @@
 		A7519D251B3873790029024D /* POC_PNChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7519D241B3873790029024D /* POC_PNChartTests.swift */; };
 		A797A5E91B3AA75D00058155 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A797A5E81B3AA75D00058155 /* SwiftyJSON.swift */; };
 		A797A5EA1B3AA75D00058155 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A797A5E81B3AA75D00058155 /* SwiftyJSON.swift */; };
+		A7BBA6CC1B3C026100CF4616 /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BBA6CB1B3C026100CF4616 /* SMViewController.m */; };
+		A7BBA6CD1B3C026100CF4616 /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BBA6CB1B3C026100CF4616 /* SMViewController.m */; };
 		FF9B65CC09779BF0D938901C /* libPods-POC_PNChart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F70798EC78F3DA3180902A /* libPods-POC_PNChart.a */; };
 /* End PBXBuildFile section */
 
@@ -48,17 +40,6 @@
 		51693D94DA919792234C604C /* Pods-POC_PNChartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC_PNChartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POC_PNChartTests/Pods-POC_PNChartTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58F70798EC78F3DA3180902A /* libPods-POC_PNChart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-POC_PNChart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EE298B24640623ACBA0A48 /* libPods-POC_PNChartTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-POC_PNChartTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A71938AF1B387D7D0015ED6E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A71938B11B387D7D0015ED6E /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBar.swift; sourceTree = "<group>"; };
-		A71938B21B387D7D0015ED6E /* PNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBarChart.swift; sourceTree = "<group>"; };
-		A71938B31B387D7D0015ED6E /* PNChartConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartConfig.swift; sourceTree = "<group>"; };
-		A71938B41B387D7D0015ED6E /* PNChartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartDelegate.swift; sourceTree = "<group>"; };
-		A71938B51B387D7D0015ED6E /* PNChartSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChartSwift.h; sourceTree = "<group>"; };
-		A71938B71B387D7D0015ED6E /* PNChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartLabel.swift; sourceTree = "<group>"; };
-		A71938B81B387D7D0015ED6E /* PNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChart.swift; sourceTree = "<group>"; };
-		A71938B91B387D7D0015ED6E /* PNLineChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartData.swift; sourceTree = "<group>"; };
-		A71938BA1B387D7D0015ED6E /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
-		A71938BB1B387D7D0015ED6E /* view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		A71938C71B38835D0015ED6E /* SMBluetoothSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMBluetoothSimulator.swift; path = PNChartSwift/SMBluetoothSimulator.swift; sourceTree = "<group>"; };
 		A71938C91B3884660015ED6E /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAC.swift; path = PNChartSwift/RAC.swift; sourceTree = "<group>"; };
 		A71938CA1B3884660015ED6E /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RACObserve.swift; path = PNChartSwift/RACObserve.swift; sourceTree = "<group>"; };
@@ -75,7 +56,8 @@
 		A7519D241B3873790029024D /* POC_PNChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POC_PNChartTests.swift; sourceTree = "<group>"; };
 		A797A5E71B3AA75D00058155 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		A797A5E81B3AA75D00058155 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		A797A5EB1B3AA7BA00058155 /* POC_PNChart-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POC_PNChart-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A7BBA6CA1B3C026100CF4616 /* SMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMViewController.h; sourceTree = "<group>"; };
+		A7BBA6CB1B3C026100CF4616 /* SMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMViewController.m; sourceTree = "<group>"; };
 		B234D9CEE3AF20B96BFEF65D /* Pods-POC_PNChartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC_PNChartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-POC_PNChartTests/Pods-POC_PNChartTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB86B18BD1F25484A7F4A620 /* Pods-POC_PNChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POC_PNChart.release.xcconfig"; path = "Pods/Target Support Files/Pods-POC_PNChart/Pods-POC_PNChart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,40 +91,6 @@
 				B234D9CEE3AF20B96BFEF65D /* Pods-POC_PNChartTests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		A71938AD1B387D7D0015ED6E /* PNChartSwift */ = {
-			isa = PBXGroup;
-			children = (
-				A71938AF1B387D7D0015ED6E /* Info.plist */,
-				A71938B01B387D7D0015ED6E /* PNBarChart */,
-				A71938B31B387D7D0015ED6E /* PNChartConfig.swift */,
-				A71938B41B387D7D0015ED6E /* PNChartDelegate.swift */,
-				A71938B51B387D7D0015ED6E /* PNChartSwift.h */,
-				A71938B61B387D7D0015ED6E /* PNLineChart */,
-				A71938BA1B387D7D0015ED6E /* PNValue.swift */,
-				A71938BB1B387D7D0015ED6E /* view.swift */,
-			);
-			path = PNChartSwift;
-			sourceTree = "<group>";
-		};
-		A71938B01B387D7D0015ED6E /* PNBarChart */ = {
-			isa = PBXGroup;
-			children = (
-				A71938B11B387D7D0015ED6E /* PNBar.swift */,
-				A71938B21B387D7D0015ED6E /* PNBarChart.swift */,
-			);
-			path = PNBarChart;
-			sourceTree = "<group>";
-		};
-		A71938B61B387D7D0015ED6E /* PNLineChart */ = {
-			isa = PBXGroup;
-			children = (
-				A71938B71B387D7D0015ED6E /* PNChartLabel.swift */,
-				A71938B81B387D7D0015ED6E /* PNLineChart.swift */,
-				A71938B91B387D7D0015ED6E /* PNLineChartData.swift */,
-			);
-			path = PNLineChart;
 			sourceTree = "<group>";
 		};
 		A719392E1B3885C70015ED6E /* Utils */ = {
@@ -183,7 +131,8 @@
 				A7519D0E1B3873790029024D /* AppDelegate.swift */,
 				A7519D101B3873790029024D /* ViewController.swift */,
 				A71938C71B38835D0015ED6E /* SMBluetoothSimulator.swift */,
-				A797A5EB1B3AA7BA00058155 /* POC_PNChart-Bridging-Header.h */,
+				A7BBA6CA1B3C026100CF4616 /* SMViewController.h */,
+				A7BBA6CB1B3C026100CF4616 /* SMViewController.m */,
 				A7519D121B3873790029024D /* Main.storyboard */,
 				A7519D151B3873790029024D /* Images.xcassets */,
 				A7519D171B3873790029024D /* LaunchScreen.xib */,
@@ -222,7 +171,6 @@
 			children = (
 				A797A5E71B3AA75D00058155 /* SwiftyJSON.h */,
 				A797A5E81B3AA75D00058155 /* SwiftyJSON.swift */,
-				A71938AD1B387D7D0015ED6E /* PNChartSwift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -322,7 +270,6 @@
 			files = (
 				A7519D141B3873790029024D /* Main.storyboard in Resources */,
 				A7519D191B3873790029024D /* LaunchScreen.xib in Resources */,
-				A71938BD1B387D7D0015ED6E /* Info.plist in Resources */,
 				A7519D161B3873790029024D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,21 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A71938BF1B387D7D0015ED6E /* PNBarChart.swift in Sources */,
-				A71938C11B387D7D0015ED6E /* PNChartDelegate.swift in Sources */,
-				A71938BE1B387D7D0015ED6E /* PNBar.swift in Sources */,
-				A71938C61B387D7D0015ED6E /* view.swift in Sources */,
 				A71938CC1B3884660015ED6E /* RAC.swift in Sources */,
 				A71938CD1B3884660015ED6E /* RACObserve.swift in Sources */,
-				A71938C01B387D7D0015ED6E /* PNChartConfig.swift in Sources */,
-				A71938C31B387D7D0015ED6E /* PNLineChart.swift in Sources */,
 				A7519D111B3873790029024D /* ViewController.swift in Sources */,
 				A71938C81B38835D0015ED6E /* SMBluetoothSimulator.swift in Sources */,
+				A7BBA6CC1B3C026100CF4616 /* SMViewController.m in Sources */,
 				A7519D0F1B3873790029024D /* AppDelegate.swift in Sources */,
 				A797A5E91B3AA75D00058155 /* SwiftyJSON.swift in Sources */,
-				A71938C21B387D7D0015ED6E /* PNChartLabel.swift in Sources */,
-				A71938C41B387D7D0015ED6E /* PNLineChartData.swift in Sources */,
-				A71938C51B387D7D0015ED6E /* PNValue.swift in Sources */,
 				A71938CE1B3884660015ED6E /* RACSignal+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7519D251B3873790029024D /* POC_PNChartTests.swift in Sources */,
+				A7BBA6CD1B3C026100CF4616 /* SMViewController.m in Sources */,
 				A797A5EA1B3AA75D00058155 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,11 +488,16 @@
 			baseConfigurationReference = 1C2C4BAF30504ABDD989865F /* Pods-POC_PNChart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = POC_PNChart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "POC_PNChart-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -561,10 +506,14 @@
 			baseConfigurationReference = FB86B18BD1F25484A7F4A620 /* Pods-POC_PNChart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = POC_PNChart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "POC_PNChart-Bridging-Header.h";
 			};
 			name = Release;

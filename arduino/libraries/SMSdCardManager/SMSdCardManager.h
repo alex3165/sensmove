@@ -30,13 +30,13 @@ public:
     // public methods
     void initializeSDCard();
     void readFolderContent(char* nameFolder);
-    void createFolder(char* nameFolder);
-    void deleteFolder(char* nameFolder);
+    // void createFolder(char* nameFolder);
+    // void deleteFolder(char* nameFolder);
     void recordSession(char* nameSession);
     void closeSession();
     void deleteSession();
     void recordSession();
-    void readFileContent(char* reader);
+    void readSession(char* reader);
 private:
     // attributes
     char* _nameSession;
@@ -44,7 +44,6 @@ private:
 
     
 };
-
 
 
 

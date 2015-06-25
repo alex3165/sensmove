@@ -1,13 +1,24 @@
 /*
-  SD card test
+* SD card test
+*
+*
+* The circuit:
+*  * SD card attached to SPI bus as follows:
+* ** MOSI - pin 11 on Arduino Uno/Duemilanove/Diecimila
+* ** MISO - pin 12 on Arduino Uno/Duemilanove/Diecimila
+* ** CLK - pin 13 on Arduino Uno/Duemilanove/Diecimila
+* ** CS - depends on your SD card shield or module.
+*
+*/
 
 
- */
-// include the SD library:
+/*
+*  Dependencies
+*/
 #include <SPI.h>
 #include <SD.h>
-// include the json library:
-#include <ArduinoJson.h>
+#include <ArduinoJson.h> // include the json library:
+
 
 // set up variables using the SD utility library functions:
 //Sd2Card card;

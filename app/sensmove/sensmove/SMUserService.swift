@@ -57,6 +57,10 @@ class SMUserService: NSObject {
         self.saveUserToKeychain()
     }
     
+    func deleteSessionFromId(identifier: String) {
+//        self.currentUser?.sessions.fil
+    }
+    
     // Save current user state to keychain
     func saveUserToKeychain(){
         self.currentUser?.saveUserToKeychain()

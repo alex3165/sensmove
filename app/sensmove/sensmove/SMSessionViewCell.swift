@@ -10,12 +10,15 @@ import UIKit
 
 class SMSessionViewCell: UITableViewCell {
 
+//    @IBOutlet weak var sessionIdentifier: UILabel?
     @IBOutlet weak var sessionDuration: UILabel?
     @IBOutlet weak var averageLeftForces: UILabel?
     @IBOutlet weak var averageRightForces: UILabel?
     @IBOutlet weak var sendReport: UIButton?
     @IBOutlet weak var sessionTitle: UILabel?
     @IBOutlet weak var headerView: UIView?
+    @IBOutlet weak var deleteSessionButton: UIButton?
+    var sessionIdentifier: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +29,11 @@ class SMSessionViewCell: UITableViewCell {
     }
 
     func setSessionViewFromModel(session: SMSession) {
-        
+
         self.designComponents()
-        
+
         // Set values for components
+        self.sessionIdentifier = session.id as String
         self.sessionTitle?.text = session.name as String
         self.averageLeftForces?.text = session.averageLeftForce?.stringValue
         self.averageRightForces?.text = session.averageRightForce?.stringValue

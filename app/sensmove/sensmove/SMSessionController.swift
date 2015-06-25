@@ -9,7 +9,7 @@
 import UIKit
 
 class SMSessionController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     var userSessions: NSMutableArray!
 
     required init(coder aDecoder: NSCoder) {
@@ -26,7 +26,7 @@ class SMSessionController: UITableViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    /// MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
@@ -44,6 +44,17 @@ class SMSessionController: UITableViewController, UITableViewDataSource, UITable
         let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexPath) as! SMSessionViewCell
         currentCell.setSessionViewFromModel(self.userSessions.objectAtIndex(indexPath.row) as! SMSession)
         return currentCell
+    }
+    
+    @IBAction func deleteSessionAction(sender: AnyObject) {
+//        var button: UIButton = sender as! UIButton
+        let buttonPosition: CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
+        let indexCell = self.tableView.indexPathForRowAtPoint(buttonPosition)
+        
+        if indexCell != nil {
+            let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexCell!) as! SMSessionViewCell
+            
+        }
     }
 
     /*

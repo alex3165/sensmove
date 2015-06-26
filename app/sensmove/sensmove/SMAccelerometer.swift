@@ -13,12 +13,14 @@ import SceneKit
 
 class SMAccelerometer: SMSensor {
 
-    var values: SCNVector3?
+    dynamic var currentValues: SCNVector3
+    var archivedValues: [SCNVector3]
     
-    required init(id: Int, pos: JSON) {
+    required init(id: Int) {
+        self.currentValues = SCNVector3(x: 0, y: 0, z: 0)
+        self.archivedValues = []
 
         super.init(id: id, creation: NSDate())
-
     }
     
     required init(id: Int, creation: NSDate) {
@@ -27,8 +29,11 @@ class SMAccelerometer: SMSensor {
 
     // Set the accelerometer 3d vector to the given values
     func setAccValues(x: Float, y: Float, z: Float) {
-        self.values?.x = x
-        self.values?.y = y
-        self.values?.z = z
+        
+        self.archivedValues.append(self.currentValues)
+        
+        self.currentValues.x = x
+        self.currentValues.y = y
+        self.currentValues.z = z
     }
 }

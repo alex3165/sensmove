@@ -14,16 +14,16 @@ class SMTrackSessionService: NSObject {
     var currentSession: SMSession?
 
     // Singleton instance of current class
-    class var sharedInstance: SMTrackSessionService {
-        struct Static {
-            static let instance: SMTrackSessionService = SMTrackSessionService()
-        }
-        return Static.instance
-    }
+    static let sharedInstance = SMTrackSessionService()
+//    class var sharedInstance: SMTrackSessionService {
+//        struct Static {
+//            static let instance: SMTrackSessionService = SMTrackSessionService()
+//        }
+//        return Static.instance
+//    }
 
     // Create new force / acceleration tracking
     func createNewSession() {
-        
         var singletonDatas: SMData = SMData.sharedInstance
         singletonDatas.getDatasFromFile("SMSensorsVectors", success: { (datas) -> () in
             
@@ -31,10 +31,27 @@ class SMTrackSessionService: NSObject {
             self.currentSession = SMSession(sensorsVectors: sensorsJson)
             
         }) { (error) -> () in
-            
+
             printLog(error, "createNewSession", "Error when creating new session")
-            
+
         }
+    }
+    
+    func stopCurrentSession(duration: NSTimeInterval) {
+        self.currentSession?.setDuration(duration)
+
+        /// TODO: Retrieve and calcul forces from soles datas
+        self.currentSession?.setLeftForce(100)
+        self.currentSession?.setRightForce(110)
+    }
+    
+    func saveCurrentSession() {
+        SMUserService.sharedInstance.addSessionToCurrentUser(self.currentSession!)
+        self.currentSession = nil
+    }
+    
+    func deleteCurrentSession() {
+        self.currentSession = nil
     }
 
     // return the right sole object

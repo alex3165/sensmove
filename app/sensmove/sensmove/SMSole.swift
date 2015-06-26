@@ -13,7 +13,9 @@ class SMSole: NSObject {
     let isRight: Bool
 
     var forceSensors: [SMForce] = []
-    var accelerometerSensors: [SMAccelerometer] = []
+    var accelerometerSensors: SMAccelerometer?
+    
+    let id: NSString
 
     /**
     *
@@ -23,24 +25,42 @@ class SMSole: NSObject {
     */
     init(simpleVectors: JSON, isRight: Bool) {
 
+        /// TODO: Get ID from sole at bluetooth initialization
+        self.id = "SLPSENSMOVE01"
+        
         self.isRight = isRight
         super.init()
         
-        self.createSensortsFromVectors(simpleVectors)
+        self.createForceSensorsFromVectors(simpleVectors)
+        self.createAccSensors()
     }
-    
+
+    func createAccSensors() {
+        self.accelerometerSensors = SMAccelerometer(id: 0)
+    }
+
     /**
     *
     *   Create force sensors from JSON object
     *   :param:  forceVectors  JSON object
     *
     */
-    func createSensortsFromVectors(forceVectors: JSON) {
+    func createForceSensorsFromVectors(forceVectors: JSON) {
 
         var index: Int = forceVectors.count - 1
 
         for (key: String, vector: JSON) in forceVectors {
             forceSensors.append(SMForce(id: index--, pos: vector))
         }
+    }
+
+    /// TODO: Add forces and acc sensors in sqlite database
+    func toPropertyList() -> NSDictionary {
+        var sole: NSDictionary = [
+            "id": self.id,
+            "isRight": self.isRight
+        ]
+
+        return sole
     }
 }

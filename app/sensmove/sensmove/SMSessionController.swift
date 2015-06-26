@@ -10,12 +10,10 @@ import UIKit
 
 class SMSessionController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var userService: SMUserService
     var userSessions: NSMutableArray!
 
     required init(coder aDecoder: NSCoder) {
-        self.userService = SMUserService.sharedInstance
-        self.userSessions = self.userService.currentUser?.sessions
+        self.userSessions = SMUserService.sharedInstance.currentUser!.sessions
         super.init(coder: aDecoder)
     }
 

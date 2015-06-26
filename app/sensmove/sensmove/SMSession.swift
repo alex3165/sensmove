@@ -15,15 +15,21 @@ let kSessionDate: String = "date"
 let kSessionDuration: String = "duration"
 let kAverageLeftForce: String = "leftForce"
 let kAverageRightForce: String = "rightForce"
+let kRightSole: String = "rightSole"
+let kLeftSole: String = "leftSole"
+let kSessionComment: String = "sessionComment"
+let kSessionActivity: String = "activity"
 
 class SMSession: NSObject {
     
     var id: NSString
     var name: NSString
     var date: NSDate
-    var duration: NSNumber?
+    var duration: NSTimeInterval?
     var averageLeftForce: NSNumber?
     var averageRightForce: NSNumber?
+    var sessionComment: String?
+    var activity: String?
 
     /// Observable variable
     dynamic var isActive: Bool
@@ -41,7 +47,8 @@ class SMSession: NSObject {
         self.date = NSDate()
         self.id = NSString(format:"%@%ui", self.name, self.date.timeIntervalSince1970)
         self.isActive = true
-
+        self.sessionComment = ""
+        self.activity = ""
         self.rightSole = SMSole(simpleVectors: sensorsVectors["right"], isRight: true)
         self.leftSole = SMSole(simpleVectors: sensorsVectors["left"], isRight: false)
         
@@ -57,30 +64,61 @@ class SMSession: NSObject {
         self.id = sessionSettings[kSessionId].stringValue
         self.name = sessionSettings[kSessionName].stringValue
         self.date = NSDate(timeIntervalSince1970: sessionSettings[kSessionDate].doubleValue)
-        self.duration = sessionSettings[kSessionDuration].numberValue
-        self.averageLeftForce = sessionSettings[kAverageLeftForce].numberValue
-        self.averageRightForce = sessionSettings[kAverageRightForce].numberValue
         self.isActive = false
-        self.rightSole = nil
-        self.leftSole = nil
 
         super.init()
+        
+        self.duration = sessionSettings[kSessionDuration].doubleValue
+        self.averageLeftForce = sessionSettings[kAverageLeftForce].numberValue
+        self.averageRightForce = sessionSettings[kAverageRightForce].numberValue
+        
+        self.sessionComment = self.getPropertyValueFromKey(kSessionComment, settings: sessionSettings)
+        self.activity = self.getPropertyValueFromKey(kSessionActivity, settings: sessionSettings)
+
+        self.rightSole = nil
+        self.leftSole = nil
+    }
+    
+    func getPropertyValueFromKey(key: String, settings: JSON) -> String {
+        return settings[key] != nil ? settings[key].stringValue : ""
     }
 
+    func setDuration(timeInterval: NSTimeInterval) {
+        self.duration = timeInterval
+    }
+
+    func setLeftForce(leftForce: Float) {
+        self.averageLeftForce = NSNumber(float: leftForce)
+    }
+
+    func setRightForce(rightForce: Float) {
+        self.averageRightForce = NSNumber(float: rightForce)
+    }
     /**
     *
     *   Format session object for keychain storage
     *   :returns:  sessionJson  session formatted for storage
     */
     func toPropertyList() -> NSDictionary {
-        var sessionJson: NSDictionary = [
+        var sessionJson: NSMutableDictionary = [
             kSessionId: self.id,
             kSessionName: self.name,
             kSessionDate: self.date.timeIntervalSince1970,
             kSessionDuration: self.duration!,
             kAverageLeftForce: self.averageLeftForce!,
-            kAverageRightForce: self.averageRightForce!
+            kAverageRightForce: self.averageRightForce!,
+            kSessionActivity: self.activity!,
+            kSessionComment: self.sessionComment!
         ]
+
+        if self.rightSole != nil {
+            sessionJson.setValue(self.rightSole!.toPropertyList(), forKey: kRightSole)
+        }
+
+        if self.leftSole != nil {
+            sessionJson.setValue(self.leftSole!.toPropertyList(), forKey: kLeftSole)
+        }
+
         return sessionJson
     }
 }

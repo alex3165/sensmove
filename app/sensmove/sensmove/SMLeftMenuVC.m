@@ -56,9 +56,9 @@
     [self setImage];
 
     /// Observe change on sessions array then set the correct value in side menu
-    [RACObserve(self.userService.currentUser, sessions) subscribeNext:^(NSMutableArray *sessions) {
-        if (sessions != nil) {
-            [self setSessions:[NSString stringWithFormat:@"%lu sessions", sessions.count]];
+    [RACObserve(self.userService.currentUser, numberOfSession) subscribeNext:^(id number) {
+        if (number != nil) {
+            [self setSessions:[NSString stringWithFormat:@"%@ sessions", number]];
         }
     }];
 }

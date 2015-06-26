@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  POC_Charts
+//  POCCharts
 //
-//  Created by Jean-Sébastien Pélerin on 25/06/2015.
+//  Created by Jean-Sébastien Pélerin on 26/06/2015.
 //  Copyright (c) 2015 Sensmove. All rights reserved.
 //
 

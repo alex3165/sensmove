@@ -1,19 +1,19 @@
 //
-//  POC_ChartsTests.m
-//  POC_ChartsTests
+//  POCChartsTests.m
+//  POCChartsTests
 //
-//  Created by Jean-Sébastien Pélerin on 25/06/2015.
+//  Created by Jean-Sébastien Pélerin on 26/06/2015.
 //  Copyright (c) 2015 Sensmove. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface POC_ChartsTests : XCTestCase
+@interface POCChartsTests : XCTestCase
 
 @end
 
-@implementation POC_ChartsTests
+@implementation POCChartsTests
 
 - (void)setUp {
     [super setUp];

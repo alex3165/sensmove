@@ -19,7 +19,7 @@ void setup() {
 	Serial.begin(9600);
 	while(!Serial); // Leonardo/Micro should wait for serial init
     // Initialize the SMBLEApplication instance
-     bleApplication.initializeBluetooth();
+  bleApplication.initializeBluetooth();
 }
 
 

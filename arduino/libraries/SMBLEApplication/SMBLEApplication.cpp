@@ -30,11 +30,11 @@ SMBLEApplication::~SMBLEApplication() {
 *	initializeBluetooth: Initialization of the bluetooth module
 *
 */
- void SMBLEApplication::initializeBluetooth() {
- 	_BTLESerial->setDeviceName("SL18902"); /* 7 characters max! */
-   	_BTLESerial->begin();
-  
- }
+void SMBLEApplication::initializeBluetooth() {
+	_BTLESerial->setDeviceName("SL18902"); /* 7 characters max! */
+	_BTLESerial->begin();
+
+}
 
 
 /*
@@ -143,17 +143,18 @@ void SMBLEApplication::updateStatus(){
 	
 	if (status != _laststatus) {  // If the status changed....
 
-	if (status == ACI_EVT_DEVICE_STARTED) {
-	    Serial.println(F("* Advertising started"));
-	}
-	if (status == ACI_EVT_CONNECTED) {
-	    Serial.println(F("* Connected!"));
-	}
-	if (status == ACI_EVT_DISCONNECTED) {
-	    Serial.println(F("* Disconnected or advertising timed out"));
-	}
+		if (status == ACI_EVT_DEVICE_STARTED) {
+		    Serial.println(F("* Advertising started"));
+		}
+		if (status == ACI_EVT_CONNECTED) {
+		    Serial.println(F("* Connected!"));
+		}
+		if (status == ACI_EVT_DISCONNECTED) {
+		    Serial.println(F("* Disconnected or advertising timed out"));
+		}
 
-	_laststatus = status; // OK set the last status change to this one
+		_laststatus = status; // OK set the last status change to this one
+		
 	}
 
 	_laststatus = status;

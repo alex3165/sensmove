@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'POC_Charts' do
+	pod 'ReactiveCocoa', '~> 2.3'
+    pod 'PNChart', '~> 0.8.3'
+end
+
+target 'POC_ChartsTests' do
+	pod 'ReactiveCocoa', '~> 2.3'
+    pod 'PNChart', '~> 0.8.3'
+end
+

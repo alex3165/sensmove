@@ -2,15 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SMViewController.h">
-   </FileRef>
-   <FileRef
-      location = "group:SMViewController.m">
-   </FileRef>
-   <FileRef
-      location = "group:POC_PNChart-Bridging-Header.h">
-   </FileRef>
-   <FileRef
       location = "group:POC_PNChart.xcodeproj">
    </FileRef>
    <FileRef

@@ -7,6 +7,7 @@
 //
 
 #import "SMViewController.h"
+#import "POC_PNChart-Swift.h"
 
 
 @implementation SMViewController

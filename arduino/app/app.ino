@@ -36,7 +36,7 @@ void loop() {
       dataJson.updateData();
       String jsonData = dataJson.getJsonData();
       bleApplication.sendInstruction(jsonData);
-      delay(1000);
+      delay(500);
 
       
     } else {
@@ -44,8 +44,7 @@ void loop() {
 
       //Waiting instruction from the external device to manage and send Data
       bleApplication.waitInstruction();
-      Serial.println("Waiting...");
-      delay(5000);
+      delay(1000);
 
     
     }

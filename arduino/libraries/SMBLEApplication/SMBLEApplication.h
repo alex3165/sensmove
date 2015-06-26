@@ -19,7 +19,7 @@
 /*
 *  Constants
 */
-#define BLEFRAME 17 // Maximum size of a BLE frame
+#define BLEFRAME 19 // Maximum size of a BLE frame
 #define STARTSESSION  "start" //Keyword to start the session
 #define STOPSESSION "stop" //Keyword to stop the session
 #define ADAFRUITBLE_REQ 10

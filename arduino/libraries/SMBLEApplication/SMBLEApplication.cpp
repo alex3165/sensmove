@@ -37,8 +37,6 @@ SMBLEApplication::~SMBLEApplication() {
  }
 
 
-
-
 /*
 *	waitInstruction: Session did not started, wait for start request
 *
@@ -59,16 +57,24 @@ void SMBLEApplication::sendInstruction(String largeData){
 
 		String dataCurDevice;
 		String dataExtDevice;
+		largeData = "$" + largeData + "$";
 
 		int jsonDataLength = largeData.length()/BLEFRAME;
 
 			for(int i= 0;  i< jsonDataLength+1; i++){
+
 				if(i == jsonDataLength){
-					dataCurDevice =	"$" +largeData.substring(i*BLEFRAME) +"$";
-					sendData(dataCurDevice);
-					Serial.println(dataCurDevice);
+
+					if(BLEFRAME%i != 0){
+						//Check wether there are last data to send
+						dataCurDevice =	largeData.substring(i*BLEFRAME);
+						sendData(dataCurDevice);
+						Serial.println(dataCurDevice);
+					}
+					
 				} else {
-					dataCurDevice = "$" + largeData.substring(i*BLEFRAME,(i+1)*BLEFRAME) + "$";
+
+					dataCurDevice = largeData.substring(i*BLEFRAME,(i+1)*BLEFRAME);
 					sendData(dataCurDevice);
 					Serial.println(dataCurDevice);
 
@@ -76,13 +82,9 @@ void SMBLEApplication::sendInstruction(String largeData){
 
 			}
 
-		
 		//Check if their is a request from the external device
 		dataExtDevice = receiveData();
 		_sessionStarted = !dataExtDevice.equals(String(STOPSESSION));
-
-
-
 }
 
 

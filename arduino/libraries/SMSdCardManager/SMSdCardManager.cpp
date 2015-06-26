@@ -9,8 +9,8 @@
 #include "SMSdCardManager.h"
 
 /*
-* 
-*   @param: 
+*   Constructor
+*   @param: name of the session
 */
 SMSdCardManager::SMSdCardManager(char* nameSession){
     _myFile = new File();
@@ -19,16 +19,16 @@ SMSdCardManager::SMSdCardManager(char* nameSession){
 }
 
 /*
-* 
-*   @param: 
+*   Destructor
+*    
 */
 SMSdCardManager::~SMSdCardManager(){
 
 }
 
 /*
-* 
-*   @param: 
+*   initializeSDCard: tell Arduino to initialize SD card (in the setup)
+*    
 */
 void SMSdCardManager::initializeSDCard(){
     if (!SD.begin(port)) {
@@ -40,10 +40,10 @@ void SMSdCardManager::initializeSDCard(){
 }
 
 /*
-* 
-*   @param: 
+*   createSession: create a session into a file
+*
 */
-void SMSdCardManager::createSession(char* nameSession){
+void SMSdCardManager::createSession(){
     _myFile = SD.open(nameSession, FILE_WRITE);
     if (_myFile) {
         Serial.print("Opening file ");
@@ -55,30 +55,6 @@ void SMSdCardManager::createSession(char* nameSession){
     
 }
 
-
-// /*
-// *   readFolderContent
-// *   @param: 
-// */
-// void SMSdCardManager::readFolderContent(char* nameFolder){
-    
-// }
-
-// /*
-// *   createFolder
-// *   @param: 
-// */
-// void SMSdCardManager::createFolder(char* nameFolder){
-    
-// }
-
-// /*
-// *   deleteFolder
-// *   @param: 
-// */
-// void SMSdCardManager::deleteFolder(char* nameFolder){
-    
-// }
 
 /*
 *   closeSession: close the session in which we are pointing
@@ -97,7 +73,7 @@ void SMSdCardManager::deleteSession(){
 }
 
 /*
-*   recordSession
+*   recordSession: record data in the file we are pointing at
 *
 */
 void SMSdCardManager::recordSession(){

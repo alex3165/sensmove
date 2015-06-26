@@ -30,9 +30,7 @@ public:
     // public methods
     void initializeSDCard();
     void readFolderContent(char* nameFolder);
-    // void createFolder(char* nameFolder);
-    // void deleteFolder(char* nameFolder);
-    void recordSession(char* nameSession);
+    void recordSession();
     void closeSession();
     void deleteSession();
     void recordSession();

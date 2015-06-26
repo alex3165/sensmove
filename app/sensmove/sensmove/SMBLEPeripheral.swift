@@ -28,7 +28,7 @@ class SMBLEPeripheral: NSObject, CBPeripheralDelegate {
         
     }
     
-    // Shorthand method that convert string into data and call writeRawData
+    /// Shorthand method that convert string into data and call writeRawData
     func writeString(string:NSString){
 
         let data = NSData(bytes: string.UTF8String, length: string.length)
@@ -36,21 +36,21 @@ class SMBLEPeripheral: NSObject, CBPeripheralDelegate {
         writeRawData(data)
     }
     
-    // Send datas over bluetooth (write on characteristic)
+    /// Send datas over bluetooth (write on characteristic)
     func writeRawData(data:NSData) {
         
         var writeType:CBCharacteristicWriteType = CBCharacteristicWriteType.WithoutResponse
         
-        //send data in lengths of <= 20 bytes
+        /// send data in lengths of <= 20 bytes
         let dataLength = data.length
         let limit = 20
         
-        //Below limit, send as-is
+        /// Below limit, send as-is
         if dataLength <= limit {
             currentPeripheral!.writeValue(data, forCharacteristic: txCharacteristic, type: writeType)
         }
             
-            //Above limit, send in lengths <= 20 bytes
+        /// Above limit, send in lengths <= 20 bytes
         else {
             
             var len = limit

@@ -11,7 +11,10 @@ import SceneKit
 
 class SMForce: SMSensor {
 
+    /// Dynamic observable variable
     dynamic var currentForcePressure: Float
+    
+    /// Archived forces
     var archivedForces: [Float]
 
     required init(id: Int, pos: JSON) {
@@ -26,7 +29,7 @@ class SMForce: SMSensor {
         fatalError("init(id:creation:) has not been implemented")
     }
 
-    // Update the force pressure on sensor
+    /// Update the force pressure on sensor
     func updateForce(force: Float) {
         self.archivedForces.append(self.currentForcePressure)
         self.currentForcePressure = force

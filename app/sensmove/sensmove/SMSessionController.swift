@@ -10,7 +10,7 @@ import UIKit
 
 class SMSessionController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var userSessions: NSMutableArray!
+    var userSessions: Array<SMSession>!
 
     required init(coder aDecoder: NSCoder) {
         self.userSessions = SMUserService.sharedInstance.currentUser!.sessions
@@ -42,12 +42,12 @@ class SMSessionController: UITableViewController, UITableViewDataSource, UITable
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexPath) as! SMSessionViewCell
-        currentCell.setSessionViewFromModel(self.userSessions.objectAtIndex(indexPath.row) as! SMSession)
+        currentCell.setSessionViewFromModel(self.userSessions[indexPath.row] as SMSession)
         return currentCell
     }
     
     @IBAction func deleteSessionAction(sender: AnyObject) {
-//        var button: UIButton = sender as! UIButton
+
         let buttonPosition: CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let indexCell = self.tableView.indexPathForRowAtPoint(buttonPosition)
         

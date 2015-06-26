@@ -13,22 +13,19 @@ import SceneKit
 
 class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, SMChronometerDelegate {
     
-    // For development
-    //@IBOutlet weak var printButton: UIButton?
-    
     @IBOutlet weak var timeCountdown: UILabel?
     @IBOutlet weak var stopSessionButton: UIButton?
 
     var chronometer: SMChronometer?
     var trackSessionService: SMTrackSessionService?
 
-    // Current central manager
+    /// Current central manager
     var centralManager: CBCentralManager?
     
-    // Current received datas
+    /// Current received datas
     var datas: NSMutableData?
     
-    // current discovered peripheral
+    /// current discovered peripheral
     private var currentPeripheral: CBPeripheral?
     
     
@@ -93,7 +90,10 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.navigationController?.presentViewController(resultController, animated: false, completion: nil)
     }
 
-     /// MARK: Central manager delegates methods
+    /// MARK: Central manager delegates methods
+    
+    
+    /// Triggered whenever bluetooth state change, verify if it's power is on then scan for peripheral
     func centralManagerDidUpdateState(central: CBCentralManager!){
         if(centralManager?.state == CBCentralManagerState.PoweredOn) {
 
@@ -102,6 +102,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         }
     }
 
+    /// Connect to peripheral from name
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         if(self.currentPeripheral != peripheral && peripheral.name == "SL18902"){
             self.currentPeripheral = peripheral
@@ -113,6 +114,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         }
     }
 
+    /// Triggered when device is connected to peripheral, check for services
     func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
         
         self.centralManager?.stopScan()
@@ -127,6 +129,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         
     }
 
+    /// Check characteristic from service, discover characteristic from common UUID
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
 
         if((error) != nil) {
@@ -144,6 +147,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         }
     }
 
+    /// Notify peripheral that characteristic is discovered
     func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
 
         printLog(service.characteristics, "didDiscoverCharacteristicsForService", "Discover characteristique")
@@ -157,6 +161,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         }
     }
 
+    /// Check update for characteristic and call didReceiveDatasFromBle method
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
         printLog(characteristic, "didUpdateValueForCharacteristic", "Append new datas")
         self.didReceiveDatasFromBle(characteristic.value)
@@ -167,13 +172,4 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         var fsr: Array<JSON> = jsonData["fsr"].arrayValue
         
     }
-    
-    // MARK: tests methods
-//    @IBAction func startAction(sender:UIButton!) {
-//
-//    }
-//    
-//    @IBAction func printAction(sender:UIButton!) {
-//    }
-
 }

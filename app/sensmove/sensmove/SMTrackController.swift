@@ -27,6 +27,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     /// current discovered peripheral
     private var currentPeripheral: CBPeripheral?
+    var sensmoveBleWriter: SMBLEPeripheral?
     
     
     override func viewDidLoad() {
@@ -43,20 +44,20 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.datas = NSMutableData()
 
         
-        //self.centralManager = CBCentralManager(delegate: self, queue: nil)
+        self.centralManager = CBCentralManager(delegate: self, queue: nil)
 
         //self.peripheral = SMBLEPeripheral()
 //        RACObserve(self, "datas").subscribeNext { (datas) -> Void in
 //        }
 
         /// For development
-        var bleSimulator = SMBluetoothSimulator()
-        RACObserve(bleSimulator, "data").subscribeNext { (next:AnyObject!) -> Void in
-            
-            if let data = next as? NSData {
-                self.didReceiveDatasFromBle(data)
-            }
-        }
+//        var bleSimulator = SMBluetoothSimulator()
+//        RACObserve(bleSimulator, "data").subscribeNext { (next:AnyObject!) -> Void in
+//            
+//            if let data = next as? NSData {
+//                self.didReceiveDatasFromBle(data)
+//            }
+//        }
         /// ******************
         
         self.uiInitialize()
@@ -107,9 +108,6 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         if(self.currentPeripheral != peripheral && peripheral.name == "SL18902"){
             self.currentPeripheral = peripheral
 
-            /// TODO: Instantiate peripheral and use it
-            //SMBLEPeripheral(peripheral: self.currentPeripheral!)
-
             self.centralManager?.connectPeripheral(peripheral, options: nil)
         }
     }
@@ -133,13 +131,13 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
 
         if((error) != nil) {
-            printLog(error, "didDiscoverServices", "error when discovering services")
+            printLog(error, "didDiscoverServices", "Error when discovering services")
             return
         }
         
         for service in peripheral.services as! [CBService] {
             if service.characteristics != nil {
-                printLog(service.characteristics, "didDiscoverServices", "characteristics already known")
+                printLog(service.characteristics, "didDiscoverServices", "Characteristics already known")
             }
             if service.UUID.isEqual(uartServiceUUID()) {
                 peripheral.discoverCharacteristics([txCharacteristicUUID(), rxCharacteristicUUID()], forService: service)
@@ -155,7 +153,10 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         if service.UUID.isEqual(uartServiceUUID()) {
             for characteristic in service.characteristics as! [CBCharacteristic] {
                 if characteristic.UUID.isEqual(txCharacteristicUUID()) || characteristic.UUID.isEqual(rxCharacteristicUUID()) {
+                    
                     peripheral.setNotifyValue(true, forCharacteristic: characteristic)
+                    
+                    self.peripheralDiscovered()
                 }
             }
         }
@@ -167,6 +168,13 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.didReceiveDatasFromBle(characteristic.value)
     }
 
+    func peripheralDiscovered() {
+        /// TODO: Instantiate peripheral and use it
+        self.sensmoveBleWriter = SMBLEPeripheral(peripheral: self.currentPeripheral!)
+        
+        self.sensmoveBleWriter?.writeString("start")
+    }
+    
     func didReceiveDatasFromBle(datas: NSData) {
         var jsonData: JSON = JSON(data: datas)
         var fsr: Array<JSON> = jsonData["fsr"].arrayValue

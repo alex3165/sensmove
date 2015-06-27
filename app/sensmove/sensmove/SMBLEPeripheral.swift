@@ -23,21 +23,23 @@ class SMBLEPeripheral: NSObject, CBPeripheralDelegate {
 
         self.txCharacteristic = CBMutableCharacteristic(type: txCharacteristicUUID(), properties: CBCharacteristicProperties.Notify, value: nil, permissions: CBAttributePermissions.Readable)
     }
-
-    func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
-        
-    }
     
     /// Shorthand method that convert string into data and call writeRawData
     func writeString(string:NSString){
 
+        printLog(string, "writeString", "Write data to sensmove sole")
+        
         let data = NSData(bytes: string.UTF8String, length: string.length)
 
-        writeRawData(data)
+        if self.currentPeripheral != nil {
+            self.writeRawData(data)
+        } else {
+            printLog(self.currentPeripheral!, "writeString", "No current peripheral set")
+        }
     }
     
     /// Send datas over bluetooth (write on characteristic)
-    func writeRawData(data:NSData) {
+    private func writeRawData(data:NSData) {
         
         var writeType:CBCharacteristicWriteType = CBCharacteristicWriteType.WithoutResponse
         
@@ -47,7 +49,7 @@ class SMBLEPeripheral: NSObject, CBPeripheralDelegate {
         
         /// Below limit, send as-is
         if dataLength <= limit {
-            currentPeripheral!.writeValue(data, forCharacteristic: txCharacteristic, type: writeType)
+            self.currentPeripheral!.writeValue(data, forCharacteristic: txCharacteristic, type: writeType)
         }
             
         /// Above limit, send in lengths <= 20 bytes

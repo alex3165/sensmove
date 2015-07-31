@@ -57,6 +57,9 @@ class SMUserController: UIViewController {
         self.profilePicture!.layer.borderWidth = 5.0;
         self.profilePicture!.image =  UIImage(named: self.userService.currentUser?.picturePath as! String)
 
+        self.topBanner?.setNeedsDisplay()
+        self.topBanner?.layoutIfNeeded()
+        
         let locations: [Float] = [0.2, 1]
         var smGradient: SMGradient = SMGradient(locations: locations)
         smGradient.setFrameFromRect(self.topBanner!.bounds)

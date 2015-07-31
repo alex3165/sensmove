@@ -49,12 +49,14 @@ class SMSessionController: UITableViewController, UITableViewDataSource, UITable
     @IBAction func deleteSessionAction(sender: AnyObject) {
 
         let buttonPosition: CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
-        let indexCell = self.tableView.indexPathForRowAtPoint(buttonPosition)
+        let indexCell: NSIndexPath = self.tableView.indexPathForRowAtPoint(buttonPosition)!
         
-        if indexCell != nil {
-            let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexCell!) as! SMSessionViewCell
-            
-        }
+        println("Cell index : \(indexCell.item)")
+        
+        let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexCell) as! SMSessionViewCell
+
+        //self.userSessions[indexCell.item].name
+        
     }
 
     /*

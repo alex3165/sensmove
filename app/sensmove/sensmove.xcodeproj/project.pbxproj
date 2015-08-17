@@ -60,7 +60,6 @@
 		22BA89DB1B1C916E0001A1C4 /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D61B1C916E0001A1C4 /* RACObserve.swift */; };
 		22BA89DC1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */; };
 		22BA89DD1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */; };
-		22BA89E01B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA89DF1B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a */; };
 		22BA89E11B1CA9390001A1C4 /* SMTrackSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */; };
 		22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */; };
 		22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */; };
@@ -107,6 +106,7 @@
 		22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
 		22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */; };
 		294C05DE63DFA537C62BC1A9 /* libPods-sensmove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48BCA881402655856765B7 /* libPods-sensmove.a */; };
+		ACD436D11B82455800996176 /* libReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD436D01B82455800996176 /* libReactiveCocoa.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +194,8 @@
 		22FFAAA71AE58ECB005A49CF /* SMUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserService.swift; sourceTree = "<group>"; };
 		22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserTest.swift; sourceTree = "<group>"; };
 		3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACD436CE1B82454C00996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
+		ACD436D01B82455800996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		AF48BCA881402655856765B7 /* libPods-sensmove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBECF654EB87862462474F9 /* Pods-sensmove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmove/Pods-sensmove.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B94D8E5AA476BF36C49CC0 /* libPods-sensmoveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmoveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,7 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22BA89E01B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a in Frameworks */,
+				ACD436D11B82455800996176 /* libReactiveCocoa.a in Frameworks */,
 				294C05DE63DFA537C62BC1A9 /* libPods-sensmove.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +420,8 @@
 		AC3B0E47F36311D3ADEFFEBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACD436D01B82455800996176 /* libReactiveCocoa.a */,
+				ACD436CE1B82454C00996176 /* libReactiveCocoa.a */,
 				22BA89DF1B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a */,
 				AF48BCA881402655856765B7 /* libPods-sensmove.a */,
 				F4B94D8E5AA476BF36C49CC0 /* libPods-sensmoveTests.a */,
@@ -823,7 +827,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sensmove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -839,7 +846,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sensmove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "sensmove/sensmove-Bridging-Header.h";
 			};

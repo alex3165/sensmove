@@ -3,7 +3,7 @@ platform :ios, '8.0'
 
 target 'sensmove' do
        pod 'AMSlideMenu', '~> 1.5.4'
-       pod 'ReactiveCocoa', '~> 2.3'
+       pod 'ReactiveCocoa', '~>2.3'
 end
 
 target 'sensmoveTests' do

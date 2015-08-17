@@ -8,53 +8,42 @@
 
 import Foundation
 import UIKit
-import SceneKit
 
-class SMLiveForcesTrack: SCNScene {
+class SMLiveForcesTrack: UIView {
     
     var trackSessionService: SMTrackSessionService?
-    var globalNode:  SCNNode = SCNNode()
-    
-    override init() {
-        super.init()
-        
+    //var circleChart: PNCircleChart!
+
+    override init(frame: CGRect) {
+
+        super.init(frame: frame)
+
         self.trackSessionService = SMTrackSessionService.sharedInstance
         
-//        self.createLights()
+        let halfViewWidth: CGFloat = self.frame.size.width / 2
+        let halfViewHeight: CGFloat = self.frame.size.height / 2
+        
+//        self.circleChart = PNCircleChart(frame: CGRectMake(halfViewWidth, halfViewHeight, 50, 50), total: 1024, current: 0, clockwise: true, shadow: false, shadowColor: UIColor.redColor(), displayCountingLabel: false, overrideLineWidth: 6)
 
-        if let sole = self.trackSessionService?.currentSession?.rightSole {
+//        self.circleChart.strokeColor = UIColor.redColor()
+//        self.circleChart.backgroundColor = UIColor.clearColor()
+//        self.circleChart.strokeChart()
+        
 
-//            RACObserve(sole, "forceSensors").subscribeNext({ (forceSensors) -> Void in
-//                for sensor: SMForce in sole.forceSensors {
-//                    self.globalNode.addChildNode(sensor.getNode())
-//                }
-//                self.rootNode.addChildNode(self.globalNode)
-//
-//            })
+        if let sensorForces: [SMForce] = self.trackSessionService?.getRightSole().forceSensors {
+//            for forceSensor in sensorForces {
+                RACObserve(sensorForces[0], "currentForcePressure").subscribeNext({ (forceValue) -> Void in
+                    let value: Float = forceValue as! Float
+                    printLog(value, "Force Value", "\(value)")
+//                    self.circleChart.current = value
+//                    self.circleChart.updateChartByCurrent(value)
+                })
+//            }
         }
 
+//        self.addSubview(self.circleChart)
+
     }
-    
-//    func createLights() {
-//        var light = SCNLight()
-//        var lightNode = SCNNode()
-//        
-//        light.type = SCNLightTypeOmni
-//        light.color = SMColor.orange()
-//        lightNode.light = light
-//        lightNode.position = SCNVector3(x: -40, y: 40, z: 60)
-//        self.rootNode.addChildNode(lightNode)
-//        
-//        
-//        var ambientLight = SCNLight()
-//        var ambientLightNode = SCNNode()
-//        
-//        ambientLight.type = SCNLightTypeAmbient
-//        ambientLight.color = SMColor.red()
-//        ambientLightNode.light = ambientLight
-//        self.rootNode.addChildNode(ambientLightNode)
-//        
-//    }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

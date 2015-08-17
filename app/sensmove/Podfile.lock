@@ -1,19 +1,19 @@
 PODS:
   - AMSlideMenu (1.5.4)
-  - ReactiveCocoa (2.5):
-    - ReactiveCocoa/UI (= 2.5)
-  - ReactiveCocoa/Core (2.5):
+  - ReactiveCocoa (2.3):
+    - ReactiveCocoa/UI (= 2.3)
+  - ReactiveCocoa/Core (2.3):
     - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.5)
-  - ReactiveCocoa/UI (2.5):
+  - ReactiveCocoa/no-arc (2.3)
+  - ReactiveCocoa/UI (2.3):
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
   - AMSlideMenu (~> 1.5.4)
-  - ReactiveCocoa (~> 2.3)
+  - ReactiveCocoa (= 2.3)
 
 SPEC CHECKSUMS:
   AMSlideMenu: 8571937703d2b8e187b22c1416be4cafc3532a11
-  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  ReactiveCocoa: fbe689fe218063b7bbed41032912c9ca4fdbe172
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

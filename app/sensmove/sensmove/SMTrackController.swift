@@ -21,17 +21,18 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
     /// Current central manager
     var centralManager: CBCentralManager?
-    
-    /// Current received datas
-//    var datas: NSMutableData?
+
+    /// Temporary string data, string is delimited by $ character
     var tmpDatasString: String!
+
+    /// Set whenever string is built
     dynamic var blockDataCompleted: NSData!
     
     /// current discovered peripheral
     private var currentPeripheral: CBPeripheral?
     var sensmoveBleWriter: SMBLEPeripheral?
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,16 +48,25 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
 
-        //self.peripheral = SMBLEPeripheral()
+        /**
+        *   Observe blockDataCompleted property of current class then update forces values 
+        *   of current session
+        */
         RACObserve(self, "blockDataCompleted").subscribeNext { (datas) -> Void in
             if let data: NSData = datas as? NSData{
                 let jsonObject: JSON = JSON(data: data)
+                self.trackSessionService?.updateCurrentSession(jsonObject)
             }
             
         }
         
-        RACObserve(self.trackSessionService?.getRightSole(), "forceSensors").subscribeNext { (forceSensors) -> Void in
-            
+        let sensorForces = self.trackSessionService?.getRightSole().forceSensors
+
+        for forceSensor in sensorForces! {
+            RACObserve(forceSensor, "currentForcePressure").subscribeNext({ (forceValue) -> Void in
+                let value: Float = forceValue as! Float
+                printLog(value, "Force Value", "\(value)")
+            })
         }
         
         self.uiInitialize()
@@ -153,6 +163,8 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
                     
                     peripheral.setNotifyValue(true, forCharacteristic: characteristic)
                     
+                    // TODO: Instantiate peripheral then send start / stop notification to insole
+
                     //self.peripheralDiscovered()
                 }
             }
@@ -161,17 +173,19 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
     /// Check update for characteristic and call didReceiveDatasFromBle method
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
-        printLog(characteristic, "didUpdateValueForCharacteristic", "Append new datas")
         self.didReceiveDatasFromBle(characteristic.value)
     }
 
     func peripheralDiscovered() {
-        /// TODO: Instantiate peripheral and use it
+
         self.sensmoveBleWriter = SMBLEPeripheral(peripheral: self.currentPeripheral!)
         
         self.sensmoveBleWriter?.writeString("start")
     }
     
+    /**
+    *   Bufferize data and build it as string
+    */
     func didReceiveDatasFromBle(datas: NSData) {
         let currentStringData: NSString = NSString(data: datas, encoding: NSUTF8StringEncoding)!
         

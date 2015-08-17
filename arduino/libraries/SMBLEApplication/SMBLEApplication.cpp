@@ -103,6 +103,8 @@ String SMBLEApplication::receiveData(){
 			// To receiving datas
 			while (_BTLESerial->available()) {
 		       char data = _BTLESerial->read();
+		       Serial.println(data);
+
 		       stringBle = stringBle + String(data);
 			}
 			if(stringBle.length()>0){

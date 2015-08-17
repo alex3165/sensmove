@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39C24BC16FEE09813E7B7756 /* libPods-POCCharts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9EF361A9A8D0DC58E7F834 /* libPods-POCCharts.a */; };
+		4F3B4EE212769E9191E681EC /* libPods-POCChartsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9145158A9FD4CAE025B8DDCF /* libPods-POCChartsTests.a */; };
+		A779564A1B3D7BB90033F358 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77956491B3D7BB90033F358 /* SwiftyJSON.swift */; };
+		A779564C1B3D7D900033F358 /* SMBluetoothSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779564B1B3D7D900033F358 /* SMBluetoothSimulator.swift */; };
 		A793A16A1B3D783200DCB328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793A1691B3D783200DCB328 /* AppDelegate.swift */; };
 		A793A16C1B3D783200DCB328 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793A16B1B3D783200DCB328 /* ViewController.swift */; };
 		A793A16F1B3D783200DCB328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A793A16D1B3D783200DCB328 /* Main.storyboard */; };
 		A793A1711B3D783200DCB328 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A793A1701B3D783200DCB328 /* Images.xcassets */; };
 		A793A1741B3D783200DCB328 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A793A1721B3D783200DCB328 /* LaunchScreen.xib */; };
 		A793A1801B3D783200DCB328 /* POCChartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793A17F1B3D783200DCB328 /* POCChartsTests.swift */; };
+		A793A18C1B3D786200DCB328 /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A793A18B1B3D786200DCB328 /* SMViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E3C36B20CBE2BC12C8B47C0 /* Pods-POCCharts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POCCharts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POCCharts/Pods-POCCharts.debug.xcconfig"; sourceTree = "<group>"; };
+		2CF5B5706B8FBBB068BEC249 /* Pods-POCChartsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POCChartsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POCChartsTests/Pods-POCChartsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B5F40EABE873665D54510AA /* Pods-POCChartsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POCChartsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-POCChartsTests/Pods-POCChartsTests.release.xcconfig"; sourceTree = "<group>"; };
+		9145158A9FD4CAE025B8DDCF /* libPods-POCChartsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-POCChartsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A77956481B3D7BB90033F358 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		A77956491B3D7BB90033F358 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		A779564B1B3D7D900033F358 /* SMBluetoothSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBluetoothSimulator.swift; sourceTree = "<group>"; };
 		A793A1641B3D783200DCB328 /* POCCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A793A1681B3D783200DCB328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A793A1691B3D783200DCB328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +48,11 @@
 		A793A1791B3D783200DCB328 /* POCChartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCChartsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A793A17E1B3D783200DCB328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A793A17F1B3D783200DCB328 /* POCChartsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCChartsTests.swift; sourceTree = "<group>"; };
+		A793A1891B3D786200DCB328 /* POCCharts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "POCCharts-Bridging-Header.h"; sourceTree = "<group>"; };
+		A793A18A1B3D786200DCB328 /* SMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMViewController.h; sourceTree = "<group>"; };
+		A793A18B1B3D786200DCB328 /* SMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMViewController.m; sourceTree = "<group>"; };
+		BBFA1DF6EB5D427EA2FDCE8C /* Pods-POCCharts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POCCharts.release.xcconfig"; path = "Pods/Target Support Files/Pods-POCCharts/Pods-POCCharts.release.xcconfig"; sourceTree = "<group>"; };
+		DD9EF361A9A8D0DC58E7F834 /* libPods-POCCharts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-POCCharts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C24BC16FEE09813E7B7756 /* libPods-POCCharts.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +68,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3B4EE212769E9191E681EC /* libPods-POCChartsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23EA29175F4D7DE86D37460B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E3C36B20CBE2BC12C8B47C0 /* Pods-POCCharts.debug.xcconfig */,
+				BBFA1DF6EB5D427EA2FDCE8C /* Pods-POCCharts.release.xcconfig */,
+				2CF5B5706B8FBBB068BEC249 /* Pods-POCChartsTests.debug.xcconfig */,
+				7B5F40EABE873665D54510AA /* Pods-POCChartsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A793A15B1B3D783200DCB328 = {
 			isa = PBXGroup;
 			children = (
 				A793A1661B3D783200DCB328 /* POCCharts */,
 				A793A17C1B3D783200DCB328 /* POCChartsTests */,
 				A793A1651B3D783200DCB328 /* Products */,
+				23EA29175F4D7DE86D37460B /* Pods */,
+				FC5AB7CC987999A3A235F376 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +111,16 @@
 			children = (
 				A793A1691B3D783200DCB328 /* AppDelegate.swift */,
 				A793A16B1B3D783200DCB328 /* ViewController.swift */,
+				A793A18A1B3D786200DCB328 /* SMViewController.h */,
+				A793A18B1B3D786200DCB328 /* SMViewController.m */,
+				A779564B1B3D7D900033F358 /* SMBluetoothSimulator.swift */,
+				A77956481B3D7BB90033F358 /* SwiftyJSON.h */,
+				A77956491B3D7BB90033F358 /* SwiftyJSON.swift */,
 				A793A16D1B3D783200DCB328 /* Main.storyboard */,
 				A793A1701B3D783200DCB328 /* Images.xcassets */,
 				A793A1721B3D783200DCB328 /* LaunchScreen.xib */,
 				A793A1671B3D783200DCB328 /* Supporting Files */,
+				A793A1891B3D786200DCB328 /* POCCharts-Bridging-Header.h */,
 			);
 			path = POCCharts;
 			sourceTree = "<group>";
@@ -112,6 +150,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FC5AB7CC987999A3A235F376 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD9EF361A9A8D0DC58E7F834 /* libPods-POCCharts.a */,
+				9145158A9FD4CAE025B8DDCF /* libPods-POCChartsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A793A1831B3D783200DCB328 /* Build configuration list for PBXNativeTarget "POCCharts" */;
 			buildPhases = (
+				B20932AE7470AC9B62B3F6BC /* Check Pods Manifest.lock */,
 				A793A1601B3D783200DCB328 /* Sources */,
 				A793A1611B3D783200DCB328 /* Frameworks */,
 				A793A1621B3D783200DCB328 /* Resources */,
+				DC7FC4F515BF5F301D26E2DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A793A1861B3D783200DCB328 /* Build configuration list for PBXNativeTarget "POCChartsTests" */;
 			buildPhases = (
+				75FB1C4542F592ADE45F1789 /* Check Pods Manifest.lock */,
 				A793A1751B3D783200DCB328 /* Sources */,
 				A793A1761B3D783200DCB328 /* Frameworks */,
 				A793A1771B3D783200DCB328 /* Resources */,
+				49FDACF63747BB4FB64C259E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +258,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49FDACF63747BB4FB64C259E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POCChartsTests/Pods-POCChartsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75FB1C4542F592ADE45F1789 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B20932AE7470AC9B62B3F6BC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC7FC4F515BF5F301D26E2DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POCCharts/Pods-POCCharts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A793A1601B3D783200DCB328 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A793A16C1B3D783200DCB328 /* ViewController.swift in Sources */,
+				A793A18C1B3D786200DCB328 /* SMViewController.m in Sources */,
 				A793A16A1B3D783200DCB328 /* AppDelegate.swift in Sources */,
+				A779564C1B3D7D900033F358 /* SMBluetoothSimulator.swift in Sources */,
+				A779564A1B3D7BB90033F358 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,26 +455,34 @@
 		};
 		A793A1841B3D783200DCB328 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E3C36B20CBE2BC12C8B47C0 /* Pods-POCCharts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = POCCharts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "POCCharts/POCCharts-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A793A1851B3D783200DCB328 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBFA1DF6EB5D427EA2FDCE8C /* Pods-POCCharts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = POCCharts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "POCCharts/POCCharts-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		A793A1871B3D783200DCB328 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CF5B5706B8FBBB068BEC249 /* Pods-POCChartsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -377,6 +502,7 @@
 		};
 		A793A1881B3D783200DCB328 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B5F40EABE873665D54510AA /* Pods-POCChartsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -409,6 +535,7 @@
 				A793A1851B3D783200DCB328 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A793A1861B3D783200DCB328 /* Build configuration list for PBXNativeTarget "POCChartsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +544,7 @@
 				A793A1881B3D783200DCB328 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

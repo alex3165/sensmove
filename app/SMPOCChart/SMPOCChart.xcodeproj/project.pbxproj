@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20D16DE554CE0EC735EA829F /* libPods-SMPOCChartTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C2FD43703E30B24BF6A140 /* libPods-SMPOCChartTests.a */; };
+		471BF55B16AC1CC3F0D1177B /* libPods-SMPOCChart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA79C485A1BA5ECFF8601160 /* libPods-SMPOCChart.a */; };
+		A779565C1B3D94FA0033F358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779565B1B3D94FA0033F358 /* AppDelegate.swift */; };
+		A779565E1B3D94FA0033F358 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779565D1B3D94FA0033F358 /* ViewController.swift */; };
+		A77956611B3D94FA0033F358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A779565F1B3D94FA0033F358 /* Main.storyboard */; };
+		A77956631B3D94FA0033F358 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A77956621B3D94FA0033F358 /* Images.xcassets */; };
+		A77956661B3D94FA0033F358 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A77956641B3D94FA0033F358 /* LaunchScreen.xib */; };
+		A77956721B3D94FA0033F358 /* SMPOCChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77956711B3D94FA0033F358 /* SMPOCChartTests.swift */; };
+		A79B6BC21B49973100D0BDD6 /* SMBluetoothSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79B6BC11B49973100D0BDD6 /* SMBluetoothSimulator.swift */; };
+		A7BD4DA91B66605E003B6BCC /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD4DA61B66605E003B6BCC /* RAC.swift */; };
+		A7BD4DAA1B66605E003B6BCC /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD4DA71B66605E003B6BCC /* RACObserve.swift */; };
+		A7BD4DAB1B66605E003B6BCC /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BD4DA81B66605E003B6BCC /* RACSignal+Extensions.swift */; };
+		A7DED8241B65686F00D00275 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DED8231B65686F00D00275 /* SwiftyJSON.swift */; };
+		A7DED8251B65686F00D00275 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DED8231B65686F00D00275 /* SwiftyJSON.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A779566C1B3D94FA0033F358 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A779564E1B3D94FA0033F358 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A77956551B3D94FA0033F358;
+			remoteInfo = SMPOCChart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4131A4022AC4C51AF20BEBCE /* Pods-SMPOCChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPOCChart.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMPOCChart/Pods-SMPOCChart.release.xcconfig"; sourceTree = "<group>"; };
+		8567595D284460C7CF691FF7 /* Pods-SMPOCChartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPOCChartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMPOCChartTests/Pods-SMPOCChartTests.release.xcconfig"; sourceTree = "<group>"; };
+		89BF3718B2BF4A3EA2729C15 /* Pods-SMPOCChartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPOCChartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMPOCChartTests/Pods-SMPOCChartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A77956561B3D94FA0033F358 /* SMPOCChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMPOCChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A779565A1B3D94FA0033F358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A779565B1B3D94FA0033F358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A779565D1B3D94FA0033F358 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A77956601B3D94FA0033F358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A77956621B3D94FA0033F358 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A77956651B3D94FA0033F358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A779566B1B3D94FA0033F358 /* SMPOCChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMPOCChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A77956701B3D94FA0033F358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A77956711B3D94FA0033F358 /* SMPOCChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPOCChartTests.swift; sourceTree = "<group>"; };
+		A779567B1B3D95340033F358 /* SMPOCChart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMPOCChart-Bridging-Header.h"; sourceTree = "<group>"; };
+		A79B6BC11B49973100D0BDD6 /* SMBluetoothSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBluetoothSimulator.swift; sourceTree = "<group>"; };
+		A7BD4DA61B66605E003B6BCC /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC.swift; sourceTree = "<group>"; };
+		A7BD4DA71B66605E003B6BCC /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACObserve.swift; sourceTree = "<group>"; };
+		A7BD4DA81B66605E003B6BCC /* RACSignal+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Extensions.swift"; sourceTree = "<group>"; };
+		A7DED8231B65686F00D00275 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		A7DED8261B65761400D00275 /* SwiftyJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		BA79C485A1BA5ECFF8601160 /* libPods-SMPOCChart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMPOCChart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E659C530B5850E23AB64D6D9 /* Pods-SMPOCChart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMPOCChart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMPOCChart/Pods-SMPOCChart.debug.xcconfig"; sourceTree = "<group>"; };
+		E8C2FD43703E30B24BF6A140 /* libPods-SMPOCChartTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SMPOCChartTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A77956531B3D94FA0033F358 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				471BF55B16AC1CC3F0D1177B /* libPods-SMPOCChart.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A77956681B3D94FA0033F358 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20D16DE554CE0EC735EA829F /* libPods-SMPOCChartTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3296EB87D12D1882AD803279 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E659C530B5850E23AB64D6D9 /* Pods-SMPOCChart.debug.xcconfig */,
+				4131A4022AC4C51AF20BEBCE /* Pods-SMPOCChart.release.xcconfig */,
+				89BF3718B2BF4A3EA2729C15 /* Pods-SMPOCChartTests.debug.xcconfig */,
+				8567595D284460C7CF691FF7 /* Pods-SMPOCChartTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A779564D1B3D94FA0033F358 = {
+			isa = PBXGroup;
+			children = (
+				A77956581B3D94FA0033F358 /* SMPOCChart */,
+				A779566E1B3D94FA0033F358 /* SMPOCChartTests */,
+				A77956571B3D94FA0033F358 /* Products */,
+				A779567B1B3D95340033F358 /* SMPOCChart-Bridging-Header.h */,
+				3296EB87D12D1882AD803279 /* Pods */,
+				A7BE45519F76245F345024EB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A77956571B3D94FA0033F358 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A77956561B3D94FA0033F358 /* SMPOCChart.app */,
+				A779566B1B3D94FA0033F358 /* SMPOCChartTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A77956581B3D94FA0033F358 /* SMPOCChart */ = {
+			isa = PBXGroup;
+			children = (
+				A7DED8231B65686F00D00275 /* SwiftyJSON.swift */,
+				A7BD4DA51B66602F003B6BCC /* util */,
+				A7DED8261B65761400D00275 /* SwiftyJSON.h */,
+				A779565B1B3D94FA0033F358 /* AppDelegate.swift */,
+				A779565D1B3D94FA0033F358 /* ViewController.swift */,
+				A79B6BC11B49973100D0BDD6 /* SMBluetoothSimulator.swift */,
+				A779565F1B3D94FA0033F358 /* Main.storyboard */,
+				A77956621B3D94FA0033F358 /* Images.xcassets */,
+				A77956641B3D94FA0033F358 /* LaunchScreen.xib */,
+				A77956591B3D94FA0033F358 /* Supporting Files */,
+			);
+			path = SMPOCChart;
+			sourceTree = "<group>";
+		};
+		A77956591B3D94FA0033F358 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A779565A1B3D94FA0033F358 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A779566E1B3D94FA0033F358 /* SMPOCChartTests */ = {
+			isa = PBXGroup;
+			children = (
+				A77956711B3D94FA0033F358 /* SMPOCChartTests.swift */,
+				A779566F1B3D94FA0033F358 /* Supporting Files */,
+			);
+			path = SMPOCChartTests;
+			sourceTree = "<group>";
+		};
+		A779566F1B3D94FA0033F358 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A77956701B3D94FA0033F358 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7BD4DA51B66602F003B6BCC /* util */ = {
+			isa = PBXGroup;
+			children = (
+				A7BD4DA61B66605E003B6BCC /* RAC.swift */,
+				A7BD4DA71B66605E003B6BCC /* RACObserve.swift */,
+				A7BD4DA81B66605E003B6BCC /* RACSignal+Extensions.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		A7BE45519F76245F345024EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA79C485A1BA5ECFF8601160 /* libPods-SMPOCChart.a */,
+				E8C2FD43703E30B24BF6A140 /* libPods-SMPOCChartTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A77956551B3D94FA0033F358 /* SMPOCChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A77956751B3D94FA0033F358 /* Build configuration list for PBXNativeTarget "SMPOCChart" */;
+			buildPhases = (
+				3058E06E939EE74F72593C01 /* Check Pods Manifest.lock */,
+				A77956521B3D94FA0033F358 /* Sources */,
+				A77956531B3D94FA0033F358 /* Frameworks */,
+				A77956541B3D94FA0033F358 /* Resources */,
+				E821281B6485A39F89A0E1BD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMPOCChart;
+			productName = SMPOCChart;
+			productReference = A77956561B3D94FA0033F358 /* SMPOCChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A779566A1B3D94FA0033F358 /* SMPOCChartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A77956781B3D94FA0033F358 /* Build configuration list for PBXNativeTarget "SMPOCChartTests" */;
+			buildPhases = (
+				2D7AEB71C18A1537050B8B41 /* Check Pods Manifest.lock */,
+				A77956671B3D94FA0033F358 /* Sources */,
+				A77956681B3D94FA0033F358 /* Frameworks */,
+				A77956691B3D94FA0033F358 /* Resources */,
+				C2F4D0950EE4F9F50CC39F3C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A779566D1B3D94FA0033F358 /* PBXTargetDependency */,
+			);
+			name = SMPOCChartTests;
+			productName = SMPOCChartTests;
+			productReference = A779566B1B3D94FA0033F358 /* SMPOCChartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A779564E1B3D94FA0033F358 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Sensmove;
+				TargetAttributes = {
+					A77956551B3D94FA0033F358 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					A779566A1B3D94FA0033F358 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = A77956551B3D94FA0033F358;
+					};
+				};
+			};
+			buildConfigurationList = A77956511B3D94FA0033F358 /* Build configuration list for PBXProject "SMPOCChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A779564D1B3D94FA0033F358;
+			productRefGroup = A77956571B3D94FA0033F358 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A77956551B3D94FA0033F358 /* SMPOCChart */,
+				A779566A1B3D94FA0033F358 /* SMPOCChartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A77956541B3D94FA0033F358 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A77956611B3D94FA0033F358 /* Main.storyboard in Resources */,
+				A77956661B3D94FA0033F358 /* LaunchScreen.xib in Resources */,
+				A77956631B3D94FA0033F358 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A77956691B3D94FA0033F358 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D7AEB71C18A1537050B8B41 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3058E06E939EE74F72593C01 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2F4D0950EE4F9F50CC39F3C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMPOCChartTests/Pods-SMPOCChartTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E821281B6485A39F89A0E1BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMPOCChart/Pods-SMPOCChart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A77956521B3D94FA0033F358 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7BD4DA91B66605E003B6BCC /* RAC.swift in Sources */,
+				A7BD4DAA1B66605E003B6BCC /* RACObserve.swift in Sources */,
+				A7BD4DAB1B66605E003B6BCC /* RACSignal+Extensions.swift in Sources */,
+				A779565E1B3D94FA0033F358 /* ViewController.swift in Sources */,
+				A79B6BC21B49973100D0BDD6 /* SMBluetoothSimulator.swift in Sources */,
+				A779565C1B3D94FA0033F358 /* AppDelegate.swift in Sources */,
+				A7DED8241B65686F00D00275 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A77956671B3D94FA0033F358 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A77956721B3D94FA0033F358 /* SMPOCChartTests.swift in Sources */,
+				A7DED8251B65686F00D00275 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A779566D1B3D94FA0033F358 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A77956551B3D94FA0033F358 /* SMPOCChart */;
+			targetProxy = A779566C1B3D94FA0033F358 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A779565F1B3D94FA0033F358 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A77956601B3D94FA0033F358 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A77956641B3D94FA0033F358 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A77956651B3D94FA0033F358 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A77956731B3D94FA0033F358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A77956741B3D94FA0033F358 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A77956761B3D94FA0033F358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E659C530B5850E23AB64D6D9 /* Pods-SMPOCChart.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = SMPOCChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SMPOCChart-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A77956771B3D94FA0033F358 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4131A4022AC4C51AF20BEBCE /* Pods-SMPOCChart.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = SMPOCChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SMPOCChart-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		A77956791B3D94FA0033F358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89BF3718B2BF4A3EA2729C15 /* Pods-SMPOCChartTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SMPOCChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMPOCChart.app/SMPOCChart";
+			};
+			name = Debug;
+		};
+		A779567A1B3D94FA0033F358 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8567595D284460C7CF691FF7 /* Pods-SMPOCChartTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SMPOCChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMPOCChart.app/SMPOCChart";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A77956511B3D94FA0033F358 /* Build configuration list for PBXProject "SMPOCChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A77956731B3D94FA0033F358 /* Debug */,
+				A77956741B3D94FA0033F358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A77956751B3D94FA0033F358 /* Build configuration list for PBXNativeTarget "SMPOCChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A77956761B3D94FA0033F358 /* Debug */,
+				A77956771B3D94FA0033F358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A77956781B3D94FA0033F358 /* Build configuration list for PBXNativeTarget "SMPOCChartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A77956791B3D94FA0033F358 /* Debug */,
+				A779567A1B3D94FA0033F358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A779564E1B3D94FA0033F358 /* Project object */;
+}

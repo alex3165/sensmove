@@ -13,16 +13,10 @@ class SMTrackSessionService: NSObject {
 
     var currentSession: SMSession?
 
-    // Singleton instance of current class
+    /// Singleton instance of current class
     static let sharedInstance = SMTrackSessionService()
-//    class var sharedInstance: SMTrackSessionService {
-//        struct Static {
-//            static let instance: SMTrackSessionService = SMTrackSessionService()
-//        }
-//        return Static.instance
-//    }
 
-    // Create new force / acceleration tracking
+    /// Create new force / acceleration tracking
     func createNewSession() {
         var singletonDatas: SMData = SMData.sharedInstance
         singletonDatas.getDatasFromFile("SMSensorsVectors", success: { (datas) -> () in
@@ -37,6 +31,7 @@ class SMTrackSessionService: NSObject {
         }
     }
     
+    /// Set duration and left / right forces
     func stopCurrentSession(duration: NSTimeInterval) {
         self.currentSession?.setDuration(duration)
 

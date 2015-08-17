@@ -48,6 +48,7 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     
     /**
     *   Action triggered when use tap on main home button
+    *   :param: 
     */
     @IBAction func validateCredentials(sender: AnyObject) {
         var username: NSString = identifier!.text
@@ -58,7 +59,7 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
                 var userToSave: SMUser = SMUser(userSettings: informations)
                 self.userService.setUser(userToSave)
                 self.userService.saveUserToKeychain()
-            
+
                 self.redirectToView("sideMenuController")
 
             }, failure: { (error) -> () in

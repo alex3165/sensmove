@@ -13,7 +13,10 @@ import SceneKit
 
 class SMAccelerometer: SMSensor {
 
+    /// Dynamic observable variable
     dynamic var currentValues: SCNVector3
+    
+    /// Archived datas
     var archivedValues: [SCNVector3]
     
     required init(id: Int) {
@@ -27,7 +30,7 @@ class SMAccelerometer: SMSensor {
         fatalError("init(id:creation:) has not been implemented")
     }
 
-    // Set the accelerometer 3d vector to the given values
+    /// Set the accelerometer 3d vector to the given values
     func setAccValues(x: Float, y: Float, z: Float) {
         
         self.archivedValues.append(self.currentValues)

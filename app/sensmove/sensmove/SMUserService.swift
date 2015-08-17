@@ -8,25 +8,19 @@
 
 import Foundation
 
-// Login success closure type definition
+/// Login success closure type definition
 typealias SMLoginSuccess = (userInformations: JSON) -> ()
-// Login failure closure type definition
+
+/// Login failure closure type definition
 typealias SMLoginFailure = (error: NSException) -> ()
 
 class SMUserService: NSObject {
 
-    // The current user retrieved from keychain storage or nil if not exist
+    /// The current user retrieved from keychain storage or nil if not exist
     var currentUser: SMUser? = SMUser.getUserFromKeychain()
 
+    /// Singleton instance of SMUserService
     static let sharedInstance = SMUserService()
-    // Singleton instance of SMUserService
-//    class var sharedInstance: SMUserService {
-//        struct Static {
-//            static let instance: SMUserService = SMUserService()
-//        }
-//
-//        return Static.instance
-//    }
 
     /** 
     * 
@@ -46,18 +40,25 @@ class SMUserService: NSObject {
         failure(error: NSException(name: "loginError", reason: "No user or password", userInfo: nil))
     }
     
-    // Setter for currentUser
+    /// Setter for currentUser
     func setUser(user: SMUser) {
         self.currentUser = user
     }
     
-    // Add new session to the currentUser then save to keychain
+    /// Add new session to the currentUser then save to keychain
     func addSessionToCurrentUser(session: SMSession) {
         self.currentUser?.addNewSession(session)
         self.saveUserToKeychain()
     }
     
-    // Save current user state to keychain
+    func deleteSessionFromId(identifier: String) {
+        /// TODO: WIP filter array
+        let newArr = self.currentUser?.sessions.filter({ (session: SMSession) -> Bool in
+            return session.id as String == identifier
+        })
+    }
+    
+    /// Save current user state to keychain
     func saveUserToKeychain(){
         self.currentUser?.saveUserToKeychain()
     }
@@ -67,7 +68,7 @@ class SMUserService: NSObject {
         return self.currentUser != nil
     }
 
-    // Return every users stored in SMData file
+    /// Return every users stored in SMData file
     private func retrieveUsersFromDatasFile() -> [JSON] {
         let datasSingleton: SMData = SMData.sharedInstance
         let users: JSON = datasSingleton.getUsers()

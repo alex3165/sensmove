@@ -18,10 +18,10 @@ import Foundation
 
 class SMSensor: NSObject {
     
-    // Sensor Id
+    /// Sensor Id
     var id: Int
-    
-    // Sensor creational date
+
+    /// Sensor creational date
     let creationalDate: NSDate
 
     required init(id:Int, creation:NSDate) {

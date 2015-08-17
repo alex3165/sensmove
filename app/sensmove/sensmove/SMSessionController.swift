@@ -9,8 +9,8 @@
 import UIKit
 
 class SMSessionController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
-
-    var userSessions: NSMutableArray!
+    
+    var userSessions: Array<SMSession>!
 
     required init(coder aDecoder: NSCoder) {
         self.userSessions = SMUserService.sharedInstance.currentUser!.sessions
@@ -26,7 +26,7 @@ class SMSessionController: UITableViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    /// MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
@@ -42,8 +42,21 @@ class SMSessionController: UITableViewController, UITableViewDataSource, UITable
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexPath) as! SMSessionViewCell
-        currentCell.setSessionViewFromModel(self.userSessions.objectAtIndex(indexPath.row) as! SMSession)
+        currentCell.setSessionViewFromModel(self.userSessions[indexPath.row] as SMSession)
         return currentCell
+    }
+    
+    @IBAction func deleteSessionAction(sender: AnyObject) {
+
+        let buttonPosition: CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
+        let indexCell: NSIndexPath = self.tableView.indexPathForRowAtPoint(buttonPosition)!
+        
+        println("Cell index : \(indexCell.item)")
+        
+        let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexCell) as! SMSessionViewCell
+
+        //self.userSessions[indexCell.item].name
+        
     }
 
     /*

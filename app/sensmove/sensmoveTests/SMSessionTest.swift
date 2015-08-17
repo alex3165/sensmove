@@ -36,6 +36,7 @@ class SMSessionTest: XCTestCase {
         let sessionService = SMTrackSessionService.sharedInstance
         
         sessionService.stopCurrentSession(NSTimeInterval(3.10))
+        sessionService.saveCurrentSession()
         XCTAssert(sessionService.currentSession == nil, "Session correctly deleted")
     }
     
@@ -55,7 +56,7 @@ class SMSessionTest: XCTestCase {
         let userService: SMUserService = SMUserService.sharedInstance
         let initialNumberOfSessions = userService.currentUser?.sessions.count
 
-        userService.currentUser?.sessions.removeLastObject()
+        userService.currentUser?.sessions.removeLast()
         userService.currentUser?.saveUserToKeychain()
         
         XCTAssert(userService.currentUser?.sessions.count == initialNumberOfSessions! - 1, "Session correctly deleted")
@@ -66,9 +67,9 @@ class SMSessionTest: XCTestCase {
         self.testCreateStopAndSaveSession()
 
         let userService: SMUserService = SMUserService.sharedInstance
-        userService.currentUser?.sessions.removeAllObjects()
+        userService.currentUser?.sessions.removeAll(keepCapacity: true)
         userService.currentUser?.saveUserToKeychain()
-        
+
         XCTAssert(userService.currentUser?.sessions.count == 0, "All sessions correctly deleted")
         
     }

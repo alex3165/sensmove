@@ -41,7 +41,7 @@ class SMUser: NSObject {
 
     var diseaseDescription: NSString?
 
-    var sessions: NSMutableArray
+    var sessions: Array<SMSession>
     dynamic var numberOfSession: Int
 
     /**
@@ -64,9 +64,9 @@ class SMUser: NSObject {
             
         self.diseaseDescription = userSettings[kDiseaseDescription].stringValue
         
-        self.sessions = NSMutableArray();
+        self.sessions = []
         for session in userSettings[kSessions].arrayValue {
-            self.sessions.addObject(SMSession(sessionSettings: session))
+            self.sessions.append(SMSession(sessionSettings: session))
         }
         self.numberOfSession = self.sessions.count
 
@@ -91,7 +91,7 @@ class SMUser: NSObject {
     *   :param: session The new session to add
     */
     func addNewSession(session: SMSession) {
-        self.sessions.addObject(session)
+        self.sessions.append(session)
         self.numberOfSession++;
     }
     
@@ -112,7 +112,7 @@ class SMUser: NSObject {
         return nil
     }
 
-    // Convert current user model into JSON object for keychain storage
+    /// Convert current user model into JSON object for keychain storage
     private func toPropertyList() -> JSON {
         var userJson: NSDictionary = [
             kId: self.id!,
@@ -133,14 +133,14 @@ class SMUser: NSObject {
         return JSON(userJson)
     }
 
-    // Transform SMSession into NSarray in order to store it in keychain
+    /// Transform SMSession into NSarray in order to store it in keychain
     func sessionList() -> NSArray {
 
         var sessionsList = NSMutableArray()
         var tempSession: SMSession;
 
         for(var index = 0; index < self.sessions.count; index++){
-            tempSession = self.sessions.objectAtIndex(index) as! SMSession
+            tempSession = self.sessions[index] as SMSession
             sessionsList.addObject(tempSession.toPropertyList())
         }
 

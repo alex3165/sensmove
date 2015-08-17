@@ -22,9 +22,9 @@ let kSessionActivity: String = "activity"
 
 class SMSession: NSObject {
     
-    var id: NSString
+    let id: NSString
     var name: NSString
-    var date: NSDate
+    let date: NSDate
     var duration: NSTimeInterval?
     var averageLeftForce: NSNumber?
     var averageRightForce: NSNumber?
@@ -79,6 +79,7 @@ class SMSession: NSObject {
         self.leftSole = nil
     }
     
+    /// Get property from settings if not nul otherwise return empty String
     func getPropertyValueFromKey(key: String, settings: JSON) -> String {
         return settings[key] != nil ? settings[key].stringValue : ""
     }

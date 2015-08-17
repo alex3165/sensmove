@@ -17,7 +17,7 @@ SMBLEApplication::SMBLEApplication(){
 	// bleCommunicationCounter = 0;
 	_laststatus = ACI_EVT_DISCONNECTED;
 	_BTLESerial = new Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
-	_sessionStarted = false;
+	_sessionStarted = true;
 }
 
 /*
@@ -47,11 +47,12 @@ void SMBLEApplication::bleLoopCommunication(String largeData) {
 
 	String dataExtDevice;
 	String dataCurDevice;
+	largeData = "$" + largeData + "$";
 	if(!_sessionStarted){
 		//Session did not started, wait for start request
 
 		dataExtDevice = receiveData();
-		_sessionStarted = dataExtDevice.equals(String("start"));
+		_sessionStarted = true;//dataExtDevice.equals(String("start"));
 		// Serial.println(_sessionStarted);
 
 	} else {
@@ -62,11 +63,11 @@ void SMBLEApplication::bleLoopCommunication(String largeData) {
 		// if(jsonDataLength>0){
 			for(int i= 0;  i< jsonDataLength+1; i++){
 				if(i == jsonDataLength){
-					dataCurDevice =	"$" +largeData.substring(i*17) +"$";
+					dataCurDevice =	largeData.substring(i*17);
 					sendData(dataCurDevice);
 					Serial.println(dataCurDevice);
 				} else {
-					dataCurDevice = "$" + largeData.substring(i*17,(i+1)*17) + "$";
+					dataCurDevice = largeData.substring(i*17,(i+1)*17);
 					sendData(dataCurDevice);
 					Serial.println(dataCurDevice);
 
@@ -78,7 +79,7 @@ void SMBLEApplication::bleLoopCommunication(String largeData) {
 		
 		//Check if their is a request from the external device
 		dataExtDevice = receiveData();
-		_sessionStarted = !dataExtDevice.equals(String("stop"));
+		_sessionStarted = true;//!dataExtDevice.equals(String("stop"));
 
 	}
 		

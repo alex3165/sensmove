@@ -23,7 +23,9 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     var centralManager: CBCentralManager?
     
     /// Current received datas
-    var datas: NSMutableData?
+//    var datas: NSMutableData?
+    var tmpDatasString: String!
+    dynamic var blockDataCompleted: NSData!
     
     /// current discovered peripheral
     private var currentPeripheral: CBPeripheral?
@@ -41,24 +43,17 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.chronometer?.delegate = self
         self.chronometer?.startChronometer()
 
-        self.datas = NSMutableData()
-
+        self.tmpDatasString = ""
         
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
 
         //self.peripheral = SMBLEPeripheral()
-//        RACObserve(self, "datas").subscribeNext { (datas) -> Void in
-//        }
-
-        /// For development
-//        var bleSimulator = SMBluetoothSimulator()
-//        RACObserve(bleSimulator, "data").subscribeNext { (next:AnyObject!) -> Void in
-//            
-//            if let data = next as? NSData {
-//                self.didReceiveDatasFromBle(data)
-//            }
-//        }
-        /// ******************
+        RACObserve(self, "blockDataCompleted").subscribeNext { (datas) -> Void in
+            if let data: NSData = datas as? NSData{
+                let jsonObject: JSON = JSON(data: data)
+            }
+            
+        }
         
         self.uiInitialize()
     }
@@ -117,8 +112,6 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         
         self.centralManager?.stopScan()
         
-        self.datas?.length = 0
-        
         peripheral.delegate = self
         
         if peripheral.services == nil {
@@ -156,7 +149,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
                     
                     peripheral.setNotifyValue(true, forCharacteristic: characteristic)
                     
-                    self.peripheralDiscovered()
+                    //self.peripheralDiscovered()
                 }
             }
         }
@@ -176,8 +169,27 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
     
     func didReceiveDatasFromBle(datas: NSData) {
-        var jsonData: JSON = JSON(data: datas)
-        var fsr: Array<JSON> = jsonData["fsr"].arrayValue
+        let currentStringData: NSString = NSString(data: datas, encoding: NSUTF8StringEncoding)!
         
+        if currentStringData.containsString("$") && self.tmpDatasString == "" {
+
+            self.tmpDatasString = currentStringData.stringByReplacingOccurrencesOfString("$", withString: "")
+
+        } else if currentStringData.containsString("$") {
+
+            let formattedString: String = currentStringData.stringByReplacingOccurrencesOfString("$", withString: "")
+            self.tmpDatasString = self.tmpDatasString.stringByAppendingString(formattedString)
+            
+            let tmpData: NSData = self.tmpDatasString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+            
+            self.blockDataCompleted = tmpData
+            self.tmpDatasString = ""
+            
+        } else {
+            
+            self.tmpDatasString = self.tmpDatasString.stringByAppendingString(currentStringData as String)
+
+        }
     }
+
 }

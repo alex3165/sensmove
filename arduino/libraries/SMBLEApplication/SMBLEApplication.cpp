@@ -14,7 +14,7 @@ SMBLEApplication::SMBLEApplication(){
 
 	_laststatus = ACI_EVT_DISCONNECTED;
 	_BTLESerial = new Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
-	_sessionStarted = false;
+	_sessionStarted = true;//false;
 }
 
 /*
@@ -45,7 +45,7 @@ void SMBLEApplication::waitInstruction(){
 	
 	String dataExtDevice;
 	dataExtDevice = receiveData();
-	_sessionStarted = dataExtDevice.equals(String(STARTSESSION));
+	_sessionStarted = true;//dataExtDevice.equals(String(STARTSESSION));
 
 }
 
@@ -84,7 +84,7 @@ void SMBLEApplication::sendInstruction(String largeData){
 
 		//Check if their is a request from the external device
 		dataExtDevice = receiveData();
-		_sessionStarted = !dataExtDevice.equals(String(STOPSESSION));
+		_sessionStarted = true;//!dataExtDevice.equals(String(STOPSESSION));
 }
 
 

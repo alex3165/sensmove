@@ -28,9 +28,18 @@ class SMResultController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.initializeUI()
         self.trackSessionService = SMTrackSessionService.sharedInstance
+
+        if let leftForce = self.trackSessionService?.getAverageForces("left") {
+            self.averageLeftForce?.text = "\(leftForce)"
+        }
+        
+        if let rightForce = self.trackSessionService?.getAverageForces("right") {
+            self.averageRightForce?.text = "\(rightForce)"
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,14 +97,5 @@ class SMResultController: UIViewController {
         let navigationController: UINavigationController = UINavigationController(rootViewController: sidemenuController)
         self.presentViewController(navigationController, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

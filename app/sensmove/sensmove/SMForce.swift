@@ -33,6 +33,9 @@ class SMForce: SMSensor {
     func updateForce(force: Float) {
         self.archivedForces.append(self.currentForcePressure)
         self.currentForcePressure = force
-        
+    }
+    
+    func getAverageForce() -> Float {
+        return self.archivedForces.reduce(0, combine: { $0 + $1 }) / Float(self.archivedForces.count)
     }
 }

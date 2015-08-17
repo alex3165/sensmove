@@ -87,25 +87,23 @@ class SMSession: NSObject {
     func setDuration(timeInterval: NSTimeInterval) {
         self.duration = timeInterval
     }
-
-    func setLeftForce(leftForce: Float) {
-        self.averageLeftForce = NSNumber(float: leftForce)
-    }
-
-    func setRightForce(rightForce: Float) {
-        self.averageRightForce = NSNumber(float: rightForce)
-    }
     
     func addDatasBlock(datas: JSON) {
         let forces = datas["fsr"].arrayValue
 
         self._addForcesValues(forces)
-        
         // TODO: Add accelerometer values
     }
 
     func _addForcesValues(valuesArray: [JSON]) {
         self.rightSole?.updateEveryForceSensors(valuesArray)
+    }
+    
+    func stopSession(duration: NSTimeInterval) {
+        self.averageRightForce = self.rightSole?.getTotalAverageForce()
+        self.averageLeftForce = self.leftSole?.getTotalAverageForce()
+        
+        self.setDuration(duration)
     }
     
     /**

@@ -12,7 +12,7 @@ class SMSole: NSObject {
     
     let isRight: Bool
 
-    dynamic var forceSensors: [SMForce] = []
+    var forceSensors: [SMForce] = []
     var accelerometerSensors: SMAccelerometer?
     
     let id: NSString
@@ -54,13 +54,30 @@ class SMSole: NSObject {
         }
     }
 
+    /**
+    *   Update each sensors by adding a new value
+    */
     func updateEveryForceSensors(forceArray: [JSON]) {
         for(var index = 0; index < forceArray.count; index++) {
             self.forceSensors[index].updateForce(forceArray[index].floatValue)
         }
     }
+
     
-    /// TODO: Add forces and acc sensors in sqlite database
+    /**
+    *   Get insole average force by doing an average of the average of each force sensors
+    */
+    func getTotalAverageForce() -> Float {
+        var totalForce: Float = Float(0);
+        
+        for (var i = 0; i < self.forceSensors.count; i++) {
+            totalForce += self.forceSensors[i].getAverageForce()
+        }
+
+        return totalForce / Float(self.forceSensors.count)
+    }
+
+    /// TODO: Store forces and accelerometer sensors in SQLite database
     func toPropertyList() -> NSDictionary {
         var sole: NSDictionary = [
             "id": self.id,

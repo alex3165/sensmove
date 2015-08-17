@@ -33,11 +33,7 @@ class SMTrackSessionService: NSObject {
     
     /// Set duration and left / right forces
     func stopCurrentSession(duration: NSTimeInterval) {
-        self.currentSession?.setDuration(duration)
-
-        /// TODO: Retrieve and calcul forces from soles datas
-        self.currentSession?.setLeftForce(100)
-        self.currentSession?.setRightForce(110)
+        self.currentSession?.stopSession(duration)
     }
     
     func saveCurrentSession() {
@@ -48,14 +44,23 @@ class SMTrackSessionService: NSObject {
     func updateCurrentSession(jsonDatas: JSON) {
         self.currentSession?.addDatasBlock(jsonDatas)
     }
-    
+
+    func getAverageForces(sole: String) -> Float {
+        return sole == "left" ? self.currentSession?.averageLeftForce as! Float : self.currentSession?.averageRightForce as! Float
+    }
+
     func deleteCurrentSession() {
         self.currentSession = nil
     }
 
     // return the right sole object
-    func getRightSole() -> SMSole {
-        return (self.currentSession?.rightSole as SMSole?)!
+    func getRightSole() -> SMSole? {
+        
+        if let curSession = self.currentSession {
+            return curSession.rightSole!
+        } else {
+            return nil
+        }
     }
 
     // return the left sole object

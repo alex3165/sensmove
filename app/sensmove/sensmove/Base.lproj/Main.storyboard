@@ -389,18 +389,27 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zG-D0-ysc" customClass="SMLiveForcesTrack" customModule="sensmove" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="188" width="320" height="230"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9zG-D0-ysc" secondAttribute="bottom" constant="150" id="6wJ-Jc-cfe"/>
                             <constraint firstAttribute="trailing" secondItem="BlQ-SC-L8U" secondAttribute="trailing" id="MK6-ci-tf6"/>
                             <constraint firstItem="BlQ-SC-L8U" firstAttribute="bottom" secondItem="az0-dm-rmq" secondAttribute="top" id="SnD-7m-jHv"/>
                             <constraint firstItem="BlQ-SC-L8U" firstAttribute="centerX" secondItem="cHb-Lf-DGO" secondAttribute="centerX" id="V7K-Kq-CRY"/>
+                            <constraint firstItem="9zG-D0-ysc" firstAttribute="leading" secondItem="BlQ-SC-L8U" secondAttribute="leading" id="aej-xb-2H0"/>
+                            <constraint firstItem="9zG-D0-ysc" firstAttribute="top" secondItem="cHb-Lf-DGO" secondAttribute="bottom" constant="43" id="hJp-id-UHN"/>
                             <constraint firstItem="cHb-Lf-DGO" firstAttribute="top" secondItem="HJU-qr-8Wf" secondAttribute="bottom" constant="47" id="ocf-Yw-TUp"/>
+                            <constraint firstItem="9zG-D0-ysc" firstAttribute="trailing" secondItem="BlQ-SC-L8U" secondAttribute="trailing" id="r8z-Nz-u7H"/>
                             <constraint firstItem="BlQ-SC-L8U" firstAttribute="leading" secondItem="PLM-oX-XaF" secondAttribute="leading" id="rqc-oN-WTQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NI8-FE-k7V"/>
                     <connections>
+                        <outlet property="liveTrackGraph" destination="9zG-D0-ysc" id="CWZ-Gb-Rn6"/>
                         <outlet property="stopSessionButton" destination="BlQ-SC-L8U" id="2OP-Xu-zXZ"/>
                         <outlet property="timeCountdown" destination="cHb-Lf-DGO" id="wpY-yG-vCJ"/>
                     </connections>

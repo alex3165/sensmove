@@ -15,6 +15,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     @IBOutlet weak var timeCountdown: UILabel?
     @IBOutlet weak var stopSessionButton: UIButton?
+    @IBOutlet weak var liveTrackGraph: SMLiveForcesTrack!
 
     var chronometer: SMChronometer?
     var trackSessionService: SMTrackSessionService?
@@ -60,15 +61,17 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
             
         }
         
-        let sensorForces = self.trackSessionService?.getRightSole().forceSensors
-
-        for forceSensor in sensorForces! {
-            RACObserve(forceSensor, "currentForcePressure").subscribeNext({ (forceValue) -> Void in
-                let value: Float = forceValue as! Float
-                printLog(value, "Force Value", "\(value)")
-            })
-        }
         
+        self.liveTrackGraph.initializeForceObserver()
+//        let sensorForces = self.trackSessionService?.getRightSole()!.forceSensors
+//
+//        for forceSensor in sensorForces! {
+//            RACObserve(forceSensor, "currentForcePressure").subscribeNext({ (forceValue) -> Void in
+//                let value: Float = forceValue as! Float
+//                printLog(value, "Force Value", "\(value)")
+//            })
+//        }
+
         self.uiInitialize()
     }
 
@@ -92,6 +95,9 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
     
     @IBAction func stopSessionAction(sender: AnyObject) {
+        self.centralManager?.cancelPeripheralConnection(self.currentPeripheral)
+        self.currentPeripheral = nil
+
         self.chronometer?.stopChronometer()
         let elapsedTime = self.chronometer?.getElapsedTime()
         self.trackSessionService?.stopCurrentSession(elapsedTime!)
@@ -102,11 +108,9 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
     /// MARK: Central manager delegates methods
     
-    
     /// Triggered whenever bluetooth state change, verify if it's power is on then scan for peripheral
     func centralManagerDidUpdateState(central: CBCentralManager!){
         if(centralManager?.state == CBCentralManagerState.PoweredOn) {
-
             self.centralManager?.scanForPeripheralsWithServices(nil, options: [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(bool: true)])
             printLog(self, "centralManagerDidUpdateState", "Scanning")
         }
@@ -176,12 +180,12 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.didReceiveDatasFromBle(characteristic.value)
     }
 
-    func peripheralDiscovered() {
-
-        self.sensmoveBleWriter = SMBLEPeripheral(peripheral: self.currentPeripheral!)
-        
-        self.sensmoveBleWriter?.writeString("start")
-    }
+//    func peripheralDiscovered() {
+//
+//        self.sensmoveBleWriter = SMBLEPeripheral(peripheral: self.currentPeripheral!)
+//        
+//        self.sensmoveBleWriter?.writeString("start")
+//    }
     
     /**
     *   Bufferize data and build it as string

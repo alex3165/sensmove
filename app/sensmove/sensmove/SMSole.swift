@@ -12,7 +12,7 @@ class SMSole: NSObject {
     
     let isRight: Bool
 
-    var forceSensors: [SMForce] = []
+    dynamic var forceSensors: [SMForce] = []
     var accelerometerSensors: SMAccelerometer?
     
     let id: NSString
@@ -54,6 +54,12 @@ class SMSole: NSObject {
         }
     }
 
+    func updateEveryForceSensors(forceArray: [JSON]) {
+        for(var index = 0; index < forceArray.count; index++) {
+            self.forceSensors[index].updateForce(forceArray[index].floatValue)
+        }
+    }
+    
     /// TODO: Add forces and acc sensors in sqlite database
     func toPropertyList() -> NSDictionary {
         var sole: NSDictionary = [

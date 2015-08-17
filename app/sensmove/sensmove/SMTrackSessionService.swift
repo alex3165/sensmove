@@ -45,6 +45,10 @@ class SMTrackSessionService: NSObject {
         self.currentSession = nil
     }
     
+    func updateCurrentSession(jsonDatas: JSON) {
+        self.currentSession?.addDatasBlock(jsonDatas)
+    }
+    
     func deleteCurrentSession() {
         self.currentSession = nil
     }

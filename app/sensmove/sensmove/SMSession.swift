@@ -95,6 +95,19 @@ class SMSession: NSObject {
     func setRightForce(rightForce: Float) {
         self.averageRightForce = NSNumber(float: rightForce)
     }
+    
+    func addDatasBlock(datas: JSON) {
+        let forces = datas["fsr"].arrayValue
+
+        self._addForcesValues(forces)
+        
+        // TODO: Add accelerometer values
+    }
+
+    func _addForcesValues(valuesArray: [JSON]) {
+        self.rightSole?.updateEveryForceSensors(valuesArray)
+    }
+    
     /**
     *
     *   Format session object for keychain storage

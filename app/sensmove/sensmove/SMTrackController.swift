@@ -55,6 +55,10 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
             
         }
         
+        RACObserve(self.trackSessionService?.getRightSole(), "forceSensors").subscribeNext { (forceSensors) -> Void in
+            
+        }
+        
         self.uiInitialize()
     }
 

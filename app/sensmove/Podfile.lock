@@ -1,19 +1,25 @@
 PODS:
   - AMSlideMenu (1.5.4)
-  - ReactiveCocoa (2.3):
-    - ReactiveCocoa/UI (= 2.3)
-  - ReactiveCocoa/Core (2.3):
+  - PNChart (0.8.6):
+    - UICountingLabel (~> 1.2.0)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
     - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.3)
-  - ReactiveCocoa/UI (2.3):
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - AMSlideMenu (~> 1.5.4)
-  - ReactiveCocoa (= 2.3)
+  - PNChart (~> 0.8.6)
+  - ReactiveCocoa (~> 2.5)
 
 SPEC CHECKSUMS:
   AMSlideMenu: 8571937703d2b8e187b22c1416be4cafc3532a11
-  ReactiveCocoa: fbe689fe218063b7bbed41032912c9ca4fdbe172
+  PNChart: c8f7aaa8c28abef26e55d80f473d2a1db77cd972
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
 COCOAPODS: 0.38.2

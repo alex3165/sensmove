@@ -79,17 +79,6 @@
 		22BD4E651ADADDAF0022318B /* SMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E631ADADDAE0022318B /* SMHomeController.swift */; };
 		22BD4E671ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
 		22BD4E681ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
-		22C20A981B3837F9005F803E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C20A8A1B3837F9005F803E /* Images.xcassets */; };
-		22C20A991B3837F9005F803E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C20A8B1B3837F9005F803E /* Info.plist */; };
-		22C20A9A1B3837F9005F803E /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A8D1B3837F9005F803E /* PNBar.swift */; };
-		22C20A9B1B3837F9005F803E /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A8E1B3837F9005F803E /* PNBarChart.swift */; };
-		22C20A9C1B3837F9005F803E /* PNChartConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A8F1B3837F9005F803E /* PNChartConfig.swift */; };
-		22C20A9D1B3837F9005F803E /* PNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A901B3837F9005F803E /* PNChartDelegate.swift */; };
-		22C20A9E1B3837F9005F803E /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A931B3837F9005F803E /* PNChartLabel.swift */; };
-		22C20A9F1B3837F9005F803E /* PNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A941B3837F9005F803E /* PNLineChart.swift */; };
-		22C20AA01B3837F9005F803E /* PNLineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A951B3837F9005F803E /* PNLineChartData.swift */; };
-		22C20AA11B3837F9005F803E /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A961B3837F9005F803E /* PNValue.swift */; };
-		22C20AA21B3837F9005F803E /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C20A971B3837F9005F803E /* view.swift */; };
 		22C78E661B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */; };
 		22C78E671B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */; };
 		22CC928D1B1B451200D98E9E /* SMSessionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */; };
@@ -173,18 +162,6 @@
 		22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		22BD4E631ADADDAE0022318B /* SMHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMHomeController.swift; sourceTree = "<group>"; };
 		22BD4E661ADADF860022318B /* SMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUser.swift; sourceTree = "<group>"; };
-		22C20A8A1B3837F9005F803E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		22C20A8B1B3837F9005F803E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22C20A8D1B3837F9005F803E /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBar.swift; sourceTree = "<group>"; };
-		22C20A8E1B3837F9005F803E /* PNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBarChart.swift; sourceTree = "<group>"; };
-		22C20A8F1B3837F9005F803E /* PNChartConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartConfig.swift; sourceTree = "<group>"; };
-		22C20A901B3837F9005F803E /* PNChartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartDelegate.swift; sourceTree = "<group>"; };
-		22C20A911B3837F9005F803E /* PNChartSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChartSwift.h; sourceTree = "<group>"; };
-		22C20A931B3837F9005F803E /* PNChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartLabel.swift; sourceTree = "<group>"; };
-		22C20A941B3837F9005F803E /* PNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChart.swift; sourceTree = "<group>"; };
-		22C20A951B3837F9005F803E /* PNLineChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartData.swift; sourceTree = "<group>"; };
-		22C20A961B3837F9005F803E /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
-		22C20A971B3837F9005F803E /* view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLiveForcesTrack.swift; sourceTree = "<group>"; };
 		22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTrackSessionService.swift; sourceTree = "<group>"; };
 		22FE07871AE503FD0064F750 /* SMUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserController.swift; sourceTree = "<group>"; };
@@ -226,7 +203,6 @@
 		22415FD71AD9B40F00106E7A /* LIbrary */ = {
 			isa = PBXGroup;
 			children = (
-				22C20A891B3837F9005F803E /* PNChartSwift */,
 				22BD4E5F1ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
 				22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 				22BD4E5B1ADA71C60022318B /* TPKeyboardAvoidingScrollView.h */,
@@ -371,41 +347,6 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
-		22C20A891B3837F9005F803E /* PNChartSwift */ = {
-			isa = PBXGroup;
-			children = (
-				22C20A8A1B3837F9005F803E /* Images.xcassets */,
-				22C20A8B1B3837F9005F803E /* Info.plist */,
-				22C20A8C1B3837F9005F803E /* PNBarChart */,
-				22C20A8F1B3837F9005F803E /* PNChartConfig.swift */,
-				22C20A901B3837F9005F803E /* PNChartDelegate.swift */,
-				22C20A911B3837F9005F803E /* PNChartSwift.h */,
-				22C20A921B3837F9005F803E /* PNLineChart */,
-				22C20A961B3837F9005F803E /* PNValue.swift */,
-				22C20A971B3837F9005F803E /* view.swift */,
-			);
-			path = PNChartSwift;
-			sourceTree = "<group>";
-		};
-		22C20A8C1B3837F9005F803E /* PNBarChart */ = {
-			isa = PBXGroup;
-			children = (
-				22C20A8D1B3837F9005F803E /* PNBar.swift */,
-				22C20A8E1B3837F9005F803E /* PNBarChart.swift */,
-			);
-			path = PNBarChart;
-			sourceTree = "<group>";
-		};
-		22C20A921B3837F9005F803E /* PNLineChart */ = {
-			isa = PBXGroup;
-			children = (
-				22C20A931B3837F9005F803E /* PNChartLabel.swift */,
-				22C20A941B3837F9005F803E /* PNLineChart.swift */,
-				22C20A951B3837F9005F803E /* PNLineChartData.swift */,
-			);
-			path = PNLineChart;
-			sourceTree = "<group>";
-		};
 		58BDDEF6A9453DFA07768D1D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,10 +458,8 @@
 				22B91C0A1AB33D9600497025 /* Main.storyboard in Resources */,
 				22BD4E571ADA6D340022318B /* Roboto-Regular.ttf in Resources */,
 				22BD4E591ADA6D340022318B /* varela round.otf in Resources */,
-				22C20A981B3837F9005F803E /* Images.xcassets in Resources */,
 				22415FD41AD9B2A200106E7A /* SMData.json in Resources */,
 				22BD4E551ADA6D340022318B /* Roboto-Medium.ttf in Resources */,
-				22C20A991B3837F9005F803E /* Info.plist in Resources */,
 				22068C9D1AF65B3D0033DD6D /* simpleMenuButton.png in Resources */,
 				22BD4E531ADA6D340022318B /* Roboto-Light.ttf in Resources */,
 				22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */,
@@ -622,32 +561,23 @@
 				22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */,
 				22BA89D81B1C916E0001A1C4 /* RAC.swift in Sources */,
 				2219FBD71B1516AD006A26A0 /* SMSessionController.swift in Sources */,
-				22C20AA21B3837F9005F803E /* view.swift in Sources */,
 				22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
 				2251E03D1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
 				22FE1ED81B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
 				221F74581ADC5A000078A75E /* SMSole.swift in Sources */,
-				22C20A9D1B3837F9005F803E /* PNChartDelegate.swift in Sources */,
-				22C20A9F1B3837F9005F803E /* PNLineChart.swift in Sources */,
 				22BA89DC1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */,
 				22BD4E5D1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				222E182D1B39F07800AE7795 /* SMResultController.swift in Sources */,
-				22C20A9E1B3837F9005F803E /* PNChartLabel.swift in Sources */,
-				22C20A9A1B3837F9005F803E /* PNBar.swift in Sources */,
 				2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
-				22C20A9B1B3837F9005F803E /* PNBarChart.swift in Sources */,
-				22C20AA01B3837F9005F803E /* PNLineChartData.swift in Sources */,
 				22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03B1AD3062E005FE3B8 /* SMForce.swift in Sources */,
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
-				22C20AA11B3837F9005F803E /* PNValue.swift in Sources */,
 				222E182F1B39FC8000AE7795 /* SMChronometer.swift in Sources */,
 				228FAD331B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
 				227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */,
 				22CC928F1B1B50ED00D98E9E /* SMTrackSessionService.swift in Sources */,
 				223A10681AE522A000BD19C5 /* SMSideMenuController.m in Sources */,
-				22C20A9C1B3837F9005F803E /* PNChartConfig.swift in Sources */,
 				22FFAAA81AE58ECB005A49CF /* SMUserService.swift in Sources */,
 				22BA89DA1B1C916E0001A1C4 /* RACObserve.swift in Sources */,
 				228950811B0D243200D6FF88 /* SMGradient.swift in Sources */,

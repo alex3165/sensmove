@@ -12,7 +12,7 @@ import UIKit
 class SMLiveForcesTrack: UIView {
     
     var trackSessionService: SMTrackSessionService?
-    //var circleChart: PNCircleChart!
+//    var circleChart: PNCircleChart!
 
     override init(frame: CGRect) {
 

@@ -61,16 +61,11 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
             
         }
         
-        
+        // Initialize graph charts for each sensors
+        self.liveTrackGraph.initializeCharts()
+
+        // Initialize RACObserve on each sensors
         self.liveTrackGraph.initializeForceObserver()
-//        let sensorForces = self.trackSessionService?.getRightSole()!.forceSensors
-//
-//        for forceSensor in sensorForces! {
-//            RACObserve(forceSensor, "currentForcePressure").subscribeNext({ (forceValue) -> Void in
-//                let value: Float = forceValue as! Float
-//                printLog(value, "Force Value", "\(value)")
-//            })
-//        }
 
         self.uiInitialize()
     }

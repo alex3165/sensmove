@@ -12,7 +12,7 @@ import UIKit
 class SMLiveForcesTrack: UIView {
     
     var trackSessionService: SMTrackSessionService?
-    var circleChart: PNCircleChart!
+    var circleChart: [PNCircleChart]!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,17 +22,33 @@ class SMLiveForcesTrack: UIView {
         super.init(coder: aDecoder)
         
         self.trackSessionService = SMTrackSessionService.sharedInstance
-        
-        let halfViewWidth: CGFloat = self.frame.size.width / 2
-        let halfViewHeight: CGFloat = self.frame.size.height / 2
-        
-        self.circleChart = PNCircleChart(frame: CGRectMake(halfViewWidth, halfViewHeight, 50, 50), total: 1024, current: 0, clockwise: true, shadow: false, shadowColor: UIColor.redColor(), displayCountingLabel: false, overrideLineWidth: 6)
-        
-        self.circleChart.strokeColor = UIColor.redColor()
-        self.circleChart.backgroundColor = UIColor.clearColor()
-        self.circleChart.strokeChart()
 
-        self.addSubview(self.circleChart)
+    }
+    
+    func initializeCharts() {
+        if let rightSole = self.trackSessionService?.getRightSole() {
+            let sensorForces: [SMForce] = rightSole.forceSensors
+
+            for (var index = 0; index < sensorForces.count; index++) {
+                self.circleChart.append(self.createChartFromSensor(sensorForces[index]))
+                self.addSubview(self.circleChart[index])
+            }
+        }
+    }
+    
+    func createChartFromSensor(sensor: SMForce) -> PNCircleChart {
+        let xPosition = (self.frame.size.width / 2) + CGFloat(sensor.position.x)
+        let yPosition = (self.frame.size.height / 2) + CGFloat(sensor.position.y)
+
+        let sensorFrame: CGRect = CGRectMake(xPosition, yPosition, CGFloat(sensor.size), CGFloat(sensor.size))
+        
+        let chart: PNCircleChart = PNCircleChart(frame: sensorFrame, total: 1024, current: 512, clockwise: true, shadow: false, shadowColor: SMColor.red(), displayCountingLabel: false, overrideLineWidth: 6)
+
+        chart.strokeChart()
+        chart.backgroundColor = UIColor.clearColor()
+        chart.strokeColor = SMColor.red()
+        
+        return chart
     }
     
     func initializeForceObserver() {
@@ -42,14 +58,12 @@ class SMLiveForcesTrack: UIView {
             
             // TODO: Run every sensors in order to observe them
 
-            //            for forceSensor in sensorForces {
-            RACObserve(sensorForces[0], "currentForcePressure").subscribeNext({ (forceValue) -> Void in
-                let value: Float = forceValue as! Float
-                printLog(value, "Force Value", "\(value)")
-                self.circleChart.current = value
-                self.circleChart.updateChartByCurrent(value)
-            })
-            //            }
+            for (var index = 0; index < sensorForces.count; index++) {
+                RACObserve(sensorForces[index], "currentForcePressure").subscribeNext({ (forceValue) -> Void in
+                    let value: Float = forceValue as! Float
+                    //self.circleChart[index].updateChartByCurrent(value)
+                })
+            }
         }
     }
 }

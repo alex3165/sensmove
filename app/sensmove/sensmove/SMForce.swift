@@ -17,11 +17,17 @@ class SMForce: SMSensor {
     /// Archived forces
     var archivedForces: [Float]
 
+    let position: SCNVector3
+    let size: Int
+    
     required init(id: Int, pos: JSON) {
-        
+
         self.currentForcePressure = 0.0
         self.archivedForces = []
+        self.position = SCNVector3(x: pos["x"].floatValue, y: pos["y"].floatValue, z: Float(0))
 
+        self.size = pos["size"].int!
+        
         super.init(id: id, creation: NSDate())
     }
 

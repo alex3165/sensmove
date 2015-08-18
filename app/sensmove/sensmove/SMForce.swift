@@ -11,8 +11,8 @@ import SceneKit
 
 class SMForce: SMSensor {
 
-    /// Dynamic observable variable
-    dynamic var currentForcePressure: Float
+    // Observable variable, trigger signal when dictionary change
+    dynamic var currentForcePressure: NSDictionary
     
     /// Archived forces
     var archivedForces: [Float]
@@ -22,7 +22,9 @@ class SMForce: SMSensor {
     
     required init(id: Int, pos: JSON) {
 
-        self.currentForcePressure = 0.0
+        self.currentForcePressure = [
+            id: Float(0)
+        ]
         self.archivedForces = []
         self.position = SCNVector3(x: pos["x"].floatValue, y: pos["y"].floatValue, z: Float(0))
 
@@ -35,12 +37,13 @@ class SMForce: SMSensor {
         fatalError("init(id:creation:) has not been implemented")
     }
 
-    /// Update the force pressure on sensor
+    // Archive previous force pressure and update the current variable mapped with sensor id
     func updateForce(force: Float) {
-        self.archivedForces.append(self.currentForcePressure)
-        self.currentForcePressure = force
+        self.archivedForces.append(self.currentForcePressure[super.id] as! Float)
+        self.currentForcePressure = [ super.id: force ]
     }
-    
+
+    // Calculate average force by adding archive force array and dividing it by the length
     func getAverageForce() -> Float {
         return self.archivedForces.reduce(0, combine: { $0 + $1 }) / Float(self.archivedForces.count)
     }

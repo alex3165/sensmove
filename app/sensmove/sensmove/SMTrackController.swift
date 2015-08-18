@@ -82,7 +82,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     /**
     *
     *   Delegate method triggered every second
-    *   :param: newTime new time string formated
+    *   :param: String new time string formated
     *
     */
     func updateChronometer(newTime: String) {
@@ -159,12 +159,8 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         if service.UUID.isEqual(uartServiceUUID()) {
             for characteristic in service.characteristics as! [CBCharacteristic] {
                 if characteristic.UUID.isEqual(txCharacteristicUUID()) || characteristic.UUID.isEqual(rxCharacteristicUUID()) {
-                    
-                    peripheral.setNotifyValue(true, forCharacteristic: characteristic)
-                    
-                    // TODO: Instantiate peripheral then send start / stop notification to insole
 
-                    //self.peripheralDiscovered()
+                    peripheral.setNotifyValue(true, forCharacteristic: characteristic)
                 }
             }
         }
@@ -175,12 +171,6 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.didReceiveDatasFromBle(characteristic.value)
     }
 
-//    func peripheralDiscovered() {
-//
-//        self.sensmoveBleWriter = SMBLEPeripheral(peripheral: self.currentPeripheral!)
-//        
-//        self.sensmoveBleWriter?.writeString("start")
-//    }
     
     /**
     *   Bufferize data and build it as string

@@ -16,7 +16,7 @@ class SMTrackSessionService: NSObject {
     /// Singleton instance of current class
     static let sharedInstance = SMTrackSessionService()
 
-    /// Create new force / acceleration tracking
+    // Create new session from sensors parameters in SMSensorsVectors file
     func createNewSession() {
         var singletonDatas: SMData = SMData.sharedInstance
         singletonDatas.getDatasFromFile("SMSensorsVectors", success: { (datas) -> () in
@@ -31,20 +31,26 @@ class SMTrackSessionService: NSObject {
         }
     }
     
-    /// Set duration and left / right forces
+    // Set duration and left / right forces
     func stopCurrentSession(duration: NSTimeInterval) {
         self.currentSession?.stopSession(duration)
     }
-    
+
     func saveCurrentSession() {
         SMUserService.sharedInstance.addSessionToCurrentUser(self.currentSession!)
-        self.currentSession = nil
+        self.deleteCurrentSession()
     }
-    
+
+    /**
+    *   Give json datas to currentsession service, picked up from bluetooth central manager
+    */
     func updateCurrentSession(jsonDatas: JSON) {
         self.currentSession?.addDatasBlock(jsonDatas)
     }
 
+    /**
+    *   Return average force according to selected sole
+    */
     func getAverageForces(sole: String) -> Float {
         return sole == "left" ? self.currentSession?.averageLeftForce as! Float : self.currentSession?.averageRightForce as! Float
     }
@@ -63,7 +69,7 @@ class SMTrackSessionService: NSObject {
         }
     }
 
-    // return the left sole object
+    // return left sole object
     func getLeftSole() -> SMSole {
         return (self.currentSession?.leftSole as SMSole?)!
     }

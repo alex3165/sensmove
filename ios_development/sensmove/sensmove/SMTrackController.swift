@@ -90,8 +90,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
     
     @IBAction func stopSessionAction(sender: AnyObject) {
-        self.centralManager?.cancelPeripheralConnection(self.currentPeripheral)
-        self.currentPeripheral = nil
+//        self.centralManager?.cancelPeripheralConnection(self.currentPeripheral)
 
         self.chronometer?.stopChronometer()
         let elapsedTime = self.chronometer?.getElapsedTime()

@@ -91,7 +91,7 @@ class SMUser: NSObject {
     *   :param: session The new session to add
     */
     func addNewSession(session: SMSession) {
-        self.sessions.append(session)
+        self.sessions.insert(session, atIndex: 0)
         self.numberOfSession++;
     }
     

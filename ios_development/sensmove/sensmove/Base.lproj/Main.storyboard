@@ -315,10 +315,10 @@
                                     <navigationItem title="SENSMOVE" id="mi5-dT-qxa"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="up9-Wn-ULb" customClass="SMConnexionNotification" customModule="sensmove" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="up9-Wn-ULb">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connexion notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vss-zA-F6I">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion notification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vss-zA-F6I">
                                         <rect key="frame" x="32" y="14" width="256" height="21"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -328,10 +328,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5d1-7L-PaN"/>
+                                    <constraint firstItem="Vss-zA-F6I" firstAttribute="top" secondItem="up9-Wn-ULb" secondAttribute="top" constant="14" id="HnS-uX-Dbi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vss-zA-F6I" secondAttribute="trailing" constant="32" id="U6D-wT-hBG"/>
+                                    <constraint firstItem="Vss-zA-F6I" firstAttribute="leading" secondItem="up9-Wn-ULb" secondAttribute="leading" constant="32" id="npk-aq-EQ9"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="notificationLabel" destination="Vss-zA-F6I" id="qIA-kl-5Rx"/>
-                                </connections>
                             </view>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cG4-eh-nhB">
                                 <rect key="frame" x="65" y="189" width="190" height="190"/>

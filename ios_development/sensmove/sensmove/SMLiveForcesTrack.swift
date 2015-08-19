@@ -54,11 +54,11 @@ class SMLiveForcesTrack: UIView {
 
         let sensorFrame: CGRect = CGRectMake(xPosition, yPosition, CGFloat(sensor.size), CGFloat(sensor.size))
 
-        let chart: PNCircleChart = PNCircleChart(frame: sensorFrame, total: 1024, current: 0, clockwise: true, shadow: false, shadowColor: SMColor.red(), displayCountingLabel: false, overrideLineWidth: 4)
+        let chart: PNCircleChart = PNCircleChart(frame: sensorFrame, total: 1024, current: 0, clockwise: true, shadow: false, shadowColor: UIColor.redColor(), displayCountingLabel: false, overrideLineWidth: 4)
 
         chart.strokeChart()
         chart.backgroundColor = UIColor.clearColor()
-        chart.strokeColor = SMColor.red()
+        chart.strokeColor = UIColor.redColor()
         
         return chart
     }

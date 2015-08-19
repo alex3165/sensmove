@@ -97,6 +97,7 @@
 		294C05DE63DFA537C62BC1A9 /* libPods-sensmove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48BCA881402655856765B7 /* libPods-sensmove.a */; };
 		AC97C4491B8472EA00A724C6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4471B8472EA00A724C6 /* menu.png */; };
 		AC97C44A1B8472EA00A724C6 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4481B8472EA00A724C6 /* menu@2x.png */; };
+		AC97C44C1B84A1D000A724C6 /* SMConnexionNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */; };
 		ACD436D11B82455800996176 /* libReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD436D01B82455800996176 /* libReactiveCocoa.a */; };
 /* End PBXBuildFile section */
 
@@ -175,6 +176,7 @@
 		3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC97C4471B8472EA00A724C6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		AC97C4481B8472EA00A724C6 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMConnexionNotification.swift; sourceTree = "<group>"; };
 		ACD436CE1B82454C00996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		ACD436D01B82455800996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		AF48BCA881402655856765B7 /* libPods-sensmove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +240,7 @@
 				228950801B0D243200D6FF88 /* SMGradient.swift */,
 				227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */,
 				22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */,
+				AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				22BD4E5D1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				222E182D1B39F07800AE7795 /* SMResultController.swift in Sources */,
 				2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
+				AC97C44C1B84A1D000A724C6 /* SMConnexionNotification.swift in Sources */,
 				22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03B1AD3062E005FE3B8 /* SMForce.swift in Sources */,
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,

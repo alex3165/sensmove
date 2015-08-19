@@ -75,11 +75,6 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
     
     func uiInitialize() {
-
-//        let textAttributes = NSMutableDictionary(capacity:1)
-//        textAttributes.setObject(SMColor.orange(), forKey: NSForegroundColorAttributeName)
-//        textAttributes.setObject("Avenir", forKey: NSFontAttributeName)
-//        self.navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSObject : AnyObject]
         
         self.stopSessionButton?.backgroundColor = SMColor.red()
         self.stopSessionButton?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)

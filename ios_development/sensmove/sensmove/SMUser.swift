@@ -95,6 +95,11 @@ class SMUser: NSObject {
         self.numberOfSession++;
     }
     
+    func removeSession(index: Int) {
+        self.sessions.removeAtIndex(index)
+        self.numberOfSession--;
+    }
+    
     /**
     *
     *   Retrieve user from keychain (Class method)

@@ -45,6 +45,9 @@ class SMForce: SMSensor {
 
     // Calculate average force by adding archive force array and dividing it by the length
     func getAverageForce() -> Float {
-        return self.archivedForces.reduce(0, combine: { $0 + $1 }) / Float(self.archivedForces.count)
+        
+        let average: Float = self.archivedForces.reduce(0, combine: { $0 + $1 }) / Float(self.archivedForces.count)
+
+        return average.isNaN ? Float(0) : average
     }
 }

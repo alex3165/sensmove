@@ -96,7 +96,7 @@
     frame = CGRectMake(0, 0, 25, 13);
     button.frame = frame;
     button.backgroundColor = [UIColor clearColor];
-    [button setImage:[UIImage imageNamed:@"simpleMenuButton"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
 }
 
 - (void)configureSlideLayer:(CALayer *)layer

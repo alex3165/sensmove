@@ -66,6 +66,7 @@ class SMUserController: UIViewController {
 
         self.topBanner!.layer.insertSublayer(smGradient, atIndex: 0)
         
+        self.delimiter?.backgroundColor = SMColor.orange()
         
         self.firstName?.text = self.userService.currentUser?.firstName as? String
         self.lastName?.text = self.userService.currentUser?.lastName as? String

@@ -11,7 +11,7 @@ import UIKit
 class SMSessionController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     var userSessions: Array<SMSession>!
-
+    
     required init(coder aDecoder: NSCoder) {
         self.userSessions = SMUserService.sharedInstance.currentUser!.sessions
         super.init(coder: aDecoder)
@@ -53,10 +53,17 @@ class SMSessionController: UITableViewController, UITableViewDataSource, UITable
         
         println("Cell index : \(indexCell.item)")
         
-        let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexCell) as! SMSessionViewCell
+        self.userSessions = SMUserService.sharedInstance.deleteSession(indexCell.item)
 
+//        let currentCell = tableView.dequeueReusableCellWithIdentifier("sessionCell", forIndexPath: indexCell) as! SMSessionViewCell
+//
+//        self.userSessions = self.userSessions.filter({ (session) -> Bool in
+//            return session.id != currentCell.sessionIdentifier?.text!
+//        })
+
+        self.tableView.reloadData()
         //self.userSessions[indexCell.item].name
-        
+//        self.trackSessionService?
     }
 
     /*

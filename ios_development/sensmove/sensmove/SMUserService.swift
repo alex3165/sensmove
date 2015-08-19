@@ -51,13 +51,13 @@ class SMUserService: NSObject {
         self.saveUserToKeychain()
     }
     
-    func deleteSessionFromId(identifier: String) {
-        /// TODO: WIP filter array
-        let newArr = self.currentUser?.sessions.filter({ (session: SMSession) -> Bool in
-            return session.id as String == identifier
-        })
+    func deleteSession(index: Int) -> Array<SMSession> {
+        self.currentUser?.removeSession(index)
+        self.saveUserToKeychain()
+
+        return self.currentUser!.sessions
     }
-    
+
     /// Save current user state to keychain
     func saveUserToKeychain(){
         self.currentUser?.saveUserToKeychain()

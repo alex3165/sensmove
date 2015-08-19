@@ -95,6 +95,8 @@
 		22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
 		22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */; };
 		294C05DE63DFA537C62BC1A9 /* libPods-sensmove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48BCA881402655856765B7 /* libPods-sensmove.a */; };
+		AC97C4491B8472EA00A724C6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4471B8472EA00A724C6 /* menu.png */; };
+		AC97C44A1B8472EA00A724C6 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4481B8472EA00A724C6 /* menu@2x.png */; };
 		ACD436D11B82455800996176 /* libReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD436D01B82455800996176 /* libReactiveCocoa.a */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +173,8 @@
 		22FFAAA71AE58ECB005A49CF /* SMUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserService.swift; sourceTree = "<group>"; };
 		22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserTest.swift; sourceTree = "<group>"; };
 		3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC97C4471B8472EA00A724C6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		AC97C4481B8472EA00A724C6 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		ACD436CE1B82454C00996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		ACD436D01B82455800996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		AF48BCA881402655856765B7 /* libPods-sensmove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +309,8 @@
 		22B91BFF1AB33D9600497025 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AC97C4471B8472EA00A724C6 /* menu.png */,
+				AC97C4481B8472EA00A724C6 /* menu@2x.png */,
 				22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */,
 				22068C9B1AF65B3D0033DD6D /* simpleMenuButton.png */,
 				22068C9C1AF65B3D0033DD6D /* simpleMenuButton@2x.png */,
@@ -456,8 +462,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B91C0A1AB33D9600497025 /* Main.storyboard in Resources */,
+				AC97C44A1B8472EA00A724C6 /* menu@2x.png in Resources */,
 				22BD4E571ADA6D340022318B /* Roboto-Regular.ttf in Resources */,
 				22BD4E591ADA6D340022318B /* varela round.otf in Resources */,
+				AC97C4491B8472EA00A724C6 /* menu.png in Resources */,
 				22415FD41AD9B2A200106E7A /* SMData.json in Resources */,
 				22BD4E551ADA6D340022318B /* Roboto-Medium.ttf in Resources */,
 				22068C9D1AF65B3D0033DD6D /* simpleMenuButton.png in Resources */,

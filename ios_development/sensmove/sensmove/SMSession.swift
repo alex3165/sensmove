@@ -112,6 +112,7 @@ class SMSession: NSObject {
     *   :returns:  sessionJson  session formatted for storage
     */
     func toPropertyList() -> NSDictionary {
+
         var sessionJson: NSMutableDictionary = [
             kSessionId: self.id,
             kSessionName: self.name,

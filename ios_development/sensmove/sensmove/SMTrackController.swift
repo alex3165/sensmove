@@ -75,6 +75,12 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
     
     func uiInitialize() {
+
+//        let textAttributes = NSMutableDictionary(capacity:1)
+//        textAttributes.setObject(SMColor.orange(), forKey: NSForegroundColorAttributeName)
+//        textAttributes.setObject("Avenir", forKey: NSFontAttributeName)
+//        self.navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSObject : AnyObject]
+        
         self.stopSessionButton?.backgroundColor = SMColor.red()
         self.stopSessionButton?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)
     }
@@ -96,7 +102,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         let elapsedTime = self.chronometer?.getElapsedTime()
         self.trackSessionService?.stopCurrentSession(elapsedTime!)
 
-        let resultController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("resultView") as! UIViewController
+        let resultController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("resumeController") as! UIViewController
         self.navigationController?.presentViewController(resultController, animated: false, completion: nil)
     }
 

@@ -31,7 +31,7 @@ class SMResultController: UIViewController {
 
         self.initializeUI()
         self.trackSessionService = SMTrackSessionService.sharedInstance
-
+        
         if let leftForce = self.trackSessionService?.getAverageForces("left") {
             self.averageLeftForce?.text = "\(leftForce)"
         }
@@ -40,8 +40,24 @@ class SMResultController: UIViewController {
             self.averageRightForce?.text = "\(rightForce)"
         }
         
+        if let durInterval: NSTimeInterval = self.trackSessionService?.currentSession?.duration {
+            self.duration?.text = self.stringFromTimeInterval(durInterval) as String
+        }
     }
 
+    func stringFromTimeInterval(interval:NSTimeInterval) -> NSString {
+
+        var ti = NSInteger(interval)
+
+        var ms = Int((interval % 1) * 1000)
+
+        var seconds = ti % 60
+        var minutes = (ti / 60) % 60
+        var hours = (ti / 3600)
+
+        return NSString(format: "%0.2d:%0.2d:%0.2d",hours,minutes,seconds)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

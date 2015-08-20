@@ -60,13 +60,21 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
                 self.userService.setUser(userToSave)
                 self.userService.saveUserToKeychain()
 
-                self.redirectToView("sideMenuController")
+                if(self.hasUnlockedPresentation()) {
+                    self.redirectToView("sideMenuController")
+                } else {
+                    self.redirectToView("presentationController")
+                }
 
             }, failure: { (error) -> () in
                 self.badCredentials?.hidden = false
                 /// Trigger timer that hide failure message in 2 seconds
                 var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("onHideBadCredentials"), userInfo: nil, repeats: false)
         })
+    }
+    
+    func hasUnlockedPresentation() -> Bool {
+        return NSUserDefaults.standardUserDefaults().boolForKey("hasUnlockedPresentation")
     }
     
     /**
@@ -78,7 +86,7 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         let newController: UIViewController = storyboard.instantiateViewControllerWithIdentifier(view) as! UIViewController
 
         self.presentViewController(newController, animated: true) { () -> Void in
-            println("present new view controller done")
+            println("Redirection to \(newController.nibName)")
         }
     }
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+<text transform="matrix(1 0 0 1 51.8931 366.2275)"><tspan x="0" y="0" fill="#FE5E00" font-family="'VarelaRound-Regular'" font-size="50.1809">SENS</tspan><tspan x="136.14" y="0" fill="#E94A3C" font-family="'VarelaRound-Regular'" font-size="50.1809">MOVE</tspan></text>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="199.9337" y1="20.1334" x2="199.9337" y2="299.9535">
+	<stop  offset="0" style="stop-color:#FE5E00"/>
+	<stop  offset="0.2153" style="stop-color:#F65716"/>
+	<stop  offset="0.4838" style="stop-color:#EF502B"/>
+	<stop  offset="0.7478" style="stop-color:#EA4B38"/>
+	<stop  offset="1" style="stop-color:#E94A3C"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" d="M199.934,20.133c-77.27,0-139.91,62.64-139.91,139.91s62.64,139.91,139.91,139.91
+	s139.91-62.64,139.91-139.91S277.204,20.133,199.934,20.133z M125.016,161.648c-20.87,0.816-23.581-17.342-23.581-17.342
+	s15.211-3.438,27.109-0.546c11.897,2.892,12.093,3.155,26.19,12.909c3.696,2.56,16.357,14.559,16.341,14.547
+	C161.646,164.193,149.918,160.777,125.016,161.648z M187.471,180.865c-16.805-11.384-33.056-35.564-55.293-39.843
+	c-22.277-4.287-32.884,3.632-28.478-2.01c4.407-5.643,29.562-8.018,52.871-5.308c23.31,2.71,46.757,17.36,67.218,21.141
+	c20.461,3.781,94.292,22.496,84.535,31.983C293.896,200.856,204.275,192.248,187.471,180.865z"/>
+</svg>

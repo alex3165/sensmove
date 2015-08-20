@@ -95,6 +95,7 @@
 		22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
 		22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */; };
 		294C05DE63DFA537C62BC1A9 /* libPods-sensmove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48BCA881402655856765B7 /* libPods-sensmove.a */; };
+		AC68C1591B866FFE004E9C8B /* SMPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68C1581B866FFE004E9C8B /* SMPresentationController.swift */; };
 		AC97C4491B8472EA00A724C6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4471B8472EA00A724C6 /* menu.png */; };
 		AC97C44A1B8472EA00A724C6 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4481B8472EA00A724C6 /* menu@2x.png */; };
 		AC97C44C1B84A1D000A724C6 /* SMConnexionNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */; };
@@ -174,6 +175,7 @@
 		22FFAAA71AE58ECB005A49CF /* SMUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserService.swift; sourceTree = "<group>"; };
 		22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserTest.swift; sourceTree = "<group>"; };
 		3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC68C1581B866FFE004E9C8B /* SMPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPresentationController.swift; sourceTree = "<group>"; };
 		AC97C4471B8472EA00A724C6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		AC97C4481B8472EA00A724C6 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMConnexionNotification.swift; sourceTree = "<group>"; };
@@ -286,16 +288,17 @@
 				2251E0311AD2FF09005FE3B8 /* View */,
 				2251E0301AD2FF00005FE3B8 /* Model */,
 				22B91C011AB33D9600497025 /* AppDelegate.swift */,
+				2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */,
+				AC68C1581B866FFE004E9C8B /* SMPresentationController.swift */,
 				22BD4E631ADADDAE0022318B /* SMHomeController.swift */,
 				2228F5CE1AF68D9400151221 /* SMLeftMenuVC.h */,
 				2228F5CF1AF68D9400151221 /* SMLeftMenuVC.m */,
 				223A10661AE522A000BD19C5 /* SMSideMenuController.h */,
 				223A10671AE522A000BD19C5 /* SMSideMenuController.m */,
-				2251E03F1AD3065D005FE3B8 /* SMLoginController.swift */,
-				22FE07871AE503FD0064F750 /* SMUserController.swift */,
 				221A64731B12680900C662CD /* SMTrackController.swift */,
-				2219FBD61B1516AD006A26A0 /* SMSessionController.swift */,
 				222E182C1B39F07800AE7795 /* SMResultController.swift */,
+				22FE07871AE503FD0064F750 /* SMUserController.swift */,
+				2219FBD61B1516AD006A26A0 /* SMSessionController.swift */,
 				22B91C081AB33D9600497025 /* Main.storyboard */,
 				22B91C0B1AB33D9600497025 /* Images.xcassets */,
 				22B91C0D1AB33D9600497025 /* LaunchScreen.xib */,
@@ -586,6 +589,7 @@
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
 				222E182F1B39FC8000AE7795 /* SMChronometer.swift in Sources */,
+				AC68C1591B866FFE004E9C8B /* SMPresentationController.swift in Sources */,
 				228FAD331B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
 				227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */,
 				22CC928F1B1B50ED00D98E9E /* SMTrackSessionService.swift in Sources */,

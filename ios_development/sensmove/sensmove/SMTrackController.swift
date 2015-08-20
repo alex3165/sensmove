@@ -113,10 +113,12 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
     /// Connect to peripheral from name
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
-        if(self.currentPeripheral != peripheral && peripheral.name == "SL18902"){
-            self.currentPeripheral = peripheral
-
-            self.centralManager?.connectPeripheral(peripheral, options: nil)
+        if (peripheral.name != nil) {
+            if(self.currentPeripheral != peripheral && peripheral.name == "SL18902"){
+                self.currentPeripheral = peripheral
+                
+                self.centralManager?.connectPeripheral(peripheral, options: nil)
+            }
         }
     }
 

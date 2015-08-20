@@ -16,7 +16,9 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     @IBOutlet weak var timeCountdown: UILabel?
     @IBOutlet weak var stopSessionButton: UIButton?
     @IBOutlet weak var liveTrackGraph: SMLiveForcesTrack!
-
+    @IBOutlet weak var jumpCounter: UILabel!
+    @IBOutlet weak var stepCounter: UILabel!
+    
     var chronometer: SMChronometer?
     var trackSessionService: SMTrackSessionService?
 
@@ -75,6 +77,9 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
     
     func uiInitialize() {
+        
+        self.jumpCounter.textColor = SMColor.orange()
+        self.stepCounter.textColor = SMColor.orange()
         
         self.stopSessionButton?.backgroundColor = SMColor.red()
         self.stopSessionButton?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)

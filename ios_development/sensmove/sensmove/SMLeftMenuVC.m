@@ -35,6 +35,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *firstName;
 @property (nonatomic, weak) IBOutlet UIImageView *userPicture;
 @property (nonatomic, weak) IBOutlet UILabel *numberOfSessions;
+@property (nonatomic, weak) IBOutlet UILabel *activeSessionLabel;
 
 @end
 
@@ -61,6 +62,16 @@
             [self setSessions:[NSString stringWithFormat:@"%@ sessions", number]];
         }
     }];
+    
+//    SMTrackSessionService *sessionService = [SMTrackSessionService sharedInstance];
+//    
+//    [RACObserve(sessionService, currentSession) subscribeNext:^(id currentSession) {
+//        if (currentSession != nil) {
+//            [self.activeSessionLabel setText:@"Session en cours"];
+//        } else {
+//            [self.activeSessionLabel setText:@"Aucune session en cours"];
+//        }
+//    }];
 }
 
 /**

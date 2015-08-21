@@ -35,8 +35,15 @@ class SMSessionViewCell: UITableViewCell {
         // Set values for components
         self.sessionIdentifier?.text = session.id as String
         self.sessionTitle?.text = session.name as String
-        self.averageLeftForces?.text = session.averageLeftForce?.stringValue
-        self.averageRightForces?.text = session.averageRightForce?.stringValue
+
+        if let leftForceStringValue = session.averageLeftForce?.stringValue {
+            self.averageLeftForces?.text = "\(leftForceStringValue) psi"
+        }
+        
+        if let rightForceStringValue = session.averageRightForce?.stringValue {
+            self.averageRightForces?.text = "\(rightForceStringValue) psi"
+        }
+        
         self.sessionDuration?.text = "\(session.duration!)"
     }
 

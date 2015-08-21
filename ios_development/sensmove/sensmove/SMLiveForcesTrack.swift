@@ -22,7 +22,7 @@ class SMLiveForcesTrack: UIView {
         super.init(coder: aDecoder)
         
         self.trackSessionService = SMTrackSessionService.sharedInstance
-        
+
         self.circleChart = NSMutableDictionary()
     }
 
@@ -33,6 +33,17 @@ class SMLiveForcesTrack: UIView {
         if let rightSole = self.trackSessionService?.getRightSole() {
             let sensorForces: [SMForce] = rightSole.forceSensors
 
+            for (var index = 0; index < sensorForces.count; index++) {
+                var sensorId: Int = sensorForces[index].id
+                self.circleChart[sensorId] = self._createChartFromSensor(sensorForces[index])
+                self.addSubview(self.circleChart[sensorId] as! PNCircleChart)
+            }
+        }
+        
+        if let leftSole = self.trackSessionService?.getLeftSole() {
+            
+            let sensorForces: [SMForce] = leftSole.forceSensors
+            
             for (var index = 0; index < sensorForces.count; index++) {
                 var sensorId: Int = sensorForces[index].id
                 self.circleChart[sensorId] = self._createChartFromSensor(sensorForces[index])
@@ -54,12 +65,13 @@ class SMLiveForcesTrack: UIView {
 
         let sensorFrame: CGRect = CGRectMake(xPosition, yPosition, CGFloat(sensor.size), CGFloat(sensor.size))
 
-        let chart: PNCircleChart = PNCircleChart(frame: sensorFrame, total: 1024, current: 0, clockwise: true, shadow: false, shadowColor: UIColor.redColor(), displayCountingLabel: false, overrideLineWidth: 4)
+        let chart: PNCircleChart = PNCircleChart(frame: sensorFrame, total: 1024, current: 0, clockwise: true, shadow: true, shadowColor: SMColor.ligthGrey(), displayCountingLabel: false, overrideLineWidth: 4)
 
-        chart.strokeChart()
-        chart.backgroundColor = UIColor.clearColor()
-        chart.strokeColor = UIColor.redColor()
         
+        chart.backgroundColor = UIColor.clearColor()
+        chart.strokeColor = SMColor.red()
+        chart.strokeChart()
+
         return chart
     }
 
@@ -67,7 +79,7 @@ class SMLiveForcesTrack: UIView {
         if let rightSole = self.trackSessionService?.getRightSole() {
 
             let sensorForces = rightSole.forceSensors
-            
+
             for (var index = 0; index < sensorForces.count; index++) {
                 
                 // rac observe every changes on currentForcePressure dictionary of each sensors

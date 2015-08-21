@@ -70,7 +70,12 @@ class SMTrackSessionService: NSObject {
     }
 
     // return left sole object
-    func getLeftSole() -> SMSole {
-        return (self.currentSession?.leftSole as SMSole?)!
+    func getLeftSole() -> SMSole? {
+
+        if let curSession = self.currentSession {
+            return curSession.leftSole!
+        } else {
+            return nil
+        }
     }
 }

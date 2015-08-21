@@ -36,7 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         /// if user exist redirect to main home view (sideMenuController) otherwise redirect to login controller
         if(userService.asUserInKeychain()) {
-            newController = storyboard.instantiateViewControllerWithIdentifier("sideMenuController") as! UIViewController
+            if(self.hasUnlockedPresentation()) {
+                newController = storyboard.instantiateViewControllerWithIdentifier("sideMenuController") as! UIViewController
+            } else {
+                newController = storyboard.instantiateViewControllerWithIdentifier("presentationController") as! UIViewController
+            }
+            
         }else {
             newController = storyboard.instantiateViewControllerWithIdentifier("loginController") as! UIViewController
         }
@@ -44,7 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = newController
         self.window?.makeKeyAndVisible()
         
+
+        
         return true
+    }
+    
+    func hasUnlockedPresentation() -> Bool {
+        return NSUserDefaults.standardUserDefaults().boolForKey("hasUnlockedPresentation")
     }
 
     func applicationWillResignActive(application: UIApplication) {

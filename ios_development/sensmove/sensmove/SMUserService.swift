@@ -57,9 +57,14 @@ class SMUserService: NSObject {
 
         return self.currentUser!.sessions
     }
+    
+    func disconnectUser() {
+        self.currentUser?.removeUserToKeychain()
+        self.currentUser = nil
+    }
 
     /// Save current user state to keychain
-    func saveUserToKeychain(){
+    func saveUserToKeychain() {
         self.currentUser?.saveUserToKeychain()
     }
     

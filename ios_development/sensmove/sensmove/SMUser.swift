@@ -82,7 +82,7 @@ class SMUser: NSObject {
         NSUserDefaults.standardUserDefaults().setObject(datas, forKey: "user")
     }
     
-    func removeObjectToKeychain() {
+    func removeUserToKeychain() {
         NSUserDefaults.standardUserDefaults().removeObjectForKey("user")
     }
 

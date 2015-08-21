@@ -44,6 +44,20 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
         self.view.backgroundColor = SMColor.ligthGrey()
         self.badCredentials?.textColor = SMColor.red()
         brandLabel?.textColor = SMColor.orange()
+
+        if var frameRect: CGRect = self.password?.frame {
+            frameRect.size.height = 100;
+            self.password?.frame = frameRect;
+        }
+
+        self.password?.textColor = SMColor.orange()
+        self.identifier?.textColor = SMColor.orange()
+        
+        self.validation?.backgroundColor = SMColor.orange()
+        self.validation?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)
+        self.validation?.layer.cornerRadius = 8
+//        self.password?.frame = CGRectMake(20, 20, 240, 80)
+//        self.identifier?.frame.height = CGFloat(40)
     }
     
     /**

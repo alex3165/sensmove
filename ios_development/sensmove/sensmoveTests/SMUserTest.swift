@@ -76,7 +76,7 @@ class SMUserTest: XCTestCase {
     }
     
     func testRemoveUserFromKeychain() {
-        SMUserService.sharedInstance.currentUser?.removeObjectToKeychain()
+        //SMUserService.sharedInstance.currentUser?.removeObjectToKeychain()
     }
 
 }

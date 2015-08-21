@@ -82,4 +82,16 @@
     self.userPicture.image =  [UIImage imageNamed:self.userService.currentUser.picturePath];
 }
 
+-(IBAction)disconnectUser:(id) sender {
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UIViewController *loginController = [story instantiateViewControllerWithIdentifier:@"loginController"];
+    
+    [self.userService disconnectUser];
+    
+    [self presentViewController:loginController animated:true completion:^{
+        NSLog(@"User disconnected, navigate to login controller");
+    }];
+}
+
 @end

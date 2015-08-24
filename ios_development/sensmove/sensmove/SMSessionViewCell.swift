@@ -43,8 +43,17 @@ class SMSessionViewCell: UITableViewCell {
         if let rightForceStringValue = session.averageRightForce?.stringValue {
             self.averageRightForces?.text = "\(rightForceStringValue) psi"
         }
+
+        self.sessionDuration?.text = "\(self.stringFromTimeInterval(session.duration!))"
         
-        self.sessionDuration?.text = "\(session.duration!)"
+    }
+
+    func stringFromTimeInterval(interval: NSTimeInterval) -> String {
+        let interval = Int(interval)
+        let seconds = interval % 60
+        let minutes = (interval / 60) % 60
+        let hours = (interval / 3600)
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
 
     // Set colors for differents component of session view
@@ -55,6 +64,14 @@ class SMSessionViewCell: UITableViewCell {
         self.averageRightForces?.textColor = SMColor.red()
         self.averageLeftForces?.textColor = SMColor.red()
 
-        self.sendReport?.setTitleColor(SMColor.middleGrey(), forState: UIControlState.Normal)
+        self.sendReport?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)
+        self.sendReport?.backgroundColor = SMColor.green()
+        self.sendReport?.layer.cornerRadius = 4
+        
+        self.deleteSessionButton?.setTitleColor(SMColor.whiteColor(), forState: UIControlState.Normal)
+        self.deleteSessionButton?.backgroundColor = SMColor.red()
+        self.deleteSessionButton?.layer.cornerRadius = 4
+        
+        self.sessionIdentifier?.textColor = SMColor.lightGrayColor()
     }
 }

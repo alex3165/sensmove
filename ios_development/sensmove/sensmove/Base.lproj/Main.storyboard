@@ -14,6 +14,7 @@
         </mutableArray>
         <mutableArray key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
+            <string>Roboto-Medium</string>
         </mutableArray>
         <mutableArray key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
@@ -1317,21 +1318,21 @@
         <scene sceneID="2TF-1L-Ajc">
             <objects>
                 <tableViewController id="JUS-0k-c8y" userLabel="Session" customClass="SMSessionController" customModule="sensmove" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="204" sectionHeaderHeight="22" sectionFooterHeight="22" id="C2V-Qj-6pm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="211" sectionHeaderHeight="22" sectionFooterHeight="22" id="C2V-Qj-6pm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sessionCell" rowHeight="204" id="1e5-Fc-G11" customClass="SMSessionViewCell" customModule="sensmove" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sessionCell" rowHeight="211" id="1e5-Fc-G11" customClass="SMSessionViewCell" customModule="sensmove" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1e5-Fc-G11" id="k1F-oL-Pjr">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-JA-fSA" userLabel="header">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBN-ID-Yy8">
-                                                    <rect key="frame" x="15" y="12" width="305" height="21"/>
+                                                    <rect key="frame" x="15" y="8" width="305" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="305" id="7zd-ma-FLT"/>
                                                         <constraint firstAttribute="height" constant="21" id="kak-H9-aCI"/>
@@ -1343,7 +1344,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="KBN-ID-Yy8" secondAttribute="centerY" id="KRP-Zv-fds"/>
+                                                <constraint firstAttribute="centerY" secondItem="KBN-ID-Yy8" secondAttribute="centerY" id="cgg-3e-JBh"/>
                                                 <constraint firstItem="KBN-ID-Yy8" firstAttribute="leading" secondItem="JMT-JA-fSA" secondAttribute="leading" constant="15" id="p5A-rM-x2k"/>
                                             </constraints>
                                         </view>
@@ -1363,9 +1364,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="62" translatesAutoresizingMaskIntoConstraints="NO" id="KPE-5M-Z71">
-                                                    <rect key="frame" x="84" y="46" width="62" height="22"/>
+                                                    <rect key="frame" x="84" y="46" width="200" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="62" id="fQl-pu-uIE"/>
+                                                        <constraint firstAttribute="width" constant="200" id="fQl-pu-uIE"/>
                                                         <constraint firstAttribute="height" constant="22" id="jN1-Cr-h26"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
@@ -1453,25 +1454,26 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkq-Ze-WHJ" userLabel="footer">
-                                            <rect key="frame" x="0.0" y="169" width="320" height="35"/>
+                                            <rect key="frame" x="0.0" y="165" width="320" height="45"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY5-7P-8dJ">
-                                                    <rect key="frame" x="196" y="3" width="110" height="30"/>
+                                                    <rect key="frame" x="196" y="4" width="110" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Z0v-Nu-tTJ"/>
                                                         <constraint firstAttribute="width" constant="110" id="fUY-An-Q1q"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="fZ1-VL-5jk"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="hCB-qP-B7f"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
-                                                    <state key="normal" title="Envoyer rapport"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                    <state key="normal" title="Envoyer"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlf-VV-Bx5">
-                                                    <rect key="frame" x="14" y="3" width="110" height="30"/>
+                                                    <rect key="frame" x="14" y="4" width="110" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="110" id="CdM-5h-DYb"/>
                                                         <constraint firstAttribute="height" constant="30" id="Fpf-NT-cpm"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
                                                     <state key="normal" title="Supprimer">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -1483,22 +1485,22 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="tlf-VV-Bx5" firstAttribute="leading" secondItem="zkq-Ze-WHJ" secondAttribute="leading" constant="14" id="8LU-Q3-vew"/>
+                                                <constraint firstAttribute="centerY" secondItem="tlf-VV-Bx5" secondAttribute="centerY" constant="3.5" id="B9t-nT-CFa"/>
                                                 <constraint firstAttribute="trailing" secondItem="WY5-7P-8dJ" secondAttribute="trailing" constant="14" id="JHB-TJ-sP0"/>
-                                                <constraint firstAttribute="height" constant="35" id="Ne7-yE-RUV"/>
-                                                <constraint firstAttribute="centerY" secondItem="WY5-7P-8dJ" secondAttribute="centerY" id="iuH-7m-ve0"/>
-                                                <constraint firstAttribute="centerY" secondItem="tlf-VV-Bx5" secondAttribute="centerY" id="zB6-0h-HKC"/>
+                                                <constraint firstAttribute="height" constant="45" id="Ne7-yE-RUV"/>
+                                                <constraint firstAttribute="centerY" secondItem="WY5-7P-8dJ" secondAttribute="centerY" constant="3.5" id="QQH-LZ-7W8"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="JMT-JA-fSA" firstAttribute="trailing" secondItem="SLT-Bn-mJG" secondAttribute="trailing" id="2Lh-JX-IY6"/>
-                                        <constraint firstItem="zkq-Ze-WHJ" firstAttribute="top" secondItem="SLT-Bn-mJG" secondAttribute="bottom" constant="7" id="3Pe-E6-tQk"/>
+                                        <constraint firstItem="zkq-Ze-WHJ" firstAttribute="top" secondItem="SLT-Bn-mJG" secondAttribute="bottom" constant="3" id="3Pe-E6-tQk"/>
                                         <constraint firstItem="JMT-JA-fSA" firstAttribute="top" secondItem="k1F-oL-Pjr" secondAttribute="top" id="LOa-28-eeD"/>
                                         <constraint firstItem="zkq-Ze-WHJ" firstAttribute="leading" secondItem="k1F-oL-Pjr" secondAttribute="leading" id="TXF-w2-9h3"/>
                                         <constraint firstItem="JMT-JA-fSA" firstAttribute="leading" secondItem="SLT-Bn-mJG" secondAttribute="leading" id="Zm7-cw-YeU"/>
                                         <constraint firstAttribute="trailing" secondItem="JMT-JA-fSA" secondAttribute="trailing" id="dhK-a5-c13"/>
-                                        <constraint firstAttribute="bottom" secondItem="zkq-Ze-WHJ" secondAttribute="bottom" constant="-1" id="lRn-YY-Of5"/>
-                                        <constraint firstAttribute="bottom" secondItem="JMT-JA-fSA" secondAttribute="bottom" constant="158" id="q0E-Eb-0Fq"/>
+                                        <constraint firstAttribute="bottom" secondItem="zkq-Ze-WHJ" secondAttribute="bottom" id="lRn-YY-Of5"/>
+                                        <constraint firstAttribute="bottom" secondItem="JMT-JA-fSA" secondAttribute="bottom" constant="173" id="q0E-Eb-0Fq"/>
                                         <constraint firstItem="JMT-JA-fSA" firstAttribute="leading" secondItem="k1F-oL-Pjr" secondAttribute="leading" id="t77-OA-KKY"/>
                                         <constraint firstAttribute="trailing" secondItem="zkq-Ze-WHJ" secondAttribute="trailing" id="xuH-ob-fpz"/>
                                     </constraints>
@@ -1506,6 +1508,7 @@
                                 <connections>
                                     <outlet property="averageLeftForces" destination="6fG-bs-baj" id="o1Z-mz-U2H"/>
                                     <outlet property="averageRightForces" destination="Sf6-sv-7cH" id="hRo-eB-SX7"/>
+                                    <outlet property="deleteSessionButton" destination="tlf-VV-Bx5" id="sKn-Hp-Rxt"/>
                                     <outlet property="headerView" destination="JMT-JA-fSA" id="sW8-DB-9jk"/>
                                     <outlet property="sendReport" destination="WY5-7P-8dJ" id="1O4-Uj-Fmx"/>
                                     <outlet property="sessionDuration" destination="KPE-5M-Z71" id="jAF-b8-V4E"/>

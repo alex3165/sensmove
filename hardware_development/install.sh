@@ -14,7 +14,7 @@
 #Path of the libraries in the project (the script should be started in the root of the project)
 PATHPROJECT="${PWD}/libraries/"
 #Path of the libraries in Arduino
-PATHARDUI="${HOME}/Documents/Arduino/libraries/"
+PATHARDUI="${HOME}/Documents/Arduino/Libraries/"
 
 #Color added to the console messages
 red='\033[0;31m'

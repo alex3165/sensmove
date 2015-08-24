@@ -22,7 +22,7 @@ let kSessionActivity: String = "activity"
 
 class SMSession: NSObject {
     
-    let id: NSString
+    let id: String
     var name: NSString
     let date: NSDate
     var duration: NSTimeInterval?
@@ -45,7 +45,7 @@ class SMSession: NSObject {
     init(sensorsVectors: JSON){
         self.name = "new_session"
         self.date = NSDate()
-        self.id = NSString(format:"%@%ui", self.name, self.date.timeIntervalSince1970)
+        self.id = "\(self.name)\(self.date.timeIntervalSince1970)"
         self.isActive = true
         self.sessionComment = ""
         self.activity = ""

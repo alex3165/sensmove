@@ -37,16 +37,12 @@ void loop() {
       String jsonData = dataJson.getJsonData();
       bleApplication.sendInstruction(jsonData);
       delay(500);
-
-      
     } else {
       // Session has not been started
 
       //Waiting instruction from the external device to manage and send Data
       bleApplication.waitInstruction();
-      delay(1000);
-
-    
+      delay(1000);    
     }
-
 }
+

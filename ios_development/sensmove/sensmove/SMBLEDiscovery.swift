@@ -68,6 +68,11 @@ class SMBLEDiscovery: NSObject, CBCentralManagerDelegate {
     }
     
     func centralManager(central: CBCentralManager!, didDisconnectPeripheral peripheral: CBPeripheral!, error: NSError!) {
-        
+        if (peripheral == nil) {
+            return;
+        }
+
+        self.bleService?.isConnectedToDevice = false
+        self.bleService?.isReceivingDatas = false
     }
 }

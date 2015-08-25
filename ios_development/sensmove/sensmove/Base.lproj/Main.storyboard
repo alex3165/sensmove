@@ -227,15 +227,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDk-LV-rBT">
-                                <rect key="frame" x="110" y="43" width="100" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gDk-LV-rBT" secondAttribute="height" multiplier="1:1" id="BXP-JA-2ky"/>
-                                    <constraint firstAttribute="width" constant="100" id="Sld-nk-NyE"/>
-                                    <constraint firstAttribute="height" constant="100" id="jqR-EL-vBC"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmJ-Dq-pyR" userLabel="logo_button">
                                 <rect key="frame" x="110" y="43" width="100" height="100"/>
                                 <constraints>
@@ -265,23 +256,21 @@
                             <constraint firstItem="tvE-YX-gMq" firstAttribute="leading" secondItem="ZM6-Gi-3zd" secondAttribute="leading" constant="27" id="77F-nf-bSU"/>
                             <constraint firstItem="YDz-fx-irm" firstAttribute="leading" secondItem="ZM6-Gi-3zd" secondAttribute="leadingMargin" constant="61" id="85x-uM-qeN"/>
                             <constraint firstItem="YDz-fx-irm" firstAttribute="top" secondItem="DmJ-Dq-pyR" secondAttribute="bottom" constant="8" id="9ZG-7h-rzm"/>
+                            <constraint firstItem="DmJ-Dq-pyR" firstAttribute="top" secondItem="nrO-cj-dNQ" secondAttribute="bottom" constant="23" id="Amv-7P-2D1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YDz-fx-irm" secondAttribute="trailing" constant="61" id="DBF-H6-JKi"/>
                             <constraint firstItem="jjo-S7-HCC" firstAttribute="leading" secondItem="ZM6-Gi-3zd" secondAttribute="leadingMargin" constant="62" id="Dpz-1i-SEL"/>
                             <constraint firstItem="inO-MX-Nin" firstAttribute="top" secondItem="jjo-S7-HCC" secondAttribute="bottom" constant="28" id="NIZ-U0-4rG"/>
                             <constraint firstItem="jjo-S7-HCC" firstAttribute="top" secondItem="tvE-YX-gMq" secondAttribute="bottom" constant="50" id="hCt-Qo-yyX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jjo-S7-HCC" secondAttribute="trailing" constant="62" id="hqz-b5-CeP"/>
-                            <constraint firstItem="YDz-fx-irm" firstAttribute="top" secondItem="gDk-LV-rBT" secondAttribute="bottom" constant="8" symbolic="YES" id="jwY-B9-tPI"/>
                             <constraint firstItem="tvE-YX-gMq" firstAttribute="top" secondItem="pJr-tM-QOT" secondAttribute="bottom" constant="47" id="lKk-Vy-Lgm"/>
-                            <constraint firstAttribute="centerX" secondItem="gDk-LV-rBT" secondAttribute="centerX" id="mN4-xR-82T"/>
-                            <constraint firstItem="gDk-LV-rBT" firstAttribute="top" secondItem="nrO-cj-dNQ" secondAttribute="bottom" constant="23" id="pGd-JX-CDw"/>
-                            <constraint firstItem="DmJ-Dq-pyR" firstAttribute="centerX" secondItem="gDk-LV-rBT" secondAttribute="centerX" id="sOg-gX-GGm"/>
+                            <constraint firstItem="DmJ-Dq-pyR" firstAttribute="centerX" secondItem="YDz-fx-irm" secondAttribute="centerX" id="nUm-hn-Q4e"/>
                             <constraint firstItem="pJr-tM-QOT" firstAttribute="trailing" secondItem="ZM6-Gi-3zd" secondAttribute="trailingMargin" id="v7Y-TU-OZy"/>
                             <constraint firstAttribute="trailing" secondItem="tvE-YX-gMq" secondAttribute="trailing" constant="27" id="wRP-v2-FTl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yCM-jN-Osg"/>
                     <connections>
-                        <outlet property="animationView" destination="gDk-LV-rBT" id="TOy-mB-SVV"/>
+                        <outlet property="logoButton" destination="DmJ-Dq-pyR" id="f1C-uE-lXM"/>
                         <outlet property="mainTitle" destination="YDz-fx-irm" id="vZC-rB-h3c"/>
                         <outlet property="startButton" destination="jjo-S7-HCC" id="GAF-YT-lK6"/>
                     </connections>
@@ -369,7 +358,7 @@
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aucune session en cours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsM-wD-J8R">
                                                     <rect key="frame" x="104" y="100" width="193" height="21"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -536,6 +525,8 @@
                     <navigationItem key="navigationItem" title="SENSMOVE" id="4bE-Nm-d2L"/>
                     <connections>
                         <outlet property="loaderView" destination="cG4-eh-nhB" id="GMF-02-tP8"/>
+                        <outlet property="notificationView" destination="up9-Wn-ULb" id="whs-LV-wms"/>
+                        <outlet property="textNotification" destination="Vss-zA-F6I" id="Geb-gW-ZLe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

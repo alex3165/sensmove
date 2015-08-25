@@ -97,6 +97,7 @@
 		AC97C4491B8472EA00A724C6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4471B8472EA00A724C6 /* menu.png */; };
 		AC97C44A1B8472EA00A724C6 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4481B8472EA00A724C6 /* menu@2x.png */; };
 		AC97C44C1B84A1D000A724C6 /* SMConnexionNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */; };
+		ACB4A2541B8CB15900F3A3AB /* LFTPulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB4A2531B8CB15900F3A3AB /* LFTPulseAnimation.swift */; };
 		ACD436D11B82455800996176 /* libReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD436D01B82455800996176 /* libReactiveCocoa.a */; };
 		ACFE0B291B8C523A000E9A2E /* SMBLEDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE0B281B8C523A000E9A2E /* SMBLEDiscovery.swift */; };
 		ACFE0B2A1B8C523A000E9A2E /* SMBLEDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE0B281B8C523A000E9A2E /* SMBLEDiscovery.swift */; };
@@ -180,6 +181,7 @@
 		AC97C4471B8472EA00A724C6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		AC97C4481B8472EA00A724C6 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMConnexionNotification.swift; sourceTree = "<group>"; };
+		ACB4A2531B8CB15900F3A3AB /* LFTPulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimation.swift; sourceTree = "<group>"; };
 		ACD436CE1B82454C00996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		ACD436D01B82455800996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		ACFE0B281B8C523A000E9A2E /* SMBLEDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBLEDiscovery.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				22BD4E5C1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m */,
 				22BD4E4B1ADA6B0F0022318B /* SwiftyJSON.h */,
 				22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */,
+				ACB4A2531B8CB15900F3A3AB /* LFTPulseAnimation.swift */,
 			);
 			name = LIbrary;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				2251E0391AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
 				22B91C021AB33D9600497025 /* AppDelegate.swift in Sources */,
 				22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */,
+				ACB4A2541B8CB15900F3A3AB /* LFTPulseAnimation.swift in Sources */,
 				22BA89D81B1C916E0001A1C4 /* RAC.swift in Sources */,
 				2219FBD71B1516AD006A26A0 /* SMSessionController.swift in Sources */,
 				22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,

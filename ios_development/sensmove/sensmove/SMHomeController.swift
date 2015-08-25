@@ -8,9 +8,18 @@
 
 import UIKit
 
+enum NotificationText: String {
+    case searching = "Recherche de la semelle"
+    case found = "Connecté à la semelle"
+}
+
 class SMHomeController: UIViewController {
     
     @IBOutlet weak var loaderView: UIView!
+    @IBOutlet weak var textNotification: UILabel!
+    @IBOutlet weak var notificationView: UIView!
+
+    var finalNotificationFrame: CGRect?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -18,8 +27,11 @@ class SMHomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.createStartButton()
+        self.notificationView.hidden = true
+//        let actualFrame = self.notificationView.frame
+//        self.finalNotificationFrame = CGRectMake(actualFrame.origin.x, actualFrame.origin.y - actualFrame.size.height, actualFrame.size.width, actualFrame.size.height)
     }
 
     /**
@@ -45,8 +57,22 @@ class SMHomeController: UIViewController {
     */
     @IBAction func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .Ended {
-            let trackController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("navSession") as! UIViewController
-            self.navigationController?.presentViewController(trackController, animated: true, completion: nil)
+            let btDiscovery: SMBLEDiscovery = btDiscoverySharedInstance
+            self.textNotification.text = NotificationText.searching.rawValue
+            self.notificationView.hidden = false
+
+            RACObserve(btDiscovery, "bleService").subscribeNext({ (bleService) -> Void in
+                if let btService = bleService as? SMBLEService {
+                    RACObserve(btService, "isConnectedToDevice").subscribeNextAs({ (isConnectedToDevice: Bool) -> () in
+                        if isConnectedToDevice {
+                            self.textNotification.text = NotificationText.found.rawValue
+                            
+                            let trackController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("navSession") as! UIViewController
+                            self.navigationController?.presentViewController(trackController, animated: true, completion: nil)
+                        }
+                    })
+                }
+            })
         }
     }
 

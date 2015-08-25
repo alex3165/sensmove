@@ -12,10 +12,9 @@ class SMPresentationController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var mainTitle: UILabel!
-    @IBOutlet weak var animationView: UIView!
+    @IBOutlet weak var logoButton: UIButton!
     
-    var initialFrame: CGRect!
-    var finalFrame: CGRect!
+    weak var halo: LFTPulseAnimation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,21 +24,18 @@ class SMPresentationController: UIViewController {
         self.startButton.layer.cornerRadius = 6
         
         self.mainTitle.textColor = SMColor.orange()
-        
-        self.animationView.backgroundColor = SMColor.ligthGrey()
-        self.animationView.layer.cornerRadius = 50
-        self.animationView.contentMode = UIViewContentMode.Center
-        self.animationView.center = CGPoint(x: self.animationView.frame.size.width/2, y: self.animationView.frame.size.height/2)
-        self.finalFrame = self.animationView.frame
-        self.initialFrame = CGRectMake(self.finalFrame.origin.x, self.finalFrame.origin.y, 0, 0)
-        self.animationView.frame = self.initialFrame
+
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     @IBAction func onTapLogo(sender: UIButton) {
+        halo = LFTPulseAnimation(repeatCount: 1, radius: 100, position: CGPointMake(self.view.center.x, self.logoButton.center.y))
+        halo.animationDuration =  NSTimeInterval(1)
+        halo.backgroundColor = SMColor.orange().CGColor
+        self.view.layer.insertSublayer(halo, below: self.logoButton.layer)
         // TODO : animate ellipse at touch event
 //        UIView.animateWithDuration(NSTimeInterval(0.5), animations: { () -> Void in
 //            self.animationView.frame = self.finalFrame

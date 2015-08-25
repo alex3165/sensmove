@@ -9,7 +9,6 @@
 import Foundation
 import CoreBluetooth
 
-//let BLEServiceStartNotification = "kBLEServiceStartNotification"
 
 class SMBLEService: NSObject, CBPeripheralDelegate {
     
@@ -21,14 +20,16 @@ class SMBLEService: NSObject, CBPeripheralDelegate {
 
     /// Set whenever string is built
     dynamic var blockDataCompleted: NSData!
-
+    dynamic var isConnectedToDevice: Bool = true
+    dynamic var isReceivingDatas: Bool = false
+    
     init(initWithPeripheral peripheral: CBPeripheral) {
         super.init()
         self.currentPeripheral = peripheral
         self.currentPeripheral.delegate = self
-        
-        self.bufferedDatasString = ""
 
+        self.bufferedDatasString = ""
+//        self.btCurrentState = BTStates.ConnectedToDevice
 //        NSNotificationCenter.defaultCenter().postNotificationName(BLEServiceStartNotification, object: self, userInfo: nil)
     }
     
@@ -71,6 +72,10 @@ class SMBLEService: NSObject, CBPeripheralDelegate {
     /// Check update for characteristic and call didReceiveDatasFromBle method
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
         self.didReceiveDatasFromBle(characteristic.value)
+
+        if !self.isReceivingDatas {
+            self.isReceivingDatas = true
+        }
     }
     
     /**

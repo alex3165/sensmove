@@ -11,7 +11,7 @@ import CoreBluetooth
 import Foundation
 import SceneKit
 
-class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, SMChronometerDelegate {
+class SMTrackController: UIViewController, SMChronometerDelegate {
     
     @IBOutlet weak var timeCountdown: UILabel?
     @IBOutlet weak var stopSessionButton: UIButton?
@@ -21,19 +21,6 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     var chronometer: SMChronometer?
     var trackSessionService: SMTrackSessionService?
-
-    /// Current central manager
-    var centralManager: CBCentralManager?
-
-    /// Temporary string data, string is delimited by $ character
-    var tmpDatasString: String!
-
-    /// Set whenever string is built
-    dynamic var blockDataCompleted: NSData!
-    
-    /// current discovered peripheral
-    private var currentPeripheral: CBPeripheral?
-    var sensmoveBleWriter: SMBLEPeripheral?
     
 
     override func viewDidLoad() {
@@ -46,23 +33,25 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         self.chronometer = SMChronometer()
         self.chronometer?.delegate = self
         self.chronometer?.startChronometer()
-
-        self.tmpDatasString = ""
         
-        self.centralManager = CBCentralManager(delegate: self, queue: nil)
+        let btDiscovery: SMBLEDiscovery = btDiscoverySharedInstance
 
-        /**
-        *   Observe blockDataCompleted property of current class then update forces values 
-        *   of current session
-        */
-        RACObserve(self, "blockDataCompleted").subscribeNext { (datas) -> Void in
-            if let data: NSData = datas as? NSData{
-                let jsonObject: JSON = JSON(data: data)
-                self.trackSessionService?.updateCurrentSession(jsonObject)
+        // Wait until bleService is set
+        RACObserve(btDiscovery, "bleService").subscribeNext { (bleService) -> Void in
+            if let btService = bleService as? SMBLEService {
+                /**
+                *   Observe blockDataCompleted property of current class then update forces values
+                *   of current session
+                */
+                RACObserve(btService, "blockDataCompleted").subscribeNext { (datas) -> Void in
+                    if let data: NSData = datas as? NSData {
+                        let jsonObject: JSON = JSON(data: data)
+                        self.trackSessionService?.updateCurrentSession(jsonObject)
+                    }
+                }
             }
-            
         }
-        
+
         // Initialize graph charts for each sensors
         self.liveTrackGraph.initializeCharts()
 
@@ -75,6 +64,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     func uiInitialize() {
         
@@ -96,7 +86,6 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     }
     
     @IBAction func stopSessionAction(sender: AnyObject) {
-//        self.centralManager?.cancelPeripheralConnection(self.currentPeripheral)
 
         self.chronometer?.stopChronometer()
         let elapsedTime = self.chronometer?.getElapsedTime()
@@ -104,106 +93,6 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
         let resultController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("resumeController") as! UIViewController
         self.navigationController?.presentViewController(resultController, animated: false, completion: nil)
-    }
-
-    /// MARK: Central manager delegates methods
-    
-    /// Triggered whenever bluetooth state change, verify if it's power is on then scan for peripheral
-    func centralManagerDidUpdateState(central: CBCentralManager!){
-        if(centralManager?.state == CBCentralManagerState.PoweredOn) {
-            self.centralManager?.scanForPeripheralsWithServices(nil, options: [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(bool: true)])
-            printLog(self, "centralManagerDidUpdateState", "Scanning")
-        }
-    }
-
-    /// Connect to peripheral from name
-    func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
-        if (peripheral.name != nil) {
-            if(self.currentPeripheral != peripheral && peripheral.name == "SL18902"){
-                self.currentPeripheral = peripheral
-                
-                self.centralManager?.connectPeripheral(peripheral, options: nil)
-            }
-        }
-    }
-
-    /// Triggered when device is connected to peripheral, check for services
-    func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
-        
-        self.centralManager?.stopScan()
-        
-        peripheral.delegate = self
-        
-        if peripheral.services == nil {
-            peripheral.discoverServices([uartServiceUUID()])
-        }
-        
-    }
-
-    /// Check characteristic from service, discover characteristic from common UUID
-    func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
-
-        if((error) != nil) {
-            printLog(error, "didDiscoverServices", "Error when discovering services")
-            return
-        }
-        
-        for service in peripheral.services as! [CBService] {
-            if service.characteristics != nil {
-                printLog(service.characteristics, "didDiscoverServices", "Characteristics already known")
-            }
-            if service.UUID.isEqual(uartServiceUUID()) {
-                peripheral.discoverCharacteristics([txCharacteristicUUID(), rxCharacteristicUUID()], forService: service)
-            }
-        }
-    }
-
-    /// Notify peripheral that characteristic is discovered
-    func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
-
-        printLog(service.characteristics, "didDiscoverCharacteristicsForService", "Discover characteristique")
-        
-        if service.UUID.isEqual(uartServiceUUID()) {
-            for characteristic in service.characteristics as! [CBCharacteristic] {
-                if characteristic.UUID.isEqual(txCharacteristicUUID()) || characteristic.UUID.isEqual(rxCharacteristicUUID()) {
-
-                    peripheral.setNotifyValue(true, forCharacteristic: characteristic)
-                }
-            }
-        }
-    }
-
-    /// Check update for characteristic and call didReceiveDatasFromBle method
-    func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
-        self.didReceiveDatasFromBle(characteristic.value)
-    }
-
-    
-    /**
-    *   Bufferize data and build it as string
-    */
-    func didReceiveDatasFromBle(datas: NSData) {
-        let currentStringData: NSString = NSString(data: datas, encoding: NSUTF8StringEncoding)!
-        
-        if currentStringData.containsString("$") && self.tmpDatasString == "" {
-
-            self.tmpDatasString = currentStringData.stringByReplacingOccurrencesOfString("$", withString: "")
-
-        } else if currentStringData.containsString("$") {
-
-            let formattedString: String = currentStringData.stringByReplacingOccurrencesOfString("$", withString: "")
-            self.tmpDatasString = self.tmpDatasString.stringByAppendingString(formattedString)
-            
-            let tmpData: NSData = self.tmpDatasString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-            
-            self.blockDataCompleted = tmpData
-            self.tmpDatasString = ""
-            
-        } else {
-            
-            self.tmpDatasString = self.tmpDatasString.stringByAppendingString(currentStringData as String)
-
-        }
     }
 
 }

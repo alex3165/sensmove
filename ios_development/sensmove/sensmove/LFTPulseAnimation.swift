@@ -39,15 +39,17 @@ class LFTPulseAnimation: CALayer {
         dispatch_async(dispatch_get_main_queue()) {
             self.setupAnimationGroup()
             self.setPulseRadius(self.radius)
-            
-            if (self.pulseInterval != Double.infinity) {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.addAnimation(self.animationGroup, forKey: "pulse")
-                }
-            }
         }
     }
+    
+    func startAnimation() {
+        self.addAnimation(self.animationGroup, forKey: "pulse")
+    }
 
+    func stopAnimation() {
+        self.removeAllAnimations()
+    }
+    
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

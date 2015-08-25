@@ -19,6 +19,8 @@ class SMHomeController: UIViewController {
     
     dynamic var isSearching: Bool = false
     
+    var searchLoader: LFTPulseAnimation!
+    
     enum NotificationText: String {
         case searching = "Recherche de la semelle"
         case found = "Connecté à la semelle"
@@ -34,14 +36,21 @@ class SMHomeController: UIViewController {
         self.createStartButton()
         self.notificationView.hidden = true
         
-//        LFTPulseAnimation(coder: NSCoder())
-//        var searchLoader: LFTPulseAnimation = LFTPulseAnimation(repeatCount: Float.infinity, radius: 300, position: CGPointMake(self.view.center.x, self.view.center.y))
-//
-//        self.searchLoader!.animationDuration = NSTimeInterval(1)
-//        self.searchLoader!.backgroundColor = SMColor.orange().CGColor
-//        self.view.layer.insertSublayer(self.searchLoader, below: self.loaderView.layer)
+        self.searchLoader = LFTPulseAnimation(repeatCount: Float.infinity, radius: 160, position: CGPointMake(self.view.center.x, self.view.center.y))
+        self.searchLoader.animationDuration = NSTimeInterval(2)
+        self.searchLoader.backgroundColor = SMColor.orange().CGColor
+        self.view.layer.insertSublayer(self.searchLoader, below: self.loaderView.layer)
+        
+        
         
         RACObserve(self, "isSearching").subscribeNextAs { (isSearching: Bool) -> () in
+            
+            if isSearching {
+                self.searchLoader.startAnimation()
+            } else {
+                self.searchLoader.stopAnimation()
+            }
+
             self.textNotification.text = NotificationText.searching.rawValue
             self.notificationView.hidden = !isSearching
             

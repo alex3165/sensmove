@@ -75,7 +75,6 @@
 		22BD4E611ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		22BD4E621ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E631ADADDAE0022318B /* SMHomeController.swift */; };
-		22BD4E651ADADDAF0022318B /* SMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E631ADADDAE0022318B /* SMHomeController.swift */; };
 		22BD4E671ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
 		22BD4E681ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
 		22C78E661B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */; };
@@ -590,11 +589,11 @@
 				222E182D1B39F07800AE7795 /* SMResultController.swift in Sources */,
 				2228F5D01AF68D9400151221 /* SMLeftMenuVC.m in Sources */,
 				AC97C44C1B84A1D000A724C6 /* SMConnexionNotification.swift in Sources */,
-				22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03B1AD3062E005FE3B8 /* SMForce.swift in Sources */,
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
 				222E182F1B39FC8000AE7795 /* SMChronometer.swift in Sources */,
+				22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				AC68C1591B866FFE004E9C8B /* SMPresentationController.swift in Sources */,
 				228FAD331B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
 				227A6B8B1B19E66B00EFA360 /* SMSessionViewCell.swift in Sources */,
@@ -617,7 +616,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BA89E11B1CA9390001A1C4 /* SMTrackSessionService.swift in Sources */,
-				22BD4E651ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				2251E03A1AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
 				22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */,
 				22BD4E681ADADF860022318B /* SMUser.swift in Sources */,

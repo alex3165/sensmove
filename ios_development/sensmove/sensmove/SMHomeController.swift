@@ -8,19 +8,22 @@
 
 import UIKit
 
-enum NotificationText: String {
-    case searching = "Recherche de la semelle"
-    case found = "Connecté à la semelle"
-}
+
 
 class SMHomeController: UIViewController {
     
     @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var textNotification: UILabel!
     @IBOutlet weak var notificationView: UIView!
-
-    var finalNotificationFrame: CGRect?
+    @IBOutlet weak var buttonValue: UILabel!
     
+    dynamic var isSearching: Bool = false
+    
+    enum NotificationText: String {
+        case searching = "Recherche de la semelle"
+        case found = "Connecté à la semelle"
+    }
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -30,10 +33,22 @@ class SMHomeController: UIViewController {
 
         self.createStartButton()
         self.notificationView.hidden = true
-//        let actualFrame = self.notificationView.frame
-//        self.finalNotificationFrame = CGRectMake(actualFrame.origin.x, actualFrame.origin.y - actualFrame.size.height, actualFrame.size.width, actualFrame.size.height)
+        
+//        LFTPulseAnimation(coder: NSCoder())
+//        var searchLoader: LFTPulseAnimation = LFTPulseAnimation(repeatCount: Float.infinity, radius: 300, position: CGPointMake(self.view.center.x, self.view.center.y))
+//
+//        self.searchLoader!.animationDuration = NSTimeInterval(1)
+//        self.searchLoader!.backgroundColor = SMColor.orange().CGColor
+//        self.view.layer.insertSublayer(self.searchLoader, below: self.loaderView.layer)
+        
+        RACObserve(self, "isSearching").subscribeNextAs { (isSearching: Bool) -> () in
+            self.textNotification.text = NotificationText.searching.rawValue
+            self.notificationView.hidden = !isSearching
+            
+            self.buttonValue.text = isSearching ? "STOP" : "START"
+        }
     }
-
+    
     /**
     *   Graphicaly create main button
     */
@@ -58,8 +73,8 @@ class SMHomeController: UIViewController {
     @IBAction func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .Ended {
             let btDiscovery: SMBLEDiscovery = btDiscoverySharedInstance
-            self.textNotification.text = NotificationText.searching.rawValue
-            self.notificationView.hidden = false
+
+            self.isSearching = !self.isSearching
 
             RACObserve(btDiscovery, "bleService").subscribeNext({ (bleService) -> Void in
                 if let btService = bleService as? SMBLEService {

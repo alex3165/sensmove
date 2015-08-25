@@ -524,6 +524,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="SENSMOVE" id="4bE-Nm-d2L"/>
                     <connections>
+                        <outlet property="buttonValue" destination="fqo-Mo-mVu" id="WAN-k1-kuT"/>
                         <outlet property="loaderView" destination="cG4-eh-nhB" id="GMF-02-tP8"/>
                         <outlet property="notificationView" destination="up9-Wn-ULb" id="whs-LV-wms"/>
                         <outlet property="textNotification" destination="Vss-zA-F6I" id="Geb-gW-ZLe"/>

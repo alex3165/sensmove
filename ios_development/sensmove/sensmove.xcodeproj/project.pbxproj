@@ -50,7 +50,6 @@
 		22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22B91C031AB33D9600497025 /* sensmove.xcdatamodeld */; };
 		22B91C0A1AB33D9600497025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B91C081AB33D9600497025 /* Main.storyboard */; };
 		22B91C0C1AB33D9600497025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B91C0B1AB33D9600497025 /* Images.xcassets */; };
-		22B91C0F1AB33D9600497025 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B91C0D1AB33D9600497025 /* LaunchScreen.xib */; };
 		22B91C1B1AB33D9600497025 /* sensmoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B91C1A1AB33D9600497025 /* sensmoveTests.swift */; };
 		22BA89D11B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */ = {isa = PBXBuildFile; fileRef = 22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */; };
 		22BA89D21B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */ = {isa = PBXBuildFile; fileRef = 22BA89D01B1C5B9E0001A1C4 /* SMSensorsVectors.json */; };
@@ -148,7 +147,6 @@
 		22B91C041AB33D9600497025 /* sensmove.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sensmove.xcdatamodel; sourceTree = "<group>"; };
 		22B91C091AB33D9600497025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22B91C0B1AB33D9600497025 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		22B91C0E1AB33D9600497025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		22B91C141AB33D9600497025 /* sensmoveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sensmoveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B91C191AB33D9600497025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B91C1A1AB33D9600497025 /* sensmoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sensmoveTests.swift; sourceTree = "<group>"; };
@@ -308,7 +306,6 @@
 				2219FBD61B1516AD006A26A0 /* SMSessionController.swift */,
 				22B91C081AB33D9600497025 /* Main.storyboard */,
 				22B91C0B1AB33D9600497025 /* Images.xcassets */,
-				22B91C0D1AB33D9600497025 /* LaunchScreen.xib */,
 				22B91C031AB33D9600497025 /* sensmove.xcdatamodeld */,
 				22B91BFF1AB33D9600497025 /* Supporting Files */,
 				22415FD31AD9B2A200106E7A /* SMData.json */,
@@ -485,7 +482,6 @@
 				22BD4E531ADA6D340022318B /* Roboto-Light.ttf in Resources */,
 				22068C9E1AF65B3D0033DD6D /* simpleMenuButton@2x.png in Resources */,
 				22BA89D11B1C5B9E0001A1C4 /* SMSensorsVectors.json in Resources */,
-				22B91C0F1AB33D9600497025 /* LaunchScreen.xib in Resources */,
 				2219FBD11B1515BC006A26A0 /* SMSessionData.json in Resources */,
 				22B91C0C1AB33D9600497025 /* Images.xcassets in Resources */,
 			);
@@ -676,14 +672,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		22B91C0D1AB33D9600497025 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22B91C0E1AB33D9600497025 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -779,6 +767,7 @@
 			baseConfigurationReference = BCBECF654EB87862462474F9 /* Pods-sensmove.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sensmove/Info.plist;
@@ -798,6 +787,7 @@
 			baseConfigurationReference = FBE2B84740EFA177EC0EC40A /* Pods-sensmove.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = sensmove/Info.plist;

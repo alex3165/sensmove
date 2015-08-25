@@ -7,7 +7,8 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_LSM303_U.h>
 
-#define ISRIGHT true
+#define ISRIGHT false
+#define DEVICENAME "coco"
 
 //Adafruit_LSM303_Accel_Unified accel = Adafruit_LSM303_Accel_Unified(54321);
 //long lastDisplayTime;
@@ -21,7 +22,7 @@ int accPins[] = {6,0,2};
 SMDataManager dataJson = SMDataManager(fsrPins, sizeof(fsrPins)/2, accPins, sizeof(accPins)/2);
 
 // Create an instance of SMBLEApplication
-SMBLEApplication bleApplication = SMBLEApplication();
+SMBLEApplication bleApplication = SMBLEApplication(DEVICENAME, ISRIGHT);
 
 /*
 * Arduino Setup

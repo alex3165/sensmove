@@ -43,6 +43,7 @@ class SMLiveForcesTrack: UIView {
             }
         }
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: SMForcePressureNewValue, object: nil)
 //        if let leftSole = self.trackSessionService?.getLeftSole() {
 //            
 //            let sensorForces: [SMForce] = leftSole.forceSensors
@@ -101,15 +102,29 @@ class SMLiveForcesTrack: UIView {
     
     // TMPWORKAROUND
     func initializeForceObserver() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: SMForcePressureNewValue, object: nil)
+        
+//        NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: false)
+    }
+
+    var cacheId: Int?
+    
+    func update() {
+        var i: Int = Int(arc4random_uniform(5))
+        var value: Float = Float(arc4random_uniform(1024))
+        
+        self.updateChart(i, value: value)
     }
     
     func connectionChanged(notification: NSNotification) {
         let userInfo = notification.userInfo! as NSDictionary
         let sensorId: Int = userInfo["sensorId"] as! Int
-        let sensorValue: NSDictionary = userInfo["value"] as! NSDictionary
-        let value: Float = sensorValue[sensorId] as! Float
+        let value: Float = userInfo["value"] as! Float
         
-        self.circleChart[sensorId]!.updateChartByCurrent(value)
+        self.updateChart(sensorId, value: value)
+        
+    }
+    
+    func updateChart (i: Int, value: Float) {
+        self.circleChart[i]!.updateChartByCurrent(value)
     }
 }

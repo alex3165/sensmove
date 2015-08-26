@@ -14,7 +14,9 @@
 Adafruit_LSM303_Accel_Unified accel = Adafruit_LSM303_Accel_Unified(54321);
 
 long lastDisplayTime;
-float currentLightLevel = 0;
+float currentLightLevelX = 0;
+float currentLightLevelY = 0;
+float currentLightLevelZ = 0;
 
 /**
 *
@@ -25,8 +27,9 @@ float currentLightLevel = 0;
 */
 void setup(void) {
   // monitor read on port 9600
+  
   Serial.begin(9600);
-
+while(!Serial); // Leonardo/Micro should wait for serial init
   // set the pin 13 as output
   pinMode(13, OUTPUT);
 
@@ -57,14 +60,19 @@ void loop(void) {
   */
   sensors_event_t accelEvent;
   accel.getEvent(&accelEvent);
-  
 
   /*
   * Map accelerometers values to the led in analog output 13
   */
-  currentLightLevel = map(accelEvent.acceleration.x, -20, 20, 0, 255);
-  Serial.print(currentLightLevel); Serial.print(" \n ");
-  analogWrite(13, currentLightLevel);
+  currentLightLevelX = map(accelEvent.acceleration.x, -20, 20, 0, 255);
+    currentLightLevelY = map(accelEvent.acceleration.y, -20, 20, 0, 255);
+  currentLightLevelZ = map(accelEvent.acceleration.z, -20, 20, 0, 255);
+
+  Serial.print(currentLightLevelX); Serial.print(" \n ");
+    Serial.print(currentLightLevelY); Serial.print(" \n ");
+  Serial.print(currentLightLevelZ); Serial.print(" \n ");
+
+  analogWrite(13, currentLightLevelX);
   
   if ((millis() - lastDisplayTime) > 50)
   {

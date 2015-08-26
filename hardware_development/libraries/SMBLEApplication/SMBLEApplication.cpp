@@ -10,11 +10,13 @@
 /*
 *	Constructor of the BLE manager
 */
-SMBLEApplication::SMBLEApplication(){
+SMBLEApplication::SMBLEApplication(char * deviceName, boolean isRight){
 
 	_laststatus = ACI_EVT_DISCONNECTED;
 	_BTLESerial = new Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
 	_sessionStarted = true;//false;
+	_deviceName = deviceName;
+	_isRight = isRight;
 }
 
 /*
@@ -31,7 +33,8 @@ SMBLEApplication::~SMBLEApplication() {
 *
 */
 void SMBLEApplication::initializeBluetooth() {
-	_BTLESerial->setDeviceName("SL18902"); /* 7 characters max! */
+
+	_BTLESerial->setDeviceName(_deviceName); /* 7 characters max! */
 	_BTLESerial->begin();
 
 }
@@ -57,6 +60,9 @@ void SMBLEApplication::sendInstruction(String largeData){
 
 		String dataCurDevice;
 		String dataExtDevice;
+		String position;
+		position = _isRight ? "@" : "";
+		
 		largeData = "$" + largeData + "$";
 
 		int jsonDataLength = largeData.length()/BLEFRAME;
@@ -67,14 +73,14 @@ void SMBLEApplication::sendInstruction(String largeData){
 
 					if(BLEFRAME%i != 0){
 						//Check wether there are last data to send
-						dataCurDevice =	largeData.substring(i*BLEFRAME);
+						dataCurDevice =	position + largeData.substring(i*(BLEFRAME-1));
 						sendData(dataCurDevice);
 						Serial.println(dataCurDevice);
 					}
 					
 				} else {
 
-					dataCurDevice = largeData.substring(i*BLEFRAME,(i+1)*BLEFRAME);
+					dataCurDevice = position + largeData.substring(i*(BLEFRAME-1),(i+1)*(BLEFRAME-1));
 					sendData(dataCurDevice);
 					Serial.println(dataCurDevice);
 

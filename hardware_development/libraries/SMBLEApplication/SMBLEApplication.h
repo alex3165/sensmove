@@ -34,7 +34,7 @@ class SMBLEApplication {
 public:
 
   // constructors
-  SMBLEApplication();
+  SMBLEApplication(char * deviceName , boolean isRight);
   ~SMBLEApplication();
 
   // public methods
@@ -58,6 +58,8 @@ private:
   Adafruit_BLE_UART* _BTLESerial;
   aci_evt_opcode_t _laststatus;
   boolean _sessionStarted;
+  char * _deviceName;
+  boolean _isRight;
   // unsigned int startSessionTime;
   // unsigned int bleCommunicationCounter;
   // void detectValuesLimitations();

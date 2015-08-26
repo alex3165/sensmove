@@ -41,7 +41,7 @@ class SMBLEDiscovery: NSObject, CBCentralManagerDelegate {
     /// Connect to peripheral from name
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         if (peripheral.name != nil) {
-            if(self.peripheralBLE != peripheral && peripheral.name == "SL18902"){
+            if(self.peripheralBLE != peripheral && peripheral.name == "coco"){
                 self.peripheralBLE = peripheral
                 
                 self.centralManager?.connectPeripheral(peripheral, options: nil)
@@ -72,6 +72,8 @@ class SMBLEDiscovery: NSObject, CBCentralManagerDelegate {
             return;
         }
 
+        println("Disconnected from insole \(peripheral.name)")
+        
         self.bleService?.isConnectedToDevice = false
         self.bleService?.isReceivingDatas = false
     }

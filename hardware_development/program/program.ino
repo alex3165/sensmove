@@ -7,7 +7,7 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_LSM303_U.h>
 
-#define ISRIGHT false
+#define ISRIGHT true
 #define DEVICENAME "coco"
 
 //Adafruit_LSM303_Accel_Unified accel = Adafruit_LSM303_Accel_Unified(54321);

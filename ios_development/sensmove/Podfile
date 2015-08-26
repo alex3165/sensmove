@@ -4,7 +4,7 @@ platform :ios, '8.0'
 target 'sensmove' do
        pod 'AMSlideMenu', '~> 1.5.4'
        pod 'ReactiveCocoa', '~> 2.5'
-       pod 'PNChart', '~> 0.8.6'
+       pod 'PNChart', '0.8.5'
 end
 
 target 'sensmoveTests' do

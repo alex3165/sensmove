@@ -91,6 +91,8 @@
 		22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
 		22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */; };
 		294C05DE63DFA537C62BC1A9 /* libPods-sensmove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48BCA881402655856765B7 /* libPods-sensmove.a */; };
+		AC54DEC01B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54DEBF1B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift */; };
+		AC54DEC11B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54DEBF1B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift */; };
 		AC68C1591B866FFE004E9C8B /* SMPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68C1581B866FFE004E9C8B /* SMPresentationController.swift */; };
 		AC97C4491B8472EA00A724C6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4471B8472EA00A724C6 /* menu.png */; };
 		AC97C44A1B8472EA00A724C6 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4481B8472EA00A724C6 /* menu@2x.png */; };
@@ -174,6 +176,7 @@
 		22FFAAA71AE58ECB005A49CF /* SMUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserService.swift; sourceTree = "<group>"; };
 		22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserTest.swift; sourceTree = "<group>"; };
 		3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC54DEBF1B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBluetoothDatasBuffer.swift; sourceTree = "<group>"; };
 		AC68C1581B866FFE004E9C8B /* SMPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPresentationController.swift; sourceTree = "<group>"; };
 		AC97C4471B8472EA00A724C6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		AC97C4481B8472EA00A724C6 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
@@ -234,6 +237,7 @@
 				22BD4E661ADADF860022318B /* SMUser.swift */,
 				221F74541ADC58EB0078A75E /* SMSession.swift */,
 				221F74571ADC5A000078A75E /* SMSole.swift */,
+				AC54DEBF1B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -593,6 +597,7 @@
 				22B91C051AB33D9600497025 /* sensmove.xcdatamodeld in Sources */,
 				22BD4E671ADADF860022318B /* SMUser.swift in Sources */,
 				222E182F1B39FC8000AE7795 /* SMChronometer.swift in Sources */,
+				AC54DEC01B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift in Sources */,
 				22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */,
 				AC68C1591B866FFE004E9C8B /* SMPresentationController.swift in Sources */,
 				228FAD331B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
@@ -617,6 +622,7 @@
 			files = (
 				22BA89E11B1CA9390001A1C4 /* SMTrackSessionService.swift in Sources */,
 				2251E03A1AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
+				AC54DEC11B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift in Sources */,
 				22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */,
 				22BD4E681ADADF860022318B /* SMUser.swift in Sources */,
 				22415FDD1AD9B5FE00106E7A /* SMData.swift in Sources */,

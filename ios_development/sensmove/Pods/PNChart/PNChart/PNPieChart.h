@@ -38,12 +38,6 @@
 /** Show absolute values not relative i.e. percentages */
 @property (nonatomic) BOOL showAbsoluteValues;
 
-/** Hide percentage labels less than cutoff value */
-@property (nonatomic, assign) CGFloat labelPercentageCutoff;
-
-/** Default YES. */
-@property (nonatomic) BOOL shouldHighlightSectorOnTouch;
-
 @property (nonatomic, weak) id<PNChartDelegate> delegate;
 
 - (void)strokeChart;

@@ -41,6 +41,12 @@ class SMForce: SMSensor {
     func updateForce(force: Float) {
         self.archivedForces.append(self.currentForcePressure[super.id] as! Float)
         self.currentForcePressure = [ super.id: force ]
+        
+        // TMPWORKAROUND
+        NSNotificationCenter.defaultCenter().postNotificationName(SMForcePressureNewValue, object: self, userInfo: [
+            "sensorId": super.id,
+            "value": self.currentForcePressure
+            ])
     }
 
     // Calculate average force by adding archive force array and dividing it by the length

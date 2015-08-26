@@ -46,6 +46,7 @@ class SMTrackController: UIViewController, SMChronometerDelegate {
                 RACObserve(btService, "blockDataCompleted").subscribeNext { (datas) -> Void in
                     if let data: NSData = datas as? NSData {
                         let jsonObject: JSON = JSON(data: data)
+//                        println(jsonObject)
                         self.trackSessionService?.updateCurrentSession(jsonObject)
                     }
                 }

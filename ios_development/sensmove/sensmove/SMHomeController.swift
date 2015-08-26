@@ -41,8 +41,6 @@ class SMHomeController: UIViewController {
         self.searchLoader.backgroundColor = SMColor.orange().CGColor
         self.view.layer.insertSublayer(self.searchLoader, below: self.loaderView.layer)
         
-        
-        
         RACObserve(self, "isSearching").subscribeNextAs { (isSearching: Bool) -> () in
             
             if isSearching {

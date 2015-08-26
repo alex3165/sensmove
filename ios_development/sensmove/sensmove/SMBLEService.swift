@@ -15,20 +15,19 @@ class SMBLEService: NSObject, CBPeripheralDelegate {
     var currentPeripheral: CBPeripheral!
     var txCharacteristic: CBCharacteristic?
 
-    /// Temporary string data, string is delimited by $ character
-    var bufferedDatasString: String!
 
     /// Set whenever string is built
     dynamic var blockDataCompleted: NSData!
     dynamic var isConnectedToDevice: Bool = true
     dynamic var isReceivingDatas: Bool = false
     
+    let bluetoothBuffer: SMBluetoothDatasBuffer = SMBluetoothDatasBuffer()
+    
     init(initWithPeripheral peripheral: CBPeripheral) {
         super.init()
         self.currentPeripheral = peripheral
         self.currentPeripheral.delegate = self
 
-        self.bufferedDatasString = ""
 //        self.btCurrentState = BTStates.ConnectedToDevice
 //        NSNotificationCenter.defaultCenter().postNotificationName(BLEServiceStartNotification, object: self, userInfo: nil)
     }
@@ -71,37 +70,13 @@ class SMBLEService: NSObject, CBPeripheralDelegate {
     
     /// Check update for characteristic and call didReceiveDatasFromBle method
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
-        self.didReceiveDatasFromBle(characteristic.value)
+
+        if let dataBlock = bluetoothBuffer.addValue(characteristic.value) {
+            self.blockDataCompleted = dataBlock
+        }
 
         if !self.isReceivingDatas {
             self.isReceivingDatas = true
-        }
-    }
-    
-    /**
-    *   Bufferize data and build it as string
-    */
-    func didReceiveDatasFromBle(datas: NSData) {
-        let currentStringData: NSString = NSString(data: datas, encoding: NSUTF8StringEncoding)!
-
-        if currentStringData.containsString("$") && self.bufferedDatasString == "" {
-            
-            self.bufferedDatasString = currentStringData.stringByReplacingOccurrencesOfString("$", withString: "")
-            
-        } else if currentStringData.containsString("$") {
-            
-            let formattedString: String = currentStringData.stringByReplacingOccurrencesOfString("$", withString: "")
-            self.bufferedDatasString = self.bufferedDatasString.stringByAppendingString(formattedString)
-            
-            let tmpData: NSData = self.bufferedDatasString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-            
-            self.blockDataCompleted = tmpData
-            self.bufferedDatasString = ""
-            
-        } else {
-            
-            self.bufferedDatasString = self.bufferedDatasString.stringByAppendingString(currentStringData as String)
-            
         }
     }
     

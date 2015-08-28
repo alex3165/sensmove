@@ -33,7 +33,6 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     /// current discovered peripheral
     private var currentPeripheral: CBPeripheral?
-    var sensmoveBleWriter: SMBLEPeripheral?
     
 
     var bluetoothBuffer: SMBluetoothDatasBuffer = SMBluetoothDatasBuffer()

@@ -9,6 +9,8 @@
 import Foundation
 import SceneKit
 
+let SMForcePressureNewValue = "kSMForcePressureNewValue"
+
 class SMForce: SMSensor {
 
     // Observable variable, trigger signal when dictionary change

@@ -19,7 +19,6 @@ class SMHomeController: UIViewController {
     
     dynamic var isSearching: Bool = false
     
-    var searchLoader: LFTPulseAnimation!
     
     enum NotificationText: String {
         case searching = "Recherche de la semelle"
@@ -34,26 +33,8 @@ class SMHomeController: UIViewController {
         super.viewDidLoad()
 
         self.createStartButton()
-        self.notificationView.hidden = true
+//        self.notificationView.hidden = true
         
-        self.searchLoader = LFTPulseAnimation(repeatCount: Float.infinity, radius: 160, position: CGPointMake(self.view.center.x, self.view.center.y))
-        self.searchLoader.animationDuration = NSTimeInterval(2)
-        self.searchLoader.backgroundColor = SMColor.orange().CGColor
-        self.view.layer.insertSublayer(self.searchLoader, below: self.loaderView.layer)
-        
-        RACObserve(self, "isSearching").subscribeNextAs { (isSearching: Bool) -> () in
-            
-            if isSearching {
-                self.searchLoader.startAnimation()
-            } else {
-                self.searchLoader.stopAnimation()
-            }
-
-            self.textNotification.text = NotificationText.searching.rawValue
-            self.notificationView.hidden = !isSearching
-            
-            self.buttonValue.text = isSearching ? "STOP" : "START"
-        }
     }
     
     /**
@@ -79,22 +60,13 @@ class SMHomeController: UIViewController {
     */
     @IBAction func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .Ended {
-            let btDiscovery: SMBLEDiscovery = btDiscoverySharedInstance
+//            let btDiscovery: SMBLEDiscovery = btDiscoverySharedInstance
 
             self.isSearching = !self.isSearching
-
-            RACObserve(btDiscovery, "bleService").subscribeNext({ (bleService) -> Void in
-                if let btService = bleService as? SMBLEService {
-                    RACObserve(btService, "isConnectedToDevice").subscribeNextAs({ (isConnectedToDevice: Bool) -> () in
-                        if isConnectedToDevice {
-                            self.textNotification.text = NotificationText.found.rawValue
-                            
-                            let trackController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("navSession") as! UIViewController
-                            self.navigationController?.presentViewController(trackController, animated: true, completion: nil)
-                        }
-                    })
-                }
-            })
+            
+            let trackController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("navSession") as! UIViewController
+            self.navigationController?.presentViewController(trackController, animated: true, completion: nil)
+            
         }
     }
 

@@ -75,6 +75,7 @@
 		22BD4E611ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		22BD4E621ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		22BD4E641ADADDAF0022318B /* SMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E631ADADDAE0022318B /* SMHomeController.swift */; };
+		22BD4E651ADADDAF0022318B /* SMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E631ADADDAE0022318B /* SMHomeController.swift */; };
 		22BD4E671ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
 		22BD4E681ADADF860022318B /* SMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E661ADADF860022318B /* SMUser.swift */; };
 		22C78E661B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */; };
@@ -83,6 +84,8 @@
 		22CC928F1B1B50ED00D98E9E /* SMTrackSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */; };
 		22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE07871AE503FD0064F750 /* SMUserController.swift */; };
 		22FE07891AE503FD0064F750 /* SMUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE07871AE503FD0064F750 /* SMUserController.swift */; };
+		22FE1ED21B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */; };
+		22FE1ED31B079C0A006BB6B5 /* SMBLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED11B079C0A006BB6B5 /* SMBLEPeripheral.swift */; };
 		22FE1ED81B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */; };
 		22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1ED71B07A2BF006BB6B5 /* SMDataExtensions.swift */; };
 		22FE1EDB1B07A38A006BB6B5 /* SMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FE1EDA1B07A38A006BB6B5 /* SMConstants.swift */; };
@@ -91,18 +94,14 @@
 		22FFAAA91AE58ECB005A49CF /* SMUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAA71AE58ECB005A49CF /* SMUserService.swift */; };
 		22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */; };
 		294C05DE63DFA537C62BC1A9 /* libPods-sensmove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF48BCA881402655856765B7 /* libPods-sensmove.a */; };
-		AC54DEC01B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54DEBF1B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift */; };
-		AC54DEC11B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54DEBF1B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift */; };
 		AC68C1591B866FFE004E9C8B /* SMPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC68C1581B866FFE004E9C8B /* SMPresentationController.swift */; };
 		AC97C4491B8472EA00A724C6 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4471B8472EA00A724C6 /* menu.png */; };
 		AC97C44A1B8472EA00A724C6 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC97C4481B8472EA00A724C6 /* menu@2x.png */; };
 		AC97C44C1B84A1D000A724C6 /* SMConnexionNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */; };
-		ACB4A2541B8CB15900F3A3AB /* LFTPulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB4A2531B8CB15900F3A3AB /* LFTPulseAnimation.swift */; };
 		ACD436D11B82455800996176 /* libReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD436D01B82455800996176 /* libReactiveCocoa.a */; };
-		ACFE0B291B8C523A000E9A2E /* SMBLEDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE0B281B8C523A000E9A2E /* SMBLEDiscovery.swift */; };
-		ACFE0B2A1B8C523A000E9A2E /* SMBLEDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE0B281B8C523A000E9A2E /* SMBLEDiscovery.swift */; };
-		ACFE0B2C1B8C5274000E9A2E /* SMBLEService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE0B2B1B8C5274000E9A2E /* SMBLEService.swift */; };
-		ACFE0B2D1B8C5274000E9A2E /* SMBLEService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE0B2B1B8C5274000E9A2E /* SMBLEService.swift */; };
+		ACE494D21B90489E0096477F /* SMBluetoothDatasBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE494D11B90489E0096477F /* SMBluetoothDatasBuffer.swift */; };
+		ACE494D41B904B8F0096477F /* SMPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE494D31B904B8F0096477F /* SMPulse.swift */; };
+		ACE494D51B904B8F0096477F /* SMPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE494D31B904B8F0096477F /* SMPulse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,16 +175,14 @@
 		22FFAAA71AE58ECB005A49CF /* SMUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserService.swift; sourceTree = "<group>"; };
 		22FFAAAF1AE591D6005A49CF /* SMUserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMUserTest.swift; sourceTree = "<group>"; };
 		3E554FD4F36E211165DC346B /* Pods-sensmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmoveTests/Pods-sensmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AC54DEBF1B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBluetoothDatasBuffer.swift; sourceTree = "<group>"; };
 		AC68C1581B866FFE004E9C8B /* SMPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPresentationController.swift; sourceTree = "<group>"; };
 		AC97C4471B8472EA00A724C6 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		AC97C4481B8472EA00A724C6 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMConnexionNotification.swift; sourceTree = "<group>"; };
-		ACB4A2531B8CB15900F3A3AB /* LFTPulseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFTPulseAnimation.swift; sourceTree = "<group>"; };
 		ACD436CE1B82454C00996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		ACD436D01B82455800996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
-		ACFE0B281B8C523A000E9A2E /* SMBLEDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBLEDiscovery.swift; sourceTree = "<group>"; };
-		ACFE0B2B1B8C5274000E9A2E /* SMBLEService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBLEService.swift; sourceTree = "<group>"; };
+		ACE494D11B90489E0096477F /* SMBluetoothDatasBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBluetoothDatasBuffer.swift; sourceTree = "<group>"; };
+		ACE494D31B904B8F0096477F /* SMPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPulse.swift; sourceTree = "<group>"; };
 		AF48BCA881402655856765B7 /* libPods-sensmove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBECF654EB87862462474F9 /* Pods-sensmove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sensmove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sensmove/Pods-sensmove.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B94D8E5AA476BF36C49CC0 /* libPods-sensmoveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sensmoveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,7 +219,6 @@
 				22BD4E5C1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m */,
 				22BD4E4B1ADA6B0F0022318B /* SwiftyJSON.h */,
 				22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */,
-				ACB4A2531B8CB15900F3A3AB /* LFTPulseAnimation.swift */,
 			);
 			name = LIbrary;
 			sourceTree = "<group>";
@@ -237,7 +233,6 @@
 				22BD4E661ADADF860022318B /* SMUser.swift */,
 				221F74541ADC58EB0078A75E /* SMSession.swift */,
 				221F74571ADC5A000078A75E /* SMSole.swift */,
-				AC54DEBF1B8DEB1000721C1B /* SMBluetoothDatasBuffer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -250,6 +245,7 @@
 				227A6B8A1B19E66B00EFA360 /* SMSessionViewCell.swift */,
 				22C78E651B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift */,
 				AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */,
+				ACE494D31B904B8F0096477F /* SMPulse.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -261,8 +257,6 @@
 				22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */,
 				228FAD321B32107A00ECF878 /* SMBluetoothSimulator.swift */,
 				222E182E1B39FC8000AE7795 /* SMChronometer.swift */,
-				ACFE0B281B8C523A000E9A2E /* SMBLEDiscovery.swift */,
-				ACFE0B2B1B8C5274000E9A2E /* SMBLEService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -304,6 +298,7 @@
 				223A10661AE522A000BD19C5 /* SMSideMenuController.h */,
 				223A10671AE522A000BD19C5 /* SMSideMenuController.m */,
 				221A64731B12680900C662CD /* SMTrackController.swift */,
+				ACE494D11B90489E0096477F /* SMBluetoothDatasBuffer.swift */,
 				222E182C1B39F07800AE7795 /* SMResultController.swift */,
 				22FE07871AE503FD0064F750 /* SMUserController.swift */,
 				2219FBD61B1516AD006A26A0 /* SMSessionController.swift */,
@@ -610,8 +605,10 @@
 				221A64741B12680900C662CD /* SMTrackController.swift in Sources */,
 				2251E0341AD2FF61005FE3B8 /* SMColor.swift in Sources */,
 				2251E0401AD3065D005FE3B8 /* SMLoginController.swift in Sources */,
+				ACE494D41B904B8F0096477F /* SMPulse.swift in Sources */,
 				22FE1EDB1B07A38A006BB6B5 /* SMConstants.swift in Sources */,
 				22415FDC1AD9B5FE00106E7A /* SMData.swift in Sources */,
+				ACE494D21B90489E0096477F /* SMBluetoothDatasBuffer.swift in Sources */,
 				22C78E661B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +626,7 @@
 				22C78E671B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */,
 				221F74591ADC5A000078A75E /* SMSole.swift in Sources */,
 				2251E03E1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
+				ACE494D51B904B8F0096477F /* SMPulse.swift in Sources */,
 				22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
 				228FAD341B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
 				22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,

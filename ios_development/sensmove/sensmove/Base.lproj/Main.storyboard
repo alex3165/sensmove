@@ -222,13 +222,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SENSMOVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDz-fx-irm">
-                                <rect key="frame" x="77" y="151" width="166" height="29"/>
+                                <rect key="frame" x="77" y="154" width="166" height="26"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmJ-Dq-pyR" userLabel="logo_button">
-                                <rect key="frame" x="110" y="43" width="100" height="100"/>
+                                <rect key="frame" x="110" y="50" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="5SC-1D-VfN"/>
                                     <constraint firstAttribute="height" constant="100" id="OhJ-kK-QWU"/>
@@ -255,22 +255,22 @@
                             <constraint firstItem="pJr-tM-QOT" firstAttribute="leading" secondItem="ZM6-Gi-3zd" secondAttribute="leadingMargin" id="5gO-mR-iJ6"/>
                             <constraint firstItem="tvE-YX-gMq" firstAttribute="leading" secondItem="ZM6-Gi-3zd" secondAttribute="leading" constant="27" id="77F-nf-bSU"/>
                             <constraint firstItem="YDz-fx-irm" firstAttribute="leading" secondItem="ZM6-Gi-3zd" secondAttribute="leadingMargin" constant="61" id="85x-uM-qeN"/>
-                            <constraint firstItem="YDz-fx-irm" firstAttribute="top" secondItem="DmJ-Dq-pyR" secondAttribute="bottom" constant="8" id="9ZG-7h-rzm"/>
-                            <constraint firstItem="DmJ-Dq-pyR" firstAttribute="top" secondItem="nrO-cj-dNQ" secondAttribute="bottom" constant="23" id="Amv-7P-2D1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YDz-fx-irm" secondAttribute="trailing" constant="61" id="DBF-H6-JKi"/>
                             <constraint firstItem="jjo-S7-HCC" firstAttribute="leading" secondItem="ZM6-Gi-3zd" secondAttribute="leadingMargin" constant="62" id="Dpz-1i-SEL"/>
                             <constraint firstItem="inO-MX-Nin" firstAttribute="top" secondItem="jjo-S7-HCC" secondAttribute="bottom" constant="28" id="NIZ-U0-4rG"/>
+                            <constraint firstItem="DmJ-Dq-pyR" firstAttribute="top" secondItem="nrO-cj-dNQ" secondAttribute="bottom" constant="30" id="O8O-li-RAD"/>
+                            <constraint firstItem="YDz-fx-irm" firstAttribute="top" secondItem="DmJ-Dq-pyR" secondAttribute="bottom" constant="4" id="W9L-wY-vDZ"/>
+                            <constraint firstItem="DmJ-Dq-pyR" firstAttribute="centerX" secondItem="YDz-fx-irm" secondAttribute="centerX" id="bPP-HE-BU8"/>
                             <constraint firstItem="jjo-S7-HCC" firstAttribute="top" secondItem="tvE-YX-gMq" secondAttribute="bottom" constant="50" id="hCt-Qo-yyX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jjo-S7-HCC" secondAttribute="trailing" constant="62" id="hqz-b5-CeP"/>
                             <constraint firstItem="tvE-YX-gMq" firstAttribute="top" secondItem="pJr-tM-QOT" secondAttribute="bottom" constant="47" id="lKk-Vy-Lgm"/>
-                            <constraint firstItem="DmJ-Dq-pyR" firstAttribute="centerX" secondItem="YDz-fx-irm" secondAttribute="centerX" id="nUm-hn-Q4e"/>
                             <constraint firstItem="pJr-tM-QOT" firstAttribute="trailing" secondItem="ZM6-Gi-3zd" secondAttribute="trailingMargin" id="v7Y-TU-OZy"/>
                             <constraint firstAttribute="trailing" secondItem="tvE-YX-gMq" secondAttribute="trailing" constant="27" id="wRP-v2-FTl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yCM-jN-Osg"/>
                     <connections>
-                        <outlet property="logoButton" destination="DmJ-Dq-pyR" id="f1C-uE-lXM"/>
+                        <outlet property="logoButton" destination="DmJ-Dq-pyR" id="g5f-M6-zI3"/>
                         <outlet property="mainTitle" destination="YDz-fx-irm" id="vZC-rB-h3c"/>
                         <outlet property="startButton" destination="jjo-S7-HCC" id="GAF-YT-lK6"/>
                     </connections>
@@ -358,7 +358,7 @@
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aucune session en cours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsM-wD-J8R">
                                                     <rect key="frame" x="104" y="100" width="193" height="21"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -524,10 +524,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="SENSMOVE" id="4bE-Nm-d2L"/>
                     <connections>
-                        <outlet property="buttonValue" destination="fqo-Mo-mVu" id="WAN-k1-kuT"/>
                         <outlet property="loaderView" destination="cG4-eh-nhB" id="GMF-02-tP8"/>
-                        <outlet property="notificationView" destination="up9-Wn-ULb" id="whs-LV-wms"/>
-                        <outlet property="textNotification" destination="Vss-zA-F6I" id="Geb-gW-ZLe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

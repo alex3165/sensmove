@@ -9,7 +9,11 @@
 import UIKit
 
 class SMBluetoothDatasBuffer: NSObject {
+<<<<<<< ours
    
+=======
+    
+>>>>>>> theirs
     var tempStringDatas: NSMutableDictionary!
     
     override init() {
@@ -21,7 +25,11 @@ class SMBluetoothDatasBuffer: NSObject {
             "left": ""
         ]
     }
+<<<<<<< ours
 
+=======
+    
+>>>>>>> theirs
     
     func addValue(dataValue: NSData) -> NSData? {
         let currentStringData: NSString = NSString(data: dataValue, encoding: NSUTF8StringEncoding)!
@@ -47,12 +55,21 @@ class SMBluetoothDatasBuffer: NSObject {
         
         if isFirstTram {
             self.tempStringDatas[insole] = dataStringValue.stringByReplacingOccurrencesOfString("$", withString: "")
+<<<<<<< ours
 
             return nil
         }
 
         let bufferString = self.tempStringDatas.objectForKey(insole) as! String
 
+=======
+            
+            return nil
+        }
+        
+        let bufferString = self.tempStringDatas.objectForKey(insole) as! String
+        
+>>>>>>> theirs
         if isLastTram {
             
             self.tempStringDatas[insole] = bufferString + dataStringValue.stringByReplacingOccurrencesOfString("$", withString: "")
@@ -61,7 +78,11 @@ class SMBluetoothDatasBuffer: NSObject {
         }
         
         self.tempStringDatas[insole] = bufferString + dataStringValue
+<<<<<<< ours
 
+=======
+        
+>>>>>>> theirs
         return nil
         
     }

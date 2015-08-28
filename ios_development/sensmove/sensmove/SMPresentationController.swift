@@ -14,7 +14,7 @@ class SMPresentationController: UIViewController {
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var logoButton: UIButton!
     
-    weak var halo: LFTPulseAnimation!
+    weak var halo: SMPulse!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +26,13 @@ class SMPresentationController: UIViewController {
         self.mainTitle.textColor = SMColor.orange()
 
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     @IBAction func onTapLogo(sender: UIButton) {
-        halo = LFTPulseAnimation(repeatCount: 1, radius: 100, position: CGPointMake(self.view.center.x, self.logoButton.center.y))
+        halo = SMPulse(repeatCount: 1, radius: 100, position: CGPointMake(self.view.center.x, self.logoButton.center.y))
         halo.animationDuration =  NSTimeInterval(1)
         halo.backgroundColor = SMColor.orange().CGColor
         self.view.layer.insertSublayer(halo, below: self.logoButton.layer)

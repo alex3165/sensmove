@@ -9,9 +9,6 @@
 import Foundation
 import UIKit
 
-
-let SMForcePressureNewValue = "kSMForcePressureNewValue"
-
 class SMLiveForcesTrack: UIView {
     
     var trackSessionService: SMTrackSessionService?
@@ -43,7 +40,6 @@ class SMLiveForcesTrack: UIView {
             }
         }
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: SMForcePressureNewValue, object: nil)
 //        if let leftSole = self.trackSessionService?.getLeftSole() {
 //            
 //            let sensorForces: [SMForce] = leftSole.forceSensors
@@ -79,52 +75,30 @@ class SMLiveForcesTrack: UIView {
         return chart
     }
 
-//    func initializeForceObserver() {
-//        if let rightSole = self.trackSessionService?.getRightSole() {
-//
-//            let sensorForces = rightSole.forceSensors
-//
-//            for (var index = 0; index < sensorForces.count; index++) {
-//                
-//                // rac observe every changes on currentForcePressure dictionary of each sensors
-//                sensorForces[index].rac_valuesAndChangesForKeyPath("currentForcePressure", options: nil, observer: sensorForces[index]).subscribeNext({ (obj) -> Void in
-//
-//                    if let dict: NSDictionary = obj.first() as? NSDictionary {
-//                        let sensorId: Int = Array(dict.allKeys)[0] as! Int
-//                        let currentValue: Float = dict[sensorId] as! Float
-//
-//                        self.updateSensorValue(sensorId, value: currentValue)
-//                    }
-//                })
-//            }
-//        }
-//    }
-    
-    // TMPWORKAROUND
     func initializeForceObserver() {
-        
-//        NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("update"), userInfo: nil, repeats: false)
-    }
+        if let rightSole = self.trackSessionService?.getRightSole() {
 
-    var cacheId: Int?
-    
-    func update() {
-        var i: Int = Int(arc4random_uniform(5))
-        var value: Float = Float(arc4random_uniform(1024))
-        
-        self.updateChart(i, value: value)
-    }
-    
-    func connectionChanged(notification: NSNotification) {
-        let userInfo = notification.userInfo! as NSDictionary
-        let sensorId: Int = userInfo["sensorId"] as! Int
-        let value: Float = userInfo["value"] as! Float
-        
-        self.updateChart(sensorId, value: value)
-        
-    }
-    
-    func updateChart (i: Int, value: Float) {
-        self.circleChart[i]!.updateChartByCurrent(value)
+            let sensorForces = rightSole.forceSensors
+
+            for (var index = 0; index < sensorForces.count; index++) {
+                
+                // rac observe every changes on currentForcePressure dictionary of each sensors
+                sensorForces[index].rac_valuesAndChangesForKeyPath("currentForcePressure", options: nil, observer: sensorForces[index]).subscribeNext({ (obj) -> Void in
+
+                    if let dict: NSDictionary = obj.first() as? NSDictionary {
+                        let sensorId: Int = Array(dict.allKeys)[0] as! Int
+                        let currentValue: Float = dict[sensorId] as! Float
+
+                        if let chart: PNCircleChart = self.circleChart[sensorId] as? PNCircleChart {
+                            
+                            println("Sensor ID : \(sensorId), sensor value : \(currentValue)")
+                            // Update chart value of observed sensor
+                            chart.updateChartByCurrent(currentValue)
+                        }
+                    }
+                })
+                
+            }
+        }
     }
 }

@@ -39,18 +39,6 @@ class SMLiveForcesTrack: UIView {
                 self.addSubview(self.circleChart[sensorId] as! PNCircleChart)
             }
         }
-
-        
-//        if let leftSole = self.trackSessionService?.getLeftSole() {
-//            
-//            let sensorForces: [SMForce] = leftSole.forceSensors
-//            
-//            for (var index = 0; index < sensorForces.count; index++) {
-//                var sensorId: Int = sensorForces[index].id
-//                self.circleChart[sensorId] = self._createChartFromSensor(sensorForces[index])
-//                self.addSubview(self.circleChart[sensorId] as! PNCircleChart)
-//            }
-//        }
     }
 
     /**
@@ -78,30 +66,6 @@ class SMLiveForcesTrack: UIView {
 
     func initializeForceObserver() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("connectionChanged:"), name: SMForcePressureNewValue, object: nil)
-//        if let rightSole = self.trackSessionService?.getRightSole() {
-//
-//            let sensorForces = rightSole.forceSensors
-//
-//            for (var index = 0; index < sensorForces.count; index++) {
-//                
-//                // rac observe every changes on currentForcePressure dictionary of each sensors
-//                sensorForces[index].rac_valuesAndChangesForKeyPath("currentForcePressure", options: nil, observer: sensorForces[index]).subscribeNext({ (obj) -> Void in
-//
-//                    if let dict: NSDictionary = obj.first() as? NSDictionary {
-//                        let sensorId: Int = Array(dict.allKeys)[0] as! Int
-//                        let currentValue: Float = dict[sensorId] as! Float
-//
-//                        if let chart: PNCircleChart = self.circleChart[sensorId] as? PNCircleChart {
-//                            
-//                            println("Sensor ID : \(sensorId), sensor value : \(currentValue)")
-//                            // Update chart value of observed sensor
-//                            chart.updateChartByCurrent(currentValue)
-//                        }
-//                    }
-//                })
-//                
-//            }
-//        }
     }
     
     

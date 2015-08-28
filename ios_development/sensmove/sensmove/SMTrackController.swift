@@ -20,13 +20,13 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     @IBOutlet weak var stepCounter: UILabel!
     
     var chronometer: SMChronometer?
-    var trackSessionService: SMTrackSessionService?
+    var trackSessionService: SMTrackSessionService = SMTrackSessionService.sharedInstance
 
     /// Current central manager
     var centralManager: CBCentralManager?
 
     /// Temporary string data, string is delimited by $ character
-    var tmpDatasString: String!
+    var tmpDatasString: String = ""
 
     /// Set whenever string is built
     dynamic var blockDataCompleted: NSData!
@@ -40,16 +40,13 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.trackSessionService = SMTrackSessionService.sharedInstance
-        
         /// Trigger new session when opening track controller
-        self.trackSessionService?.createNewSession()
+        self.trackSessionService.createNewSession()
         self.chronometer = SMChronometer()
         self.chronometer?.delegate = self
         self.chronometer?.startChronometer()
 
-        self.tmpDatasString = ""
-        
+
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
 
         /**
@@ -59,7 +56,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         RACObserve(self, "blockDataCompleted").subscribeNext { (datas) -> Void in
             if let data: NSData = datas as? NSData{
                 let jsonObject: JSON = JSON(data: data)
-                self.trackSessionService?.updateCurrentSession(jsonObject)
+                self.trackSessionService.updateCurrentSession(jsonObject)
             }
             
         }
@@ -101,7 +98,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
         self.chronometer?.stopChronometer()
         let elapsedTime = self.chronometer?.getElapsedTime()
-        self.trackSessionService?.stopCurrentSession(elapsedTime!)
+        self.trackSessionService.stopCurrentSession(elapsedTime!)
 
         let resultController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("resumeController") as! UIViewController
         self.navigationController?.presentViewController(resultController, animated: false, completion: nil)
@@ -176,41 +173,11 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
 
     /// Check update for characteristic and call didReceiveDatasFromBle method
     func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
-        //self.didReceiveDatasFromBle(characteristic.value)
+
         if let dataBlock = bluetoothBuffer.addValue(characteristic.value) {
             self.blockDataCompleted = dataBlock
         }
 
-    }
-
-    
-    /**
-    *   Bufferize data and build it as string
-    */
-    func didReceiveDatasFromBle(datas: NSData) {
-        let tmsring: NSString = NSString(data: datas, encoding: NSUTF8StringEncoding)!
-        
-        let currentStringData: NSString = tmsring.stringByReplacingOccurrencesOfString("@", withString: "")
-        
-        if currentStringData.containsString("$") && self.tmpDatasString == "" {
-
-            self.tmpDatasString = currentStringData.stringByReplacingOccurrencesOfString("$", withString: "")
-
-        } else if currentStringData.containsString("$") {
-
-            let formattedString: String = currentStringData.stringByReplacingOccurrencesOfString("$", withString: "")
-            self.tmpDatasString = self.tmpDatasString.stringByAppendingString(formattedString)
-            
-            let tmpData: NSData = self.tmpDatasString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-            
-            self.blockDataCompleted = tmpData
-            self.tmpDatasString = ""
-            
-        } else {
-            
-            self.tmpDatasString = self.tmpDatasString.stringByAppendingString(currentStringData as String)
-
-        }
     }
 
 }

@@ -44,6 +44,39 @@
              "firstname": "",
              "email": "hello@domain.tld",
              "password": ""
-        }
+        },
+        {
+             "id": 3,
+             "firstname": "Patsy",
+             "lastname": "Fletcher",
+             "email": "patsy.fletcher55@example.com",
+             "password": "sensmove",
+             "picturePath": "patsy.jpg",
+             "doctor": "Doctor Hughes",
+             "balance": "Not good balance",
+             "weight": 60,
+             "height": 172,
+             "averageForceLeft": 80,
+             "averageForceRight": 100,
+             "diseaseDescription": "Postural shift, left leg's 2 centimeters smaller",
+             "sessions": [
+                    {
+                          "id": "953b78a778442ba87505d55901b362c4",
+                          "name": "Marche universitaire",
+                          "date": 1429274609,
+                          "duration": 2650,
+                          "leftForce": 100,
+                          "rightForce": 90
+                    },
+                    {
+                          "id": "ad4aee16c3db328ad8cd6fcbc3fea896",
+                          "name": "Entrainement running marathon 01",
+                          "date": 1432658924,
+                          "duration": 1632,
+                          "leftForce": 102,
+                          "rightForce": 88
+                    }
+            ]
+             },
     ]
 }

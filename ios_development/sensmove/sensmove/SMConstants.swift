@@ -10,70 +10,13 @@ import Foundation
 import UIKit
 import CoreBluetooth
 
-//System Variables
-let CURRENT_DEVICE = UIDevice.currentDevice()
-let INTERFACE_IS_PAD:Bool = (CURRENT_DEVICE.userInterfaceIdiom == UIUserInterfaceIdiom.Pad)
-let INTERFACE_IS_PHONE:Bool = (CURRENT_DEVICE.userInterfaceIdiom == UIUserInterfaceIdiom.Phone)
-
-let IS_IPAD:Bool = INTERFACE_IS_PAD
-let IS_IPHONE:Bool = INTERFACE_IS_PHONE
-let MAIN_SCREEN = UIScreen.mainScreen()
-let IS_IPHONE_5:Bool = MAIN_SCREEN.bounds.size.height == 568.0
-let IS_IPHONE_4:Bool = MAIN_SCREEN.bounds.size.height == 480.0
-let IS_RETINA:Bool = MAIN_SCREEN.respondsToSelector("scale") && (MAIN_SCREEN.scale == 2.0)
-let IOS_VERSION_FLOAT:Float = (CURRENT_DEVICE.systemVersion as NSString).floatValue
-let LOGGING = false
-let PREF_UART_SHOULD_ECHO_LOCAL = "UartEchoLocal"
-let cellSelectionColor = UIColor(red: 100.0/255.0, green: 182.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-let bleBlueColor = UIColor(red: 24.0/255.0, green: 126.0/255.0, blue: 248.0/255.0, alpha: 1.0)
 
 
-func animateCellSelection(cell:UITableViewCell) {
-    
-    //fade cell background blue to white
-    cell.backgroundColor = cellSelectionColor
-    UIView.animateWithDuration(0.25, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
-        cell.backgroundColor = UIColor.whiteColor()
-        }) { (done:Bool) -> Void in
-    }
-}
+let blockDelimiter = "$"
+let rightInsoleMarkup = "@"
+let leftInsoleMarkup = "*"
 
-
-func delay(delay:Double, closure:()->()) {
-    
-    dispatch_after(
-        dispatch_time(
-            DISPATCH_TIME_NOW,
-            Int64(delay * Double(NSEC_PER_SEC))
-        ),
-        dispatch_get_main_queue(), closure
-    )
-}
-
-
-//MARK: User prefs
-
-func uartShouldEchoLocal() ->Bool {
-    
-    // Pref was not set
-    if NSUserDefaults.standardUserDefaults().valueForKey(PREF_UART_SHOULD_ECHO_LOCAL) == nil {
-        uartShouldEchoLocalSet(false)
-        return false
-    }
-        
-        // Pref was set
-    else {
-        return NSUserDefaults.standardUserDefaults().boolForKey(PREF_UART_SHOULD_ECHO_LOCAL)
-    }
-    
-}
-
-
-func uartShouldEchoLocalSet(shouldEcho:Bool) {
-    
-    NSUserDefaults.standardUserDefaults().setBool(shouldEcho, forKey: PREF_UART_SHOULD_ECHO_LOCAL)
-    
-}
+let insoleName = "coco"
 
 
 //MARK: UUID Retrieval
@@ -151,57 +94,6 @@ func dfuServiceUUID()->CBUUID{
 }
 
 
-let knownUUIDs:[CBUUID] =  [
-    uartServiceUUID(),
-    txCharacteristicUUID(),
-    rxCharacteristicUUID(),
-    deviceInformationServiceUUID(),
-    hardwareRevisionStringUUID(),
-    manufacturerNameStringUUID(),
-    modelNumberStringUUID(),
-    firmwareRevisionStringUUID(),
-    softwareRevisionStringUUID(),
-    serialNumberStringUUID(),
-    dfuServiceUUID(),
-    CBUUID(string: CBUUIDCharacteristicAggregateFormatString),
-    CBUUID(string: CBUUIDCharacteristicExtendedPropertiesString),
-    CBUUID(string: CBUUIDCharacteristicFormatString),
-    CBUUID(string: CBUUIDCharacteristicUserDescriptionString),
-    CBUUID(string: CBUUIDClientCharacteristicConfigurationString),
-    CBUUID(string: CBUUIDServerCharacteristicConfigurationString)
-]
-
-
-
-let knownUUIDNames:[String] =  [
-    "UART",
-    "TXD",
-    "RXD",
-    "Device Information",
-    "Hardware Revision",
-    "Manufacturer Name",
-    "Model Number",
-    "Firmware Revision",
-    "Software Revision",
-    "Serial Number",
-    "DFU Service",
-    "Characteristic Aggregate Format",
-    "Characteristic Extended Properties",
-    "Characteristic Format",
-    "Characteristic User Description",
-    "Client Characteristic Configuration",
-    "Server Characteristic Configuration",
-]
-
-
 func UUIDsAreEqual(firstID:CBUUID, secondID:CBUUID)->Bool {
-    
-    if firstID.representativeString() == secondID.representativeString() {
-        return true
-    }
-        
-    else {
-        return false
-    }
-    
+    return firstID.representativeString() == secondID.representativeString()
 }

@@ -23,13 +23,18 @@ class SMBluetoothDatasBuffer: NSObject {
     }
     
     func addValue(dataValue: NSData) -> NSData? {
-        let currentStringData: NSString = NSString(data: dataValue, encoding: NSUTF8StringEncoding)!
+        var currentStringData: NSString = NSString(data: dataValue, encoding: NSUTF8StringEncoding)!
         
         if currentStringData != "" {
-            let insoleMarkup: String = currentStringData.substringToIndex(1)
-            return self.addValueToInsole(currentStringData.substringFromIndex(1), insole: insoleMarkup == "@" ? "right" : "left")
+            var insoleMarkup: String = currentStringData.substringToIndex(1)
+            // Fix when receiving trame with missing @ markup, need to be fix hardware side
+            if insoleMarkup == "$" && currentStringData.length < 2 {
+                currentStringData = "@$"
+                insoleMarkup = "@"
+            }
+            return self.addValueToInsole(currentStringData.substringFromIndex(1), insole: insoleMarkup == rightInsoleMarkup ? "right" : "left")
         } else {
-            printLog(currentStringData, "addValue", "No value to add")
+            printLog(currentStringData, "addValue", "No value to add before getting insole markup")
             return nil
         }
     }
@@ -37,15 +42,15 @@ class SMBluetoothDatasBuffer: NSObject {
     func addValueToInsole(dataStringValue: String, insole: String) -> NSData? {
         
         if dataStringValue == "" {
-            printLog(dataStringValue, "addValue", "No value to add")
+            printLog(dataStringValue, "addValue", "No value to add after getting insole markup")
             return nil
         }
         
-        let isFirstTram: Bool = dataStringValue.substringToIndex(advance(dataStringValue.startIndex, 1)) == "$"
-        let isLastTram: Bool = dataStringValue.substringFromIndex(advance(dataStringValue.endIndex, -1)) == "$"
+        let isFirstTram: Bool = dataStringValue.substringToIndex(advance(dataStringValue.startIndex, 1)) == blockDelimiter
+        let isLastTram: Bool = dataStringValue.substringFromIndex(advance(dataStringValue.endIndex, -1)) == blockDelimiter
         
         if isFirstTram {
-            self.tempStringDatas[insole] = dataStringValue.stringByReplacingOccurrencesOfString("$", withString: "")
+            self.tempStringDatas[insole] = dataStringValue.stringByReplacingOccurrencesOfString(blockDelimiter, withString: "")
 
             return nil
         }
@@ -54,7 +59,7 @@ class SMBluetoothDatasBuffer: NSObject {
 
         if isLastTram {
             
-            self.tempStringDatas[insole] = bufferString + dataStringValue.stringByReplacingOccurrencesOfString("$", withString: "")
+            self.tempStringDatas[insole] = bufferString + dataStringValue.stringByReplacingOccurrencesOfString(blockDelimiter, withString: "")
             
             return self.tempStringDatas.objectForKey(insole)?.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         }

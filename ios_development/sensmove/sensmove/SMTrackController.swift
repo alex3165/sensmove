@@ -21,7 +21,8 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     
     var chronometer: SMChronometer?
     var trackSessionService: SMTrackSessionService = SMTrackSessionService.sharedInstance
-
+    let dataProcessingService: SMDataProcessing = SMDataProcessing()
+    
     /// Current central manager
     var centralManager: CBCentralManager?
 
@@ -56,7 +57,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
         RACObserve(self, "blockDataCompleted").subscribeNext { (datas) -> Void in
             if let data: NSData = datas as? NSData{
                 let jsonObject: JSON = JSON(data: data)
-                self.trackSessionService.updateCurrentSession(jsonObject)
+                self.trackSessionService.updateCurrentSession(self.dataProcessingService.removeNoise(jsonObject))
             }
             
         }
@@ -117,7 +118,7 @@ class SMTrackController: UIViewController, CBCentralManagerDelegate, CBPeriphera
     /// Connect to peripheral from name
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         if (peripheral.name != nil) {
-            if(self.currentPeripheral != peripheral && peripheral.name == "coco"){
+            if(self.currentPeripheral != peripheral && peripheral.name == insoleName){
                 self.currentPeripheral = peripheral
                 
                 self.centralManager?.connectPeripheral(peripheral, options: nil)

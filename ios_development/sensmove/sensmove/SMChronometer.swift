@@ -39,7 +39,11 @@ class SMChronometer: NSObject {
     }
 
     func getElapsedTime() -> NSTimeInterval {
-        return self.elapsedTime!
+        if let time: NSTimeInterval = self.elapsedTime {
+            return time
+        } else {
+            return NSTimeInterval(0)
+        }
     }
     
     /**

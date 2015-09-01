@@ -39,6 +39,10 @@ class SMResultController: UIViewController {
         if let rightForce = self.trackSessionService?.getAverageForces("right") {
             self.averageRightForce?.text = "\(rightForce)"
         }
+
+        self.walks?.text = "No steps done"
+        self.jumps?.text = "No jumps done"
+        self.balance?.text = "Cannot get balance"
         
         if let durInterval: NSTimeInterval = self.trackSessionService?.currentSession?.duration {
             self.duration?.text = self.stringFromTimeInterval(durInterval) as String

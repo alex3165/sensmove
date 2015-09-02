@@ -14,7 +14,7 @@
 		<string>http://stash.allinwatch.com/scm/sen/sensmove.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>app/sensmove/sensmove.xcworkspace</string>
+	<string>ios_development/sensmove/sensmove.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AF39647DE19ED6A568CE23C56B2660DC192163AC</key>

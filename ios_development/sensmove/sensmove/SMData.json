@@ -2,51 +2,12 @@
     "user": [
         {
              "id": 0,
-             "firstname": "Alexandre",
-             "lastname": "Rieux",
-             "email": "alexr.3165@gmail.com",
-             "password": "test",
-             "picturePath": "alex.png",
-             "doctor": "Mme Prat",
-             "balance": "Great balance",
-             "weight": 70,
-             "height": 180,
-             "averageForceLeft": 120,
-             "averageForceRight": 111,
-             "diseaseDescription": "Alexandre left leg's taller than the right, the shift is about 1 centimeter.",
-             "sessions": [
-                {
-                    "id": "univalexrieux01",
-                    "name": "Marche universitaire",
-                    "date": 1429274609,
-                    "duration": 10000,
-                    "leftForce": 100,
-                    "rightForce": 90
-                },
-                {
-                    "id": "etrmaraalexrieux02",
-                    "name": "Entrainement running marathon 01",
-                    "date": 1432658924,
-                    "duration": 9888,
-                    "leftForce": 102,
-                    "rightForce": 88
-                }
-             ]
-        },
-        {
-             "id": 1,
-             "firstname": "Jean-Sébastien",
-             "email": "blabla@domain.tld",
-             "password": "test"
-        },
-        {
-             "id": 2,
              "firstname": "",
              "email": "hello@domain.tld",
              "password": ""
         },
         {
-             "id": 3,
+             "id": 1,
              "firstname": "Patsy",
              "lastname": "Fletcher",
              "email": "patsy.fletcher55@example.com",
@@ -77,6 +38,6 @@
                           "rightForce": 88
                     }
             ]
-             },
+        }
     ]
 }

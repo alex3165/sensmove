@@ -23,10 +23,12 @@ For a single insole design you will need these components :
 - 7 [Force-Sensitive Resistor](http://www.adafruit.com/products/166)
 - 1 [Resistor kit](https://www.sparkfun.com/products/10969)
 
-Note that sensors are satured quickly, we identified better sensors on [Tekscan](https://www.tekscan.com/products-solutions/force-sensors/ess301) but haven't tested yet (every insight on this sensors is welcome).
+Note that sensors are satured quickly, we identified better sensors on [Tekscan](https://www.tekscan.com/products-solutions/force-sensors/ess301) but haven't tested yet (every insight on these sensors is welcome).
 
 
 ## Design phase
+
+> We advise you to use Fritzing software before beginning. [Fritzing](http://fritzing.org/home/)
 
 You should follow the design scheme file "electronic_design.fzz" in source folder to connect components on the breadboard.
 

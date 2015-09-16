@@ -5,7 +5,7 @@
 </p>
 <br/>
 <p align="center">
-  <a href='#'>
+  <a href='https://gitter.im/alex3165/sensmove'>
     <img src='https://badges.gitter.im/Join%20Chat.svg' alt='Gitter Chat' />
   </a>
 </p>

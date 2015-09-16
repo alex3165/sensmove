@@ -3,6 +3,7 @@
 <p align="center">
   <img title="sensmove" src='design/logo.png' width="180px"/>
 </p>
+<br/>
 <p align="center">
   <a href='#'>
     <img src='https://badges.gitter.im/Join%20Chat.svg' alt='Gitter Chat' />

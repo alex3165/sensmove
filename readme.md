@@ -11,6 +11,8 @@
 </p>
 
 ## About
+
+[![Join the chat at https://gitter.im/alex3165/sensmove](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/alex3165/sensmove?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Sensmove is the first open-sourced smart insole system that allows the user to visualize his foot forces simultaneously on his smartphone.
 The smart insole get 7 force sensitive resistor sensors distributed along it. The data are sent through bluetooth to the mobile phone. Then, on the smartphone, when the user starts a new session, he can visualize his foot forces through circle charts. Once the session is finished, a summary is done and the user can grasp a session name, an activity and a description. The user can also see his profile and the history of the differents sessions he did.
 

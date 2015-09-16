@@ -1,6 +1,6 @@
 # How to craft the insole
 
-Before everythings, you should have some basics electronics components, some are not needed but highly recomended :
+Before everything, you should have some basic electronic components, some are not needed but highly recomended :
 
 - Soldering iron
 - Tin

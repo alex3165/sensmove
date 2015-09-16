@@ -11,13 +11,17 @@
 
 ## About
 Sensmove is the first open-sourced smart insole system that allows the user to visualize his foot forces simultaneously on his smartphone.
-The smart insole get 7 force sensitive resistor sensors distributed along it. The datas are sent through bluetooth to the mobile phone. Then, on the smartphone, when user start a new session, he can visualize his foot forces through circles charts. Once the session is finished, a summary is done and user can grasp a session name, an activity and a description. User can also see his profile and the history of the differents sessions he did.
+The smart insole get 7 force sensitive resistor sensors distributed along it. The data are sent through bluetooth to the mobile phone. Then, on the smartphone, when the user starts a new session, he can visualize his foot forces through circle charts. Once the session is finished, a summary is done and the user can grasp a session name, an activity and a description. The user can also see his profile and the history of the differents sessions he did.
 
-## Possibles uses cases
+<p align="center">
+  <img title="sensmove" src='documentation/prototype_sensmove.jpg' width="500px"/>
+</p>
+
+## Possibles use cases
 - Sport: Help sportsmen in their trainning by coaching them trough an application and check that the person performs his exercises correctly. Check your strides.
 - Music: Use it as a loop pedal or metronome.
 - Robotic: Stabilize balance of a robot.
-- Medical: Help podolog to design better insole, help kinesitherapist to follow their patients during their consultation.
+- Medical: Help podologs to design better insole, help kinesitherapists to follow their patients during their consultation.
 
 
 ## Technologies
@@ -27,7 +31,7 @@ The smart insole get 7 force sensitive resistor sensors distributed along it. Th
 
 ## Improvements
 Lots of improvements should be done, it is a first draft of the possibilities of the insole, the final purpose is to provide as usable as possible smart insole system.
-Main improvements should be done on bluetooth transmission handler on ios. Another important work to do is to store forces datas on the smartphone with SQLite mobile database.
+Main improvements should be done on the bluetooth transmission processing on ios. Another important work to do is to store force data on the smartphone with SQLite mobile database.
 
 Improvements should be done on mobile application and on hardware, if you want to improve it, you can check github issues for details.
 

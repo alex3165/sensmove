@@ -26,7 +26,7 @@ class SMTrackSessionService: NSObject {
             
         }) { (error) -> () in
 
-            printLog(error, "createNewSession", "Error when creating new session")
+            printLog(error, funcName: "createNewSession", logString: "Error when creating new session")
 
         }
     }

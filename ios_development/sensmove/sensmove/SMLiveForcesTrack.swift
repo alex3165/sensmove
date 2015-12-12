@@ -18,7 +18,7 @@ class SMLiveForcesTrack: UIView {
         super.init(frame: frame)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.trackSessionService = SMTrackSessionService.sharedInstance
@@ -34,7 +34,7 @@ class SMLiveForcesTrack: UIView {
             let sensorForces: [SMForce] = rightSole.forceSensors
 
             for (var index = 0; index < sensorForces.count; index++) {
-                var sensorId: Int = sensorForces[index].id
+                let sensorId: Int = sensorForces[index].id
                 self.circleChart[sensorId] = self._createChartFromSensor(sensorForces[index])
                 self.addSubview(self.circleChart[sensorId] as! PNCircleChart)
             }
@@ -44,7 +44,7 @@ class SMLiveForcesTrack: UIView {
     /**
     *
     *   Create chart from SMForce sensor
-    *   :param: SMForce The sensor to create circle chart for
+    *   - parameter SMForce: The sensor to create circle chart for
     *   :return: PNCircleChart The chart associated to gave sensor
     *
     */

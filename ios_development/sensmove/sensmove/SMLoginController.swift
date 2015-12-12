@@ -20,7 +20,7 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     
     var userService: SMUserService
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         self.userService = SMUserService.sharedInstance
         super.init(coder: aDecoder)
     }
@@ -62,15 +62,15 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     
     /**
     *   Action triggered when use tap on main home button
-    *   :param: 
+    *   - parameter 
     */
     @IBAction func validateCredentials(sender: AnyObject) {
-        var username: NSString = identifier!.text
-        var pass: NSString = password!.text
+        let username: NSString = identifier!.text!
+        let pass: NSString = password!.text!
         
         /// Try login user with login and password entered
         self.userService.loginUserWithUserNameAndPassword(username, passwd: pass, success: { (informations) -> () in
-                var userToSave: SMUser = SMUser(userSettings: informations)
+                let userToSave: SMUser = SMUser(userSettings: informations)
                 self.userService.setUser(userToSave)
                 self.userService.saveUserToKeychain()
 
@@ -93,14 +93,14 @@ class SMLoginController: UIViewController, UITextFieldDelegate {
     
     /**
     *   Redirect to the given view
-    *   :param: view The view to redirect at
+    *   - parameter view: The view to redirect at
     */
     func redirectToView(view: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let newController: UIViewController = storyboard.instantiateViewControllerWithIdentifier(view) as! UIViewController
+        let newController: UIViewController = storyboard.instantiateViewControllerWithIdentifier(view) 
 
         self.presentViewController(newController, animated: true) { () -> Void in
-            println("Redirection to \(newController.nibName)")
+            print("Redirection to \(newController.nibName)")
         }
     }
 

@@ -24,7 +24,7 @@ class SMBluetoothSimulator: NSObject {
     *   Create datas and store it into data variable
     */
     func startSimulator() {
-        var jsonData: JSON = [
+        let jsonData: JSON = [
             "fsr": [
                 Int(arc4random_uniform(1024)),
                 Int(arc4random_uniform(1024)),
@@ -41,6 +41,6 @@ class SMBluetoothSimulator: NSObject {
             ]
         ];
 
-        self.data = jsonData.rawData()!
+        self.data = try! jsonData.rawData()
     }
 }

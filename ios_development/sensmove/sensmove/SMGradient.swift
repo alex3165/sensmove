@@ -21,7 +21,7 @@ class SMGradient: CAGradientLayer {
         super.init()
         
         self.colors = [SMColor.orange().CGColor, SMColor.red().CGColor]
-        self.locations = locations as [AnyObject]
+        self.locations = locations as! [NSNumber]
 
     }
     
@@ -33,7 +33,7 @@ class SMGradient: CAGradientLayer {
         self.cornerRadius = CGFloat(rad)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

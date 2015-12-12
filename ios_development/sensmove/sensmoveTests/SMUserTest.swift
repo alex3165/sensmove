@@ -22,7 +22,7 @@ class SMUserTest: XCTestCase {
     }
 
     func getUserJson() -> JSON!{
-        var userJson: JSON = [
+        let userJson: JSON = [
             "id": 32,
             "firstname": "Addison",
             "lastname": "Richards",
@@ -63,7 +63,7 @@ class SMUserTest: XCTestCase {
     }
 
     func testUserServiceSave() {
-        var userService: SMUserService = SMUserService.sharedInstance
+        let userService: SMUserService = SMUserService.sharedInstance
         userService.setUser(SMUser(userSettings: self.getUserJson()))
         userService.saveUserToKeychain()
     }

@@ -20,8 +20,8 @@ class SMSole: NSObject {
     /**
     *
     *   Initialize new sole object
-    *   :param:  simpleVectors  x / y positions of vectors
-    *   :param:  isRight  Boolean that specify if the sole is right or left
+    *   - parameter  simpleVectors:  x / y positions of vectors
+    *   - parameter  isRight:  Boolean that specify if the sole is right or left
     */
     init(simpleVectors: JSON, isRight: Bool) {
 
@@ -42,14 +42,14 @@ class SMSole: NSObject {
     /**
     *
     *   Create force sensors from JSON object
-    *   :param:  forceVectors  JSON object
+    *   - parameter  forceVectors:  JSON object
     *
     */
     func createForceSensorsFromVectors(forceVectors: JSON) {
 
         var index: Int = forceVectors.count - 1
 
-        for (key: String, vector: JSON) in forceVectors {
+        for (key, vector): (String, JSON) in forceVectors {
             forceSensors.append(SMForce(id: index++, pos: vector))
         }
     }
@@ -79,7 +79,7 @@ class SMSole: NSObject {
 
     /// TODO: Store forces and accelerometer sensors in SQLite database
     func toPropertyList() -> NSDictionary {
-        var sole: NSDictionary = [
+        let sole: NSDictionary = [
             "id": self.id,
             "isRight": self.isRight
         ]

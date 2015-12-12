@@ -20,7 +20,7 @@ class SMPulse: CALayer {
     // Need to implement that, because otherwise it can't find
     // the constructor init(layer:AnyObject!)
     // Doesn't seem to look in the super class
-    override init!(layer: AnyObject!) {
+    override init(layer: AnyObject) {
         super.init(layer: layer)
     }
     
@@ -45,14 +45,14 @@ class SMPulse: CALayer {
         }
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     func setPulseRadius(radius: CGFloat) {
         self.radius = radius
-        var tempPos = self.position
-        var diameter = self.radius * 2
+        let tempPos = self.position
+        let diameter = self.radius * 2
         
         self.bounds = CGRect(x: 0.0, y: 0.0, width: diameter, height: diameter)
         self.cornerRadius = self.radius
@@ -66,7 +66,7 @@ class SMPulse: CALayer {
         self.animationGroup.removedOnCompletion = false
         
         if self.useTimingFunction {
-            var defaultCurve = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+            let defaultCurve = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
             self.animationGroup.timingFunction = defaultCurve
         }
         
@@ -74,7 +74,7 @@ class SMPulse: CALayer {
     }
     
     func createScaleAnimation() -> CABasicAnimation {
-        var scaleAnimation = CABasicAnimation(keyPath: "transform.scale.xy")
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale.xy")
         scaleAnimation.fromValue = NSNumber(float: self.fromValueForRadius)
         scaleAnimation.toValue = NSNumber(float: 1.0)
         scaleAnimation.duration = self.animationDuration
@@ -83,7 +83,7 @@ class SMPulse: CALayer {
     }
     
     func createOpacityAnimation() -> CAKeyframeAnimation {
-        var opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+        let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
         opacityAnimation.duration = self.animationDuration
         opacityAnimation.values = [self.fromValueForAlpha, 0.8, 0]
         opacityAnimation.keyTimes = [0, self.keyTimeForHalfOpacity, 1]

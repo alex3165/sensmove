@@ -47,10 +47,10 @@ class SMPresentationController: UIViewController {
         NSUserDefaults.standardUserDefaults().synchronize()
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("sideMenuController") as! UIViewController
+        let homeController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("sideMenuController") 
 
         self.presentViewController(homeController, animated: true) { () -> Void in
-            println("Redirection to home controller")
+            print("Redirection to home controller")
         }
     }
 }

@@ -28,7 +28,7 @@ class SMUserService: NSObject {
     *
     */
     func loginUserWithUserNameAndPassword(username: NSString, passwd: NSString, success: SMLoginSuccess, failure: SMLoginFailure) {
-        var users = self.retrieveUsersFromDatasFile()
+        let users = self.retrieveUsersFromDatasFile()
 
         for user in users {
             if user[kFirstName].stringValue as String == username && passwd == user["password"].stringValue as String {
@@ -77,7 +77,7 @@ class SMUserService: NSObject {
     private func retrieveUsersFromDatasFile() -> [JSON] {
         let datasSingleton: SMData = SMData.sharedInstance
         let users: JSON = datasSingleton.getUsers()
-        var usersArray: Array = users.arrayValue
+        let usersArray: Array = users.arrayValue
 
         return usersArray
     }

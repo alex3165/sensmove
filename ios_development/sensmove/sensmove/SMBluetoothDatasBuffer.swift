@@ -34,7 +34,7 @@ class SMBluetoothDatasBuffer: NSObject {
             }
             return self.addValueToInsole(currentStringData.substringFromIndex(1), insole: insoleMarkup == rightInsoleMarkup ? "right" : "left")
         } else {
-            printLog(currentStringData, "addValue", "No value to add before getting insole markup")
+            printLog(currentStringData, funcName: "addValue", logString: "No value to add before getting insole markup")
             return nil
         }
     }
@@ -42,12 +42,12 @@ class SMBluetoothDatasBuffer: NSObject {
     func addValueToInsole(dataStringValue: String, insole: String) -> NSData? {
         
         if dataStringValue == "" {
-            printLog(dataStringValue, "addValue", "No value to add after getting insole markup")
+            printLog(dataStringValue, funcName: "addValue", logString: "No value to add after getting insole markup")
             return nil
         }
         
-        let isFirstTram: Bool = dataStringValue.substringToIndex(advance(dataStringValue.startIndex, 1)) == blockDelimiter
-        let isLastTram: Bool = dataStringValue.substringFromIndex(advance(dataStringValue.endIndex, -1)) == blockDelimiter
+        let isFirstTram: Bool = dataStringValue.substringToIndex(dataStringValue.startIndex.advancedBy(1)) == blockDelimiter
+        let isLastTram: Bool = dataStringValue.substringFromIndex(dataStringValue.endIndex.advancedBy(-1)) == blockDelimiter
         
         if isFirstTram {
             self.tempStringDatas[insole] = dataStringValue.stringByReplacingOccurrencesOfString(blockDelimiter, withString: "")

@@ -25,7 +25,7 @@ class SMHomeController: UIViewController {
         case found = "Connecté à la semelle"
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -42,7 +42,7 @@ class SMHomeController: UIViewController {
     */
     func createStartButton() {
         let locations: [Float] = [0.2, 1]
-        var smGradient: SMGradient = SMGradient(locations: locations)
+        let smGradient: SMGradient = SMGradient(locations: locations)
         smGradient.setFrameFromRect(self.loaderView.bounds)
         smGradient.setCRadius(95)
 
@@ -56,7 +56,7 @@ class SMHomeController: UIViewController {
 
     /**
     *   Listen for tap action on main start button
-    *   :param: sender  Gesture type
+    *   - parameter sender:  Gesture type
     */
     @IBAction func handleTap(sender: UITapGestureRecognizer) {
         if sender.state == .Ended {
@@ -64,7 +64,7 @@ class SMHomeController: UIViewController {
 
             self.isSearching = !self.isSearching
             
-            let trackController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("navSession") as! UIViewController
+            let trackController: UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("navSession"))!
             self.navigationController?.presentViewController(trackController, animated: true, completion: nil)
             
         }

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SMSessionController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class SMSessionController: UITableViewController {
     
     var userSessions: Array<SMSession>!
     
     required init(coder aDecoder: NSCoder) {
         self.userSessions = SMUserService.sharedInstance.currentUser!.sessions
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
     }
 
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class SMSessionController: UITableViewController, UITableViewDataSource, UITable
         let buttonPosition: CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let indexCell: NSIndexPath = self.tableView.indexPathForRowAtPoint(buttonPosition)!
         
-        println("Cell index : \(indexCell.item)")
+        print("Cell index : \(indexCell.item)")
         
         self.userSessions = SMUserService.sharedInstance.deleteSession(indexCell.item)
 

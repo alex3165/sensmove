@@ -53,7 +53,7 @@ class SMChronometer: NSObject {
     *
     */
     func updateTime() {
-        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        let currentTime = NSDate.timeIntervalSinceReferenceDate()
         self.elapsedTime = currentTime - self.startTime!
 
         let minutes = UInt8(self.elapsedTime! / 60.0)

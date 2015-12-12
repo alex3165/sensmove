@@ -51,13 +51,13 @@ class SMResultController: UIViewController {
 
     func stringFromTimeInterval(interval:NSTimeInterval) -> NSString {
 
-        var ti = NSInteger(interval)
+        let ti = NSInteger(interval)
 
         var ms = Int((interval % 1) * 1000)
 
-        var seconds = ti % 60
-        var minutes = (ti / 60) % 60
-        var hours = (ti / 3600)
+        let seconds = ti % 60
+        let minutes = (ti / 60) % 60
+        let hours = (ti / 3600)
 
         return NSString(format: "%0.2d:%0.2d:%0.2d",hours,minutes,seconds)
     }
@@ -85,19 +85,19 @@ class SMResultController: UIViewController {
     @IBAction func saveSessionAction(sender: AnyObject) {
 
         if let sessionTextName = self.sessionName?.text {
-            if count(sessionTextName) > 0 {
+            if sessionTextName.characters.count > 0 {
                 self.trackSessionService?.currentSession?.name = sessionTextName
             }
         }
 
         if let descriptionText = self.sessionComment?.text {
-            if count(descriptionText) > 0 {
+            if descriptionText.characters.count > 0 {
                 self.trackSessionService?.currentSession?.sessionComment = descriptionText
             }
         }
         
         if let activityText = self.sessionComment?.text {
-            if count(activityText) > 0 {
+            if activityText.characters.count > 0 {
                 self.trackSessionService?.currentSession?.activity = activityText
             }
         }
@@ -112,7 +112,7 @@ class SMResultController: UIViewController {
     }
     
     func redirectToHomeView() {
-        let sidemenuController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("sideMenuController") as! UIViewController
+        let sidemenuController: UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("sideMenuController"))!
 
         let navigationController: UINavigationController = UINavigationController(rootViewController: sidemenuController)
         self.presentViewController(navigationController, animated: true, completion: nil)

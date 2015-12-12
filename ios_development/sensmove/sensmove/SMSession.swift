@@ -40,7 +40,7 @@ class SMSession: NSObject {
     /**
     *
     *   Initialize new active session
-    *   :param:  sensorsVectors  x / y positions of vectors
+    *   - parameter  sensorsVectors:  x / y positions of vectors
     */
     init(sensorsVectors: JSON){
         self.name = "new_session"
@@ -58,7 +58,7 @@ class SMSession: NSObject {
     /**
     *
     *   Initialize session from data file (stored session typicaly), furthermore, data will be fetched from Server
-    *   :param:  sessionSettings  session settings from data file
+    *   - parameter  sessionSettings:  session settings from data file
     */
     init(sessionSettings: JSON) {
         self.id = sessionSettings[kSessionId].stringValue
@@ -109,11 +109,11 @@ class SMSession: NSObject {
     /**
     *
     *   Format session object for keychain storage
-    *   :returns:  sessionJson  session formatted for storage
+    *   - returns:  sessionJson  session formatted for storage
     */
     func toPropertyList() -> NSDictionary {
 
-        var sessionJson: NSMutableDictionary = [
+        let sessionJson: NSMutableDictionary = [
             kSessionId: self.id,
             kSessionName: self.name,
             kSessionDate: self.date.timeIntervalSince1970,

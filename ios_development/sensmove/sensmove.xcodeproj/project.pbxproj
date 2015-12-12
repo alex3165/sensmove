@@ -58,8 +58,6 @@
 		22BA89DC1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */; };
 		22BA89DD1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */; };
 		22BA89E11B1CA9390001A1C4 /* SMTrackSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC928E1B1B50ED00D98E9E /* SMTrackSessionService.swift */; };
-		22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */; };
-		22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */; };
 		22BD4E531ADA6D340022318B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */; };
 		22BD4E541ADA6D340022318B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */; };
 		22BD4E551ADA6D340022318B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22BD4E501ADA6D340022318B /* Roboto-Medium.ttf */; };
@@ -95,6 +93,8 @@
 		AC97C44C1B84A1D000A724C6 /* SMConnexionNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */; };
 		ACADB8FB1B931B0A00ADE34F /* SMDataProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACADB8FA1B931B0A00ADE34F /* SMDataProcessing.swift */; };
 		ACADB8FC1B931B0A00ADE34F /* SMDataProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACADB8FA1B931B0A00ADE34F /* SMDataProcessing.swift */; };
+		ACCA9DF41C1C8F7D00F4D0ED /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA9DF31C1C8F7D00F4D0ED /* SwiftyJSON.swift */; };
+		ACCA9DF51C1C8F7D00F4D0ED /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA9DF31C1C8F7D00F4D0ED /* SwiftyJSON.swift */; };
 		ACD436D11B82455800996176 /* libReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD436D01B82455800996176 /* libReactiveCocoa.a */; };
 		ACE494D21B90489E0096477F /* SMBluetoothDatasBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE494D11B90489E0096477F /* SMBluetoothDatasBuffer.swift */; };
 		ACE494D41B904B8F0096477F /* SMPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE494D31B904B8F0096477F /* SMPulse.swift */; };
@@ -151,8 +151,6 @@
 		22BA89D61B1C916E0001A1C4 /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACObserve.swift; sourceTree = "<group>"; };
 		22BA89D71B1C916E0001A1C4 /* RACSignal+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Extensions.swift"; sourceTree = "<group>"; };
 		22BA89DF1B1C9DC40001A1C4 /* libPods-sensmove-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-sensmove-ReactiveCocoa.a"; path = "Pods/../build/Debug-iphoneos/libPods-sensmove-ReactiveCocoa.a"; sourceTree = "<group>"; };
-		22BD4E4B1ADA6B0F0022318B /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
-		22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		22BD4E4F1ADA6D340022318B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "sensmoveTests/Roboto-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		22BD4E501ADA6D340022318B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "sensmoveTests/Roboto-Medium.ttf"; sourceTree = SOURCE_ROOT; };
 		22BD4E511ADA6D340022318B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "sensmoveTests/Roboto-Regular.ttf"; sourceTree = SOURCE_ROOT; };
@@ -176,6 +174,8 @@
 		AC97C4481B8472EA00A724C6 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		AC97C44B1B84A1D000A724C6 /* SMConnexionNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMConnexionNotification.swift; sourceTree = "<group>"; };
 		ACADB8FA1B931B0A00ADE34F /* SMDataProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDataProcessing.swift; sourceTree = "<group>"; };
+		ACCA9DF21C1C8F7D00F4D0ED /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		ACCA9DF31C1C8F7D00F4D0ED /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		ACD436CE1B82454C00996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		ACD436D01B82455800996176 /* libReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReactiveCocoa.a; path = "Pods/../build/Debug-iphoneos/libReactiveCocoa.a"; sourceTree = "<group>"; };
 		ACE494D11B90489E0096477F /* SMBluetoothDatasBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBluetoothDatasBuffer.swift; sourceTree = "<group>"; };
@@ -210,12 +210,12 @@
 		22415FD71AD9B40F00106E7A /* LIbrary */ = {
 			isa = PBXGroup;
 			children = (
+				ACCA9DF21C1C8F7D00F4D0ED /* SwiftyJSON.h */,
+				ACCA9DF31C1C8F7D00F4D0ED /* SwiftyJSON.swift */,
 				22BD4E5F1ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
 				22BD4E601ADA72050022318B /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 				22BD4E5B1ADA71C60022318B /* TPKeyboardAvoidingScrollView.h */,
 				22BD4E5C1ADA71C60022318B /* TPKeyboardAvoidingScrollView.m */,
-				22BD4E4B1ADA6B0F0022318B /* SwiftyJSON.h */,
-				22BD4E4C1ADA6B0F0022318B /* SwiftyJSON.swift */,
 			);
 			name = LIbrary;
 			sourceTree = "<group>";
@@ -429,6 +429,8 @@
 		22B91BF41AB33D9600497025 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "___alexprod___";
 				TargetAttributes = {
@@ -571,7 +573,7 @@
 				22FE07881AE503FD0064F750 /* SMUserController.swift in Sources */,
 				22BA89D81B1C916E0001A1C4 /* RAC.swift in Sources */,
 				2219FBD71B1516AD006A26A0 /* SMSessionController.swift in Sources */,
-				22BD4E4D1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
+				ACCA9DF41C1C8F7D00F4D0ED /* SwiftyJSON.swift in Sources */,
 				2251E03D1AD3062E005FE3B8 /* SMSensor.swift in Sources */,
 				22FE1ED81B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
 				221F74581ADC5A000078A75E /* SMSole.swift in Sources */,
@@ -612,6 +614,7 @@
 				22BA89E11B1CA9390001A1C4 /* SMTrackSessionService.swift in Sources */,
 				2251E03A1AD3062E005FE3B8 /* SMAccelerometer.swift in Sources */,
 				22FFAAB01AE591D6005A49CF /* SMUserTest.swift in Sources */,
+				ACCA9DF51C1C8F7D00F4D0ED /* SwiftyJSON.swift in Sources */,
 				22BD4E681ADADF860022318B /* SMUser.swift in Sources */,
 				22415FDD1AD9B5FE00106E7A /* SMData.swift in Sources */,
 				22C78E671B1BAEE4000FCCA0 /* SMLiveForcesTrack.swift in Sources */,
@@ -620,7 +623,6 @@
 				ACE494D51B904B8F0096477F /* SMPulse.swift in Sources */,
 				22FE1ED91B07A2BF006BB6B5 /* SMDataExtensions.swift in Sources */,
 				228FAD341B32107A00ECF878 /* SMBluetoothSimulator.swift in Sources */,
-				22BD4E4E1ADA6B0F0022318B /* SwiftyJSON.swift in Sources */,
 				22BA89DD1B1C916E0001A1C4 /* RACSignal+Extensions.swift in Sources */,
 				22B91C1B1AB33D9600497025 /* sensmoveTests.swift in Sources */,
 				22BA89D91B1C916E0001A1C4 /* RAC.swift in Sources */,

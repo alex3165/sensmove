@@ -46,7 +46,7 @@ class SMUser: NSObject {
 
     /**
     *   Init user model from user settings in params
-    *   :param: userSettings the user settings
+    *   - parameter userSettings: the user settings
     */
     init(userSettings: JSON) {
         self.id = userSettings[kId].numberValue
@@ -77,8 +77,8 @@ class SMUser: NSObject {
     *   Save user to keychain
     */
     func saveUserToKeychain() {
-        var userInformations: JSON = self.toPropertyList() as JSON
-        var datas : NSData = userInformations.rawData()!
+        let userInformations: JSON = self.toPropertyList() as JSON
+        let datas : NSData = try! userInformations.rawData()
         NSUserDefaults.standardUserDefaults().setObject(datas, forKey: "user")
     }
     
@@ -88,7 +88,7 @@ class SMUser: NSObject {
 
     /**
     *   Add new session to user session
-    *   :param: session The new session to add
+    *   - parameter session: The new session to add
     */
     func addNewSession(session: SMSession) {
         self.sessions.insert(session, atIndex: 0)
@@ -103,14 +103,14 @@ class SMUser: NSObject {
     /**
     *
     *   Retrieve user from keychain (Class method)
-    *   :returns:   SMUser  The stored user
+    *   - returns:   SMUser  The stored user
     *
     */
     class func getUserFromKeychain() -> (SMUser?) {
-        var savedData: NSData? = NSUserDefaults.standardUserDefaults().dataForKey("user")
+        let savedData: NSData? = NSUserDefaults.standardUserDefaults().dataForKey("user")
 
         if let datas = savedData {
-            var jsonDatas: JSON = JSON(data: datas)
+            let jsonDatas: JSON = JSON(data: datas)
             return SMUser(userSettings: jsonDatas)
         }
 
@@ -119,7 +119,7 @@ class SMUser: NSObject {
 
     /// Convert current user model into JSON object for keychain storage
     private func toPropertyList() -> JSON {
-        var userJson: NSDictionary = [
+        let userJson: NSDictionary = [
             kId: self.id!,
             kFirstName: self.firstName!,
             kLastName: self.lastName!,
@@ -141,7 +141,7 @@ class SMUser: NSObject {
     /// Transform SMSession into NSarray in order to store it in keychain
     func sessionList() -> NSArray {
 
-        var sessionsList = NSMutableArray()
+        let sessionsList = NSMutableArray()
         var tempSession: SMSession;
 
         for(var index = 0; index < self.sessions.count; index++){

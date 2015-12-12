@@ -31,7 +31,7 @@ class SMUserController: UIViewController {
     /// User service that return current user
     var userService: SMUserService
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         self.userService = SMUserService.sharedInstance
         super.init(coder: aDecoder)
     }
@@ -61,7 +61,7 @@ class SMUserController: UIViewController {
         self.topBanner?.layoutIfNeeded()
         
         let locations: [Float] = [0.2, 1]
-        var smGradient: SMGradient = SMGradient(locations: locations)
+        let smGradient: SMGradient = SMGradient(locations: locations)
         smGradient.setFrameFromRect(self.topBanner!.bounds)
 
         self.topBanner!.layer.insertSublayer(smGradient, atIndex: 0)

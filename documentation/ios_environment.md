@@ -2,14 +2,14 @@
 
 For a better asynchronous handler, when receiving data from bluetooth or when processing user service data we are using reactive cocoa library.
 
-To manage packages Objective-C we are using cocoapod, for swift packages we simply drag & drop the library into the project library folder.
+To manage Objective-C packages we are using cocoapod, for swift packages we simply drag & drop the library into the project library folder.
 
-Actually, user services are stored in a local json file "SMData.json" but later there will be a web service.
+Currently, user informations are stored in a local json file "SMData.json" but on a long term vision, the plan is to create a REST Api .
 
-## UI
+## User interface
 
-Please use Autolayout for the UI.
+The UI uses Autolayout to positionate the elements.
 
 ## Notes
 
-Left insole data and accelerometer data are not processed. Take a look at the graphic mockup for a better understanding of the final design in design/app_exports folder.
+Left insole data and accelerometer data are not processed. Have a look at the graphic mockup for a better understanding of the [final design](../design/app_exports).

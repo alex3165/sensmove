@@ -11,8 +11,8 @@
 </p>
 
 ## About
-Sensmove is the first open-sourced smart insole system that allows the user to visualize his foot forces simultaneously on his smartphone.
-The smart insole get 7 force sensitive resistor sensors distributed along it. The data are sent through bluetooth to the mobile phone. Then, on the smartphone, when the user starts a new session, he can visualize his foot forces through circle charts. Once the session is finished, a summary is done and the user can grasp a session name, an activity and a description. The user can also see his profile and the history of the differents sessions he did.
+Sensmove is the first open-sourced smart insole system which provide to the user the ability to visualize his foot forces simultaneously on his smartphone.
+The smart insole include 7 force sensitive resistor sensors distributed along it. The data are sent through bluetooth to the mobile phone. Then, on the smartphone, when the user starts a new session, he can visualize his foot forces through circle charts. Once the session is finished, a summary is done and the user can grasp a session name, an activity and a description. The user can also see his profile and the history of the differents sessions he did.
 
 <p align="center">
   <img title="sensmove" src='documentation/prototype_sensmove.jpg' width="500px"/>
@@ -27,15 +27,14 @@ The smart insole get 7 force sensitive resistor sensors distributed along it. Th
 
 ## Technologies
 - Arduino environment for insole electronic system.
-- IOS environment for mobile application development.
+- iOS (swift) for the mobile application development.
 
 
 ## Improvements
-Lots of improvements should be done, it is a first draft of the possibilities of the insole, the final purpose is to provide as usable as possible smart insole system.
-Main improvements should be done on the bluetooth transmission processing on ios. Another important work to do is to store force data on the smartphone with SQLite mobile database.
+This first draft include a limited set of feature, the final purpose is to provide an as usable as possible open-source smart insole system.
+Some improvements have to be done, mainly on the bluetooth transmission between the hardware and the iOS App. The app is not scaling correctly, data has to be stored on a mobile database (SQLite).
 
-Improvements should be done on mobile application and on hardware, if you want to improve it, you can check github issues for details.
+Have a look at the github issues for more informations.
 
 
-## Documentation
-All the documentation can be found in documentation folder.
+## [Documentation](documentation/index.md)

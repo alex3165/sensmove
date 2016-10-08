@@ -38,3 +38,17 @@ Have a look at the github issues for more informations.
 
 
 ## [Documentation](documentation/index.md)
+
+## Application design
+
+<p align="center">
+  <img title="mockup1" src='design/app_mockups/teaser-mockup.png' width="500px"/>
+</p>
+
+<p align="center">
+  <img title="mockup2" src='design/app_mockups/track-mockup.png' width="500px"/>
+</p>
+
+<p align="center">
+  <img title="mockup2" src='design/app_mockups/balance-mockup.png' width="500px"/>
+</p>
